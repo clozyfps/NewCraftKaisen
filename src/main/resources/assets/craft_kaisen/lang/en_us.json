@@ -1,7 +1,18 @@
 {
-  "key.craft_kaisen.ability_4": "Ability 3",
+  "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
+  "key.craft_kaisen.ability_4": "Ability 4",
   "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
+  "key.craft_kaisen.ability_5": "Ability 5",
+  "key.craft_kaisen.output": "Output",
+  "key.craft_kaisen.ability_6": "Ability 6",
+  "gui.craft_kaisen.start_screen.button_test": "test",
   "key.craft_kaisen.ability_1": "Ability 1",
   "key.craft_kaisen.ability_2": "Ability 2",
-  "key.craft_kaisen.ability_3": "Ability 3"
+  "key.craft_kaisen.ability_3": "Ability 3",
+  "gui.craft_kaisen.start_screen.label_cursed_spirit": "Curse",
+  "gui.craft_kaisen.start_screen.label_finish": "SAVE",
+  "gui.craft_kaisen.start_screen.label_empty": "\u003e",
+  "key.craft_kaisen.menu": "Menu",
+  "gui.craft_kaisen.start_screen.label_race": "RACE:",
+  "gui.craft_kaisen.start_screen.label_human": "Human"
 }

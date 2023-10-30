@@ -4,6 +4,9 @@
   "definition": {
     "triggerKey": "X",
     "keyBindingName": "Ability 1",
-    "keyBindingCategoryKey": "craft_kaisen"
+    "keyBindingCategoryKey": "craft_kaisen",
+    "onKeyPressed": {
+      "name": "Ability1OnKeyPressed"
+    }
   }
 }

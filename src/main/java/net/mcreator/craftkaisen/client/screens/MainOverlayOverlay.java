@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.craftkaisen.procedures.ReturnOutputProcedure;
 import net.mcreator.craftkaisen.procedures.ReturnCEOverlayProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
@@ -38,6 +39,9 @@ public class MainOverlayOverlay {
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					ReturnCEOverlayProcedure.execute(entity), posX + 96, posY + 98, -16737895);
+			Minecraft.getInstance().font.draw(event.getPoseStack(),
+
+					ReturnOutputProcedure.execute(entity), posX + 96, posY + 89, -1);
 		}
 	}
 }
