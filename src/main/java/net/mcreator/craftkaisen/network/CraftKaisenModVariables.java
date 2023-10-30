@@ -89,8 +89,16 @@ public class CraftKaisenModVariables {
 			clone.ability5 = original.ability5;
 			clone.ability6 = original.ability6;
 			clone.energyControl = original.energyControl;
+			clone.special = original.special;
+			clone.maxOutput = original.maxOutput;
+			clone.level = original.level;
+			clone.abilitylist = original.abilitylist;
+			clone.technique = original.technique;
+			clone.characterCreated = original.characterCreated;
+			clone.specialCheck = original.specialCheck;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
+				clone.currentOutput = original.currentOutput;
 			}
 		}
 
@@ -276,6 +284,14 @@ public class CraftKaisenModVariables {
 		public String ability6 = "";
 		public String currentMove = "";
 		public double energyControl = 0;
+		public String special = "";
+		public double maxOutput = 0;
+		public double level = 0;
+		public double currentOutput = 10.0;
+		public String abilitylist = "";
+		public String technique = "";
+		public boolean characterCreated = false;
+		public boolean specialCheck = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -302,6 +318,14 @@ public class CraftKaisenModVariables {
 			nbt.putString("ability6", ability6);
 			nbt.putString("currentMove", currentMove);
 			nbt.putDouble("energyControl", energyControl);
+			nbt.putString("special", special);
+			nbt.putDouble("maxOutput", maxOutput);
+			nbt.putDouble("level", level);
+			nbt.putDouble("currentOutput", currentOutput);
+			nbt.putString("abilitylist", abilitylist);
+			nbt.putString("technique", technique);
+			nbt.putBoolean("characterCreated", characterCreated);
+			nbt.putBoolean("specialCheck", specialCheck);
 			return nbt;
 		}
 
@@ -325,6 +349,14 @@ public class CraftKaisenModVariables {
 			ability6 = nbt.getString("ability6");
 			currentMove = nbt.getString("currentMove");
 			energyControl = nbt.getDouble("energyControl");
+			special = nbt.getString("special");
+			maxOutput = nbt.getDouble("maxOutput");
+			level = nbt.getDouble("level");
+			currentOutput = nbt.getDouble("currentOutput");
+			abilitylist = nbt.getString("abilitylist");
+			technique = nbt.getString("technique");
+			characterCreated = nbt.getBoolean("characterCreated");
+			specialCheck = nbt.getBoolean("specialCheck");
 		}
 	}
 
@@ -367,6 +399,14 @@ public class CraftKaisenModVariables {
 					variables.ability6 = message.data.ability6;
 					variables.currentMove = message.data.currentMove;
 					variables.energyControl = message.data.energyControl;
+					variables.special = message.data.special;
+					variables.maxOutput = message.data.maxOutput;
+					variables.level = message.data.level;
+					variables.currentOutput = message.data.currentOutput;
+					variables.abilitylist = message.data.abilitylist;
+					variables.technique = message.data.technique;
+					variables.characterCreated = message.data.characterCreated;
+					variables.specialCheck = message.data.specialCheck;
 				}
 			});
 			context.setPacketHandled(true);

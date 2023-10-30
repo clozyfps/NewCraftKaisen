@@ -29,6 +29,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.craftkaisen.init.CraftKaisenModMenus;
 import net.mcreator.craftkaisen.init.CraftKaisenModItems;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
@@ -53,6 +54,8 @@ public class CraftKaisenMod {
 
 		CraftKaisenModItems.REGISTRY.register(bus);
 		CraftKaisenModEntities.REGISTRY.register(bus);
+
+		CraftKaisenModMenus.REGISTRY.register(bus);
 
 	}
 

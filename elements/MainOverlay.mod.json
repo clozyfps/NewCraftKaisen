@@ -19,6 +19,22 @@
           "x": 309,
           "y": 218
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_output",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnOutput"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 309,
+          "y": 209
+        }
       }
     ],
     "baseTexture": "",

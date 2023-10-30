@@ -2,8 +2,11 @@
   "_fv": 47,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "V",
-    "keyBindingName": "Ability 3",
-    "keyBindingCategoryKey": "craft_kaisen"
+    "triggerKey": "B",
+    "keyBindingName": "Ability 4",
+    "keyBindingCategoryKey": "craft_kaisen",
+    "onKeyPressed": {
+      "name": "Ab4Pressed"
+    }
   }
 }
