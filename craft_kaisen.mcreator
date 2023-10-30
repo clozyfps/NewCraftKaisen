@@ -141,7 +141,144 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Potions",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "Armor",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Ranged",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Commands",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Functions",
+        "children": []
+      },
+      {
+        "name": "Gamerules",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Keybinds",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Recipe",
+        "children": []
+      },
+      {
+        "name": "Biome",
+        "children": []
+      },
+      {
+        "name": "Dimensions",
+        "children": []
+      },
+      {
+        "name": "Advancement",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Structure",
+        "children": []
+      },
+      {
+        "name": "Gui",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": [
+              {
+                "name": "Value",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Overlay",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": [
+              {
+                "name": "Value",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "craft_kaisen",
