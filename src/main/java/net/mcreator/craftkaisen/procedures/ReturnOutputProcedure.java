@@ -1,13 +1,11 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+import javax.annotation.Nullable;
 
 public class ReturnOutputProcedure {
-	public static String execute(Entity entity) {
-		if (entity == null)
-			return "";
-		return new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput) + "%";
+	public static String execute() {
+		return new java.text.DecimalFormat("##.##").format() + "%";
 	}
 }
