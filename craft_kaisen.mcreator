@@ -3,6 +3,7 @@
     {
       "name": "SetStats",
       "type": "procedure",
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_stats",
@@ -16,7 +17,103 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ReversalRedProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedures"
+    },
+    {
+      "name": "ReversalRedProjectile",
+      "type": "rangeditem",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
+        ]
+      },
+      "path": "~/Ranged"
+    },
+    {
+      "name": "ReversalRedProcedures",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_procedures",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProceduresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "ReversalRedEntity",
+      "type": "livingentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -137,7 +234,10 @@
   ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
+      "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -277,6 +377,10 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Abilities",
+        "children": []
       }
     ]
   },
