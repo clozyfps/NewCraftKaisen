@@ -88,6 +88,7 @@ public class CraftKaisenModVariables {
 			clone.ability4 = original.ability4;
 			clone.ability5 = original.ability5;
 			clone.ability6 = original.ability6;
+			clone.energyControl = original.energyControl;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 			}
@@ -274,6 +275,7 @@ public class CraftKaisenModVariables {
 		public String ability5 = "";
 		public String ability6 = "";
 		public String currentMove = "";
+		public double energyControl = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -299,6 +301,7 @@ public class CraftKaisenModVariables {
 			nbt.putString("ability5", ability5);
 			nbt.putString("ability6", ability6);
 			nbt.putString("currentMove", currentMove);
+			nbt.putDouble("energyControl", energyControl);
 			return nbt;
 		}
 
@@ -321,6 +324,7 @@ public class CraftKaisenModVariables {
 			ability5 = nbt.getString("ability5");
 			ability6 = nbt.getString("ability6");
 			currentMove = nbt.getString("currentMove");
+			energyControl = nbt.getDouble("energyControl");
 		}
 	}
 
@@ -362,6 +366,7 @@ public class CraftKaisenModVariables {
 					variables.ability5 = message.data.ability5;
 					variables.ability6 = message.data.ability6;
 					variables.currentMove = message.data.currentMove;
+					variables.energyControl = message.data.energyControl;
 				}
 			});
 			context.setPacketHandled(true);

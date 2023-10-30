@@ -1,0 +1,9 @@
+{
+  "_fv": 47,
+  "_type": "command",
+  "definition": {
+    "commandName": "craftKaisen",
+    "permissionLevel": "2",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"86\" y=\"64\"><next><block type=\"literal\"><field name=\"name\">stat</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">cursedenergy</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">cursedEnergy</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">SetCursedEnergyStat</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">strength</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">strength</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">SetStrengthStat</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">speed</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">speed</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">SetSpeedStat</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">health</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">health</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">SetHealthStat</field></block></statement></block></statement></block></next></block></next></block></next></block></statement></block></statement></block></next></block></xml>"
+  }
+}
