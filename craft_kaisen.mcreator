@@ -3,7 +3,6 @@
     {
       "name": "SetStats",
       "type": "procedure",
-      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_stats",
@@ -15,10 +14,56 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
+      }
+    },
+    {
+      "name": "ReversalRedEntity",
+      "type": "livingentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
+        ]
       },
-      "path": "~/Procedures"
+      "path": "~/Mobs"
+    },
+    {
+      "name": "ReversalRedProjectile",
+      "type": "rangeditem",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
+        ]
+      },
+      "path": "~/Ranged"
     },
     {
       "name": "ReversalRedProjectileWhileProjectileFlyingTick",
@@ -61,22 +106,6 @@
       "path": "~/Ranged/Procedures"
     },
     {
-      "name": "ReversalRedProjectile",
-      "type": "rangeditem",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reversal_red_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
-        ]
-      },
-      "path": "~/Ranged"
-    },
-    {
       "name": "ReversalRedProcedures",
       "type": "procedure",
       "sortid": 3,
@@ -101,19 +130,280 @@
       "path": "~/Abilities"
     },
     {
-      "name": "ReversalRedEntity",
-      "type": "livingentity",
+      "name": "ChargeCursedEnergyOnKeyPressed",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeCursedEnergyOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SetEnergyControl",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_energy_control",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetEnergyControlProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "OnRespawn",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_respawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OnRespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MainOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/MainOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "ChargeCursedEnergyOnKeyReleased",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeCursedEnergyOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SetStrengthStat",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_strength_stat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetStrengthStatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetHealthStat",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_health_stat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetHealthStatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "Ability4",
+      "type": "keybind",
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "reversal_red_entity",
+      "registry_name": "ability_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/network/Ability4Message.java"
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ability3",
+      "type": "keybind",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability3Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ability2",
+      "type": "keybind",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability2Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ability1",
+      "type": "keybind",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability1Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SetCursedEnergyStat",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_cursed_energy_stat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedEnergyStatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ReturnCEOverlay",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ce_overlay",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnCEOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures/Value"
+    },
+    {
+      "name": "SetSpeedStat",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_speed_stat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSpeedStatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ChargeCursedEnergy",
+      "type": "keybind",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/ChargeCursedEnergyMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SetCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -230,48 +520,21 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": ""
+    },
+    {
+      "name": "energyControl",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {
-      "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
-      "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity"
-    }
+    "en_us": {}
   },
   "foldersRoot": {
     "name": "~",
     "children": [
-      {
-        "name": "Procedures",
-        "children": []
-      },
-      {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Items",
-        "children": []
-      },
-      {
-        "name": "Potions",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Tags",
-        "children": []
-      },
       {
         "name": "Armor",
         "children": [
@@ -282,29 +545,7 @@
         ]
       },
       {
-        "name": "Particles",
-        "children": []
-      },
-      {
-        "name": "Ranged",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Commands",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Functions",
+        "name": "Abilities",
         "children": []
       },
       {
@@ -317,7 +558,11 @@
         ]
       },
       {
-        "name": "Keybinds",
+        "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Ranged",
         "children": [
           {
             "name": "Procedures",
@@ -326,28 +571,7 @@
         ]
       },
       {
-        "name": "Recipe",
-        "children": []
-      },
-      {
-        "name": "Biome",
-        "children": []
-      },
-      {
-        "name": "Dimensions",
-        "children": []
-      },
-      {
-        "name": "Advancement",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Structure",
+        "name": "Tags",
         "children": []
       },
       {
@@ -379,8 +603,77 @@
         ]
       },
       {
-        "name": "Abilities",
+        "name": "Dimensions",
         "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Functions",
+        "children": []
+      },
+      {
+        "name": "Biome",
+        "children": []
+      },
+      {
+        "name": "Advancement",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Potions",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Structure",
+        "children": []
+      },
+      {
+        "name": "Recipe",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Commands",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       }
     ]
   },

@@ -1,0 +1,9 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Ability 2",
+    "keyBindingCategoryKey": "craft_kaisen"
+  }
+}
