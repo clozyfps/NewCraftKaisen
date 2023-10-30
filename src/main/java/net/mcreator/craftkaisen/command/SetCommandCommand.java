@@ -17,6 +17,7 @@ import net.minecraft.commands.Commands;
 import net.mcreator.craftkaisen.procedures.SetStrengthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetSpeedStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetHealthStatProcedure;
+import net.mcreator.craftkaisen.procedures.SetEnergyControlProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedEnergyStatProcedure;
 
 import com.mojang.brigadier.arguments.DoubleArgumentType;
@@ -73,6 +74,18 @@ public class SetCommandCommand {
 					Direction direction = entity.getDirection();
 
 					SetHealthStatProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("energycontrol").then(Commands.argument("energyControl", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetEnergyControlProcedure.execute(arguments);
 					return 0;
 				}))))));
 	}
