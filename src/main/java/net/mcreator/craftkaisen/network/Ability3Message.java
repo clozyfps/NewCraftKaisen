@@ -52,7 +52,7 @@ public class Ability3Message {
 			return;
 		if (type == 0) {
 
-			Ab3pressedProcedure.execute(world, entity);
+			Ab3pressedProcedure.execute(entity);
 		}
 	}
 

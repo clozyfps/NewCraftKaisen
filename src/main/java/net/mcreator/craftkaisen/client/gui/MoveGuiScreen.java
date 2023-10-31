@@ -1,13 +1,33 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.MoveGuiMenu;
+import net.mcreator.craftkaisen.procedures.ShowUnlockProcedure;
+import net.mcreator.craftkaisen.procedures.ReturnTechniqueProcedure;
+import net.mcreator.craftkaisen.procedures.ReturnSkillpointsProcedure;
+import net.mcreator.craftkaisen.procedures.ReturnMoveDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.ReturnMoveCostProcedure;
+import net.mcreator.craftkaisen.network.MoveGuiButtonMessage;
+import net.mcreator.craftkaisen.CraftKaisenMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class MoveGuiScreen extends AbstractContainerScreen<MoveGuiMenu> {
-
 	private final static HashMap<String, Object> guistate = MoveGuiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_1;
 	Button button_2;
 	Button button_3;
@@ -34,11 +54,8 @@ public class MoveGuiScreen extends AbstractContainerScreen<MoveGuiMenu> {
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
-
 		super.render(ms, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -46,10 +63,8 @@ public class MoveGuiScreen extends AbstractContainerScreen<MoveGuiMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -59,7 +74,6 @@ public class MoveGuiScreen extends AbstractContainerScreen<MoveGuiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -93,113 +107,84 @@ public class MoveGuiScreen extends AbstractContainerScreen<MoveGuiMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		button_1 = new Button(this.leftPos + 125, this.topPos + 7, 30, 20, Component.translatable("gui.craft_kaisen.move_gui.button_1"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(0, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_1", button_1);
 		this.addRenderableWidget(button_1);
-
 		button_2 = new Button(this.leftPos + 125, this.topPos + 34, 30, 20, Component.translatable("gui.craft_kaisen.move_gui.button_2"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(1, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_2", button_2);
 		this.addRenderableWidget(button_2);
-
 		button_3 = new Button(this.leftPos + 125, this.topPos + 61, 30, 20, Component.translatable("gui.craft_kaisen.move_gui.button_3"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(2, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_3", button_3);
 		this.addRenderableWidget(button_3);
-
 		button_4 = new Button(this.leftPos + 125, this.topPos + 88, 30, 20, Component.translatable("gui.craft_kaisen.move_gui.button_4"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(3, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_4", button_4);
 		this.addRenderableWidget(button_4);
-
 		button_5 = new Button(this.leftPos + 125, this.topPos + 115, 30, 20, Component.translatable("gui.craft_kaisen.move_gui.button_5"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(4, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_5", button_5);
 		this.addRenderableWidget(button_5);
-
 		button_6 = new Button(this.leftPos + 125, this.topPos + 142, 30, 20, Component.translatable("gui.craft_kaisen.move_gui.button_6"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(5, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_6", button_6);
 		this.addRenderableWidget(button_6);
-
 		button_unlock = new Button(this.leftPos + 35, this.topPos + 115, 56, 20, Component.translatable("gui.craft_kaisen.move_gui.button_unlock"), e -> {
-			if (
-
-			ShowUnlockProcedure.execute(entity)
-
-			) {
+			if (ShowUnlockProcedure.execute(entity)) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(6, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(PoseStack ms, int gx, int gy, float ticks) {
-				if (
-
-				ShowUnlockProcedure.execute(entity)
-
-				)
+				if (ShowUnlockProcedure.execute(entity))
 					super.render(ms, gx, gy, ticks);
 			}
 		};
-
 		guistate.put("button:button_unlock", button_unlock);
 		this.addRenderableWidget(button_unlock);
-
 		button_empty = new Button(this.leftPos + 107, this.topPos + 115, 9, 20, Component.translatable("gui.craft_kaisen.move_gui.button_empty"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(7, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_empty", button_empty);
 		this.addRenderableWidget(button_empty);
-
 		button_empty1 = new Button(this.leftPos + 8, this.topPos + 115, 9, 20, Component.translatable("gui.craft_kaisen.move_gui.button_empty1"), e -> {
 			if (true) {
 				CraftKaisenMod.PACKET_HANDLER.sendToServer(new MoveGuiButtonMessage(8, x, y, z));
 				MoveGuiButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_empty1", button_empty1);
 		this.addRenderableWidget(button_empty1);
-
 	}
-
 }
