@@ -13,6 +13,7 @@ import net.mcreator.craftkaisen.client.particle.SoundWaveParticle;
 import net.mcreator.craftkaisen.client.particle.SnowflakeParticle;
 import net.mcreator.craftkaisen.client.particle.RedParticleParticle;
 import net.mcreator.craftkaisen.client.particle.PurpleElectricityParticle;
+import net.mcreator.craftkaisen.client.particle.BloodParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftKaisenModParticles {
@@ -22,5 +23,6 @@ public class CraftKaisenModParticles {
 		event.register(CraftKaisenModParticleTypes.SNOWFLAKE.get(), SnowflakeParticle::provider);
 		event.register(CraftKaisenModParticleTypes.SOUND_WAVE.get(), SoundWaveParticle::provider);
 		event.register(CraftKaisenModParticleTypes.RED_PARTICLE.get(), RedParticleParticle::provider);
+		event.register(CraftKaisenModParticleTypes.BLOOD.get(), BloodParticle::provider);
 	}
 }

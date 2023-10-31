@@ -1,0 +1,11 @@
+{
+  "guts": {
+    "subtitle": "subtitles.guts",
+    "sounds": [
+      {
+        "name": "craft_kaisen:dicesteak",
+        "stream": false
+      }
+    ]
+  }
+}

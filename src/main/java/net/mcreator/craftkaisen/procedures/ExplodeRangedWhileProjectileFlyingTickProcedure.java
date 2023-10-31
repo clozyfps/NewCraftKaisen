@@ -12,6 +12,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
+import net.mcreator.craftkaisen.CraftKaisenMod;
 
 import java.util.stream.Collectors;
 import java.util.List;
@@ -41,5 +42,9 @@ public class ExplodeRangedWhileProjectileFlyingTickProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.SOUND_WAVE.get()), x, y, z, 1, 0.1, 0.1, 0.1, 1);
+		CraftKaisenMod.queueServerWork(20, () -> {
+			if (!immediatesourceentity.level.isClientSide())
+				immediatesourceentity.discard();
+		});
 	}
 }

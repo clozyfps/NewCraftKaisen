@@ -22,5 +22,12 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.REVERSAL_RED_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.SATORU_GOJO.get(), SatoruGojoRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.EXPLODE_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.TWIST_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.CRUSHED_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.CRUMBLE_AWAY_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.DONT_MOVE_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.SLEEP_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.RUN_AWAY_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.BLAST_AWAY_RANGED.get(), ThrownItemRenderer::new);
 	}
 }

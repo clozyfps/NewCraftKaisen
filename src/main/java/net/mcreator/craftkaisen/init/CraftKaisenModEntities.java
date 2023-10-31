@@ -16,10 +16,17 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.craftkaisen.entity.TwistRangedEntity;
+import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
+import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
+import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
+import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -36,6 +43,20 @@ public class CraftKaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ExplodeRangedEntity>> EXPLODE_RANGED = register("projectile_explode_ranged",
 			EntityType.Builder.<ExplodeRangedEntity>of(ExplodeRangedEntity::new, MobCategory.MISC).setCustomClientFactory(ExplodeRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TwistRangedEntity>> TWIST_RANGED = register("projectile_twist_ranged",
+			EntityType.Builder.<TwistRangedEntity>of(TwistRangedEntity::new, MobCategory.MISC).setCustomClientFactory(TwistRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CrushedRangedEntity>> CRUSHED_RANGED = register("projectile_crushed_ranged",
+			EntityType.Builder.<CrushedRangedEntity>of(CrushedRangedEntity::new, MobCategory.MISC).setCustomClientFactory(CrushedRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CrumbleAwayRangedEntity>> CRUMBLE_AWAY_RANGED = register("projectile_crumble_away_ranged", EntityType.Builder.<CrumbleAwayRangedEntity>of(CrumbleAwayRangedEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(CrumbleAwayRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DontMoveRangedEntity>> DONT_MOVE_RANGED = register("projectile_dont_move_ranged",
+			EntityType.Builder.<DontMoveRangedEntity>of(DontMoveRangedEntity::new, MobCategory.MISC).setCustomClientFactory(DontMoveRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SleepRangedEntity>> SLEEP_RANGED = register("projectile_sleep_ranged",
+			EntityType.Builder.<SleepRangedEntity>of(SleepRangedEntity::new, MobCategory.MISC).setCustomClientFactory(SleepRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RunAwayRangedEntity>> RUN_AWAY_RANGED = register("projectile_run_away_ranged",
+			EntityType.Builder.<RunAwayRangedEntity>of(RunAwayRangedEntity::new, MobCategory.MISC).setCustomClientFactory(RunAwayRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BlastAwayRangedEntity>> BLAST_AWAY_RANGED = register("projectile_blast_away_ranged", EntityType.Builder.<BlastAwayRangedEntity>of(BlastAwayRangedEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(BlastAwayRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

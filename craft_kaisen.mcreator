@@ -263,6 +263,7 @@
     {
       "name": "MainOverlay",
       "type": "overlay",
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_overlay",
@@ -1840,7 +1841,7 @@
           }
         ]
       },
-      "path": "~/Ranged/Procedures"
+      "path": "~/Abilities/CursedSpeech/Procedures"
     },
     {
       "name": "RedParticle",
@@ -1928,6 +1929,557 @@
         ]
       },
       "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "TwistingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twisting_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TwistingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "Twisting",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twisting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/TwistingMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "TwistRanged",
+      "type": "rangeditem",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twist_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/TwistRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/twist_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TwistRangedItem.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "TwistRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twist_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TwistRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "CrushedRanged",
+      "type": "rangeditem",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushed_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/CrushedRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/crushed_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/CrushedRangedItem.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "CrumbleAwayRanged",
+      "type": "rangeditem",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crumble_away_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/CrumbleAwayRangedItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/crumble_away_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/CrumbleAwayRangedEntity.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "DontMoveRanged",
+      "type": "rangeditem",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dont_move_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/DontMoveRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/DontMoveRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/dont_move_ranged.json"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "SleepRanged",
+      "type": "rangeditem",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_ranged",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/sleep_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/SleepRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/SleepRangedEntity.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "RunAwayRanged",
+      "type": "rangeditem",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "run_away_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/RunAwayRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/run_away_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/RunAwayRangedItem.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "BlastAwayRanged",
+      "type": "rangeditem",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_away_ranged",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/blast_away_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BlastAwayRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayRangedEntity.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "Blood",
+      "type": "particle",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BloodParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/blood.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "CrushedRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushed_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CrushedRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "CrumbleAwayRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crumble_away_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CrumbleAwayRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "StopPlayerTick",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_player_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StopPlayerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DontMoveRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dont_move_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DontMoveRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "SleepRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "SleepOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "SleepOverlay",
+      "type": "overlay",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/SleepOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlay"
+    },
+    {
+      "name": "RunAwayRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "run_away_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RunAwayRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "BlastAwayRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_away_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlastAwayRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "SetCursedSpeech",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_cursed_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "StopEntityTick",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_entity_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StopEntityTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -2106,12 +2658,21 @@
       "value": "\"\""
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "guts",
+      "files": [
+        "dicesteak"
+      ],
+      "category": "neutral",
+      "subtitle": "guts"
+    }
+  ],
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
-      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_4": "Ability 4",
+      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
@@ -2128,18 +2689,27 @@
       "gui.craft_kaisen.move_gui.button_1": "1",
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
+      "item.craft_kaisen.run_away_ranged": "Run Away Ranged",
       "itemGroup.tabck_weapons": "Ck Weapons",
+      "item.craft_kaisen.crumble_away_ranged": "Crumble Away Ranged",
+      "item.craft_kaisen.sleep_ranged": "Sleep Ranged",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
       "item.craft_kaisen.explode_ranged": "Explode Ranged",
+      "item.craft_kaisen.twist_ranged": "Twist Ranged",
       "gui.craft_kaisen.start_screen.button_test": "test",
       "gui.craft_kaisen.move_gui.button_unlock": "Unlock",
       "gui.craft_kaisen.start_screen.label_finish": "SAVE",
+      "effect.craft_kaisen.twisting": "Twisting",
+      "subtitles.guts": "guts",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "key.craft_kaisen.menu": "Menu",
+      "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
+      "item.craft_kaisen.blast_away_ranged": "Blast Away Ranged",
+      "item.craft_kaisen.dont_move_ranged": "Dont Move Ranged",
       "gui.craft_kaisen.start_screen.label_human": "Human",
       "item.craft_kaisen.playful_cloud": "Playful Cloud"
     }
@@ -2169,7 +2739,12 @@
           },
           {
             "name": "CursedSpeech",
-            "children": []
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Mobs",
