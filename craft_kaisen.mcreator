@@ -229,7 +229,7 @@
     {
       "name": "SetCommand",
       "type": "command",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "set_command",
       "metadata": {
@@ -372,10 +372,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -396,10 +392,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -650,10 +642,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -728,10 +716,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -752,10 +736,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -817,10 +797,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -870,7 +846,7 @@
       "name": "StartScreen",
       "type": "gui",
       "sortid": 68,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "start_screen",
       "metadata": {
@@ -1016,7 +992,7 @@
       "name": "ReversalRedEntity",
       "type": "livingentity",
       "sortid": 4,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_entity",
       "metadata": {
@@ -1036,9 +1012,9 @@
       "registry_name": "reversal_red_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
         ]
       },
       "path": "~/Ranged"
@@ -1098,14 +1074,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
-      "path": "~/Abilities"
+      "path": "~/Abilities/Limitless"
     },
     {
       "name": "SetSixEyes",
@@ -1360,7 +1332,7 @@
       "name": "SatoruGojo",
       "type": "livingentity",
       "sortid": 51,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "satoru_gojo",
       "metadata": {
@@ -1474,10 +1446,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1498,10 +1466,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1603,14 +1567,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
-      "path": "~/Abilities"
+      "path": "~/Abilities/MoveUse"
     },
     {
       "name": "ShowUnlock",
@@ -1658,7 +1618,7 @@
       "name": "MoveGui",
       "type": "gui",
       "sortid": 59,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "move_gui",
       "metadata": {
@@ -1930,7 +1890,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Abilities/Limitless"
     },
     {
       "name": "RedFlying",
@@ -1965,7 +1926,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Abilities/Limitless"
     }
   ],
   "variable_elements": [
@@ -2050,13 +2012,13 @@
     {
       "name": "ability2",
       "type": "string",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": ""
     },
     {
       "name": "ability3",
       "type": "string",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": ""
     },
     {
@@ -2148,8 +2110,8 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
-      "key.craft_kaisen.ability_4": "Ability 4",
       "itemGroup.tabck_mobs": "Ck Mobs",
+      "key.craft_kaisen.ability_4": "Ability 4",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
@@ -2171,6 +2133,7 @@
       "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
+      "item.craft_kaisen.explode_ranged": "Explode Ranged",
       "gui.craft_kaisen.start_screen.button_test": "test",
       "gui.craft_kaisen.move_gui.button_unlock": "Unlock",
       "gui.craft_kaisen.start_screen.label_finish": "SAVE",
