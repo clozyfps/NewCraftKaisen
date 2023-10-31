@@ -2,7 +2,6 @@
   "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
   "key.craft_kaisen.ability_4": "Ability 4",
   "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
-  "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
   "key.craft_kaisen.ability_5": "Ability 5",
   "key.craft_kaisen.output": "Output",
   "key.craft_kaisen.ability_6": "Ability 6",
@@ -14,7 +13,6 @@
   "gui.craft_kaisen.start_screen.label_finish": "SAVE",
   "gui.craft_kaisen.start_screen.label_empty": "\u003e",
   "key.craft_kaisen.menu": "Menu",
-  "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
   "gui.craft_kaisen.start_screen.label_race": "RACE:",
   "gui.craft_kaisen.start_screen.label_human": "Human"
 }
