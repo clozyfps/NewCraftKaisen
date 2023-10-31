@@ -3,7 +3,7 @@
     {
       "name": "SetStats",
       "type": "procedure",
-      "sortid": 49,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_stats",
@@ -37,176 +37,60 @@
       "path": "~/Procedures"
     },
     {
-      "name": "ReversalRedEntity",
-      "type": "livingentity",
-      "sortid": 4,
+      "name": "Ability1",
+      "type": "keybind",
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "reversal_red_entity",
+      "registry_name": "ability_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "ReversalRedProjectile",
-      "type": "rangeditem",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reversal_red_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
-        ]
-      },
-      "path": "~/Ranged"
-    },
-    {
-      "name": "ReversalRedProjectileWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reversal_red_projectile_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProjectileWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Ranged/Procedures"
-    },
-    {
-      "name": "ReversalRedProcedures",
-      "type": "procedure",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reversal_red_procedures",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProceduresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "ChargeCursedEnergyOnKeyPressed",
-      "type": "procedure",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "charge_cursed_energy_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeCursedEnergyOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/net/mcreator/craftkaisen/network/Ability1Message.java"
         ]
       },
       "path": "~/Keybinds"
     },
     {
-      "name": "SetEnergyControl",
-      "type": "procedure",
-      "sortid": 15,
+      "name": "Ability2",
+      "type": "keybind",
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_energy_control",
+      "registry_name": "ability_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetEnergyControlProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
+          "src/main/java/net/mcreator/craftkaisen/network/Ability2Message.java"
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Keybinds"
     },
     {
-      "name": "OnRespawn",
-      "type": "procedure",
-      "sortid": 14,
+      "name": "Ability3",
+      "type": "keybind",
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "on_respawn",
+      "registry_name": "ability_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OnRespawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
+          "src/main/java/net/mcreator/craftkaisen/network/Ability3Message.java"
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Keybinds"
     },
     {
-      "name": "MainOverlay",
-      "type": "overlay",
+      "name": "Ability4",
+      "type": "keybind",
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "main_overlay",
+      "registry_name": "ability_4",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/screens/MainOverlayOverlay.java"
+          "src/main/java/net/mcreator/craftkaisen/network/Ability4Message.java"
         ]
       },
-      "path": "~/Gui"
+      "path": "~/Keybinds"
     },
     {
       "name": "ChargeCursedEnergyOnKeyReleased",
@@ -229,6 +113,60 @@
       "path": "~/Keybinds"
     },
     {
+      "name": "ChargeCursedEnergyOnKeyPressed",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeCursedEnergyOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ChargeCursedEnergy",
+      "type": "keybind",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/ChargeCursedEnergyMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SetCursedEnergyStat",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_cursed_energy_stat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedEnergyStatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
       "name": "SetStrengthStat",
       "type": "procedure",
       "sortid": 10,
@@ -238,6 +176,26 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/SetStrengthStatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetSpeedStat",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_speed_stat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSpeedStatProcedure.java"
         ],
         "dependencies": [
           {
@@ -269,80 +227,17 @@
       "path": "~/Commands/Procedures"
     },
     {
-      "name": "Ability4",
-      "type": "keybind",
-      "sortid": 4,
+      "name": "SetCommand",
+      "type": "command",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ability_4",
+      "registry_name": "set_command",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/Ability4Message.java"
+          "src/main/java/net/mcreator/craftkaisen/command/SetCommandCommand.java"
         ]
       },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "Ability3",
-      "type": "keybind",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ability_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/Ability3Message.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "Ability2",
-      "type": "keybind",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ability_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/Ability2Message.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "Ability1",
-      "type": "keybind",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ability_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/Ability1Message.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "SetCursedEnergyStat",
-      "type": "procedure",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_cursed_energy_stat",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedEnergyStatProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
+      "path": "~/Commands"
     },
     {
       "name": "ReturnCEOverlay",
@@ -366,15 +261,52 @@
       "path": "~/Gui/Procedures/Value"
     },
     {
-      "name": "SetSpeedStat",
-      "type": "procedure",
-      "sortid": 11,
+      "name": "MainOverlay",
+      "type": "overlay",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_speed_stat",
+      "registry_name": "main_overlay",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetSpeedStatProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/client/screens/MainOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "OnRespawn",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_respawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OnRespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SetEnergyControl",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_energy_control",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetEnergyControlProcedure.java"
         ],
         "dependencies": [
           {
@@ -384,33 +316,6 @@
         ]
       },
       "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "ChargeCursedEnergy",
-      "type": "keybind",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "charge_cursed_energy",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/ChargeCursedEnergyMessage.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "SetCommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/command/SetCommandCommand.java"
-        ]
-      },
-      "path": "~/Commands"
     },
     {
       "name": "OutputOnKeyPressed",
@@ -1107,6 +1012,181 @@
       "path": "~/Procedures"
     },
     {
+      "name": "ReversalRedEntity",
+      "type": "livingentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "ReversalRedProjectile",
+      "type": "rangeditem",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
+        ]
+      },
+      "path": "~/Ranged"
+    },
+    {
+      "name": "ReversalRedProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedures"
+    },
+    {
+      "name": "ReversalRedProcedures",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_procedures",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProceduresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SetSixEyes",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_six_eyes",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSixEyesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetFragileBody",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_fragile_body",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetFragileBodyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetNoEnergy",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_no_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetNoEnergyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetPhysicallyGifted",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_physically_gifted",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPhysicallyGiftedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
       "name": "Sorcerers",
       "type": "tag",
       "sortid": 56,
@@ -1163,6 +1243,33 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "ck_mobs",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "PlayfulCloud",
+      "type": "tool",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playful_cloud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CkWeapons",
+      "type": "tab",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_weapons",
       "metadata": {
         "files": []
       },
@@ -1290,15 +1397,16 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "SetSixEyes",
+      "name": "ReturnSkillpoints",
       "type": "procedure",
-      "sortid": 49,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_six_eyes",
+      "registry_name": "return_skillpoints",
       "metadata": {
+        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetSixEyesProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnSkillpointsProcedure.java"
         ],
         "dependencies": [
           {
@@ -1307,18 +1415,18 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
-      "name": "SetFragileBody",
+      "name": "SetAbility1",
       "type": "procedure",
-      "sortid": 51,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_fragile_body",
+      "registry_name": "set_ability_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetFragileBodyProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility1Procedure.java"
         ],
         "dependencies": [
           {
@@ -1327,18 +1435,19 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
-      "name": "SetNoEnergy",
+      "name": "ReturnTechnique",
       "type": "procedure",
-      "sortid": 52,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_no_energy",
+      "registry_name": "return_technique",
       "metadata": {
+        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetNoEnergyProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnTechniqueProcedure.java"
         ],
         "dependencies": [
           {
@@ -1347,18 +1456,66 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
-      "name": "SetPhysicallyGifted",
+      "name": "SetAbility3",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_physically_gifted",
+      "registry_name": "set_ability_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetPhysicallyGiftedProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetAbility2",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetAbility5",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility5Procedure.java"
         ],
         "dependencies": [
           {
@@ -1367,34 +1524,169 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
-      "name": "PlayfulCloud",
-      "type": "tool",
+      "name": "SetAbility4",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "ReturnMoveDisplay",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_move_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnMoveDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetAbility6",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "LimitlessMoves",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limitless_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "ShowUnlock",
+      "type": "procedure",
       "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "playful_cloud",
+      "registry_name": "show_unlock",
       "metadata": {
+        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json"
+          "src/main/java/net/mcreator/craftkaisen/procedures/ShowUnlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/Items"
+      "path": "~/Gui/Procedures"
     },
     {
-      "name": "CkWeapons",
-      "type": "tab",
+      "name": "ReturnMoveCost",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_move_cost",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnMoveCostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "MoveGui",
+      "type": "gui",
       "sortid": 59,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ck_weapons",
+      "registry_name": "move_gui",
       "metadata": {
-        "files": []
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MoveGuiMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java"
+        ]
       },
-      "path": "~/Creative Tabs"
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "Timers",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timers",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TimersProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1577,28 +1869,32 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
-      "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "key.craft_kaisen.ability_4": "Ability 4",
-      "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
-      "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
-      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
-      "gui.craft_kaisen.start_screen.button_test": "test",
+      "gui.craft_kaisen.move_gui.button_4": "4",
       "key.craft_kaisen.ability_1": "Ability 1",
+      "gui.craft_kaisen.move_gui.button_3": "3",
       "key.craft_kaisen.ability_2": "Ability 2",
+      "gui.craft_kaisen.move_gui.button_6": "6",
       "key.craft_kaisen.ability_3": "Ability 3",
+      "gui.craft_kaisen.move_gui.button_5": "5",
+      "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "gui.craft_kaisen.start_screen.label_cursed_spirit": "Curse",
+      "gui.craft_kaisen.move_gui.button_2": "2",
+      "gui.craft_kaisen.move_gui.button_1": "1",
+      "gui.craft_kaisen.move_gui.button_empty": "\u003e",
+      "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
+      "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
+      "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
+      "gui.craft_kaisen.start_screen.button_test": "test",
+      "gui.craft_kaisen.move_gui.button_unlock": "Unlock",
       "gui.craft_kaisen.start_screen.label_finish": "SAVE",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "key.craft_kaisen.menu": "Menu",
-      "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
-      "itemGroup.tabck_weapons": "Ck Weapons",
-      "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
-      "gui.craft_kaisen.start_screen.label_human": "Human",
-      "item.craft_kaisen.playful_cloud": "Playful Cloud"
+      "gui.craft_kaisen.start_screen.label_human": "Human"
     }
   },
   "foldersRoot": {
@@ -1615,7 +1911,17 @@
       },
       {
         "name": "Abilities",
-        "children": []
+        "children": [
+          {
+            "name": "Mobs",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Gamerules",
@@ -1685,10 +1991,6 @@
         "children": []
       },
       {
-        "name": "Creative Tabs",
-        "children": []
-      },
-      {
         "name": "Particles",
         "children": []
       },
@@ -1703,19 +2005,6 @@
       {
         "name": "Advancement",
         "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "Abilities",
-            "children": []
-          },
           {
             "name": "Procedures",
             "children": []

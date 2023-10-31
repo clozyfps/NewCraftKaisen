@@ -170,7 +170,7 @@ public class SetStatsProcedure {
 						});
 					}
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 10, 1, false, false));
+						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 10, 2, false, false));
 				}
 			}
 		}

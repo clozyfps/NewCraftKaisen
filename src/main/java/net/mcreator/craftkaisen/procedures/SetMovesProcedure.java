@@ -27,16 +27,6 @@ public class SetMovesProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Test")) {
-			entity.getPersistentData().putDouble("maxMoves", 2);
-			if (entity.getPersistentData().getDouble("moveNumber") == 1) {
-				entity.getPersistentData().putString("moveDisplay", "test");
-				entity.getPersistentData().putDouble("moveCost", 5);
-			} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
-				entity.getPersistentData().putString("moveDisplay", "test2");
-				entity.getPersistentData().putDouble("moveCost", 10);
-			}
-		}
 		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Limitless")) {
 			entity.getPersistentData().putDouble("maxMoves", 7);
 			if (entity.getPersistentData().getDouble("moveNumber") == 1) {
