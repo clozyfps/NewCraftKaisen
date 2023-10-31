@@ -869,6 +869,7 @@
     {
       "name": "StartScreen",
       "type": "gui",
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "start_screen",
@@ -1024,7 +1025,7 @@
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Abilities"
     },
     {
       "name": "ReversalRedProjectile",
@@ -1035,9 +1036,9 @@
       "registry_name": "reversal_red_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
         ]
       },
       "path": "~/Ranged"
@@ -1394,7 +1395,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Procedures"
+      "path": "~/Mobs/Procedure"
     },
     {
       "name": "ReturnSkillpoints",
@@ -1686,7 +1687,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -1870,6 +1872,7 @@
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
       "key.craft_kaisen.ability_4": "Ability 4",
+      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
@@ -1886,6 +1889,9 @@
       "gui.craft_kaisen.move_gui.button_1": "1",
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
+      "itemGroup.tabck_weapons": "Ck Weapons",
+      "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
+      "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
       "gui.craft_kaisen.start_screen.button_test": "test",
@@ -1894,7 +1900,8 @@
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "key.craft_kaisen.menu": "Menu",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
-      "gui.craft_kaisen.start_screen.label_human": "Human"
+      "gui.craft_kaisen.start_screen.label_human": "Human",
+      "item.craft_kaisen.playful_cloud": "Playful Cloud"
     }
   },
   "foldersRoot": {
@@ -2042,6 +2049,23 @@
         "children": [
           {
             "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Creative Tabs",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          },
+          {
+            "name": "Abilities",
             "children": []
           }
         ]
