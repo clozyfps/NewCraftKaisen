@@ -16,13 +16,16 @@ import net.minecraft.commands.Commands;
 
 import net.mcreator.craftkaisen.procedures.SetStrengthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetSpeedStatProcedure;
+import net.mcreator.craftkaisen.procedures.SetSkillPointsProcedure;
 import net.mcreator.craftkaisen.procedures.SetSixEyesProcedure;
 import net.mcreator.craftkaisen.procedures.SetPhysicallyGiftedProcedure;
 import net.mcreator.craftkaisen.procedures.SetNoEnergyProcedure;
 import net.mcreator.craftkaisen.procedures.SetLimitlessProcedure;
+import net.mcreator.craftkaisen.procedures.SetLevelProcedure;
 import net.mcreator.craftkaisen.procedures.SetHumanProcedure;
 import net.mcreator.craftkaisen.procedures.SetHealthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetFragileBodyProcedure;
+import net.mcreator.craftkaisen.procedures.SetExpProcedure;
 import net.mcreator.craftkaisen.procedures.SetEnergyControlProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedEnergyStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetCurseProcedure;
@@ -130,6 +133,42 @@ public class SetCommandCommand {
 					Direction direction = entity.getDirection();
 
 					SetEnergyControlProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("skillpoints").then(Commands.argument("skillPoints", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetSkillPointsProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("level").then(Commands.argument("Level", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetLevelProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("exp").then(Commands.argument("Exp", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetExpProcedure.execute(arguments);
 					return 0;
 				}))))).then(Commands.literal("special").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("SixEyes").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();

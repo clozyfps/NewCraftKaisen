@@ -372,10 +372,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -396,10 +392,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -650,10 +642,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -728,10 +716,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -752,10 +736,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -817,10 +797,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -869,13 +845,14 @@
     {
       "name": "StartScreen",
       "type": "gui",
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "start_screen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StartScreenScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/StartScreenMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/StartScreenScreen.java",
           "src/main/java/net/mcreator/craftkaisen/network/StartScreenButtonMessage.java"
         ]
       },
@@ -1020,11 +997,10 @@
       "registry_name": "reversal_red_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java"
         ]
-      },
-      "path": "~/Mobs"
+      }
     },
     {
       "name": "ReversalRedProjectile",
@@ -1245,8 +1221,7 @@
       "registry_name": "ck_mobs",
       "metadata": {
         "files": []
-      },
-      "path": "~/Creative Tabs"
+      }
     },
     {
       "name": "PlayfulCloud",
@@ -1257,8 +1232,8 @@
       "registry_name": "playful_cloud",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json"
+          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json",
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java"
         ]
       },
       "path": "~/Items"
@@ -1272,8 +1247,7 @@
       "registry_name": "ck_weapons",
       "metadata": {
         "files": []
-      },
-      "path": "~/Creative Tabs"
+      }
     },
     {
       "name": "Snowflake",
@@ -1284,8 +1258,8 @@
       "registry_name": "snowflake",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/snowflake.json"
+          "src/main/resources/assets/craft_kaisen/particles/snowflake.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1349,8 +1323,8 @@
       "registry_name": "purple_electricity",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json"
         ]
       },
       "path": "~/Particles"
@@ -1365,12 +1339,11 @@
       "metadata": {
         "files": [
           "src/main/resources/data/craft_kaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
           "src/main/resources/assets/craft_kaisen/models/item/satoru_gojo_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java"
         ]
-      },
-      "path": "~/Mobs"
+      }
     },
     {
       "name": "SatoruGojoOnEntityTickUpdate",
@@ -1393,8 +1366,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Mobs/Procedures"
+      }
     },
     {
       "name": "ReturnSkillpoints",
@@ -1473,10 +1445,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1497,10 +1465,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1662,12 +1626,12 @@
       "registry_name": "move_gui",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/MoveGuiMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java"
         ]
       },
-      "path": "~/Gui/Procedures"
+      "path": "~/Gui"
     },
     {
       "name": "Timers",
@@ -1703,6 +1667,66 @@
           {
             "name": "entity",
             "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetSkillPoints",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_skill_points",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSkillPointsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetLevel",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_level",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetExp",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_exp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetExpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
           }
         ]
       },
@@ -1791,13 +1815,13 @@
     {
       "name": "ability2",
       "type": "string",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": ""
     },
     {
       "name": "ability3",
       "type": "string",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": ""
     },
     {
@@ -1882,7 +1906,7 @@
       "name": "CeNature",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": ""
     }
   ],
   "sound_elements": [],
@@ -1890,22 +1914,26 @@
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
       "key.craft_kaisen.ability_4": "Ability 4",
+      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
       "key.craft_kaisen.ability_1": "Ability 1",
       "gui.craft_kaisen.move_gui.button_3": "3",
-      "key.craft_kaisen.ability_2": "Ability 2",
       "gui.craft_kaisen.move_gui.button_6": "6",
+      "key.craft_kaisen.ability_2": "Ability 2",
       "key.craft_kaisen.ability_3": "Ability 3",
       "gui.craft_kaisen.move_gui.button_5": "5",
-      "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "gui.craft_kaisen.start_screen.label_cursed_spirit": "Curse",
+      "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
+      "itemGroup.tabck_weapons": "Ck Weapons",
+      "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
+      "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
       "gui.craft_kaisen.start_screen.button_test": "test",
@@ -1914,7 +1942,8 @@
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "key.craft_kaisen.menu": "Menu",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
-      "gui.craft_kaisen.start_screen.label_human": "Human"
+      "gui.craft_kaisen.start_screen.label_human": "Human",
+      "item.craft_kaisen.playful_cloud": "Playful Cloud"
     }
   },
   "foldersRoot": {

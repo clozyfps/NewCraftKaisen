@@ -92,6 +92,7 @@ public class CraftKaisenModVariables {
 			clone.technique = original.technique;
 			clone.characterCreated = original.characterCreated;
 			clone.specialCheck = original.specialCheck;
+			clone.CeNature = original.CeNature;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -158,6 +159,7 @@ public class CraftKaisenModVariables {
 		public String technique = "";
 		public boolean characterCreated = false;
 		public boolean specialCheck = false;
+		public String CeNature = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -194,6 +196,7 @@ public class CraftKaisenModVariables {
 			nbt.putString("technique", technique);
 			nbt.putBoolean("characterCreated", characterCreated);
 			nbt.putBoolean("specialCheck", specialCheck);
+			nbt.putString("CeNature", CeNature);
 			return nbt;
 		}
 
@@ -227,6 +230,7 @@ public class CraftKaisenModVariables {
 			technique = nbt.getString("technique");
 			characterCreated = nbt.getBoolean("characterCreated");
 			specialCheck = nbt.getBoolean("specialCheck");
+			CeNature = nbt.getString("CeNature");
 		}
 	}
 
@@ -279,6 +283,7 @@ public class CraftKaisenModVariables {
 					variables.technique = message.data.technique;
 					variables.characterCreated = message.data.characterCreated;
 					variables.specialCheck = message.data.specialCheck;
+					variables.CeNature = message.data.CeNature;
 				}
 			});
 			context.setPacketHandled(true);
