@@ -773,7 +773,12 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/ReturnOutputProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Gui/Procedures/Value"
     },
@@ -1100,6 +1105,86 @@
         ]
       },
       "path": "~/Abilities"
+    },
+    {
+      "name": "SetSixEyes",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_six_eyes",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSixEyesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetPhysicallyGifted",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_physically_gifted",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPhysicallyGiftedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetFragileBody",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_fragile_body",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetFragileBodyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetNoEnergy",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_no_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetNoEnergyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
     }
   ],
   "variable_elements": [
@@ -1278,6 +1363,7 @@
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
       "key.craft_kaisen.ability_4": "Ability 4",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
+      "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
@@ -1289,6 +1375,7 @@
       "gui.craft_kaisen.start_screen.label_finish": "SAVE",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "key.craft_kaisen.menu": "Menu",
+      "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
       "gui.craft_kaisen.start_screen.label_human": "Human"
     }

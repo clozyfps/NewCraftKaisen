@@ -1,11 +1,22 @@
 
 package net.mcreator.craftkaisen.network;
 
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+
+import net.mcreator.craftkaisen.procedures.Ab6pressedProcedure;
 import net.mcreator.craftkaisen.CraftKaisenMod;
+
+import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Ability6Message {
-
 	int type, pressedms;
 
 	public Ability6Message(int type, int pressedms) {
@@ -36,21 +47,17 @@ public class Ability6Message {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
-
 		if (type == 0) {
 
 			Ab6pressedProcedure.execute(entity);
 		}
-
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		CraftKaisenMod.addNetworkMessage(Ability6Message.class, Ability6Message::buffer, Ability6Message::new, Ability6Message::handler);
 	}
-
 }

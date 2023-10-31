@@ -1,13 +1,28 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 
 public class ResetButtonProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		{
+			boolean _setval = false;
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.characterCreated = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			boolean _setval = false;
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.specialCheck = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		{
 			double _setval = 0;
 			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -86,6 +101,20 @@ public class ResetButtonProcedure {
 			});
 		}
 		{
+			double _setval = 10;
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.currentOutput = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			double _setval = 10;
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.maxOutput = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
 			String _setval = "Human";
 			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.race = _setval;
@@ -135,6 +164,27 @@ public class ResetButtonProcedure {
 			String _setval = "";
 			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.currentMove = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "";
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.abilitylist = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "";
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.technique = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "";
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.special = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
