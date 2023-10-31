@@ -151,7 +151,7 @@ public class RandomiseCursedTechniqueProcedure {
 		}
 		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).special).equals("Six Eyes")) {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("You were born with the Six Eyes (granted 50 cursed energy and energt control stats)"), false);
+				_player.displayClientMessage(Component.literal("You were born with the Six Eyes (granted 50 cursed energy and energy control stats)"), false);
 		}
 	}
 }

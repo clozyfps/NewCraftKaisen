@@ -6,6 +6,8 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 
@@ -25,6 +27,7 @@ public class OnFirstJoinProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
+		double randomnature = 0;
 		if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).characterCreated == false) {
 			{
 				boolean _setval = false;
@@ -207,6 +210,48 @@ public class OnFirstJoinProcedure {
 					capability.special = _setval;
 					capability.syncPlayerVariables(entity);
 				});
+			}
+			randomnature = Mth.nextInt(RandomSource.create(), 1, 100);
+			if (randomnature <= 5) {
+				{
+					String _setval = "Rough";
+					entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.CeNature = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if (randomnature > 5 && randomnature <= 10) {
+				{
+					String _setval = "Electricity";
+					entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.CeNature = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if (randomnature > 10 && randomnature <= 15) {
+				{
+					String _setval = "Flame";
+					entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.CeNature = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if (randomnature > 15 && randomnature <= 20) {
+				{
+					String _setval = "Frost";
+					entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.CeNature = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else {
+				{
+					String _setval = "Basic";
+					entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.CeNature = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}
