@@ -851,8 +851,8 @@
       "registry_name": "start_screen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StartScreenScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/StartScreenMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/StartScreenScreen.java",
           "src/main/java/net/mcreator/craftkaisen/network/StartScreenButtonMessage.java"
         ]
       },
@@ -997,8 +997,8 @@
       "registry_name": "reversal_red_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java"
         ]
       },
       "path": "~/Mobs/Abilities"
@@ -1230,8 +1230,8 @@
       "registry_name": "playful_cloud",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json"
+          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json",
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java"
         ]
       },
       "path": "~/Items"
@@ -1257,8 +1257,8 @@
       "registry_name": "snowflake",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/snowflake.json"
+          "src/main/resources/assets/craft_kaisen/particles/snowflake.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1322,8 +1322,8 @@
       "registry_name": "purple_electricity",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json"
         ]
       },
       "path": "~/Particles"
@@ -1338,9 +1338,9 @@
       "metadata": {
         "files": [
           "src/main/resources/data/craft_kaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
           "src/main/resources/assets/craft_kaisen/models/item/satoru_gojo_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -1623,9 +1623,9 @@
       "registry_name": "move_gui",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/MoveGuiMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java"
         ]
       },
       "path": "~/Gui/Procedures"
@@ -1760,8 +1760,8 @@
       "registry_name": "sound_wave",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json"
         ]
       },
       "path": "~/Particles"
@@ -1795,9 +1795,9 @@
       "registry_name": "explode_ranged",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java",
           "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json",
-          "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -1851,8 +1851,8 @@
       "registry_name": "red_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/RedParticleParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/red_particle.json"
+          "src/main/resources/assets/craft_kaisen/particles/red_particle.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RedParticleParticle.java"
         ]
       },
       "path": "~/Particles"
