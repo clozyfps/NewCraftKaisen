@@ -41,6 +41,9 @@ public class MenuOnKeyPressedProcedure {
 				}
 			}
 		} else if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).characterCreated == true) {
+			entity.getPersistentData().putDouble("moveNumber", 1);
+			entity.getPersistentData().putDouble("moveCost", 0);
+			entity.getPersistentData().putString("moveDisplay", "");
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);

@@ -1024,8 +1024,7 @@
           "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
         ]
-      },
-      "path": "~/Mobs/Abilities"
+      }
     },
     {
       "name": "ReversalRedProjectile",
@@ -1036,9 +1035,9 @@
       "registry_name": "reversal_red_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
         ]
       },
       "path": "~/Ranged"
@@ -1246,8 +1245,7 @@
       "registry_name": "ck_mobs",
       "metadata": {
         "files": []
-      },
-      "path": "~/Creative Tabs"
+      }
     },
     {
       "name": "PlayfulCloud",
@@ -1273,8 +1271,7 @@
       "registry_name": "ck_weapons",
       "metadata": {
         "files": []
-      },
-      "path": "~/Creative Tabs"
+      }
     },
     {
       "name": "Snowflake",
@@ -1370,8 +1367,7 @@
           "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java"
         ]
-      },
-      "path": "~/Mobs"
+      }
     },
     {
       "name": "SatoruGojoOnEntityTickUpdate",
@@ -1394,8 +1390,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Mobs/Procedure"
+      }
     },
     {
       "name": "ReturnSkillpoints",
@@ -1687,8 +1682,107 @@
             "type": "entity"
           }
         ]
+      }
+    },
+    {
+      "name": "SetSkillPoints",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_skill_points",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSkillPointsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
       },
-      "path": "~/Procedures"
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetLimitless",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_limitless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetLimitlessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetLevel",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_level",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ReturnMoveList",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_move_list",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnMoveListProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetExp",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_exp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetExpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
     }
   ],
   "variable_elements": [
@@ -1879,12 +1973,12 @@
       "gui.craft_kaisen.move_gui.button_4": "4",
       "key.craft_kaisen.ability_1": "Ability 1",
       "gui.craft_kaisen.move_gui.button_3": "3",
-      "key.craft_kaisen.ability_2": "Ability 2",
       "gui.craft_kaisen.move_gui.button_6": "6",
+      "key.craft_kaisen.ability_2": "Ability 2",
       "key.craft_kaisen.ability_3": "Ability 3",
       "gui.craft_kaisen.move_gui.button_5": "5",
-      "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "gui.craft_kaisen.start_screen.label_cursed_spirit": "Curse",
+      "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
@@ -1998,6 +2092,10 @@
         "children": []
       },
       {
+        "name": "Creative Tabs",
+        "children": []
+      },
+      {
         "name": "Particles",
         "children": []
       },
@@ -2032,6 +2130,19 @@
         "children": []
       },
       {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          },
+          {
+            "name": "Abilities",
+            "children": []
+          }
+        ]
+      },
+      {
         "name": "Recipe",
         "children": []
       },
@@ -2049,23 +2160,6 @@
         "children": [
           {
             "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Creative Tabs",
-        "children": []
-      },
-      {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "Procedure",
-            "children": []
-          },
-          {
-            "name": "Abilities",
             "children": []
           }
         ]
