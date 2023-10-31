@@ -229,7 +229,7 @@
     {
       "name": "SetCommand",
       "type": "command",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "set_command",
       "metadata": {
@@ -870,7 +870,7 @@
       "name": "StartScreen",
       "type": "gui",
       "sortid": 68,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "start_screen",
       "metadata": {
@@ -1016,7 +1016,7 @@
       "name": "ReversalRedEntity",
       "type": "livingentity",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "reversal_red_entity",
       "metadata": {
@@ -1024,7 +1024,8 @@
           "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
         ]
-      }
+      },
+      "path": "~/Mobs/Abilities"
     },
     {
       "name": "ReversalRedProjectile",
@@ -1245,7 +1246,8 @@
       "registry_name": "ck_mobs",
       "metadata": {
         "files": []
-      }
+      },
+      "path": "~/Creative Tabs"
     },
     {
       "name": "PlayfulCloud",
@@ -1271,7 +1273,8 @@
       "registry_name": "ck_weapons",
       "metadata": {
         "files": []
-      }
+      },
+      "path": "~/Creative Tabs"
     },
     {
       "name": "Snowflake",
@@ -1357,7 +1360,7 @@
       "name": "SatoruGojo",
       "type": "livingentity",
       "sortid": 51,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "satoru_gojo",
       "metadata": {
@@ -1367,7 +1370,8 @@
           "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java"
         ]
-      }
+      },
+      "path": "~/Mobs"
     },
     {
       "name": "SatoruGojoOnEntityTickUpdate",
@@ -1390,7 +1394,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Mobs/Procedure"
     },
     {
       "name": "ReturnSkillpoints",
@@ -1653,7 +1658,7 @@
       "name": "MoveGui",
       "type": "gui",
       "sortid": 59,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "move_gui",
       "metadata": {
@@ -1682,7 +1687,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "SetSkillPoints",
@@ -1762,7 +1768,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "SetExp",
@@ -1965,8 +1972,8 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
-      "key.craft_kaisen.ability_4": "Ability 4",
       "itemGroup.tabck_mobs": "Ck Mobs",
+      "key.craft_kaisen.ability_4": "Ability 4",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
