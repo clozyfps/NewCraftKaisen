@@ -1,6 +1,16 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 
 import javax.annotation.Nullable;
 
@@ -8,14 +18,14 @@ import javax.annotation.Nullable;
 public class OnFirstJoinProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		execute(event, event.getEntity());
+		execute(event, event.getEntity().level, event.getEntity());
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double randomnature = 0;
@@ -139,20 +149,10 @@ public class OnFirstJoinProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				String _setval = "";
-				entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ability2 = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				String _setval = "";
-				entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ability3 = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+			CraftKaisenModVariables.MapVariables.get(world).ability2 = "";
+			CraftKaisenModVariables.MapVariables.get(world).syncData(world);
+			CraftKaisenModVariables.MapVariables.get(world).ability3 = "";
+			CraftKaisenModVariables.MapVariables.get(world).syncData(world);
 			{
 				String _setval = "";
 				entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

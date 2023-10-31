@@ -1,16 +1,17 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 
 public class Ab2PressedProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (entity.getPersistentData().getDouble("cooldown2") == 0) {
 			{
-				String _setval = (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).ability2;
+				String _setval = CraftKaisenModVariables.MapVariables.get(world).ability2;
 				entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.currentMove = _setval;
 					capability.syncPlayerVariables(entity);

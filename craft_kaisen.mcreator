@@ -15,9 +15,26 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "ReversalRedEntity",
@@ -450,6 +467,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -470,6 +491,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -720,6 +745,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -794,6 +823,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -814,6 +847,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -831,7 +868,12 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/ReturnOutputProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Gui/Procedures/Value"
     },
@@ -870,6 +912,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1113,6 +1159,7 @@
     {
       "name": "CkMobs",
       "type": "tab",
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ck_mobs",
@@ -1321,6 +1368,33 @@
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "PlayfulCloud",
+      "type": "tool",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playful_cloud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CkWeapons",
+      "type": "tab",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_weapons",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
     }
   ],
   "variable_elements": [
@@ -1503,9 +1577,11 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
+      "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "key.craft_kaisen.ability_4": "Ability 4",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
+      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
@@ -1518,8 +1594,11 @@
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "key.craft_kaisen.menu": "Menu",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
+      "itemGroup.tabck_weapons": "Ck Weapons",
+      "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
-      "gui.craft_kaisen.start_screen.label_human": "Human"
+      "gui.craft_kaisen.start_screen.label_human": "Human",
+      "item.craft_kaisen.playful_cloud": "Playful Cloud"
     }
   },
   "foldersRoot": {
