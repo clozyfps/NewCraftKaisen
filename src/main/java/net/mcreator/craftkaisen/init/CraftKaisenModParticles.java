@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.craftkaisen.client.particle.SnowflakeParticle;
+import net.mcreator.craftkaisen.client.particle.RedParticleParticle;
 import net.mcreator.craftkaisen.client.particle.PurpleElectricityParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -18,5 +19,6 @@ public class CraftKaisenModParticles {
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		event.register(CraftKaisenModParticleTypes.PURPLE_ELECTRICITY.get(), PurpleElectricityParticle::provider);
 		event.register(CraftKaisenModParticleTypes.SNOWFLAKE.get(), SnowflakeParticle::provider);
+		event.register(CraftKaisenModParticleTypes.RED_PARTICLE.get(), RedParticleParticle::provider);
 	}
 }
