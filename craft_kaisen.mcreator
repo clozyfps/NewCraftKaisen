@@ -229,7 +229,7 @@
     {
       "name": "SetCommand",
       "type": "command",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "set_command",
       "metadata": {
@@ -271,7 +271,7 @@
           "src/main/java/net/mcreator/craftkaisen/client/screens/MainOverlayOverlay.java"
         ]
       },
-      "path": "~/Overlay"
+      "path": "~/Gui"
     },
     {
       "name": "OnRespawn",
@@ -372,6 +372,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -392,6 +396,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -642,6 +650,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -716,6 +728,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -736,6 +752,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -797,6 +817,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -845,14 +869,14 @@
     {
       "name": "StartScreen",
       "type": "gui",
-      "sortid": 69,
-      "compiles": true,
+      "sortid": 68,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "start_screen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/StartScreenMenu.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/StartScreenScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/StartScreenMenu.java",
           "src/main/java/net/mcreator/craftkaisen/network/StartScreenButtonMessage.java"
         ]
       },
@@ -992,15 +1016,16 @@
       "name": "ReversalRedEntity",
       "type": "livingentity",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "reversal_red_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
         ]
-      }
+      },
+      "path": "~/Mobs/Abilities"
     },
     {
       "name": "ReversalRedProjectile",
@@ -1217,7 +1242,8 @@
       "registry_name": "ck_mobs",
       "metadata": {
         "files": []
-      }
+      },
+      "path": "~/Creative Tabs"
     },
     {
       "name": "PlayfulCloud",
@@ -1228,8 +1254,8 @@
       "registry_name": "playful_cloud",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json",
-          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json"
         ]
       },
       "path": "~/Items"
@@ -1243,7 +1269,8 @@
       "registry_name": "ck_weapons",
       "metadata": {
         "files": []
-      }
+      },
+      "path": "~/Creative Tabs"
     },
     {
       "name": "Snowflake",
@@ -1254,8 +1281,8 @@
       "registry_name": "snowflake",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/snowflake.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/snowflake.json"
         ]
       },
       "path": "~/Particles"
@@ -1319,8 +1346,8 @@
       "registry_name": "purple_electricity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json"
+          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1329,17 +1356,18 @@
       "name": "SatoruGojo",
       "type": "livingentity",
       "sortid": 51,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "satoru_gojo",
       "metadata": {
         "files": [
           "src/main/resources/data/craft_kaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
           "src/main/resources/assets/craft_kaisen/models/item/satoru_gojo_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java"
         ]
-      }
+      },
+      "path": "~/Mobs"
     },
     {
       "name": "SatoruGojoOnEntityTickUpdate",
@@ -1362,7 +1390,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Mobs/Procedure"
     },
     {
       "name": "ReturnSkillpoints",
@@ -1441,6 +1470,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1461,6 +1494,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1613,17 +1650,17 @@
       "name": "MoveGui",
       "type": "gui",
       "sortid": 59,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "move_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/MoveGuiMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java"
         ]
       },
-      "path": "~/Gui"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "Timers",
@@ -1642,27 +1679,8 @@
             "type": "entity"
           }
         ]
-      }
-    },
-    {
-      "name": "SetLimitless",
-      "type": "procedure",
-      "sortid": 68,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_limitless",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetLimitlessProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Procedures"
     },
     {
       "name": "SetSkillPoints",
@@ -1685,6 +1703,26 @@
       "path": "~/Commands/Procedures"
     },
     {
+      "name": "SetLimitless",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_limitless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetLimitlessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
       "name": "SetLevel",
       "type": "procedure",
       "sortid": 71,
@@ -1694,26 +1732,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/SetLevelProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "SetExp",
-      "type": "procedure",
-      "sortid": 72,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_exp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetExpProcedure.java"
         ],
         "dependencies": [
           {
@@ -1742,7 +1760,119 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SetExp",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_exp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetExpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SoundWave",
+      "type": "particle",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_wave",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "CursedSpeechMoves",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_speech_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpeechMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "ExplodeRanged",
+      "type": "rangeditem",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_ranged",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "ExplodeRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ExplodeRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedures"
     },
     {
       "name": "RedParticle",
@@ -1753,8 +1883,8 @@
       "registry_name": "red_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/red_particle.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/RedParticleParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RedParticleParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/red_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -1912,13 +2042,13 @@
     {
       "name": "ability2",
       "type": "string",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": ""
     },
     {
       "name": "ability3",
       "type": "string",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": ""
     },
     {
@@ -1972,7 +2102,7 @@
     {
       "name": "currentOutput",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "10.0"
     },
     {
@@ -2003,7 +2133,7 @@
       "name": "CeNature",
       "type": "string",
       "scope": "player_persistent",
-      "value": ""
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
@@ -2058,6 +2188,18 @@
       {
         "name": "Abilities",
         "children": [
+          {
+            "name": "MoveUse",
+            "children": []
+          },
+          {
+            "name": "Limitless",
+            "children": []
+          },
+          {
+            "name": "CursedSpeech",
+            "children": []
+          },
           {
             "name": "Mobs",
             "children": [
@@ -2178,11 +2320,11 @@
         "name": "Mobs",
         "children": [
           {
-            "name": "Procedure",
+            "name": "Abilities",
             "children": []
           },
           {
-            "name": "Abilities",
+            "name": "Procedure",
             "children": []
           }
         ]

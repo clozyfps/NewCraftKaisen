@@ -1,13 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 
 import javax.annotation.Nullable;
 
@@ -50,6 +43,34 @@ public class SetMovesProcedure {
 			} else if (entity.getPersistentData().getDouble("moveNumber") == 7) {
 				entity.getPersistentData().putString("moveDisplay", "Unlimited Void");
 				entity.getPersistentData().putDouble("moveCost", 50);
+			}
+		}
+		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Cursed Speech")) {
+			entity.getPersistentData().putDouble("maxMoves", 8);
+			if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+				entity.getPersistentData().putString("moveDisplay", "Explode");
+				entity.getPersistentData().putDouble("moveCost", 7);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
+				entity.getPersistentData().putString("moveDisplay", "Twist");
+				entity.getPersistentData().putDouble("moveCost", 10);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
+				entity.getPersistentData().putString("moveDisplay", "Crush");
+				entity.getPersistentData().putDouble("moveCost", 15);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
+				entity.getPersistentData().putString("moveDisplay", "Crumble Away");
+				entity.getPersistentData().putDouble("moveCost", 15);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
+				entity.getPersistentData().putString("moveDisplay", "Dont Move");
+				entity.getPersistentData().putDouble("moveCost", 20);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 6) {
+				entity.getPersistentData().putString("moveDisplay", "Sleep");
+				entity.getPersistentData().putDouble("moveCost", 25);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 7) {
+				entity.getPersistentData().putString("moveDisplay", "Run Away");
+				entity.getPersistentData().putDouble("moveCost", 30);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 8) {
+				entity.getPersistentData().putString("moveDisplay", "Blast Away");
+				entity.getPersistentData().putDouble("moveCost", 35);
 			}
 		}
 	}
