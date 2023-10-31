@@ -1,18 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
-import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 
 import javax.annotation.Nullable;
 
@@ -67,8 +55,6 @@ public class LimitlessAbilitiesTickProcedure {
 		}
 		if (entity.getPersistentData().getBoolean("red") == true) {
 			entity.getPersistentData().putDouble("redDistance", (entity.getPersistentData().getDouble("redDistance") + 1));
-			RedFlyingProcedure.execute(world, (x + entity.getLookAngle().x * (entity.getPersistentData().getDouble("redDistance") + 3)), (y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance")),
-					(z + entity.getLookAngle().z * (entity.getPersistentData().getDouble("redDistance") + 3)), entity);
 			if (world.getBlockState(new BlockPos(x + entity.getLookAngle().x * (entity.getPersistentData().getDouble("redDistance") + 10), y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance"),
 					z + entity.getLookAngle().z * (entity.getPersistentData().getDouble("redDistance") + 10))).canOcclude()) {
 				entity.getPersistentData().putBoolean("red", false);

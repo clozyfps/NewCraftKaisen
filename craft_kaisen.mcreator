@@ -1073,6 +1073,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1562,6 +1566,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1760,15 +1768,15 @@
       "path": "~/Particles"
     },
     {
-      "name": "RedFlying",
+      "name": "LimitlessAbilitiesTick",
       "type": "procedure",
-      "sortid": 75,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "red_flying",
+      "registry_name": "limitless_abilities_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RedFlyingProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessAbilitiesTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -1795,15 +1803,15 @@
       }
     },
     {
-      "name": "LimitlessAbilitiesTick",
+      "name": "RedFlying",
       "type": "procedure",
-      "sortid": 76,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "limitless_abilities_tick",
+      "registry_name": "red_flying",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessAbilitiesTickProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/RedFlyingProcedure.java"
         ],
         "dependencies": [
           {
@@ -2010,8 +2018,8 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
-      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_4": "Ability 4",
+      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
@@ -2137,6 +2145,10 @@
         "children": []
       },
       {
+        "name": "Creative Tabs",
+        "children": []
+      },
+      {
         "name": "Particles",
         "children": []
       },
@@ -2169,6 +2181,19 @@
       {
         "name": "Structure",
         "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          },
+          {
+            "name": "Abilities",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Recipe",
