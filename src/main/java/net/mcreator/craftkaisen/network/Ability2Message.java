@@ -6,8 +6,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.craftkaisen.procedures.Ab2PressedProcedure;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 import java.util.function.Supplier;
@@ -44,16 +47,13 @@ public class Ability2Message {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
-
 		if (type == 0) {
 
-			Ab2PressedProcedure.execute(world, entity);
+			Ab2PressedProcedure.execute(entity);
 		}
-
 	}
 
 	@SubscribeEvent

@@ -15,14 +15,9 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
-import net.minecraft.world.level.saveddata.SavedData;
-import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
@@ -38,7 +33,6 @@ import java.util.function.Supplier;
 public class CraftKaisenModVariables {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
-		CraftKaisenMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
 		CraftKaisenMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
 	}
 
@@ -85,6 +79,8 @@ public class CraftKaisenModVariables {
 			clone.strengthStat = original.strengthStat;
 			clone.speedStat = original.speedStat;
 			clone.ability1 = original.ability1;
+			clone.ability2 = original.ability2;
+			clone.ability3 = original.ability3;
 			clone.ability4 = original.ability4;
 			clone.ability5 = original.ability5;
 			clone.ability6 = original.ability6;
@@ -96,142 +92,11 @@ public class CraftKaisenModVariables {
 			clone.technique = original.technique;
 			clone.characterCreated = original.characterCreated;
 			clone.specialCheck = original.specialCheck;
+			clone.CeNature = original.CeNature;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
 			}
-		}
-
-		@SubscribeEvent
-		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level.isClientSide()) {
-				SavedData mapdata = MapVariables.get(event.getEntity().level);
-				SavedData worlddata = WorldVariables.get(event.getEntity().level);
-				if (mapdata != null)
-					CraftKaisenMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(0, mapdata));
-				if (worlddata != null)
-					CraftKaisenMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
-			}
-		}
-
-		@SubscribeEvent
-		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level.isClientSide()) {
-				SavedData worlddata = WorldVariables.get(event.getEntity().level);
-				if (worlddata != null)
-					CraftKaisenMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
-			}
-		}
-	}
-
-	public static class WorldVariables extends SavedData {
-		public static final String DATA_NAME = "craft_kaisen_worldvars";
-
-		public static WorldVariables load(CompoundTag tag) {
-			WorldVariables data = new WorldVariables();
-			data.read(tag);
-			return data;
-		}
-
-		public void read(CompoundTag nbt) {
-		}
-
-		@Override
-		public CompoundTag save(CompoundTag nbt) {
-			return nbt;
-		}
-
-		public void syncData(LevelAccessor world) {
-			this.setDirty();
-			if (world instanceof Level level && !level.isClientSide())
-				CraftKaisenMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
-		}
-
-		static WorldVariables clientSide = new WorldVariables();
-
-		public static WorldVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class MapVariables extends SavedData {
-		public static final String DATA_NAME = "craft_kaisen_mapvars";
-		public String ability2 = "";
-		public String ability3 = "";
-
-		public static MapVariables load(CompoundTag tag) {
-			MapVariables data = new MapVariables();
-			data.read(tag);
-			return data;
-		}
-
-		public void read(CompoundTag nbt) {
-			ability2 = nbt.getString("ability2");
-			ability3 = nbt.getString("ability3");
-		}
-
-		@Override
-		public CompoundTag save(CompoundTag nbt) {
-			nbt.putString("ability2", ability2);
-			nbt.putString("ability3", ability3);
-			return nbt;
-		}
-
-		public void syncData(LevelAccessor world) {
-			this.setDirty();
-			if (world instanceof Level && !world.isClientSide())
-				CraftKaisenMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new SavedDataSyncMessage(0, this));
-		}
-
-		static MapVariables clientSide = new MapVariables();
-
-		public static MapVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevelAccessor serverLevelAcc) {
-				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(e -> MapVariables.load(e), MapVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class SavedDataSyncMessage {
-		public int type;
-		public SavedData data;
-
-		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
-			this.type = buffer.readInt();
-			this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
-			if (this.data instanceof MapVariables _mapvars)
-				_mapvars.read(buffer.readNbt());
-			else if (this.data instanceof WorldVariables _worldvars)
-				_worldvars.read(buffer.readNbt());
-		}
-
-		public SavedDataSyncMessage(int type, SavedData data) {
-			this.type = type;
-			this.data = data;
-		}
-
-		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
-			buffer.writeInt(message.type);
-			buffer.writeNbt(message.data.save(new CompoundTag()));
-		}
-
-		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer()) {
-					if (message.type == 0)
-						MapVariables.clientSide = (MapVariables) message.data;
-					else
-						WorldVariables.clientSide = (WorldVariables) message.data;
-				}
-			});
-			context.setPacketHandled(true);
 		}
 	}
 
@@ -279,6 +144,8 @@ public class CraftKaisenModVariables {
 		public double strengthStat = 0;
 		public double speedStat = 0;
 		public String ability1 = "";
+		public String ability2 = "";
+		public String ability3 = "";
 		public String ability4 = "";
 		public String ability5 = "";
 		public String ability6 = "";
@@ -292,6 +159,7 @@ public class CraftKaisenModVariables {
 		public String technique = "";
 		public boolean characterCreated = false;
 		public boolean specialCheck = false;
+		public String CeNature = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -313,6 +181,8 @@ public class CraftKaisenModVariables {
 			nbt.putDouble("strengthStat", strengthStat);
 			nbt.putDouble("speedStat", speedStat);
 			nbt.putString("ability1", ability1);
+			nbt.putString("ability2", ability2);
+			nbt.putString("ability3", ability3);
 			nbt.putString("ability4", ability4);
 			nbt.putString("ability5", ability5);
 			nbt.putString("ability6", ability6);
@@ -326,6 +196,7 @@ public class CraftKaisenModVariables {
 			nbt.putString("technique", technique);
 			nbt.putBoolean("characterCreated", characterCreated);
 			nbt.putBoolean("specialCheck", specialCheck);
+			nbt.putString("CeNature", CeNature);
 			return nbt;
 		}
 
@@ -344,6 +215,8 @@ public class CraftKaisenModVariables {
 			strengthStat = nbt.getDouble("strengthStat");
 			speedStat = nbt.getDouble("speedStat");
 			ability1 = nbt.getString("ability1");
+			ability2 = nbt.getString("ability2");
+			ability3 = nbt.getString("ability3");
 			ability4 = nbt.getString("ability4");
 			ability5 = nbt.getString("ability5");
 			ability6 = nbt.getString("ability6");
@@ -357,6 +230,7 @@ public class CraftKaisenModVariables {
 			technique = nbt.getString("technique");
 			characterCreated = nbt.getBoolean("characterCreated");
 			specialCheck = nbt.getBoolean("specialCheck");
+			CeNature = nbt.getString("CeNature");
 		}
 	}
 
@@ -394,6 +268,8 @@ public class CraftKaisenModVariables {
 					variables.strengthStat = message.data.strengthStat;
 					variables.speedStat = message.data.speedStat;
 					variables.ability1 = message.data.ability1;
+					variables.ability2 = message.data.ability2;
+					variables.ability3 = message.data.ability3;
 					variables.ability4 = message.data.ability4;
 					variables.ability5 = message.data.ability5;
 					variables.ability6 = message.data.ability6;
@@ -407,6 +283,7 @@ public class CraftKaisenModVariables {
 					variables.technique = message.data.technique;
 					variables.characterCreated = message.data.characterCreated;
 					variables.specialCheck = message.data.specialCheck;
+					variables.CeNature = message.data.CeNature;
 				}
 			});
 			context.setPacketHandled(true);
