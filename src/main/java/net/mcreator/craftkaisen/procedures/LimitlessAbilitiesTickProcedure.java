@@ -5,10 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -18,10 +15,6 @@ import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 
 import javax.annotation.Nullable;
-
-import java.util.stream.Collectors;
-import java.util.List;
-import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class LimitlessAbilitiesTickProcedure {
@@ -74,33 +67,14 @@ public class LimitlessAbilitiesTickProcedure {
 		}
 		if (entity.getPersistentData().getBoolean("red") == true) {
 			entity.getPersistentData().putDouble("redDistance", (entity.getPersistentData().getDouble("redDistance") + 1));
-			RedFlyingProcedure.execute(world, (x + entity.getLookAngle().x * (entity.getPersistentData().getDouble("redDistance") + 3)), (y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance") + 0.6),
+			RedFlyingProcedure.execute(world, (x + entity.getLookAngle().x * (entity.getPersistentData().getDouble("redDistance") + 3)), (y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance")),
 					(z + entity.getLookAngle().z * (entity.getPersistentData().getDouble("redDistance") + 3)), entity);
-			{
-				final Vec3 _center = new Vec3((x + entity.getLookAngle().x * entity.getPersistentData().getDouble("redDistance")), (y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance")),
-						(z + entity.getLookAngle().z * entity.getPersistentData().getDouble("redDistance")));
-				List<Entity> _entfound = world
-						.getEntitiesOfClass(Entity.class,
-								new AABB(_center, _center).inflate(((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 5) / 2d), e -> true)
-						.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
-				for (Entity entityiterator : _entfound) {
-					if (!(entity == entityiterator) && !(entity instanceof FallingBlockEntity)) {
-						entityiterator.setDeltaMovement(new Vec3((((x + entity.getLookAngle().x * entity.getPersistentData().getDouble("redDistance")) - entityiterator.getX()) / 3),
-								(((y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance")) - entityiterator.getY()) / 3),
-								(((z + entity.getLookAngle().z * entity.getPersistentData().getDouble("redDistance")) - entityiterator.getZ()) / 3)));
-					}
-				}
-			}
-			if (world.getBlockState(new BlockPos(
-					x + entity.getLookAngle().x
-							* (entity.getPersistentData().getDouble("redDistance") + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10),
-					y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance") + 0.6, z + entity.getLookAngle().z * entity.getPersistentData().getDouble("redDistance")
-							* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)))
-					.canOcclude()) {
+			if (world.getBlockState(new BlockPos(x + entity.getLookAngle().x * (entity.getPersistentData().getDouble("redDistance") + 10), y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance"),
+					z + entity.getLookAngle().z * (entity.getPersistentData().getDouble("redDistance") + 10))).canOcclude()) {
 				entity.getPersistentData().putBoolean("red", false);
 				entity.getPersistentData().putDouble("redDistance", 0);
 			}
-			if (entity.getPersistentData().getDouble("redDistance") >= 20 + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 3) {
+			if (entity.getPersistentData().getDouble("redDistance") >= 40 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 100)) {
 				entity.getPersistentData().putBoolean("red", false);
 				entity.getPersistentData().putDouble("redDistance", 0);
 			}

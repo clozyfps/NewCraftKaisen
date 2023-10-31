@@ -1012,9 +1012,9 @@
       "registry_name": "reversal_red_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
         ]
       },
       "path": "~/Ranged"
@@ -1077,7 +1077,7 @@
           }
         ]
       },
-      "path": "~/Abilities"
+      "path": "~/Abilities/Limitless"
     },
     {
       "name": "SetSixEyes",
@@ -1570,7 +1570,7 @@
           }
         ]
       },
-      "path": "~/Abilities"
+      "path": "~/Abilities/MoveUse"
     },
     {
       "name": "ShowUnlock",
@@ -1890,7 +1890,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Abilities/Limitless"
     },
     {
       "name": "RedFlying",
@@ -1925,7 +1926,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Abilities/Limitless"
     }
   ],
   "variable_elements": [
