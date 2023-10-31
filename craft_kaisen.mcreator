@@ -2108,8 +2108,8 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
-      "key.craft_kaisen.ability_4": "Ability 4",
       "itemGroup.tabck_mobs": "Ck Mobs",
+      "key.craft_kaisen.ability_4": "Ability 4",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
