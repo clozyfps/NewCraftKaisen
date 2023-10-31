@@ -1,20 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-
-import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
-import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
-import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
 
 import javax.annotation.Nullable;
 
@@ -52,7 +38,7 @@ public class CursedSpeechMovesProcedure {
 						if (!projectileLevel.isClientSide()) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new ExplodeRangedEntity(CraftKaisenModEntities.EXPLODE_RANGED.get(), level);
+									AbstractArrow entityToSpawn = new ExplodeRangedEntity(CraftKaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);

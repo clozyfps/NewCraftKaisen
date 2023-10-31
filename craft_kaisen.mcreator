@@ -229,7 +229,7 @@
     {
       "name": "SetCommand",
       "type": "command",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "set_command",
       "metadata": {
@@ -870,7 +870,7 @@
       "name": "StartScreen",
       "type": "gui",
       "sortid": 68,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "start_screen",
       "metadata": {
@@ -1016,7 +1016,7 @@
       "name": "ReversalRedEntity",
       "type": "livingentity",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "reversal_red_entity",
       "metadata": {
@@ -1036,12 +1036,12 @@
       "registry_name": "reversal_red_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
         ]
       },
-      "path": "~/Abilities/Limitless"
+      "path": "~/Ranged"
     },
     {
       "name": "ReversalRedProjectileWhileProjectileFlyingTick",
@@ -1105,7 +1105,7 @@
           }
         ]
       },
-      "path": "~/Abilities/Limitless"
+      "path": "~/Abilities"
     },
     {
       "name": "SetSixEyes",
@@ -1360,7 +1360,7 @@
       "name": "SatoruGojo",
       "type": "livingentity",
       "sortid": 51,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "satoru_gojo",
       "metadata": {
@@ -1610,7 +1610,7 @@
           }
         ]
       },
-      "path": "~/Abilities/MoveUse"
+      "path": "~/Abilities"
     },
     {
       "name": "ShowUnlock",
@@ -1658,7 +1658,7 @@
       "name": "MoveGui",
       "type": "gui",
       "sortid": 59,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "move_gui",
       "metadata": {
@@ -1807,6 +1807,42 @@
       "path": "~/Particles"
     },
     {
+      "name": "CursedSpeechMoves",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_speech_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpeechMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "ExplodeRanged",
+      "type": "rangeditem",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_ranged",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
       "name": "ExplodeRangedWhileProjectileFlyingTick",
       "type": "procedure",
       "sortid": 75,
@@ -1847,40 +1883,89 @@
       "path": "~/Ranged/Procedures"
     },
     {
-      "name": "ExplodeRanged",
-      "type": "rangeditem",
+      "name": "RedParticle",
+      "type": "particle",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RedParticleParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/red_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "LimitlessAbilitiesTick",
+      "type": "procedure",
       "sortid": 76,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "explode_ranged",
+      "registry_name": "limitless_abilities_tick",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json",
-          "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java"
-        ]
-      },
-      "path": "~/Abilities/CursedSpeech"
-    },
-    {
-      "name": "CursedSpeechMoves",
-      "type": "procedure",
-      "sortid": 77,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_speech_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpeechMovesProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessAbilitiesTickProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
-      },
-      "path": "~/Abilities/MoveUse"
+      }
+    },
+    {
+      "name": "RedFlying",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_flying",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RedFlyingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2063,8 +2148,8 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
-      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_4": "Ability 4",
+      "itemGroup.tabck_mobs": "Ck Mobs",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
@@ -2086,7 +2171,6 @@
       "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
-      "item.craft_kaisen.explode_ranged": "Explode Ranged",
       "gui.craft_kaisen.start_screen.button_test": "test",
       "gui.craft_kaisen.move_gui.button_unlock": "Unlock",
       "gui.craft_kaisen.start_screen.label_finish": "SAVE",
@@ -2113,15 +2197,6 @@
         "name": "Abilities",
         "children": [
           {
-            "name": "Mobs",
-            "children": [
-              {
-                "name": "Procedures",
-                "children": []
-              }
-            ]
-          },
-          {
             "name": "MoveUse",
             "children": []
           },
@@ -2132,6 +2207,15 @@
           {
             "name": "CursedSpeech",
             "children": []
+          },
+          {
+            "name": "Mobs",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -2244,11 +2328,11 @@
         "name": "Mobs",
         "children": [
           {
-            "name": "Procedure",
+            "name": "Abilities",
             "children": []
           },
           {
-            "name": "Abilities",
+            "name": "Procedure",
             "children": []
           }
         ]

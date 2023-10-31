@@ -18,4 +18,5 @@ public class CraftKaisenModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> PURPLE_ELECTRICITY = REGISTRY.register("purple_electricity", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> SNOWFLAKE = REGISTRY.register("snowflake", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> SOUND_WAVE = REGISTRY.register("sound_wave", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> RED_PARTICLE = REGISTRY.register("red_particle", () -> new SimpleParticleType(true));
 }
