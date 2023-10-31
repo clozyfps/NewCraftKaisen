@@ -88,6 +88,7 @@ public class CraftKaisenModVariables {
 			clone.special = original.special;
 			clone.maxOutput = original.maxOutput;
 			clone.level = original.level;
+			clone.currentOutput = original.currentOutput;
 			clone.abilitylist = original.abilitylist;
 			clone.technique = original.technique;
 			clone.characterCreated = original.characterCreated;
@@ -95,7 +96,6 @@ public class CraftKaisenModVariables {
 			clone.CeNature = original.CeNature;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
-				clone.currentOutput = original.currentOutput;
 			}
 		}
 	}

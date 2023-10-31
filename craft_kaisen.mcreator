@@ -271,7 +271,7 @@
           "src/main/java/net/mcreator/craftkaisen/client/screens/MainOverlayOverlay.java"
         ]
       },
-      "path": "~/Gui"
+      "path": "~/Overlay"
     },
     {
       "name": "OnRespawn",
@@ -1731,6 +1731,26 @@
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ReturnMoveList",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_move_list",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnMoveListProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1875,7 +1895,7 @@
     {
       "name": "currentOutput",
       "type": "number",
-      "scope": "player_lifetime",
+      "scope": "player_persistent",
       "value": "10.0"
     },
     {
@@ -1913,8 +1933,8 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
-      "key.craft_kaisen.ability_4": "Ability 4",
       "itemGroup.tabck_mobs": "Ck Mobs",
+      "key.craft_kaisen.ability_4": "Ability 4",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
