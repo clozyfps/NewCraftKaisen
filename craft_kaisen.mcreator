@@ -229,7 +229,7 @@
     {
       "name": "SetCommand",
       "type": "command",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "set_command",
       "metadata": {
@@ -870,7 +870,7 @@
       "name": "StartScreen",
       "type": "gui",
       "sortid": 68,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "start_screen",
       "metadata": {
@@ -1016,7 +1016,7 @@
       "name": "ReversalRedEntity",
       "type": "livingentity",
       "sortid": 4,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_entity",
       "metadata": {
@@ -1036,12 +1036,12 @@
       "registry_name": "reversal_red_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
         ]
       },
-      "path": "~/Ranged"
+      "path": "~/Abilities/Limitless"
     },
     {
       "name": "ReversalRedProjectileWhileProjectileFlyingTick",
@@ -1105,7 +1105,7 @@
           }
         ]
       },
-      "path": "~/Abilities"
+      "path": "~/Abilities/Limitless"
     },
     {
       "name": "SetSixEyes",
@@ -1360,7 +1360,7 @@
       "name": "SatoruGojo",
       "type": "livingentity",
       "sortid": 51,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "satoru_gojo",
       "metadata": {
@@ -1610,7 +1610,7 @@
           }
         ]
       },
-      "path": "~/Abilities"
+      "path": "~/Abilities/MoveUse"
     },
     {
       "name": "ShowUnlock",
@@ -1658,7 +1658,7 @@
       "name": "MoveGui",
       "type": "gui",
       "sortid": 59,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "move_gui",
       "metadata": {
@@ -1790,6 +1790,97 @@
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SoundWave",
+      "type": "particle",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_wave",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ExplodeRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ExplodeRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedures"
+    },
+    {
+      "name": "ExplodeRanged",
+      "type": "rangeditem",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_ranged",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "CursedSpeechMoves",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_speech_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpeechMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
     }
   ],
   "variable_elements": [
@@ -1995,6 +2086,7 @@
       "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
+      "item.craft_kaisen.explode_ranged": "Explode Ranged",
       "gui.craft_kaisen.start_screen.button_test": "test",
       "gui.craft_kaisen.move_gui.button_unlock": "Unlock",
       "gui.craft_kaisen.start_screen.label_finish": "SAVE",
@@ -2028,6 +2120,18 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "MoveUse",
+            "children": []
+          },
+          {
+            "name": "Limitless",
+            "children": []
+          },
+          {
+            "name": "CursedSpeech",
+            "children": []
           }
         ]
       },

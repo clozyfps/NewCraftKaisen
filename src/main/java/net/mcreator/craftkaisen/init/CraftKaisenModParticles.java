@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.craftkaisen.client.particle.SoundWaveParticle;
 import net.mcreator.craftkaisen.client.particle.SnowflakeParticle;
 import net.mcreator.craftkaisen.client.particle.PurpleElectricityParticle;
 
@@ -18,5 +19,6 @@ public class CraftKaisenModParticles {
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		event.register(CraftKaisenModParticleTypes.PURPLE_ELECTRICITY.get(), PurpleElectricityParticle::provider);
 		event.register(CraftKaisenModParticleTypes.SNOWFLAKE.get(), SnowflakeParticle::provider);
+		event.register(CraftKaisenModParticleTypes.SOUND_WAVE.get(), SoundWaveParticle::provider);
 	}
 }
