@@ -21,5 +21,6 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.REVERSAL_RED_ENTITY.get(), ReversalRedEntityRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.REVERSAL_RED_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.SATORU_GOJO.get(), SatoruGojoRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.EXPLODE_RANGED.get(), ThrownItemRenderer::new);
 	}
 }
