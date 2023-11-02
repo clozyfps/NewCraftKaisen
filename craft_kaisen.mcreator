@@ -1235,7 +1235,7 @@
           "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json"
         ]
       },
-      "path": "~/Weapons"
+      "path": "~/Items"
     },
     {
       "name": "CkWeapons",
@@ -3395,64 +3395,6 @@
       "path": "~/Commands/Procedures"
     },
     {
-      "name": "BlackBlindFold",
-      "type": "armor",
-      "sortid": 123,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "black_blind_fold",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/black_blind_fold_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/BlackBlindFoldItem.java"
-        ]
-      },
-      "path": "~/Armor"
-    },
-    {
-      "name": "CkArmor",
-      "type": "tab",
-      "sortid": 124,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ck_armor",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Creative Tabs"
-    },
-    {
-      "name": "BandageBlindFold",
-      "type": "armor",
-      "sortid": 125,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bandage_blind_fold",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/bandage_blind_fold_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/BandageBlindFoldItem.java"
-        ]
-      },
-      "path": "~/Armor"
-    },
-    {
-      "name": "JujutsuSorcererUniform",
-      "type": "armor",
-      "sortid": 126,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jujutsu_sorcerer_uniform",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/jujutsu_sorcerer_uniform_chestplate.json",
-          "src/main/resources/assets/craft_kaisen/models/item/jujutsu_sorcerer_uniform_leggings.json",
-          "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererUniformItem.java"
-        ]
-      },
-      "path": "~/Armor"
-    },
-    {
       "name": "InvertedSpear",
       "type": "tool",
       "sortid": 127,
@@ -3463,21 +3405,6 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/item/InvertedSpearItem.java",
           "src/main/resources/assets/craft_kaisen/models/item/inverted_spear.json"
-        ]
-      },
-      "path": "~/Weapons"
-    },
-    {
-      "name": "SplitSoulKatana",
-      "type": "tool",
-      "sortid": 128,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "split_soul_katana",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/SplitSoulKatanaItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/split_soul_katana.json"
         ]
       },
       "path": "~/Weapons"
@@ -3526,6 +3453,277 @@
         ]
       },
       "path": "~/Weapons"
+    },
+    {
+      "name": "BlackBlindFold",
+      "type": "armor",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_blind_fold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/black_blind_fold_helmet.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BlackBlindFoldItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "CkArmor",
+      "type": "tab",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_armor",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "BandageBlindFold",
+      "type": "armor",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bandage_blind_fold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/bandage_blind_fold_helmet.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BandageBlindFoldItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "SplitSoulKatana",
+      "type": "tool",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "split_soul_katana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/SplitSoulKatanaItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/split_soul_katana.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "JujutsuSorcererUniform",
+      "type": "armor",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jujutsu_sorcerer_uniform",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/jujutsu_sorcerer_uniform_chestplate.json",
+          "src/main/resources/assets/craft_kaisen/models/item/jujutsu_sorcerer_uniform_leggings.json",
+          "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererUniformItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "AcceptVessel",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accept_vessel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/AcceptVesselProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "VesselCommand",
+      "type": "command",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/VesselCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "RequestVessel",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "request_vessel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RequestVesselProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetPlayerOne",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_player_one",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlayerOneProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ForceSukunaTechnique",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_sukuna_technique",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "DenyVessel",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deny_vessel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DenyVesselProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "VesselPotionEnd",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_potion_end",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VesselPotionEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "VesselPotionEffect",
+      "type": "potioneffect",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_potion_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/VesselPotionEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "VesselPotionActiveTick",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_potion_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VesselPotionActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "SetPlayerTwo",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_player_two",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlayerTwoProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Commands/Procedures"
     }
   ],
   "variable_elements": [
@@ -3738,6 +3936,24 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "vesselPlayerOne",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "vesselTechnique",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "vesselPlayerTwo",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -3789,7 +4005,6 @@
       "gui.craft_kaisen.move_gui.button_5": "5",
       "key.craft_kaisen.ability_3": "Ability 3",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
-      "item.craft_kaisen.bandage_blind_fold_helmet": "Bandage Blind Fold",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
       "item.craft_kaisen.run_away_ranged": "Run Away Ranged",
@@ -3798,31 +4013,18 @@
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "gui.craft_kaisen.main_menu.label_race_human": "Human",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
-      "gui.craft_kaisen.main_menu.label_race": "RACE:",
-      "itemGroup.tabck_armor": "Ck Armor",
-      "subtitles.domain": "domain",
-      "subtitles.guts": "guts",
-      "gui.craft_kaisen.main_menu.label_cursed_spirit": "Curse",
-      "subtitles.heartbeat": "heartbeat",
-      "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
-      "item.craft_kaisen.jujutsu_sorcerer_uniform_chestplate": "Jujutsu Sorcerer Uniform",
       "gui.craft_kaisen.main_menu.tooltip_cursed_technique": "Cursed Technique",
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
       "itemGroup.tabck_mobs": "Ck Mobs",
-      "item.craft_kaisen.naginata": "Naginata",
-      "subtitles.yte": "",
       "gui.craft_kaisen.start_screen.label_cursed_spirit": "Curse",
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
-      "item.craft_kaisen.miwa_katana": "Miwa Katana",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
-      "item.craft_kaisen.inverted_spear": "Inverted Spear",
       "itemGroup.tabck_weapons": "Ck Weapons",
       "effect.craft_kaisen.lapse_blue_control": "Lapse Blue",
       "item.craft_kaisen.crumble_away_ranged": "Crumble Away Ranged",
       "item.craft_kaisen.sleep_ranged": "Sleep Ranged",
       "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "gui.craft_kaisen.main_menu.label_empty6": "+",
-      "item.craft_kaisen.split_soul_katana": "Split Soul Katana",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
       "item.craft_kaisen.explode_ranged": "Explode Ranged",
@@ -3833,16 +4035,11 @@
       "gui.craft_kaisen.move_gui.button_unlock": "Unlock",
       "gui.craft_kaisen.main_menu.tooltip_increase_max_health": "increase max health",
       "gui.craft_kaisen.start_screen.label_finish": "SAVE",
-      "subtitles.slice": "slice",
       "effect.craft_kaisen.body_crushing": "Crushing",
       "effect.craft_kaisen.twisting": "Twisting",
-      "item.craft_kaisen.jujutsu_sorcerer_uniform_leggings": "Jujutsu Sorcerer Uniform",
-      "item.craft_kaisen.yuta_katana": "Yuta Katana",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "key.craft_kaisen.menu": "Menu",
-      "gui.craft_kaisen.main_menu.label_finish": "SAVE",
       "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
-      "gui.craft_kaisen.main_menu.label_human": "Human",
       "gui.craft_kaisen.main_menu.label_empty1": "\u003e\u003e",
       "gui.craft_kaisen.main_menu.label_empty5": "+",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
@@ -3934,7 +4131,7 @@
         "children": []
       },
       {
-        "name": "Gui",
+        "name": "GUI",
         "children": [
           {
             "name": "Procedures",
@@ -3967,6 +4164,10 @@
       },
       {
         "name": "Weapons",
+        "children": []
+      },
+      {
+        "name": "Items",
         "children": []
       },
       {
@@ -4041,10 +4242,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Items",
-        "children": []
       }
     ]
   },
