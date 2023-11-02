@@ -11,16 +11,24 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.item.Item;
 
+import net.mcreator.craftkaisen.item.YutaKatanaItem;
 import net.mcreator.craftkaisen.item.TwistRangedItem;
+import net.mcreator.craftkaisen.item.SplitSoulKatanaItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
 import net.mcreator.craftkaisen.item.RunAwayRangedItem;
 import net.mcreator.craftkaisen.item.ReversalRedProjectileItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
+import net.mcreator.craftkaisen.item.NaginataItem;
+import net.mcreator.craftkaisen.item.MiwaKatanaItem;
+import net.mcreator.craftkaisen.item.JujutsuSorcererUniformItem;
+import net.mcreator.craftkaisen.item.InvertedSpearItem;
 import net.mcreator.craftkaisen.item.ExplodeRangedItem;
 import net.mcreator.craftkaisen.item.DontMoveRangedItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
 import net.mcreator.craftkaisen.item.CrumbleAwayRangedItem;
 import net.mcreator.craftkaisen.item.BlastAwayRangedItem;
+import net.mcreator.craftkaisen.item.BlackBlindFoldItem;
+import net.mcreator.craftkaisen.item.BandageBlindFoldItem;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 public class CraftKaisenModItems {
@@ -37,4 +45,13 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> SLEEP_RANGED = REGISTRY.register("sleep_ranged", () -> new SleepRangedItem());
 	public static final RegistryObject<Item> RUN_AWAY_RANGED = REGISTRY.register("run_away_ranged", () -> new RunAwayRangedItem());
 	public static final RegistryObject<Item> BLAST_AWAY_RANGED = REGISTRY.register("blast_away_ranged", () -> new BlastAwayRangedItem());
+	public static final RegistryObject<Item> BLACK_BLIND_FOLD_HELMET = REGISTRY.register("black_blind_fold_helmet", () -> new BlackBlindFoldItem.Helmet());
+	public static final RegistryObject<Item> BANDAGE_BLIND_FOLD_HELMET = REGISTRY.register("bandage_blind_fold_helmet", () -> new BandageBlindFoldItem.Helmet());
+	public static final RegistryObject<Item> JUJUTSU_SORCERER_UNIFORM_CHESTPLATE = REGISTRY.register("jujutsu_sorcerer_uniform_chestplate", () -> new JujutsuSorcererUniformItem.Chestplate());
+	public static final RegistryObject<Item> JUJUTSU_SORCERER_UNIFORM_LEGGINGS = REGISTRY.register("jujutsu_sorcerer_uniform_leggings", () -> new JujutsuSorcererUniformItem.Leggings());
+	public static final RegistryObject<Item> INVERTED_SPEAR = REGISTRY.register("inverted_spear", () -> new InvertedSpearItem());
+	public static final RegistryObject<Item> SPLIT_SOUL_KATANA = REGISTRY.register("split_soul_katana", () -> new SplitSoulKatanaItem());
+	public static final RegistryObject<Item> NAGINATA = REGISTRY.register("naginata", () -> new NaginataItem());
+	public static final RegistryObject<Item> YUTA_KATANA = REGISTRY.register("yuta_katana", () -> new YutaKatanaItem());
+	public static final RegistryObject<Item> MIWA_KATANA = REGISTRY.register("miwa_katana", () -> new MiwaKatanaItem());
 }

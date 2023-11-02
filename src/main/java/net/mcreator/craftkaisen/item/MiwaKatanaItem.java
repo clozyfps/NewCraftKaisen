@@ -8,8 +8,8 @@ import net.minecraft.world.item.Item;
 
 import net.mcreator.craftkaisen.init.CraftKaisenModTabs;
 
-public class PlayfulCloudItem extends SwordItem {
-	public PlayfulCloudItem() {
+public class MiwaKatanaItem extends SwordItem {
+	public MiwaKatanaItem() {
 		super(new Tier() {
 			public int getUses() {
 				return 1000;
@@ -34,6 +34,6 @@ public class PlayfulCloudItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 3, -2f, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_WEAPONS));
+		}, 3, -3f, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_WEAPONS));
 	}
 }

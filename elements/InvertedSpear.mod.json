@@ -5,17 +5,19 @@
     "toolType": "Sword",
     "renderType": 1,
     "texture": "air102_layer_2",
-    "customModelName": "playful_cloud:default",
-    "name": "Playful Cloud",
-    "specialInfo": [],
+    "customModelName": "invertedspear:default",
+    "name": "Inverted Spear",
+    "specialInfo": [
+      "Perk - Disables Infinity"
+    ],
     "creativeTab": {
       "value": "CUSTOM:CkWeapons"
     },
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 2.0,
+    "attackSpeed": 3.0,
     "enchantability": 2,
-    "damageVsEntity": 7.0,
+    "damageVsEntity": 10.0,
     "usageCount": 1000,
     "blocksAffected": [],
     "hasGlow": false,

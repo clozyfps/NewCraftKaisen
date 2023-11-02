@@ -10,6 +10,7 @@ import net.minecraft.world.item.CreativeModeTab;
 public class CraftKaisenModTabs {
 	public static CreativeModeTab TAB_CK_WEAPONS;
 	public static CreativeModeTab TAB_CK_MOBS;
+	public static CreativeModeTab TAB_CK_ARMOR;
 
 	public static void load() {
 		TAB_CK_WEAPONS = new CreativeModeTab("tabck_weapons") {
@@ -27,6 +28,17 @@ public class CraftKaisenModTabs {
 			@Override
 			public ItemStack makeIcon() {
 				return new ItemStack(CraftKaisenModItems.SATORU_GOJO_SPAWN_EGG.get());
+			}
+
+			@Override
+			public boolean hasSearchBar() {
+				return true;
+			}
+		}.setBackgroundSuffix("item_search.png");
+		TAB_CK_ARMOR = new CreativeModeTab("tabck_armor") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(CraftKaisenModItems.BLACK_BLIND_FOLD_HELMET.get());
 			}
 
 			@Override
