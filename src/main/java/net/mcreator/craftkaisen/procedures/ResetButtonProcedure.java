@@ -1,12 +1,11 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 
 public class ResetButtonProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		{
@@ -135,10 +134,20 @@ public class ResetButtonProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		CraftKaisenModVariables.MapVariables.get(world).ability2 = "";
-		CraftKaisenModVariables.MapVariables.get(world).syncData(world);
-		CraftKaisenModVariables.MapVariables.get(world).ability3 = "";
-		CraftKaisenModVariables.MapVariables.get(world).syncData(world);
+		{
+			String _setval = "";
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.ability2 = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "";
+			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.ability3 = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		{
 			String _setval = "";
 			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -76,11 +76,11 @@ public class MoveGuiButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			SetAbility2Procedure.execute(world, entity);
+			SetAbility2Procedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			SetAbility3Procedure.execute(world, entity);
+			SetAbility3Procedure.execute(entity);
 		}
 		if (buttonID == 3) {
 

@@ -254,7 +254,7 @@ public class SetCommandCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					ResetButtonProcedure.execute(world, entity);
+					ResetButtonProcedure.execute(entity);
 					return 0;
 				}))));
 	}
