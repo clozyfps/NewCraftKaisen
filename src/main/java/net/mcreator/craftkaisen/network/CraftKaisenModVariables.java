@@ -162,6 +162,9 @@ public class CraftKaisenModVariables {
 		public static final String DATA_NAME = "craft_kaisen_mapvars";
 		public String ability2 = "";
 		public String ability3 = "";
+		public String vesselPlayerOne = "\"\"";
+		public String vesselPlayerTwo = "\"\"";
+		public String vesselTechnique = "\"\"";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -172,12 +175,18 @@ public class CraftKaisenModVariables {
 		public void read(CompoundTag nbt) {
 			ability2 = nbt.getString("ability2");
 			ability3 = nbt.getString("ability3");
+			vesselPlayerOne = nbt.getString("vesselPlayerOne");
+			vesselPlayerTwo = nbt.getString("vesselPlayerTwo");
+			vesselTechnique = nbt.getString("vesselTechnique");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putString("ability2", ability2);
 			nbt.putString("ability3", ability3);
+			nbt.putString("vesselPlayerOne", vesselPlayerOne);
+			nbt.putString("vesselPlayerTwo", vesselPlayerTwo);
+			nbt.putString("vesselTechnique", vesselTechnique);
 			return nbt;
 		}
 
