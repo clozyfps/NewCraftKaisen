@@ -259,7 +259,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures/Value"
+      "path": "~/Gui/Procedures/Value"
     },
     {
       "name": "MainOverlay",
@@ -272,7 +272,7 @@
           "src/main/java/net/mcreator/craftkaisen/client/screens/MainOverlayOverlay.java"
         ]
       },
-      "path": "~/GUI"
+      "path": "~/Gui"
     },
     {
       "name": "OnRespawn",
@@ -424,7 +424,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "RandomiseCursedTechnique",
@@ -520,7 +520,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "FinishCharacter",
@@ -540,7 +540,7 @@
           }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/Gui"
     },
     {
       "name": "Output",
@@ -574,7 +574,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "SetMove6",
@@ -594,7 +594,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "Ab4Pressed",
@@ -658,7 +658,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "SetMove4",
@@ -678,7 +678,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "Menu",
@@ -712,7 +712,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "SetMove2",
@@ -736,7 +736,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "ResetButton",
@@ -781,7 +781,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures/Value"
+      "path": "~/Gui/Procedures/Value"
     },
     {
       "name": "BackButton",
@@ -801,7 +801,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "Ab3pressed",
@@ -845,7 +845,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "Ab5pressed",
@@ -880,7 +880,7 @@
           "src/main/java/net/mcreator/craftkaisen/client/gui/StartScreenScreen.java"
         ]
       },
-      "path": "~/GUI"
+      "path": "~/Gui"
     },
     {
       "name": "Ab6pressed",
@@ -921,7 +921,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "Ability6",
@@ -970,7 +970,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Gui/Procedures"
     },
     {
       "name": "SetHuman",
@@ -1188,6 +1188,34 @@
       "path": "~/Commands/Procedures"
     },
     {
+      "name": "AcceptVessel",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accept_vessel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/AcceptVesselProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
       "name": "VesselCommand",
       "type": "command",
       "sortid": 53,
@@ -1220,14 +1248,85 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetPlayerOne",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_player_one",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlayerOneProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ForceSukunaTechnique",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_sukuna_technique",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "DenyVessel",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deny_vessel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DenyVesselProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "VesselPotionEnd",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_potion_end",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VesselPotionEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
     },
     {
       "name": "VesselPotionEffect",
@@ -1271,21 +1370,636 @@
       "path": "~/Potions/Procedures"
     },
     {
-      "name": "AcceptVessel",
+      "name": "SetPlayerTwo",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_player_two",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlayerTwoProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "Sorcerers",
+      "type": "tag",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorcerers",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/sorcerers.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "SetSkillPoints",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_skill_points",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSkillPointsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "DontMoveRanged",
+      "type": "rangeditem",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dont_move_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/DontMoveRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/dont_move_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/DontMoveRangedItem.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "ReturnMoveList",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_move_list",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnMoveListProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CkWeapons",
+      "type": "tab",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_weapons",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "ReturnEnergyControl",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_energy_control",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnEnergyControlProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "BlastAwayRanged",
+      "type": "rangeditem",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_away_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayRangedEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/BlastAwayRangedItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/blast_away_ranged.json"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "SatoruGojo",
+      "type": "livingentity",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "satoru_gojo",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/satoru_gojo_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Blood",
+      "type": "particle",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/blood.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BloodParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ReturnMoveDisplay",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_move_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnMoveDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "NonSolid",
+      "type": "tag",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "non_solid",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/blocks/non_solid.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CrushedRanged",
+      "type": "rangeditem",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushed_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/CrushedRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/crushed_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/CrushedRangedItem.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "CursedSpirits",
+      "type": "tag",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_spirits",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/cursed_spirits.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CrumbleAwayRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crumble_away_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CrumbleAwayRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "ReturnRep",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_rep",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnRepProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "ReturnExpDisplay",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_exp_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnExpDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetExp",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_exp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetExpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetLimitless",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_limitless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetLimitlessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SleepOverlay",
+      "type": "overlay",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/SleepOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlay"
+    },
+    {
+      "name": "DismantleKnockbackEntity",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dismantle_knockback_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DismantleKnockbackEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "PlayerAnimationSetup",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_animation_setup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlayerAnimationSetupProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ReturnTechnique",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_technique",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnTechniqueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "StopEntityTick",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_entity_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StopEntityTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Air",
+      "type": "tag",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/blocks/air.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "RedFlying",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_flying",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RedFlyingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "InfinityTick",
       "type": "procedure",
       "sortid": 57,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "accept_vessel",
+      "registry_name": "infinity_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/AcceptVesselProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfinityTickProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "arguments",
-            "type": "cmdcontext"
+            "name": "entity",
+            "type": "entity"
           },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DontMoveRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dont_move_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DontMoveRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "TeleportProcedure",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TeleportProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "DismantleKnockback",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dismantle_knockback",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DismantleKnockbackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "LapseBlueControl",
+      "type": "potioneffect",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_control",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/LapseBlueControlMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "DismantleProcedure",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dismantle_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DismantleProcedureProcedure.java"
+        ],
+        "dependencies": [
           {
             "name": "entity",
             "type": "entity"
@@ -1296,46 +2010,85 @@
           }
         ]
       },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "SetLevel",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_level",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
       "path": "~/Commands/Procedures"
     },
     {
-      "name": "DenyVessel",
-      "type": "procedure",
+      "name": "CkMobs",
+      "type": "tab",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_mobs",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "PlayfulCloud",
+      "type": "tool",
       "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "deny_vessel",
+      "registry_name": "playful_cloud",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DenyVesselProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/playful_cloud.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "InfinityProcedure",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfinityProcedureProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Abilities/Limitless"
     },
     {
-      "name": "VesselPotionEnd",
+      "name": "BodyCrushingOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "vessel_potion_end",
+      "registry_name": "body_crushing_on_effect_active_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VesselPotionEndProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/BodyCrushingOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -1343,7 +2096,15 @@
             "type": "entity"
           },
           {
-            "name": "amplifier",
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
             "type": "number"
           },
           {
@@ -1355,27 +2116,36 @@
       "path": "~/Potions/Procedures"
     },
     {
-      "name": "ForceSukunaTechnique",
-      "type": "gamerule",
+      "name": "ShowUnlock",
+      "type": "procedure",
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "force_sukuna_technique",
+      "registry_name": "show_unlock",
       "metadata": {
-        "files": [],
-        "type": "logic"
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ShowUnlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
-      "path": "~/Gamerules"
+      "path": "~/Gui/Procedures"
     },
     {
-      "name": "SetPlayerOne",
+      "name": "CleaveProcedure",
       "type": "procedure",
-      "sortid": 60,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_player_one",
+      "registry_name": "cleave_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlayerOneProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/CleaveProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -1383,23 +2153,87 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Abilities/SukunaVessel"
     },
     {
-      "name": "SetPlayerTwo",
+      "name": "RunAwayRanged",
+      "type": "rangeditem",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "run_away_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/RunAwayRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/RunAwayRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/run_away_ranged.json"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "ExplodeRanged",
+      "type": "rangeditem",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "SetAbility1",
       "type": "procedure",
       "sortid": 61,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_player_two",
+      "registry_name": "set_ability_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlayerTwoProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetAbility3",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility3Procedure.java"
         ],
         "dependencies": [
           {
@@ -1412,7 +2246,1360 @@
           }
         ]
       },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetAbility2",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetAbility5",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetAbility4",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SpeedButton",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SpeedButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetAbility6",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ability_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbility6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "LimitlessMoves",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limitless_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "RunAwayRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "run_away_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RunAwayRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "HealthButton",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HealthButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SleepRanged",
+      "type": "rangeditem",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_ranged",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/sleep_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/SleepRangedEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/SleepRangedItem.java"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "SatoruGojoOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "satoru_gojo_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SatoruGojoOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "StrengthButton",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strength_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StrengthButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetSukuna",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sukuna",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSukunaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "BodyCrushing",
+      "type": "potioneffect",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "body_crushing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/BodyCrushingMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "SleepOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "MainMenu",
+      "type": "gui",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java"
+        ]
+      },
+      "path": "~/Gui"
+    },
+    {
+      "name": "CrumbleAwayRanged",
+      "type": "rangeditem",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crumble_away_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/CrumbleAwayRangedEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/CrumbleAwayRangedItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/crumble_away_ranged.json"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "LapseBlueControlOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_control_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueControlOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "Snowflake",
+      "type": "particle",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snowflake",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/snowflake.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "InfinityParticle",
+      "type": "particle",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/InfinityParticleParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/infinity_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "LimitlessAbilitiesTick",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limitless_abilities_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessAbilitiesTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "ExplodeRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ExplodeRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedures"
+    },
+    {
+      "name": "TwistRanged",
+      "type": "rangeditem",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twist_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/TwistRangedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/TwistRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/twist_ranged.json"
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech"
+    },
+    {
+      "name": "CrushedRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushed_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CrushedRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "PotionDeath",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potion_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PotionDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PurpleElectricity",
+      "type": "particle",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_electricity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "TwistRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twist_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TwistRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "ControlButton",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "control_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ControlButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "BlueParticle",
+      "type": "particle",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BlueParticleParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/blue_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ReturnHealth",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_health",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnHealthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "EnergyButton",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EnergyButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "ReturnSpecial",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_special",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnSpecialProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "RedParticle",
+      "type": "particle",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RedParticleParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/red_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "BlueTick",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlueTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "ReturnAffiliation",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_affiliation",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnAffiliationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "Timers",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timers",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TimersProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ChargeTick",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SetCursedSpeech",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_cursed_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ReturnStrength",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_strength",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnStrengthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "ReturnCursedEnergy",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_cursed_energy",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnCursedEnergyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "DismantleTick",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dismantle_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DismantleTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "ReturnLevel",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_level",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "ReturnPlayer",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_player",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "ReturnMoveCost",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_move_cost",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnMoveCostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SetStats2",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_stats_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetStats2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MoveGui",
+      "type": "gui",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MoveGuiMenu.java"
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "SoundWave",
+      "type": "particle",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_wave",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Twisting",
+      "type": "potioneffect",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twisting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/TwistingMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "OpenMoves",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "LapseBlueControlEffectExpires",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_control_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueControlEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "ReturnSkillpoints",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_skillpoints",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnSkillpointsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
+    },
+    {
+      "name": "TwistingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twisting_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TwistingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "BlastAwayRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_away_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlastAwayRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "CursedSpeechMoves",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_speech_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpeechMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "StopPlayerTick",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_player_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StopPlayerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SukunaMoves",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "SleepRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/CursedSpeech/Procedures"
+    },
+    {
+      "name": "ReturnSpeed",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_speed",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnSpeedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Procedures"
     }
   ],
   "variable_elements": [
@@ -1591,19 +3778,94 @@
       "value": "\"\""
     },
     {
+      "name": "vesselTechnique",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
       "name": "vesselPlayerTwo",
       "type": "string",
       "scope": "map",
       "value": "\"\""
     },
     {
-      "name": "vesselTechnique",
+      "name": "CeNature",
       "type": "string",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "Cooldown1",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Cooldown2",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Cooldown3",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Cooldown4",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Cooldown5",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Cooldown6",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "slice",
+      "files": [
+        "sword_sweep"
+      ],
+      "category": "neutral",
+      "subtitle": "slice"
+    },
+    {
+      "name": "heartbeat",
+      "files": [
+        "rct_heartbeat"
+      ],
+      "category": "neutral",
+      "subtitle": "heartbeat"
+    },
+    {
+      "name": "domain",
+      "files": [
+        "domainexpansion"
+      ],
+      "category": "neutral",
+      "subtitle": "domain"
+    },
+    {
+      "name": "guts",
+      "files": [
+        "dicesteak"
+      ],
+      "category": "neutral",
+      "subtitle": "guts"
+    }
+  ],
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
@@ -1643,7 +3905,38 @@
       },
       {
         "name": "Abilities",
-        "children": []
+        "children": [
+          {
+            "name": "MoveUse",
+            "children": []
+          },
+          {
+            "name": "Limitless",
+            "children": []
+          },
+          {
+            "name": "CursedSpeech",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Mobs",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "SukunaVessel",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Gamerules",
@@ -1713,6 +4006,10 @@
         "children": []
       },
       {
+        "name": "Creative Tabs",
+        "children": []
+      },
+      {
         "name": "Particles",
         "children": []
       },
@@ -1737,7 +4034,11 @@
         "name": "Mobs",
         "children": [
           {
-            "name": "Procedures",
+            "name": "Abilities",
+            "children": []
+          },
+          {
+            "name": "Procedure",
             "children": []
           }
         ]

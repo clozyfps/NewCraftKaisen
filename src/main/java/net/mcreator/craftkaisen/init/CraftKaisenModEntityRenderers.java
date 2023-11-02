@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -19,5 +20,14 @@ public class CraftKaisenModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(CraftKaisenModEntities.REVERSAL_RED_ENTITY.get(), ReversalRedEntityRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.REVERSAL_RED_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.SATORU_GOJO.get(), SatoruGojoRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.EXPLODE_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.TWIST_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.CRUSHED_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.CRUMBLE_AWAY_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.DONT_MOVE_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.SLEEP_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.RUN_AWAY_RANGED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.BLAST_AWAY_RANGED.get(), ThrownItemRenderer::new);
 	}
 }

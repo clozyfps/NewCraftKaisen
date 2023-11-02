@@ -40,7 +40,7 @@ public class OnRespawnProcedure {
 			});
 		}
 		{
-			double _setval = (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).maxOutput;
+			double _setval = 100;
 			entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.currentOutput = _setval;
 				capability.syncPlayerVariables(entity);

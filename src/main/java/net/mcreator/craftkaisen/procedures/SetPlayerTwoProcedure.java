@@ -1,15 +1,10 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+import javax.annotation.Nullable;
 
 public class SetPlayerTwoProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
-		if (entity == null)
-			return;
-		CraftKaisenModVariables.MapVariables.get(world).vesselPlayerTwo = entity.getDisplayName().getString();
-		CraftKaisenModVariables.MapVariables.get(world).syncData(world);
+	public static void execute() {
 	}
 }

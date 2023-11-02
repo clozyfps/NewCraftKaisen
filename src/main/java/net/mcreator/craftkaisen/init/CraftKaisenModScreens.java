@@ -12,12 +12,16 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.craftkaisen.client.gui.StartScreenScreen;
+import net.mcreator.craftkaisen.client.gui.MoveGuiScreen;
+import net.mcreator.craftkaisen.client.gui.MainMenuScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftKaisenModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
+			MenuScreens.register(CraftKaisenModMenus.MOVE_GUI.get(), MoveGuiScreen::new);
+			MenuScreens.register(CraftKaisenModMenus.MAIN_MENU.get(), MainMenuScreen::new);
 			MenuScreens.register(CraftKaisenModMenus.START_SCREEN.get(), StartScreenScreen::new);
 		});
 	}

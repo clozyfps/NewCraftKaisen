@@ -1,0 +1,93 @@
+package net.mcreator.craftkaisen.procedures;
+
+import net.minecraftforge.eventbus.api.Event;
+
+import javax.annotation.Nullable;
+
+public class RedFlyingProcedure {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		boolean found = false;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
+		{
+			// Get the radius of the sphere
+			double radius = (1 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 100)); // 3 blocks
+			// Set the tolerance for how close to the surface a point must be to create a particle
+			double tolerance = 0.15; // 0.1 blocks
+			for (double xx = -radius; xx <= radius; xx += 0.1) {
+				for (double yy = -radius; yy <= radius; yy += 0.1) {
+					for (double zz = -radius; zz <= radius; zz += 0.1) {
+						if (Math.abs(xx * xx + yy * yy + zz * zz - radius * radius) <= tolerance) {
+							// Calculate the position of the particle
+							double posX = x + xx;
+							double posY = y + yy;
+							double posZ = z + zz;
+							if (true) {
+								if (world instanceof ServerLevel)
+									((ServerLevel) world).sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
+							} else {
+								world.addParticle((SimpleParticleType) (CraftKaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, 0, 0, 0);
+							}
+						}
+					}
+				}
+			}
+		}
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), x, y, z, 15,
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 50),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 50),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 50), 1);
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35), 0);
+		{
+			final Vec3 _center = new Vec3(x, y, z);
+			List<Entity> _entfound = world
+					.getEntitiesOfClass(Entity.class,
+							new AABB(_center, _center).inflate(((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10) / 2d), e -> true)
+					.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			for (Entity entityiterator : _entfound) {
+				if (!(entity == entityiterator) && !(entityiterator instanceof FallingBlockEntity)) {
+					entityiterator.hurt((new EntityDamageSource("flyIntoWall.player", entity)),
+							(float) (10 + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 2));
+				}
+			}
+		}
+		int horizontalRadiusSphere = (int) (2 + 2 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 30)) - 1;
+		int verticalRadiusSphere = (int) (2 + 2 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 30)) - 1;
+		int yIterationsSphere = verticalRadiusSphere;
+		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
+			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+				for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+					if (distanceSq <= 1.0) {
+						if (world instanceof ServerLevel _level)
+							FallingBlockEntity.fall(_level, new BlockPos(x + xi, y + i, z + zi), (world.getBlockState(new BlockPos(x + xi, y + i + 1, z + zi))));
+						world.setBlock(new BlockPos(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
+						world.setBlock(new BlockPos(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
+						{
+							final Vec3 _center = new Vec3(x + xi, y + i, z + zi);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof FallingBlockEntity) {
+									entityiterator.setDeltaMovement(new Vec3(((entityiterator.getX() - x) / 3), ((entityiterator.getY() - y) / 3), ((entityiterator.getZ() - z) / 3)));
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 5, ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35), 1);
+	}
+}

@@ -96,9 +96,16 @@ public class CraftKaisenModVariables {
 			clone.technique = original.technique;
 			clone.characterCreated = original.characterCreated;
 			clone.specialCheck = original.specialCheck;
+			clone.CeNature = original.CeNature;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
+				clone.Cooldown1 = original.Cooldown1;
+				clone.Cooldown2 = original.Cooldown2;
+				clone.Cooldown3 = original.Cooldown3;
+				clone.Cooldown4 = original.Cooldown4;
+				clone.Cooldown5 = original.Cooldown5;
+				clone.Cooldown6 = original.Cooldown6;
 			}
 		}
 
@@ -163,8 +170,8 @@ public class CraftKaisenModVariables {
 		public String ability2 = "";
 		public String ability3 = "";
 		public String vesselPlayerOne = "\"\"";
-		public String vesselPlayerTwo = "\"\"";
 		public String vesselTechnique = "\"\"";
+		public String vesselPlayerTwo = "\"\"";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -176,8 +183,8 @@ public class CraftKaisenModVariables {
 			ability2 = nbt.getString("ability2");
 			ability3 = nbt.getString("ability3");
 			vesselPlayerOne = nbt.getString("vesselPlayerOne");
-			vesselPlayerTwo = nbt.getString("vesselPlayerTwo");
 			vesselTechnique = nbt.getString("vesselTechnique");
+			vesselPlayerTwo = nbt.getString("vesselPlayerTwo");
 		}
 
 		@Override
@@ -185,8 +192,8 @@ public class CraftKaisenModVariables {
 			nbt.putString("ability2", ability2);
 			nbt.putString("ability3", ability3);
 			nbt.putString("vesselPlayerOne", vesselPlayerOne);
-			nbt.putString("vesselPlayerTwo", vesselPlayerTwo);
 			nbt.putString("vesselTechnique", vesselTechnique);
+			nbt.putString("vesselPlayerTwo", vesselPlayerTwo);
 			return nbt;
 		}
 
@@ -301,6 +308,13 @@ public class CraftKaisenModVariables {
 		public String technique = "";
 		public boolean characterCreated = false;
 		public boolean specialCheck = false;
+		public String CeNature = "\"\"";
+		public boolean Cooldown1 = false;
+		public boolean Cooldown2 = false;
+		public boolean Cooldown3 = false;
+		public double Cooldown4 = 0;
+		public double Cooldown5 = 0;
+		public double Cooldown6 = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -335,6 +349,13 @@ public class CraftKaisenModVariables {
 			nbt.putString("technique", technique);
 			nbt.putBoolean("characterCreated", characterCreated);
 			nbt.putBoolean("specialCheck", specialCheck);
+			nbt.putString("CeNature", CeNature);
+			nbt.putBoolean("Cooldown1", Cooldown1);
+			nbt.putBoolean("Cooldown2", Cooldown2);
+			nbt.putBoolean("Cooldown3", Cooldown3);
+			nbt.putDouble("Cooldown4", Cooldown4);
+			nbt.putDouble("Cooldown5", Cooldown5);
+			nbt.putDouble("Cooldown6", Cooldown6);
 			return nbt;
 		}
 
@@ -366,6 +387,13 @@ public class CraftKaisenModVariables {
 			technique = nbt.getString("technique");
 			characterCreated = nbt.getBoolean("characterCreated");
 			specialCheck = nbt.getBoolean("specialCheck");
+			CeNature = nbt.getString("CeNature");
+			Cooldown1 = nbt.getBoolean("Cooldown1");
+			Cooldown2 = nbt.getBoolean("Cooldown2");
+			Cooldown3 = nbt.getBoolean("Cooldown3");
+			Cooldown4 = nbt.getDouble("Cooldown4");
+			Cooldown5 = nbt.getDouble("Cooldown5");
+			Cooldown6 = nbt.getDouble("Cooldown6");
 		}
 	}
 
@@ -416,6 +444,13 @@ public class CraftKaisenModVariables {
 					variables.technique = message.data.technique;
 					variables.characterCreated = message.data.characterCreated;
 					variables.specialCheck = message.data.specialCheck;
+					variables.CeNature = message.data.CeNature;
+					variables.Cooldown1 = message.data.Cooldown1;
+					variables.Cooldown2 = message.data.Cooldown2;
+					variables.Cooldown3 = message.data.Cooldown3;
+					variables.Cooldown4 = message.data.Cooldown4;
+					variables.Cooldown5 = message.data.Cooldown5;
+					variables.Cooldown6 = message.data.Cooldown6;
 				}
 			});
 			context.setPacketHandled(true);
