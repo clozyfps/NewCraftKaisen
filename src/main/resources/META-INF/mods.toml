@@ -19,4 +19,10 @@ authors="tobia, MCreator"
 
 
 
+[[dependencies.craft_kaisen]]
+    modId="playeranimator"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

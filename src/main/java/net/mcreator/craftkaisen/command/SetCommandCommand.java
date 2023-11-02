@@ -1,197 +1,261 @@
 
 package net.mcreator.craftkaisen.command;
 
+import org.checkerframework.checker.units.qual.s;
+
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.common.util.FakePlayerFactory;
+
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.Direction;
+import net.minecraft.commands.arguments.EntityArgument;
+import net.minecraft.commands.Commands;
+
+import net.mcreator.craftkaisen.procedures.SetSukunaProcedure;
+import net.mcreator.craftkaisen.procedures.SetStrengthStatProcedure;
+import net.mcreator.craftkaisen.procedures.SetSpeedStatProcedure;
+import net.mcreator.craftkaisen.procedures.SetSkillPointsProcedure;
+import net.mcreator.craftkaisen.procedures.SetSixEyesProcedure;
+import net.mcreator.craftkaisen.procedures.SetPhysicallyGiftedProcedure;
+import net.mcreator.craftkaisen.procedures.SetNoEnergyProcedure;
+import net.mcreator.craftkaisen.procedures.SetLimitlessProcedure;
+import net.mcreator.craftkaisen.procedures.SetLevelProcedure;
+import net.mcreator.craftkaisen.procedures.SetHumanProcedure;
+import net.mcreator.craftkaisen.procedures.SetHealthStatProcedure;
+import net.mcreator.craftkaisen.procedures.SetFragileBodyProcedure;
+import net.mcreator.craftkaisen.procedures.SetExpProcedure;
+import net.mcreator.craftkaisen.procedures.SetEnergyControlProcedure;
+import net.mcreator.craftkaisen.procedures.SetCursedSpeechProcedure;
+import net.mcreator.craftkaisen.procedures.SetCursedEnergyStatProcedure;
+import net.mcreator.craftkaisen.procedures.SetCurseProcedure;
+import net.mcreator.craftkaisen.procedures.ResetButtonProcedure;
+
+import com.mojang.brigadier.arguments.DoubleArgumentType;
+
 @Mod.EventBusSubscriber
 public class SetCommandCommand {
-
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher()
-				.register(Commands.literal("craftKaisen").requires(s -> s.hasPermission(2))
-						.then(Commands.literal("technique").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("Limitless")).then(Commands.literal("CursedSpeech")).then(Commands.literal("Sukuna"))))
-						.then(Commands.literal("race").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("human").executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
+				.register(Commands.literal("craftKaisen").requires(s -> s.hasPermission(2)).then(Commands.literal("technique").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("Limitless").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
+					SetLimitlessProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("CursedSpeech").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
+					SetCursedSpeechProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("Sukuna").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Direction direction = entity.getDirection();
+					SetSukunaProcedure.execute(entity);
+					return 0;
+				})))).then(Commands.literal("race").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("human").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							SetHumanProcedure.execute(entity);
-							return 0;
-						})).then(Commands.literal("curse").executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
+					SetHumanProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("curse").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
+					SetCurseProcedure.execute(entity);
+					return 0;
+				})))).then(Commands.literal("stat").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("cursedenergy").then(Commands.argument("cursedEnergy", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
+					SetCursedEnergyStatProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("strength").then(Commands.argument("strength", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Direction direction = entity.getDirection();
+					SetStrengthStatProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("speed").then(Commands.argument("speed", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							SetCurseProcedure.execute(entity);
-							return 0;
-						})))).then(Commands.literal("stat").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("cursedenergy").then(Commands.argument("cursedEnergy", DoubleArgumentType.doubleArg()).executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
+					SetSpeedStatProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("health").then(Commands.argument("health", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
+					SetHealthStatProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("energycontrol").then(Commands.argument("energyControl", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
+					SetEnergyControlProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("skillpoints").then(Commands.argument("skillPoints", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Direction direction = entity.getDirection();
+					SetSkillPointsProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("level").then(Commands.argument("Level", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							SetCursedEnergyStatProcedure.execute(arguments);
-							return 0;
-						}))).then(Commands.literal("strength").then(Commands.argument("strength", DoubleArgumentType.doubleArg()).executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
+					SetLevelProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("exp").then(Commands.argument("Exp", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
+					SetExpProcedure.execute(arguments);
+					return 0;
+				}))))).then(Commands.literal("special").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("SixEyes").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
+					SetSixEyesProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("PhysicallyGifted").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Direction direction = entity.getDirection();
+					SetPhysicallyGiftedProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("NoEnergy").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							SetStrengthStatProcedure.execute(arguments);
-							return 0;
-						}))).then(Commands.literal("speed").then(Commands.argument("speed", DoubleArgumentType.doubleArg()).executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
+					SetNoEnergyProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("FragileBody").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
+					SetFragileBodyProcedure.execute(entity);
+					return 0;
+				})))).then(Commands.literal("reset").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
 
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-
-							Direction direction = entity.getDirection();
-
-							SetSpeedStatProcedure.execute(arguments);
-							return 0;
-						}))).then(Commands.literal("health").then(Commands.argument("health", DoubleArgumentType.doubleArg()).executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
-
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-
-							Direction direction = entity.getDirection();
-
-							SetHealthStatProcedure.execute(arguments);
-							return 0;
-						}))).then(Commands.literal("energycontrol").then(Commands.argument("energyControl", DoubleArgumentType.doubleArg()).executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
-
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-
-							Direction direction = entity.getDirection();
-
-							SetEnergyControlProcedure.execute(arguments);
-							return 0;
-						}))).then(Commands.literal("skillpoints").then(Commands.argument("skillPoints", DoubleArgumentType.doubleArg()))).then(Commands.literal("level").then(Commands.argument("Level", DoubleArgumentType.doubleArg())))
-								.then(Commands.literal("exp").then(Commands.argument("Exp", DoubleArgumentType.doubleArg())))))
-						.then(Commands.literal("special").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("SixEyes").executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
-
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-
-							Direction direction = entity.getDirection();
-
-							SetSixEyesProcedure.execute(entity);
-							return 0;
-						})).then(Commands.literal("PhysicallyGifted").executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
-
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-
-							Direction direction = entity.getDirection();
-
-							SetPhysicallyGiftedProcedure.execute(entity);
-							return 0;
-						})).then(Commands.literal("NoEnergy").executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
-
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-
-							Direction direction = entity.getDirection();
-
-							SetNoEnergyProcedure.execute(entity);
-							return 0;
-						})).then(Commands.literal("FragileBody").executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
-
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-
-							Direction direction = entity.getDirection();
-
-							SetFragileBodyProcedure.execute(entity);
-							return 0;
-						})))).then(Commands.literal("reset").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
-							ServerLevel world = arguments.getSource().getLevel();
-
-							double x = arguments.getSource().getPosition().x();
-							double y = arguments.getSource().getPosition().y();
-							double z = arguments.getSource().getPosition().z();
-
-							Entity entity = arguments.getSource().getEntity();
-							if (entity == null)
-								entity = FakePlayerFactory.getMinecraft(world);
-
-							Direction direction = entity.getDirection();
-
-							ResetButtonProcedure.execute(world, entity);
-							return 0;
-						}))));
+					ResetButtonProcedure.execute(world, entity);
+					return 0;
+				}))));
 	}
-
 }

@@ -1,8 +1,20 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.IndirectEntityDamageSource;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
+import net.mcreator.craftkaisen.CraftKaisenMod;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class TwistRangedWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
@@ -20,7 +32,7 @@ public class TwistRangedWhileProjectileFlyingTickProcedure {
 						entityiterator.hurt((new IndirectEntityDamageSource("generic.player", immediatesourceentity, entity)),
 								(float) ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 5));
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
-							_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 50, 1, false, false));
+							_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.TWISTING.get(), 50, 1, false, false));
 						{
 							Entity _ent = entityiterator;
 							_ent.setYRot((float) (entityiterator.getYRot() + 5));

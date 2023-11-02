@@ -1,8 +1,21 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class LapseBlueControlMobEffect extends MobEffect {
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+
+import net.mcreator.craftkaisen.procedures.LapseBlueControlOnEffectActiveTickProcedure;
+import net.mcreator.craftkaisen.procedures.LapseBlueControlEffectExpiresProcedure;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class LapseBlueControlMobEffect extends MobEffect {
 	public LapseBlueControlMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -14,17 +27,13 @@ public class LapseBlueControlMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		LapseBlueControlOnEffectActiveTickProcedure.execute(
-
-		);
+		LapseBlueControlOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		LapseBlueControlEffectExpiresProcedure.execute(
-
-		);
+		LapseBlueControlEffectExpiresProcedure.execute(entity);
 	}
 
 	@Override

@@ -1,8 +1,13 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class BodyCrushingMobEffect extends MobEffect {
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.procedures.BodyCrushingOnEffectActiveTickProcedure;
+
+public class BodyCrushingMobEffect extends MobEffect {
 	public BodyCrushingMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -21,5 +26,4 @@ public class BodyCrushingMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

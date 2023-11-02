@@ -1,8 +1,10 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class VesselPotionEffectMobEffect extends MobEffect {
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+public class VesselPotionEffectMobEffect extends MobEffect {
 	public VesselPotionEffectMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -10092544);
 	}
@@ -21,5 +23,4 @@ public class VesselPotionEffectMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }
