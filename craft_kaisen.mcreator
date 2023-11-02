@@ -258,7 +258,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "MainOverlay",
@@ -271,7 +272,8 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/screens/MainOverlayOverlay.java"
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "OnRespawn",
@@ -414,7 +416,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "RandomiseCursedTechnique",
@@ -509,7 +512,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "FinishCharacter",
@@ -528,7 +532,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "Output",
@@ -561,7 +566,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetMove6",
@@ -580,7 +586,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "Ab4Pressed",
@@ -639,7 +646,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetMove4",
@@ -658,7 +666,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "Menu",
@@ -691,7 +700,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetMove2",
@@ -710,7 +720,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ResetButton",
@@ -750,7 +761,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "BackButton",
@@ -769,7 +781,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "Ab3pressed",
@@ -808,7 +821,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "Ab5pressed",
@@ -843,7 +857,8 @@
           "src/main/java/net/mcreator/craftkaisen/world/inventory/StartScreenMenu.java",
           "src/main/java/net/mcreator/craftkaisen/network/StartScreenButtonMessage.java"
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "Ab6pressed",
@@ -883,7 +898,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "Ability6",
@@ -931,7 +947,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetHuman",
@@ -1372,7 +1389,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetAbility1",
@@ -1391,7 +1409,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnTechnique",
@@ -1411,7 +1430,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetAbility3",
@@ -1430,7 +1450,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetAbility2",
@@ -1449,7 +1470,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetAbility5",
@@ -1468,7 +1490,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetAbility4",
@@ -1487,7 +1510,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnMoveDisplay",
@@ -1507,7 +1531,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetAbility6",
@@ -1526,7 +1551,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "LimitlessMoves",
@@ -1566,7 +1592,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnMoveCost",
@@ -1586,7 +1613,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "MoveGui",
@@ -1601,7 +1629,8 @@
           "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java",
           "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java"
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "Timers",
@@ -2488,7 +2517,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnStrength",
@@ -2508,7 +2538,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnCursedEnergy",
@@ -2528,7 +2559,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SpeedButton",
@@ -2547,7 +2579,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "MainMenu",
@@ -2562,7 +2595,8 @@
           "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java"
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ControlButton",
@@ -2581,7 +2615,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnHealth",
@@ -2601,7 +2636,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "EnergyButton",
@@ -2620,7 +2656,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnLevel",
@@ -2640,7 +2677,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnSpecial",
@@ -2660,7 +2698,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "HealthButton",
@@ -2679,7 +2718,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnPlayer",
@@ -2699,7 +2739,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnRep",
@@ -2719,7 +2760,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnExpDisplay",
@@ -2739,7 +2781,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetStats2",
@@ -2779,7 +2822,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ReturnSpeed",
@@ -2799,7 +2843,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "StrengthButton",
@@ -2818,7 +2863,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/GUI"
     },
     {
       "name": "SetCursedSpeech",
@@ -3995,8 +4041,8 @@
       "item.craft_kaisen.bandage_blind_fold_helmet": "Bandage Blind Fold",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
-      "gui.craft_kaisen.main_menu.tooltip_increase_max_cursed_energy": "increase max cursed energy",
       "item.craft_kaisen.run_away_ranged": "Run Away Ranged",
+      "gui.craft_kaisen.main_menu.tooltip_increase_max_cursed_energy": "increase max cursed energy",
       "gui.craft_kaisen.main_menu.tooltip_increases_attack_damage": "increases attack damage",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "gui.craft_kaisen.main_menu.label_race_human": "Human",
