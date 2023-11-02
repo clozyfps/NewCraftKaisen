@@ -96,6 +96,12 @@ public class CraftKaisenModVariables {
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
+				clone.Cooldown1 = original.Cooldown1;
+				clone.Cooldown2 = original.Cooldown2;
+				clone.Cooldown3 = original.Cooldown3;
+				clone.Cooldown4 = original.Cooldown4;
+				clone.Cooldown5 = original.Cooldown5;
+				clone.Cooldown6 = original.Cooldown6;
 			}
 		}
 	}
@@ -160,6 +166,12 @@ public class CraftKaisenModVariables {
 		public boolean characterCreated = false;
 		public boolean specialCheck = false;
 		public String CeNature = "\"\"";
+		public boolean Cooldown1 = false;
+		public boolean Cooldown2 = false;
+		public boolean Cooldown3 = false;
+		public double Cooldown4 = 0;
+		public double Cooldown5 = 0;
+		public double Cooldown6 = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -197,6 +209,12 @@ public class CraftKaisenModVariables {
 			nbt.putBoolean("characterCreated", characterCreated);
 			nbt.putBoolean("specialCheck", specialCheck);
 			nbt.putString("CeNature", CeNature);
+			nbt.putBoolean("Cooldown1", Cooldown1);
+			nbt.putBoolean("Cooldown2", Cooldown2);
+			nbt.putBoolean("Cooldown3", Cooldown3);
+			nbt.putDouble("Cooldown4", Cooldown4);
+			nbt.putDouble("Cooldown5", Cooldown5);
+			nbt.putDouble("Cooldown6", Cooldown6);
 			return nbt;
 		}
 
@@ -231,6 +249,12 @@ public class CraftKaisenModVariables {
 			characterCreated = nbt.getBoolean("characterCreated");
 			specialCheck = nbt.getBoolean("specialCheck");
 			CeNature = nbt.getString("CeNature");
+			Cooldown1 = nbt.getBoolean("Cooldown1");
+			Cooldown2 = nbt.getBoolean("Cooldown2");
+			Cooldown3 = nbt.getBoolean("Cooldown3");
+			Cooldown4 = nbt.getDouble("Cooldown4");
+			Cooldown5 = nbt.getDouble("Cooldown5");
+			Cooldown6 = nbt.getDouble("Cooldown6");
 		}
 	}
 
@@ -284,6 +308,12 @@ public class CraftKaisenModVariables {
 					variables.characterCreated = message.data.characterCreated;
 					variables.specialCheck = message.data.specialCheck;
 					variables.CeNature = message.data.CeNature;
+					variables.Cooldown1 = message.data.Cooldown1;
+					variables.Cooldown2 = message.data.Cooldown2;
+					variables.Cooldown3 = message.data.Cooldown3;
+					variables.Cooldown4 = message.data.Cooldown4;
+					variables.Cooldown5 = message.data.Cooldown5;
+					variables.Cooldown6 = message.data.Cooldown6;
 				}
 			});
 			context.setPacketHandled(true);

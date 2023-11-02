@@ -49,8 +49,10 @@ public class InfinityTickProcedure {
 			}
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(6 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-						.collect(Collectors.toList());
+				List<Entity> _entfound = world
+						.getEntitiesOfClass(Entity.class,
+								new AABB(_center, _center).inflate(((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 15) / 2d), e -> true)
+						.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator) && !(entityiterator.getPersistentData().getString("owner")).equals(entity.getDisplayName().getString())) {
 						if (!(entityiterator instanceof LivingEntity)) {
@@ -61,8 +63,10 @@ public class InfinityTickProcedure {
 			}
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-						.collect(Collectors.toList());
+				List<Entity> _entfound = world
+						.getEntitiesOfClass(Entity.class,
+								new AABB(_center, _center).inflate(((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 15) / 2d), e -> true)
+						.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator) && !(entityiterator.getPersistentData().getString("owner")).equals(entity.getDisplayName().getString())) {
 						if (entityiterator instanceof LivingEntity) {
@@ -73,8 +77,10 @@ public class InfinityTickProcedure {
 			}
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-						.collect(Collectors.toList());
+				List<Entity> _entfound = world
+						.getEntitiesOfClass(Entity.class,
+								new AABB(_center, _center).inflate(((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 25) / 2d), e -> true)
+						.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator) && !(entityiterator.getPersistentData().getString("owner")).equals(entity.getDisplayName().getString())) {
 						entityiterator.setDeltaMovement(new Vec3(((entityiterator.getX() - entity.getX()) / 12), ((entityiterator.getY() - entity.getY()) / 12), ((entityiterator.getZ() - entity.getZ()) / 12)));

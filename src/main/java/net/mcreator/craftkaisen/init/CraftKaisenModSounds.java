@@ -16,4 +16,7 @@ import net.mcreator.craftkaisen.CraftKaisenMod;
 public class CraftKaisenModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CraftKaisenMod.MODID);
 	public static final RegistryObject<SoundEvent> GUTS = REGISTRY.register("guts", () -> new SoundEvent(new ResourceLocation("craft_kaisen", "guts")));
+	public static final RegistryObject<SoundEvent> SLICE = REGISTRY.register("slice", () -> new SoundEvent(new ResourceLocation("craft_kaisen", "slice")));
+	public static final RegistryObject<SoundEvent> HEARTBEAT = REGISTRY.register("heartbeat", () -> new SoundEvent(new ResourceLocation("craft_kaisen", "heartbeat")));
+	public static final RegistryObject<SoundEvent> DOMAIN = REGISTRY.register("domain", () -> new SoundEvent(new ResourceLocation("craft_kaisen", "domain")));
 }
