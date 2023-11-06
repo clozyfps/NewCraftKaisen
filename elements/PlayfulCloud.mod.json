@@ -7,7 +7,9 @@
     "texture": "air102_layer_2",
     "customModelName": "playful_cloud:default",
     "name": "Playful Cloud",
-    "specialInfo": [],
+    "specialInfo": [
+      "Powerful Weapon"
+    ],
     "creativeTab": {
       "value": "CUSTOM:CkWeapons"
     },
@@ -15,7 +17,7 @@
     "efficiency": 4.0,
     "attackSpeed": 2.0,
     "enchantability": 2,
-    "damageVsEntity": 7.0,
+    "damageVsEntity": 10.0,
     "usageCount": 1000,
     "blocksAffected": [],
     "hasGlow": false,

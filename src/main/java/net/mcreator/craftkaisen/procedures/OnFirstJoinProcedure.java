@@ -253,6 +253,13 @@ public class OnFirstJoinProcedure {
 					});
 				}
 			}
+			{
+				String _setval = entity.getDisplayName().getString();
+				entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.PlayerDisplayName = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

@@ -10,14 +10,16 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
-import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
 import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
 
 import javax.annotation.Nullable;
@@ -97,7 +99,7 @@ public class SukunaMovesProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentMove).equals("Crush")) {
+			} else if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentMove).equals("Fire Arrow")) {
 				if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy >= 50
 						* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)) {
 					{
@@ -108,28 +110,8 @@ public class SukunaMovesProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level;
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new CrushedRangedEntity(CraftKaisenModEntities.CRUSHED_RANGED.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									entityToSpawn.setPierceLevel(piercing);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 0, 0, (byte) 500);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					if (entity instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(Component.literal("Crush."), true);
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.PRE_FIRE_ARROW.get(), 40, 0, false, false));
 					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))), 0);
 				} else if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy < 50
 						* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)) {

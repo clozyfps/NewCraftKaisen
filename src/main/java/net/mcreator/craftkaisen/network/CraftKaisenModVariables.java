@@ -99,6 +99,14 @@ public class CraftKaisenModVariables {
 			clone.characterCreated = original.characterCreated;
 			clone.specialCheck = original.specialCheck;
 			clone.CeNature = original.CeNature;
+			clone.InParty = original.InParty;
+			clone.PartyRole = original.PartyRole;
+			clone.CurrentMission = original.CurrentMission;
+			clone.Yen = original.Yen;
+			clone.PlayerDisplayName = original.PlayerDisplayName;
+			clone.Squad = original.Squad;
+			clone.ReputationStatus = original.ReputationStatus;
+			clone.PartyLabel = original.PartyLabel;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -108,6 +116,9 @@ public class CraftKaisenModVariables {
 				clone.Cooldown4 = original.Cooldown4;
 				clone.Cooldown5 = original.Cooldown5;
 				clone.Cooldown6 = original.Cooldown6;
+				clone.ComboCount = original.ComboCount;
+				clone.DoingMission = original.DoingMission;
+				clone.InCombat = original.InCombat;
 			}
 		}
 
@@ -313,6 +324,17 @@ public class CraftKaisenModVariables {
 		public double Cooldown4 = 0;
 		public double Cooldown5 = 0;
 		public double Cooldown6 = 0;
+		public boolean InParty = false;
+		public String PartyRole = "";
+		public String CurrentMission = "\"\"";
+		public double Yen = 0;
+		public double ComboCount = 0;
+		public String PlayerDisplayName = "";
+		public boolean DoingMission = false;
+		public String Squad = " ";
+		public String ReputationStatus = "\"\"";
+		public boolean InCombat = false;
+		public String PartyLabel = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -356,6 +378,17 @@ public class CraftKaisenModVariables {
 			nbt.putDouble("Cooldown4", Cooldown4);
 			nbt.putDouble("Cooldown5", Cooldown5);
 			nbt.putDouble("Cooldown6", Cooldown6);
+			nbt.putBoolean("InParty", InParty);
+			nbt.putString("PartyRole", PartyRole);
+			nbt.putString("CurrentMission", CurrentMission);
+			nbt.putDouble("Yen", Yen);
+			nbt.putDouble("ComboCount", ComboCount);
+			nbt.putString("PlayerDisplayName", PlayerDisplayName);
+			nbt.putBoolean("DoingMission", DoingMission);
+			nbt.putString("Squad", Squad);
+			nbt.putString("ReputationStatus", ReputationStatus);
+			nbt.putBoolean("InCombat", InCombat);
+			nbt.putString("PartyLabel", PartyLabel);
 			return nbt;
 		}
 
@@ -396,6 +429,17 @@ public class CraftKaisenModVariables {
 			Cooldown4 = nbt.getDouble("Cooldown4");
 			Cooldown5 = nbt.getDouble("Cooldown5");
 			Cooldown6 = nbt.getDouble("Cooldown6");
+			InParty = nbt.getBoolean("InParty");
+			PartyRole = nbt.getString("PartyRole");
+			CurrentMission = nbt.getString("CurrentMission");
+			Yen = nbt.getDouble("Yen");
+			ComboCount = nbt.getDouble("ComboCount");
+			PlayerDisplayName = nbt.getString("PlayerDisplayName");
+			DoingMission = nbt.getBoolean("DoingMission");
+			Squad = nbt.getString("Squad");
+			ReputationStatus = nbt.getString("ReputationStatus");
+			InCombat = nbt.getBoolean("InCombat");
+			PartyLabel = nbt.getString("PartyLabel");
 		}
 	}
 
@@ -455,6 +499,17 @@ public class CraftKaisenModVariables {
 					variables.Cooldown4 = message.data.Cooldown4;
 					variables.Cooldown5 = message.data.Cooldown5;
 					variables.Cooldown6 = message.data.Cooldown6;
+					variables.InParty = message.data.InParty;
+					variables.PartyRole = message.data.PartyRole;
+					variables.CurrentMission = message.data.CurrentMission;
+					variables.Yen = message.data.Yen;
+					variables.ComboCount = message.data.ComboCount;
+					variables.PlayerDisplayName = message.data.PlayerDisplayName;
+					variables.DoingMission = message.data.DoingMission;
+					variables.Squad = message.data.Squad;
+					variables.ReputationStatus = message.data.ReputationStatus;
+					variables.InCombat = message.data.InCombat;
+					variables.PartyLabel = message.data.PartyLabel;
 				}
 			});
 			context.setPacketHandled(true);

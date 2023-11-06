@@ -6,7 +6,20 @@
     "items": [],
     "blocks": [],
     "functions": [],
-    "entities": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Rika"
+      },
+      {
+        "value": "CUSTOM:SatoruGojo"
+      },
+      {
+        "value": "CUSTOM:YujiItadori"
+      },
+      {
+        "value": "CUSTOM:YutaOkkotsu"
+      }
+    ],
     "biomes": [],
     "name": "sorcerers",
     "namespace": "mod"

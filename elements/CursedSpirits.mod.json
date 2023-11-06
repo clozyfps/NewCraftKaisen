@@ -6,7 +6,23 @@
     "items": [],
     "blocks": [],
     "functions": [],
-    "entities": [],
+    "entities": [
+      {
+        "value": "CUSTOM:RoppongiCursedSpirit"
+      },
+      {
+        "value": "CUSTOM:RyomenSukuna"
+      },
+      {
+        "value": "CUSTOM:GreatSerpent"
+      },
+      {
+        "value": "CUSTOM:RugbyFieldCursedSpirit"
+      },
+      {
+        "value": "CUSTOM:KoGuy"
+      }
+    ],
     "biomes": [],
     "name": "cursed_spirits",
     "namespace": "mod"
