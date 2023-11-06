@@ -31,6 +31,7 @@ import net.mcreator.craftkaisen.item.DontMoveRangedItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
 import net.mcreator.craftkaisen.item.CrumbleAwayRangedItem;
 import net.mcreator.craftkaisen.item.BlastAwayRangedItem;
+import net.mcreator.craftkaisen.item.BlackMucusItem;
 import net.mcreator.craftkaisen.item.BlackBlindFoldItem;
 import net.mcreator.craftkaisen.item.BandageBlindFoldItem;
 import net.mcreator.craftkaisen.CraftKaisenMod;
@@ -77,4 +78,8 @@ public class CraftKaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.GREAT_SERPENT, -1, -16777216, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> NUE_SPAWN_EGG = REGISTRY.register("nue_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.NUE, -37301, -1315861, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> PLAYFUL_CLOUD = REGISTRY.register("playful_cloud", () -> new PlayfulCloudItem());
+	public static final RegistryObject<Item> RUGBY_FIELD_CURSED_SPIRIT_SPAWN_EGG = REGISTRY.register("rugby_field_cursed_spirit_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RUGBY_FIELD_CURSED_SPIRIT, -16764058, -6750208, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> KO_GUY_SPAWN_EGG = REGISTRY.register("ko_guy_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.KO_GUY, -6831509, -2237795, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> BLACK_MUCUS = REGISTRY.register("black_mucus", () -> new BlackMucusItem());
 }

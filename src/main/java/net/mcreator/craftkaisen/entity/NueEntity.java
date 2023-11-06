@@ -51,6 +51,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftkaisen.procedures.NueOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
 import java.util.EnumSet;
@@ -198,6 +199,7 @@ public class NueEntity extends Monster implements IAnimatable {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		NueOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

@@ -16,10 +16,12 @@ import net.mcreator.craftkaisen.client.renderer.YujiItadoriRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.RyomenSukunaRenderer;
+import net.mcreator.craftkaisen.client.renderer.RugbyFieldCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.RoppongiCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.RikaRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.NueRenderer;
+import net.mcreator.craftkaisen.client.renderer.KoGuyRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -47,5 +49,8 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.RIKA.get(), RikaRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.GREAT_SERPENT.get(), GreatSerpentRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.NUE.get(), NueRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.RUGBY_FIELD_CURSED_SPIRIT.get(), RugbyFieldCursedSpiritRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.KO_GUY.get(), KoGuyRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.BLACK_MUCUS.get(), ThrownItemRenderer::new);
 	}
 }

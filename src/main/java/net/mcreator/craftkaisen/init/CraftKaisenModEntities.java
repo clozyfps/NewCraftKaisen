@@ -24,11 +24,13 @@ import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
 import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.RugbyFieldCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.RoppongiCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
+import net.mcreator.craftkaisen.entity.KoGuyEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
@@ -37,6 +39,7 @@ import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
 import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
 import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.BlackMucusEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -104,6 +107,17 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<NueEntity>of(NueEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NueEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RugbyFieldCursedSpiritEntity>> RUGBY_FIELD_CURSED_SPIRIT = register("rugby_field_cursed_spirit",
+			EntityType.Builder.<RugbyFieldCursedSpiritEntity>of(RugbyFieldCursedSpiritEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(RugbyFieldCursedSpiritEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<KoGuyEntity>> KO_GUY = register("ko_guy",
+			EntityType.Builder.<KoGuyEntity>of(KoGuyEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KoGuyEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BlackMucusEntity>> BLACK_MUCUS = register("projectile_black_mucus",
+			EntityType.Builder.<BlackMucusEntity>of(BlackMucusEntity::new, MobCategory.MISC).setCustomClientFactory(BlackMucusEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -122,6 +136,8 @@ public class CraftKaisenModEntities {
 			RikaEntity.init();
 			GreatSerpentEntity.init();
 			NueEntity.init();
+			RugbyFieldCursedSpiritEntity.init();
+			KoGuyEntity.init();
 		});
 	}
 
@@ -137,5 +153,7 @@ public class CraftKaisenModEntities {
 		event.put(RIKA.get(), RikaEntity.createAttributes().build());
 		event.put(GREAT_SERPENT.get(), GreatSerpentEntity.createAttributes().build());
 		event.put(NUE.get(), NueEntity.createAttributes().build());
+		event.put(RUGBY_FIELD_CURSED_SPIRIT.get(), RugbyFieldCursedSpiritEntity.createAttributes().build());
+		event.put(KO_GUY.get(), KoGuyEntity.createAttributes().build());
 	}
 }

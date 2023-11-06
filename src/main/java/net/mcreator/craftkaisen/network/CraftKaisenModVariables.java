@@ -104,6 +104,9 @@ public class CraftKaisenModVariables {
 			clone.PartyRole = original.PartyRole;
 			clone.PartyLabel = original.PartyLabel;
 			clone.PlayerDisplayName = original.PlayerDisplayName;
+			clone.CurrentMission = original.CurrentMission;
+			clone.Yen = original.Yen;
+			clone.ReputationStatus = original.ReputationStatus;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -115,6 +118,7 @@ public class CraftKaisenModVariables {
 				clone.Cooldown6 = original.Cooldown6;
 				clone.InCombat = original.InCombat;
 				clone.ComboCount = original.ComboCount;
+				clone.DoingMission = original.DoingMission;
 			}
 		}
 
@@ -327,6 +331,10 @@ public class CraftKaisenModVariables {
 		public String PlayerDisplayName = "";
 		public boolean InCombat = false;
 		public double ComboCount = 0;
+		public boolean DoingMission = false;
+		public String CurrentMission = "\"\"";
+		public double Yen = 0;
+		public String ReputationStatus = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -377,6 +385,10 @@ public class CraftKaisenModVariables {
 			nbt.putString("PlayerDisplayName", PlayerDisplayName);
 			nbt.putBoolean("InCombat", InCombat);
 			nbt.putDouble("ComboCount", ComboCount);
+			nbt.putBoolean("DoingMission", DoingMission);
+			nbt.putString("CurrentMission", CurrentMission);
+			nbt.putDouble("Yen", Yen);
+			nbt.putString("ReputationStatus", ReputationStatus);
 			return nbt;
 		}
 
@@ -424,6 +436,10 @@ public class CraftKaisenModVariables {
 			PlayerDisplayName = nbt.getString("PlayerDisplayName");
 			InCombat = nbt.getBoolean("InCombat");
 			ComboCount = nbt.getDouble("ComboCount");
+			DoingMission = nbt.getBoolean("DoingMission");
+			CurrentMission = nbt.getString("CurrentMission");
+			Yen = nbt.getDouble("Yen");
+			ReputationStatus = nbt.getString("ReputationStatus");
 		}
 	}
 
@@ -490,6 +506,10 @@ public class CraftKaisenModVariables {
 					variables.PlayerDisplayName = message.data.PlayerDisplayName;
 					variables.InCombat = message.data.InCombat;
 					variables.ComboCount = message.data.ComboCount;
+					variables.DoingMission = message.data.DoingMission;
+					variables.CurrentMission = message.data.CurrentMission;
+					variables.Yen = message.data.Yen;
+					variables.ReputationStatus = message.data.ReputationStatus;
 				}
 			});
 			context.setPacketHandled(true);

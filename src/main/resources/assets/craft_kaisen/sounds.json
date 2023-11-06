@@ -34,5 +34,23 @@
         "stream": false
       }
     ]
+  },
+  "electric": {
+    "subtitle": "subtitles.electric",
+    "sounds": [
+      {
+        "name": "craft_kaisen:electric_shock",
+        "stream": false
+      }
+    ]
+  },
+  "hit": {
+    "subtitle": "subtitles.hit",
+    "sounds": [
+      {
+        "name": "craft_kaisen:punch_hit1",
+        "stream": false
+      }
+    ]
   }
 }
