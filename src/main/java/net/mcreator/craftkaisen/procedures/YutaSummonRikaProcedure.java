@@ -1,8 +1,30 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
+import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
+import net.mcreator.craftkaisen.entity.RikaEntity;
+import net.mcreator.craftkaisen.CraftKaisenMod;
 
 import javax.annotation.Nullable;
+
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class YutaSummonRikaProcedure {
@@ -23,7 +45,7 @@ public class YutaSummonRikaProcedure {
 				if (entity.getPersistentData().getBoolean("prerika")) {
 					entity.getPersistentData().putBoolean("prerika", false);
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new RikaEntity(CraftKaisenModEntities.DELETED_MOD_ELEMENT.get(), _level);
+						Entity entityToSpawn = new RikaEntity(CraftKaisenModEntities.RIKA.get(), _level);
 						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 						if (entityToSpawn instanceof Mob _mobToSpawn)
 							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);

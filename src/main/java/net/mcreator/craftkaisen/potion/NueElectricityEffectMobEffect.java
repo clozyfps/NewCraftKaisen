@@ -1,8 +1,19 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class NueElectricityEffectMobEffect extends MobEffect {
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+
+import net.mcreator.craftkaisen.procedures.NueElectricityEffectOnEffectActiveTickProcedure;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class NueElectricityEffectMobEffect extends MobEffect {
 	public NueElectricityEffectMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -4700706);
 	}
