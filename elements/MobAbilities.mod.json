@@ -1,0 +1,7 @@
+{
+  "_fv": 47,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"34\" y=\"40\"><field name=\"trigger\">entity_ticks</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_entity_compare\"><field name=\"entity\">EntityLiving</field><value name=\"compareTo\"><block type=\"entity_gettargetentity\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value></block></value><statement name=\"DO0\"><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_binary_ops\"><field name=\"OP\">OR</field><value name=\"A\"><block type=\"logic_entity_compare\"><field name=\"entity\">CUSTOM:RyomenSukuna</field><value name=\"compareTo\"><block type=\"entity_from_deps\"></block></value></block></value><value name=\"B\"><block type=\"entity_nbt_logic_get\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><value name=\"tagName\"><block type=\"text\"><field name=\"TEXT\">sukuna</field></block></value></block></value></block></value><statement name=\"DO0\"><block type=\"call_procedure\"><field name=\"procedure\">SukunaMobMoves</field></block></statement></block></statement></block></next></block></xml>"
+  }
+}

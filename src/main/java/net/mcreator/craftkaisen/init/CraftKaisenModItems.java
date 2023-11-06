@@ -13,6 +13,8 @@ import net.minecraft.world.item.Item;
 
 import net.mcreator.craftkaisen.item.YutaKatanaItem;
 import net.mcreator.craftkaisen.item.TwistRangedItem;
+import net.mcreator.craftkaisen.item.TojiOutfitItem;
+import net.mcreator.craftkaisen.item.SukunaOutfitItem;
 import net.mcreator.craftkaisen.item.SplitSoulKatanaItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
 import net.mcreator.craftkaisen.item.RunAwayRangedItem;
@@ -22,6 +24,8 @@ import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MiwaKatanaItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererUniformItem;
 import net.mcreator.craftkaisen.item.InvertedSpearItem;
+import net.mcreator.craftkaisen.item.FireArrowMobItem;
+import net.mcreator.craftkaisen.item.FireArrowItem;
 import net.mcreator.craftkaisen.item.ExplodeRangedItem;
 import net.mcreator.craftkaisen.item.DontMoveRangedItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
@@ -36,7 +40,6 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> REVERSAL_RED_PROJECTILE = REGISTRY.register("reversal_red_projectile", () -> new ReversalRedProjectileItem());
 	public static final RegistryObject<Item> SATORU_GOJO_SPAWN_EGG = REGISTRY.register("satoru_gojo_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.SATORU_GOJO, -16514039, -1, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
-	public static final RegistryObject<Item> PLAYFUL_CLOUD = REGISTRY.register("playful_cloud", () -> new PlayfulCloudItem());
 	public static final RegistryObject<Item> EXPLODE_RANGED = REGISTRY.register("explode_ranged", () -> new ExplodeRangedItem());
 	public static final RegistryObject<Item> TWIST_RANGED = REGISTRY.register("twist_ranged", () -> new TwistRangedItem());
 	public static final RegistryObject<Item> CRUSHED_RANGED = REGISTRY.register("crushed_ranged", () -> new CrushedRangedItem());
@@ -54,4 +57,24 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> NAGINATA = REGISTRY.register("naginata", () -> new NaginataItem());
 	public static final RegistryObject<Item> YUTA_KATANA = REGISTRY.register("yuta_katana", () -> new YutaKatanaItem());
 	public static final RegistryObject<Item> MIWA_KATANA = REGISTRY.register("miwa_katana", () -> new MiwaKatanaItem());
+	public static final RegistryObject<Item> TOJI_OUTFIT_CHESTPLATE = REGISTRY.register("toji_outfit_chestplate", () -> new TojiOutfitItem.Chestplate());
+	public static final RegistryObject<Item> TOJI_OUTFIT_LEGGINGS = REGISTRY.register("toji_outfit_leggings", () -> new TojiOutfitItem.Leggings());
+	public static final RegistryObject<Item> TOJI_FUSHIGURO_SPAWN_EGG = REGISTRY.register("toji_fushiguro_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.TOJI_FUSHIGURO, -15001056, -1, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> YUJI_ITADORI_SPAWN_EGG = REGISTRY.register("yuji_itadori_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.YUJI_ITADORI, -15395555, -4712424, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> SUKUNA_OUTFIT_CHESTPLATE = REGISTRY.register("sukuna_outfit_chestplate", () -> new SukunaOutfitItem.Chestplate());
+	public static final RegistryObject<Item> RYOMEN_SUKUNA_SPAWN_EGG = REGISTRY.register("ryomen_sukuna_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RYOMEN_SUKUNA, -1, -3835270, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> ROPPONGI_CURSED_SPIRIT_SPAWN_EGG = REGISTRY.register("roppongi_cursed_spirit_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.ROPPONGI_CURSED_SPIRIT, -2829154, -10795978, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> FIRE_ARROW = REGISTRY.register("fire_arrow", () -> new FireArrowItem());
+	public static final RegistryObject<Item> FIRE_ARROW_MOB = REGISTRY.register("fire_arrow_mob", () -> new FireArrowMobItem());
+	public static final RegistryObject<Item> YUTA_OKKOTSU_SPAWN_EGG = REGISTRY.register("yuta_okkotsu_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.YUTA_OKKOTSU, -1, -15066598, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> RIKA_SPAWN_EGG = REGISTRY.register("rika_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.RIKA, -1, -15527149, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> GREAT_SERPENT_SPAWN_EGG = REGISTRY.register("great_serpent_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.GREAT_SERPENT, -1, -16777216, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> NUE_SPAWN_EGG = REGISTRY.register("nue_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.NUE, -37301, -1315861, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> PLAYFUL_CLOUD = REGISTRY.register("playful_cloud", () -> new PlayfulCloudItem());
 }

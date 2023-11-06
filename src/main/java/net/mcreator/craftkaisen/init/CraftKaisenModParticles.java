@@ -14,6 +14,7 @@ import net.mcreator.craftkaisen.client.particle.SnowflakeParticle;
 import net.mcreator.craftkaisen.client.particle.RedParticleParticle;
 import net.mcreator.craftkaisen.client.particle.PurpleElectricityParticle;
 import net.mcreator.craftkaisen.client.particle.InfinityParticleParticle;
+import net.mcreator.craftkaisen.client.particle.FireArrowParticleParticle;
 import net.mcreator.craftkaisen.client.particle.BlueParticleParticle;
 import net.mcreator.craftkaisen.client.particle.BloodParticle;
 
@@ -28,5 +29,6 @@ public class CraftKaisenModParticles {
 		event.register(CraftKaisenModParticleTypes.BLOOD.get(), BloodParticle::provider);
 		event.register(CraftKaisenModParticleTypes.BLUE_PARTICLE.get(), BlueParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.INFINITY_PARTICLE.get(), InfinityParticleParticle::provider);
+		event.register(CraftKaisenModParticleTypes.FIRE_ARROW_PARTICLE.get(), FireArrowParticleParticle::provider);
 	}
 }

@@ -18,7 +18,31 @@ authors="tobia, MCreator"
     side="BOTH"
 
 
+[[dependencies.craft_kaisen]]
+    modId="kleiders_custom_renderer"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
+[[dependencies.craft_kaisen]]
+    modId="kleidersplayerrenderer"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.craft_kaisen]]
+    modId="kleiders_custom_renderer"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.craft_kaisen]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.craft_kaisen]]
     modId="playeranimator"
     mandatory=false

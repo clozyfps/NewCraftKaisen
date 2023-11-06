@@ -22,4 +22,5 @@ public class CraftKaisenModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> BLOOD = REGISTRY.register("blood", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> BLUE_PARTICLE = REGISTRY.register("blue_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> INFINITY_PARTICLE = REGISTRY.register("infinity_particle", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> FIRE_ARROW_PARTICLE = REGISTRY.register("fire_arrow_particle", () -> new SimpleParticleType(true));
 }

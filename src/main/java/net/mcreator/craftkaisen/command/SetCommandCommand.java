@@ -31,6 +31,7 @@ import net.mcreator.craftkaisen.procedures.SetEnergyControlProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedSpeechProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedEnergyStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetCurseProcedure;
+import net.mcreator.craftkaisen.procedures.SetCopyProcedure;
 import net.mcreator.craftkaisen.procedures.ResetButtonProcedure;
 
 import com.mojang.brigadier.arguments.DoubleArgumentType;
@@ -75,6 +76,18 @@ public class SetCommandCommand {
 					Direction direction = entity.getDirection();
 
 					SetSukunaProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("Copy").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetCopyProcedure.execute(entity);
 					return 0;
 				})))).then(Commands.literal("race").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("human").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();

@@ -99,5 +99,27 @@ public class SetMovesProcedure {
 				entity.getPersistentData().putDouble("moveCost", 40);
 			}
 		}
+		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Copy")) {
+			entity.getPersistentData().putDouble("maxMoves", 6);
+			if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+				entity.getPersistentData().putString("moveDisplay", "Summon Rika");
+				entity.getPersistentData().putDouble("moveCost", 7);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
+				entity.getPersistentData().putString("moveDisplay", "Release Rika");
+				entity.getPersistentData().putDouble("moveCost", 10);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
+				entity.getPersistentData().putString("moveDisplay", "Copy 1");
+				entity.getPersistentData().putDouble("moveCost", 12);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
+				entity.getPersistentData().putString("moveDisplay", "Copy 2");
+				entity.getPersistentData().putDouble("moveCost", 15);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
+				entity.getPersistentData().putString("moveDisplay", "Copy 3");
+				entity.getPersistentData().putDouble("moveCost", 20);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 6) {
+				entity.getPersistentData().putString("moveDisplay", "Copy 4");
+				entity.getPersistentData().putDouble("moveCost", 25);
+			}
+		}
 	}
 }

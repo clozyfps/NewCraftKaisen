@@ -16,12 +16,22 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
+import net.mcreator.craftkaisen.entity.YujiItadoriEntity;
 import net.mcreator.craftkaisen.entity.TwistRangedEntity;
+import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
 import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.RoppongiCursedSpiritEntity;
+import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
+import net.mcreator.craftkaisen.entity.NueEntity;
+import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
+import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
+import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
 import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
 import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
@@ -57,6 +67,43 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<RunAwayRangedEntity>of(RunAwayRangedEntity::new, MobCategory.MISC).setCustomClientFactory(RunAwayRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BlastAwayRangedEntity>> BLAST_AWAY_RANGED = register("projectile_blast_away_ranged", EntityType.Builder.<BlastAwayRangedEntity>of(BlastAwayRangedEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(BlastAwayRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TojiFushiguroEntity>> TOJI_FUSHIGURO = register("toji_fushiguro",
+			EntityType.Builder.<TojiFushiguroEntity>of(TojiFushiguroEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TojiFushiguroEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<YujiItadoriEntity>> YUJI_ITADORI = register("yuji_itadori",
+			EntityType.Builder.<YujiItadoriEntity>of(YujiItadoriEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(YujiItadoriEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RyomenSukunaEntity>> RYOMEN_SUKUNA = register("ryomen_sukuna",
+			EntityType.Builder.<RyomenSukunaEntity>of(RyomenSukunaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RyomenSukunaEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RoppongiCursedSpiritEntity>> ROPPONGI_CURSED_SPIRIT = register("roppongi_cursed_spirit",
+			EntityType.Builder.<RoppongiCursedSpiritEntity>of(RoppongiCursedSpiritEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(RoppongiCursedSpiritEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FireArrowEntity>> FIRE_ARROW = register("projectile_fire_arrow",
+			EntityType.Builder.<FireArrowEntity>of(FireArrowEntity::new, MobCategory.MISC).setCustomClientFactory(FireArrowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FireArrowMobEntity>> FIRE_ARROW_MOB = register("projectile_fire_arrow_mob",
+			EntityType.Builder.<FireArrowMobEntity>of(FireArrowMobEntity::new, MobCategory.MISC).setCustomClientFactory(FireArrowMobEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<YutaOkkotsuEntity>> YUTA_OKKOTSU = register("yuta_okkotsu",
+			EntityType.Builder.<YutaOkkotsuEntity>of(YutaOkkotsuEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(YutaOkkotsuEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RikaEntity>> RIKA = register("rika",
+			EntityType.Builder.<RikaEntity>of(RikaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RikaEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GreatSerpentEntity>> GREAT_SERPENT = register("great_serpent",
+			EntityType.Builder.<GreatSerpentEntity>of(GreatSerpentEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GreatSerpentEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<NueEntity>> NUE = register("nue",
+			EntityType.Builder.<NueEntity>of(NueEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NueEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -67,6 +114,14 @@ public class CraftKaisenModEntities {
 		event.enqueueWork(() -> {
 			ReversalRedEntityEntity.init();
 			SatoruGojoEntity.init();
+			TojiFushiguroEntity.init();
+			YujiItadoriEntity.init();
+			RyomenSukunaEntity.init();
+			RoppongiCursedSpiritEntity.init();
+			YutaOkkotsuEntity.init();
+			RikaEntity.init();
+			GreatSerpentEntity.init();
+			NueEntity.init();
 		});
 	}
 
@@ -74,5 +129,13 @@ public class CraftKaisenModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(REVERSAL_RED_ENTITY.get(), ReversalRedEntityEntity.createAttributes().build());
 		event.put(SATORU_GOJO.get(), SatoruGojoEntity.createAttributes().build());
+		event.put(TOJI_FUSHIGURO.get(), TojiFushiguroEntity.createAttributes().build());
+		event.put(YUJI_ITADORI.get(), YujiItadoriEntity.createAttributes().build());
+		event.put(RYOMEN_SUKUNA.get(), RyomenSukunaEntity.createAttributes().build());
+		event.put(ROPPONGI_CURSED_SPIRIT.get(), RoppongiCursedSpiritEntity.createAttributes().build());
+		event.put(YUTA_OKKOTSU.get(), YutaOkkotsuEntity.createAttributes().build());
+		event.put(RIKA.get(), RikaEntity.createAttributes().build());
+		event.put(GREAT_SERPENT.get(), GreatSerpentEntity.createAttributes().build());
+		event.put(NUE.get(), NueEntity.createAttributes().build());
 	}
 }

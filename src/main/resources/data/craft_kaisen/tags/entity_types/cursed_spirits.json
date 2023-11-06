@@ -1,4 +1,8 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "craft_kaisen:ryomen_sukuna",
+    "craft_kaisen:great_serpent",
+    "craft_kaisen:roppongi_cursed_spirit"
+  ]
 }
