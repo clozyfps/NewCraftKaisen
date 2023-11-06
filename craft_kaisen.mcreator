@@ -5297,7 +5297,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedure"
     },
     {
       "name": "BlackMucusWhileProjectileFlyingTick",
@@ -5354,6 +5354,56 @@
         ]
       },
       "path": "~/Ranged"
+    },
+    {
+      "name": "InventoryCurse",
+      "type": "item",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/InventoryCurseItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/inventory_curse.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Render",
+      "type": "procedure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TojiCurseArmor",
+      "type": "armor",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_curse_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/TojiCurseArmorItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/toji_curse_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
     }
   ],
   "variable_elements": [
@@ -5787,6 +5837,7 @@
       "gamerule.forceSukunaTechnique.description": "Forces sukuna technique on whoever is controlling the body of a vessel.",
       "entity.craft_kaisen.roppongi_cursed_spirit": "Roppongi Cursed Spirit",
       "itemGroup.tabck_armor": "Ck Armor",
+      "item.craft_kaisen.inventory_curse": "Inventory Curse",
       "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
       "item.craft_kaisen.jujutsu_sorcerer_uniform_chestplate": "Jujutsu Sorcerer Uniform",
       "entity.craft_kaisen.rika": "Rika",
@@ -5810,6 +5861,7 @@
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
       "gui.craft_kaisen.main_menu.label_empty": "---------------",
       "entity.craft_kaisen.nue": "Nue",
+      "item.craft_kaisen.toji_curse_armor_chestplate": "Toji Curse Armor ",
       "gui.craft_kaisen.main_menu.tooltip_increase_movement_speed": "increase movement speed",
       "effect.craft_kaisen.body_crushing": "Crushing",
       "effect.craft_kaisen.twisting": "Twisting",

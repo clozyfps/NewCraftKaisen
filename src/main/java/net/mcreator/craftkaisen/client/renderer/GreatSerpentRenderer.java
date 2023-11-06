@@ -6,11 +6,11 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
-import net.mcreator.craftkaisen.client.model.Modelserpentground;
+import net.mcreator.craftkaisen.client.model.Modeltenshadowsgreatserpent;
 
-public class GreatSerpentRenderer extends MobRenderer<GreatSerpentEntity, Modelserpentground<GreatSerpentEntity>> {
+public class GreatSerpentRenderer extends MobRenderer<GreatSerpentEntity, Modeltenshadowsgreatserpent<GreatSerpentEntity>> {
 	public GreatSerpentRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelserpentground(context.bakeLayer(Modelserpentground.LAYER_LOCATION)), 0.5f);
+		super(context, new Modeltenshadowsgreatserpent(context.bakeLayer(Modeltenshadowsgreatserpent.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
