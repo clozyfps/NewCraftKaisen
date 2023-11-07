@@ -13,7 +13,9 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftkaisen.client.renderer.YutaOkkotsuRenderer;
 import net.mcreator.craftkaisen.client.renderer.YujiItadoriRenderer;
+import net.mcreator.craftkaisen.client.renderer.UnlimitedVoidMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
+import net.mcreator.craftkaisen.client.renderer.ToadRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.RyomenSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.RugbyFieldCursedSpiritRenderer;
@@ -22,6 +24,7 @@ import net.mcreator.craftkaisen.client.renderer.RikaRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.NueRenderer;
 import net.mcreator.craftkaisen.client.renderer.KoGuyRenderer;
+import net.mcreator.craftkaisen.client.renderer.HeianEraSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -53,6 +56,9 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.KO_GUY.get(), KoGuyRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.BLACK_MUCUS.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.DISMANTLE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.HEIAN_ERA_SUKUNA.get(), HeianEraSukunaRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.FIND_BLUE_LOCATION.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.TOAD.get(), ToadRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.UNLIMITED_VOID_MOB.get(), UnlimitedVoidMobRenderer::new);
 	}
 }

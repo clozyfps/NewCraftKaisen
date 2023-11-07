@@ -9,12 +9,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.craftkaisen.item.YutaKatanaItem;
 import net.mcreator.craftkaisen.item.TwistRangedItem;
 import net.mcreator.craftkaisen.item.TojiOutfitItem;
 import net.mcreator.craftkaisen.item.TojiCurseArmorItem;
+import net.mcreator.craftkaisen.item.TestItem;
 import net.mcreator.craftkaisen.item.SukunaOutfitItem;
 import net.mcreator.craftkaisen.item.SplitSoulKatanaItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
@@ -89,5 +93,14 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> INVENTORY_CURSE = REGISTRY.register("inventory_curse", () -> new InventoryCurseItem());
 	public static final RegistryObject<Item> TOJI_CURSE_ARMOR_CHESTPLATE = REGISTRY.register("toji_curse_armor_chestplate", () -> new TojiCurseArmorItem.Chestplate());
 	public static final RegistryObject<Item> DISMANTLE = REGISTRY.register("dismantle", () -> new DismantleItem());
+	public static final RegistryObject<Item> HEIAN_ERA_SUKUNA_SPAWN_EGG = REGISTRY.register("heian_era_sukuna_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.HEIAN_ERA_SUKUNA, -403824, -21804, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> FIND_BLUE_LOCATION = REGISTRY.register("find_blue_location", () -> new FindBlueLocationItem());
+	public static final RegistryObject<Item> TOAD_SPAWN_EGG = REGISTRY.register("toad_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.TOAD, -10841282, -3619735, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
+	public static final RegistryObject<Item> DOMAIN_BLOCK = block(CraftKaisenModBlocks.DOMAIN_BLOCK, null);
+
+	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+	}
 }
