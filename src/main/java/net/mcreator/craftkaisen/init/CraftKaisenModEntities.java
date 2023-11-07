@@ -18,8 +18,10 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
 import net.mcreator.craftkaisen.entity.YujiItadoriEntity;
+import net.mcreator.craftkaisen.entity.UnlimitedVoidMobEntity;
 import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
+import net.mcreator.craftkaisen.entity.ToadEntity;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
@@ -31,6 +33,7 @@ import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
+import net.mcreator.craftkaisen.entity.HeianEraSukunaEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
@@ -118,6 +121,16 @@ public class CraftKaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BlackMucusEntity>> BLACK_MUCUS = register("projectile_black_mucus",
 			EntityType.Builder.<BlackMucusEntity>of(BlackMucusEntity::new, MobCategory.MISC).setCustomClientFactory(BlackMucusEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<HeianEraSukunaEntity>> HEIAN_ERA_SUKUNA = register("heian_era_sukuna",
+			EntityType.Builder.<HeianEraSukunaEntity>of(HeianEraSukunaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HeianEraSukunaEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ToadEntity>> TOAD = register("toad",
+			EntityType.Builder.<ToadEntity>of(ToadEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ToadEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<UnlimitedVoidMobEntity>> UNLIMITED_VOID_MOB = register("unlimited_void_mob", EntityType.Builder.<UnlimitedVoidMobEntity>of(UnlimitedVoidMobEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UnlimitedVoidMobEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -138,6 +151,9 @@ public class CraftKaisenModEntities {
 			NueEntity.init();
 			RugbyFieldCursedSpiritEntity.init();
 			KoGuyEntity.init();
+			HeianEraSukunaEntity.init();
+			ToadEntity.init();
+			UnlimitedVoidMobEntity.init();
 		});
 	}
 
@@ -155,5 +171,8 @@ public class CraftKaisenModEntities {
 		event.put(NUE.get(), NueEntity.createAttributes().build());
 		event.put(RUGBY_FIELD_CURSED_SPIRIT.get(), RugbyFieldCursedSpiritEntity.createAttributes().build());
 		event.put(KO_GUY.get(), KoGuyEntity.createAttributes().build());
+		event.put(HEIAN_ERA_SUKUNA.get(), HeianEraSukunaEntity.createAttributes().build());
+		event.put(TOAD.get(), ToadEntity.createAttributes().build());
+		event.put(UNLIMITED_VOID_MOB.get(), UnlimitedVoidMobEntity.createAttributes().build());
 	}
 }

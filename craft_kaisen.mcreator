@@ -5404,6 +5404,406 @@
         ]
       },
       "path": "~/Armor"
+    },
+    {
+      "name": "HeianEraSukuna",
+      "type": "livingentity",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heian_era_sukuna",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/heian_era_sukuna_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HeianEraSukunaRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HeianEraSukunaEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BlackFlashPulse",
+      "type": "particle",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_flash_pulse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BlackFlashPulseParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/black_flash_pulse.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "BlackFlashAdvancement",
+      "type": "achievement",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_flash_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/black_flash_advancement.json"
+        ]
+      },
+      "path": "~/Advancement"
+    },
+    {
+      "name": "JujutsuKaisen",
+      "type": "achievement",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jujutsu_kaisen",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/jujutsu_kaisen.json"
+        ]
+      },
+      "path": "~/Advancement"
+    },
+    {
+      "name": "JujutsuSorcerer",
+      "type": "achievement",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jujutsu_sorcerer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/jujutsu_sorcerer.json"
+        ]
+      },
+      "path": "~/Advancement"
+    },
+    {
+      "name": "BlackFlash",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_flash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlackFlashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Toad",
+      "type": "livingentity",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toad",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ToadEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ToadRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/toad_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "TestLivingEntityIsHitWithItem",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_living_entity_is_hit_with_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TestLivingEntityIsHitWithItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedure"
+    },
+    {
+      "name": "Test",
+      "type": "item",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/TestItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/test.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "DomainBlock",
+      "type": "block",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/domain_block.json",
+          "src/main/resources/assets/craft_kaisen/models/block/domain_block.json",
+          "src/main/resources/assets/craft_kaisen/blockstates/domain_block.json",
+          "src/main/java/net/mcreator/craftkaisen/block/DomainBlockBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "UnlimitedVoidEffect",
+      "type": "potioneffect",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/UnlimitedVoidEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "UnlimitedVoidEffectOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnlimitedVoidEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "UnlimitedVoidEffectEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_effect_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnlimitedVoidEffectEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "UnlimitedVoidEffectEffectExpires",
+      "type": "procedure",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_effect_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnlimitedVoidEffectEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "UnlimitedVoidMobOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_mob_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnlimitedVoidMobOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "UnlimitedVoidMob",
+      "type": "livingentity",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/UnlimitedVoidMobEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/UnlimitedVoidMobRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "TestRightclicked",
+      "type": "procedure",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TestRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedure"
+    },
+    {
+      "name": "UnlimitedVoidMobOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_mob_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnlimitedVoidMobOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "DomainExpansion",
+      "type": "potioneffect",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_expansion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/DomainExpansionMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
     }
   ],
   "variable_elements": [
@@ -5755,9 +6155,12 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
+      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
+      "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
       "key.craft_kaisen.ability_4": "Ability 4",
-      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_5": "Ability 5",
+      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
@@ -5765,6 +6168,7 @@
       "key.craft_kaisen.ability_1": "Ability 1",
       "key.craft_kaisen.ability_2": "Ability 2",
       "gui.craft_kaisen.move_gui.button_6": "6",
+      "effect.craft_kaisen.domain_expansion": "Domain Expansion",
       "gui.craft_kaisen.move_gui.button_5": "5",
       "key.craft_kaisen.ability_3": "Ability 3",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
@@ -5772,11 +6176,14 @@
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
       "advancements.semi_grade_3.title": "Semi Grade 3",
+      "entity.craft_kaisen.unlimited_void_mob": "Unlimited Void Mob",
       "item.craft_kaisen.run_away_ranged": "Run Away Ranged",
+      "item.craft_kaisen.heian_era_sukuna_spawn_egg": "Heian Era Sukuna Spawn Egg",
       "entity.craft_kaisen.ko_guy": "Ko-Guy",
       "advancements.semi_grade_1.descr": "Reach The Required Fame.",
       "gui.craft_kaisen.main_menu.tooltip_increases_attack_damage": "increases attack damage",
       "gui.craft_kaisen.main_menu.label_race_human": "Human",
+      "item.craft_kaisen.toad_spawn_egg": "Toad Spawn Egg",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
       "advancements.grade_3.title": "Grade 3",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
@@ -5794,6 +6201,7 @@
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
       "item.craft_kaisen.miwa_katana": "Miwa Katana",
       "item.craft_kaisen.yuta_okkotsu_spawn_egg": "Yuta Okkotsu Spawn Egg",
+      "entity.craft_kaisen.heian_era_sukuna": "Heian Era Sukuna",
       "itemGroup.tabck_weapons": "Ck Weapons",
       "subtitles.hit": "strong hit",
       "gui.craft_kaisen.main_menu.label_empty6": "+",
@@ -5827,17 +6235,22 @@
       "advancements.grade_2.title": "Grade 2",
       "item.craft_kaisen.bandage_blind_fold_helmet": "Bandage Blind Fold",
       "advancements.grade_3.descr": "Reach The Required Fame.",
+      "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "entity.craft_kaisen.yuji_itadori": "Yuji Itadori",
       "gui.craft_kaisen.main_menu.tooltip_increase_max_cursed_energy": "increase max cursed energy",
       "item.craft_kaisen.black_mucus": "Black Mucus",
       "item.craft_kaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
+      "advancements.jujutsu_kaisen.descr": "Begin your journey in the world of JJK",
+      "advancements.black_flash_advancement.descr": "Attack a mob while your cursed energy is active with a 0.01% Chance",
       "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
       "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
       "gamerule.forceSukunaTechnique.description": "Forces sukuna technique on whoever is controlling the body of a vessel.",
       "entity.craft_kaisen.roppongi_cursed_spirit": "Roppongi Cursed Spirit",
       "itemGroup.tabck_armor": "Ck Armor",
+      "entity.craft_kaisen.toad": "Toad",
       "item.craft_kaisen.inventory_curse": "Inventory Curse",
+      "block.craft_kaisen.domain_block": "Domain Block",
       "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
       "item.craft_kaisen.jujutsu_sorcerer_uniform_chestplate": "Jujutsu Sorcerer Uniform",
       "entity.craft_kaisen.rika": "Rika",
@@ -5854,6 +6267,7 @@
       "item.craft_kaisen.crumble_away_ranged": "Crumble Away Ranged",
       "item.craft_kaisen.sleep_ranged": "Sleep Ranged",
       "entity.craft_kaisen.rugby_field_cursed_spirit": "Rugby Field Cursed Spirit",
+      "item.craft_kaisen.test": "Test",
       "advancements.semi_grade_1.title": "Semi Grade 1",
       "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "advancements.semi_grade_3.descr": "Reach The Required Fame.",
@@ -5863,6 +6277,7 @@
       "entity.craft_kaisen.nue": "Nue",
       "item.craft_kaisen.toji_curse_armor_chestplate": "Toji Curse Armor ",
       "gui.craft_kaisen.main_menu.tooltip_increase_movement_speed": "increase movement speed",
+      "advancements.black_flash_advancement.title": "Black Flash",
       "effect.craft_kaisen.body_crushing": "Crushing",
       "effect.craft_kaisen.twisting": "Twisting",
       "item.craft_kaisen.ko_guy_spawn_egg": "Ko-Guy Spawn Egg",
@@ -6016,7 +6431,12 @@
       },
       {
         "name": "Items",
-        "children": []
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Creative Tabs",
@@ -6066,6 +6486,10 @@
           {
             "name": "Procedure",
             "children": []
+          },
+          {
+            "name": "Domain",
+            "children": []
           }
         ]
       },
@@ -6090,6 +6514,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Blocks",
+        "children": []
       }
     ]
   },

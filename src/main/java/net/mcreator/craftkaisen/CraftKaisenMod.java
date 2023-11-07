@@ -38,6 +38,7 @@ import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftKaisenModMenus;
 import net.mcreator.craftkaisen.init.CraftKaisenModItems;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
+import net.mcreator.craftkaisen.init.CraftKaisenModBlocks;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -58,7 +59,7 @@ public class CraftKaisenMod {
 		CraftKaisenModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		CraftKaisenModSounds.REGISTRY.register(bus);
-
+		CraftKaisenModBlocks.REGISTRY.register(bus);
 		CraftKaisenModItems.REGISTRY.register(bus);
 		CraftKaisenModEntities.REGISTRY.register(bus);
 
