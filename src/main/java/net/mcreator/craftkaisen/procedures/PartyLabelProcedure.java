@@ -1,8 +1,12 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.commands.CommandSourceStack;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+
+import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.arguments.StringArgumentType;
 
 public class PartyLabelProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
