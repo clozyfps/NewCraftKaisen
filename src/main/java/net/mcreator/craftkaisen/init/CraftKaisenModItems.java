@@ -32,8 +32,10 @@ import net.mcreator.craftkaisen.item.InvertedSpearItem;
 import net.mcreator.craftkaisen.item.InventoryCurseItem;
 import net.mcreator.craftkaisen.item.FireArrowMobItem;
 import net.mcreator.craftkaisen.item.FireArrowItem;
+import net.mcreator.craftkaisen.item.FindBlueLocationItem;
 import net.mcreator.craftkaisen.item.ExplodeRangedItem;
 import net.mcreator.craftkaisen.item.DontMoveRangedItem;
+import net.mcreator.craftkaisen.item.DismantleItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
 import net.mcreator.craftkaisen.item.CrumbleAwayRangedItem;
 import net.mcreator.craftkaisen.item.BlastAwayRangedItem;
@@ -90,8 +92,10 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> BLACK_MUCUS = REGISTRY.register("black_mucus", () -> new BlackMucusItem());
 	public static final RegistryObject<Item> INVENTORY_CURSE = REGISTRY.register("inventory_curse", () -> new InventoryCurseItem());
 	public static final RegistryObject<Item> TOJI_CURSE_ARMOR_CHESTPLATE = REGISTRY.register("toji_curse_armor_chestplate", () -> new TojiCurseArmorItem.Chestplate());
+	public static final RegistryObject<Item> DISMANTLE = REGISTRY.register("dismantle", () -> new DismantleItem());
 	public static final RegistryObject<Item> HEIAN_ERA_SUKUNA_SPAWN_EGG = REGISTRY.register("heian_era_sukuna_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.HEIAN_ERA_SUKUNA, -403824, -21804, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> FIND_BLUE_LOCATION = REGISTRY.register("find_blue_location", () -> new FindBlueLocationItem());
 	public static final RegistryObject<Item> TOAD_SPAWN_EGG = REGISTRY.register("toad_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.TOAD, -10841282, -3619735, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
 	public static final RegistryObject<Item> DOMAIN_BLOCK = block(CraftKaisenModBlocks.DOMAIN_BLOCK, null);

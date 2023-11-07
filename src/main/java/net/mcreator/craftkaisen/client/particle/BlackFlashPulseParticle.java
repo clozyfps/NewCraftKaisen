@@ -1,19 +1,9 @@
 
 package net.mcreator.craftkaisen.client.particle;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.client.particle.TextureSheetParticle;
-import net.minecraft.client.particle.SpriteSet;
-import net.minecraft.client.particle.ParticleRenderType;
-import net.minecraft.client.particle.ParticleProvider;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.client.multiplayer.ClientLevel;
-
 @OnlyIn(Dist.CLIENT)
 public class BlackFlashPulseParticle extends TextureSheetParticle {
+
 	public static BlackFlashPulseParticleProvider provider(SpriteSet spriteSet) {
 		return new BlackFlashPulseParticleProvider(spriteSet);
 	}
@@ -38,16 +28,22 @@ public class BlackFlashPulseParticle extends TextureSheetParticle {
 	protected BlackFlashPulseParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
+
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 15f;
+
 		this.lifetime = 7;
+
 		this.gravity = 0f;
 		this.hasPhysics = false;
+
 		this.xd = vx * 1;
 		this.yd = vy * 1;
 		this.zd = vz * 1;
+
 		this.angularVelocity = 0.314f;
 		this.angularAcceleration = 0f;
+
 		this.setSpriteFromAge(spriteSet);
 	}
 
@@ -64,11 +60,15 @@ public class BlackFlashPulseParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
+
 		this.oRoll = this.roll;
 		this.roll += this.angularVelocity;
 		this.angularVelocity += this.angularAcceleration;
+
 		if (!this.removed) {
 			this.setSprite(this.spriteSet.get((this.age / 2) % 6 + 1, 6));
 		}
+
 	}
+
 }

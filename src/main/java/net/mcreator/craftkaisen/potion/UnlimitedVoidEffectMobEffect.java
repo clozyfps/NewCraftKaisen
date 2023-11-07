@@ -1,22 +1,8 @@
 
 package net.mcreator.craftkaisen.potion;
 
-import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
-
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
-
-import net.mcreator.craftkaisen.procedures.UnlimitedVoidEffectOnEffectActiveTickProcedure;
-import net.mcreator.craftkaisen.procedures.UnlimitedVoidEffectEffectStartedappliedProcedure;
-import net.mcreator.craftkaisen.procedures.UnlimitedVoidEffectEffectExpiresProcedure;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class UnlimitedVoidEffectMobEffect extends MobEffect {
+
 	public UnlimitedVoidEffectMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -39,7 +25,9 @@ public class UnlimitedVoidEffectMobEffect extends MobEffect {
 	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		UnlimitedVoidEffectEffectExpiresProcedure.execute(entity);
+		UnlimitedVoidEffectEffectExpiresProcedure.execute(
+
+		);
 	}
 
 	@Override

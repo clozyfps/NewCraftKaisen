@@ -1,26 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
-import net.mcreator.craftkaisen.entity.UnlimitedVoidMobEntity;
-import net.mcreator.craftkaisen.CraftKaisenMod;
-
-import java.util.Comparator;
+import javax.annotation.Nullable;
 
 public class TestRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
