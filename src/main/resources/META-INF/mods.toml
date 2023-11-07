@@ -20,6 +20,18 @@ authors="tobia, MCreator"
 
 
 [[dependencies.craft_kaisen]]
+    modId="kleidersplayerrenderer"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.craft_kaisen]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.craft_kaisen]]
     modId="playeranimator"
     mandatory=false
     versionRange="[0,)"

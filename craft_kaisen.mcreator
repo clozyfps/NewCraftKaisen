@@ -853,9 +853,9 @@
       "registry_name": "start_screen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StartScreenScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/StartScreenButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/StartScreenMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/StartScreenButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/StartScreenScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -1014,9 +1014,9 @@
       "registry_name": "reversal_red_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
         ]
       },
       "path": "~/Ranged"
@@ -1259,8 +1259,8 @@
       "registry_name": "snowflake",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/snowflake.json"
+          "src/main/resources/assets/craft_kaisen/particles/snowflake.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1324,8 +1324,8 @@
       "registry_name": "purple_electricity",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/purple_electricity.json"
         ]
       },
       "path": "~/Particles"
@@ -1340,9 +1340,9 @@
       "metadata": {
         "files": [
           "src/main/resources/data/craft_kaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
           "src/main/resources/assets/craft_kaisen/models/item/satoru_gojo_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -1625,9 +1625,9 @@
       "registry_name": "move_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/MoveGuiMenu.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/MoveGuiScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/network/MoveGuiButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MoveGuiMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -1762,8 +1762,8 @@
       "registry_name": "sound_wave",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json"
         ]
       },
       "path": "~/Particles"
@@ -1797,9 +1797,9 @@
       "registry_name": "explode_ranged",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java",
           "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java"
+          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -1940,9 +1940,9 @@
       "registry_name": "dont_move_ranged",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/DontMoveRangedItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/DontMoveRangedEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/dont_move_ranged.json"
+          "src/main/resources/assets/craft_kaisen/models/item/dont_move_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/item/DontMoveRangedItem.java"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -2100,9 +2100,9 @@
       "registry_name": "blast_away_ranged",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/blast_away_ranged.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayRangedEntity.java",
           "src/main/java/net/mcreator/craftkaisen/item/BlastAwayRangedItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayRangedEntity.java"
+          "src/main/resources/assets/craft_kaisen/models/item/blast_away_ranged.json"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -2197,8 +2197,8 @@
       "registry_name": "blood",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/BloodParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/blood.json"
+          "src/main/resources/assets/craft_kaisen/particles/blood.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BloodParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -2212,9 +2212,9 @@
       "registry_name": "crumble_away_ranged",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/CrumbleAwayRangedEntity.java",
           "src/main/java/net/mcreator/craftkaisen/item/CrumbleAwayRangedItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/crumble_away_ranged.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/CrumbleAwayRangedEntity.java"
+          "src/main/resources/assets/craft_kaisen/models/item/crumble_away_ranged.json"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -2325,8 +2325,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craft_kaisen/models/item/sleep_ranged.json",
-          "src/main/java/net/mcreator/craftkaisen/item/SleepRangedItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/SleepRangedEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/SleepRangedEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/SleepRangedItem.java"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -2400,9 +2400,9 @@
       "registry_name": "run_away_ranged",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/RunAwayRangedItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/RunAwayRangedEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/run_away_ranged.json",
-          "src/main/java/net/mcreator/craftkaisen/item/RunAwayRangedItem.java"
+          "src/main/resources/assets/craft_kaisen/models/item/run_away_ranged.json"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -2456,9 +2456,9 @@
       "registry_name": "twist_ranged",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/TwistRangedItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/TwistRangedEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/twist_ranged.json",
-          "src/main/java/net/mcreator/craftkaisen/item/TwistRangedItem.java"
+          "src/main/resources/assets/craft_kaisen/models/item/twist_ranged.json"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -2592,8 +2592,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -2895,8 +2895,8 @@
       "registry_name": "blue_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/blue_particle.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/BlueParticleParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BlueParticleParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/blue_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -3404,8 +3404,8 @@
       "registry_name": "inverted_spear",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/InvertedSpearItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/inverted_spear.json"
+          "src/main/resources/assets/craft_kaisen/models/item/inverted_spear.json",
+          "src/main/java/net/mcreator/craftkaisen/item/InvertedSpearItem.java"
         ]
       },
       "path": "~/Weapons"
@@ -3419,8 +3419,8 @@
       "registry_name": "naginata",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/NaginataItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/naginata.json"
+          "src/main/resources/assets/craft_kaisen/models/item/naginata.json",
+          "src/main/java/net/mcreator/craftkaisen/item/NaginataItem.java"
         ]
       },
       "path": "~/Weapons"
@@ -3464,8 +3464,8 @@
       "registry_name": "black_blind_fold",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/black_blind_fold_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/BlackBlindFoldItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/BlackBlindFoldItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/black_blind_fold_helmet.json"
         ]
       },
       "path": "~/Armor"
@@ -3491,8 +3491,8 @@
       "registry_name": "bandage_blind_fold",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/bandage_blind_fold_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/BandageBlindFoldItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/BandageBlindFoldItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/bandage_blind_fold_helmet.json"
         ]
       },
       "path": "~/Armor"
@@ -3522,8 +3522,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craft_kaisen/models/item/jujutsu_sorcerer_uniform_chestplate.json",
-          "src/main/resources/assets/craft_kaisen/models/item/jujutsu_sorcerer_uniform_leggings.json",
-          "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererUniformItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererUniformItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/jujutsu_sorcerer_uniform_leggings.json"
         ]
       },
       "path": "~/Armor"
@@ -3820,10 +3820,10 @@
       "registry_name": "ryomen_sukuna",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/RyomenSukunaEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/ryomen_sukuna_spawn_egg.json",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/ryomen_sukuna_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/RyomenSukunaRenderer.java",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/ryomen_sukuna_biome_modifier.json"
+          "src/main/java/net/mcreator/craftkaisen/entity/RyomenSukunaEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/ryomen_sukuna_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -3840,6 +3840,10 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/PartyListTickProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "world",
             "type": "world"
@@ -3885,9 +3889,9 @@
       "registry_name": "fire_arrow_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/FireArrowMobEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/fire_arrow_mob.json",
           "src/main/java/net/mcreator/craftkaisen/item/FireArrowMobItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/fire_arrow_mob.json"
+          "src/main/java/net/mcreator/craftkaisen/entity/FireArrowMobEntity.java"
         ]
       },
       "path": "~/Abilities/SukunaVessel"
@@ -3939,8 +3943,8 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/entity/YutaOkkotsuEntity.java",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/YutaOkkotsuRenderer.java",
-          "src/main/resources/assets/craft_kaisen/models/item/yuta_okkotsu_spawn_egg.json",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/yuta_okkotsu_biome_modifier.json"
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/yuta_okkotsu_biome_modifier.json",
+          "src/main/resources/assets/craft_kaisen/models/item/yuta_okkotsu_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -4110,10 +4114,10 @@
       "registry_name": "rugby_field_cursed_spirit",
       "metadata": {
         "files": [
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/rugby_field_cursed_spirit_biome_modifier.json",
-          "src/main/resources/assets/craft_kaisen/models/item/rugby_field_cursed_spirit_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/entity/RugbyFieldCursedSpiritEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/RugbyFieldCursedSpiritRenderer.java"
+          "src/main/resources/assets/craft_kaisen/models/item/rugby_field_cursed_spirit_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/RugbyFieldCursedSpiritRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/rugby_field_cursed_spirit_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -4157,6 +4161,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4233,7 +4253,16 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/PartyLabelProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Commands/Procedures"
     },
@@ -4461,8 +4490,8 @@
       "registry_name": "great_serpent",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/GreatSerpentRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/GreatSerpentEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/GreatSerpentRenderer.java",
           "src/main/resources/assets/craft_kaisen/models/item/great_serpent_spawn_egg.json"
         ]
       },
@@ -4856,9 +4885,9 @@
       "registry_name": "black_mucus",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/black_mucus.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BlackMucusItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/BlackMucusEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/BlackMucusItem.java"
+          "src/main/resources/assets/craft_kaisen/models/item/black_mucus.json"
         ]
       },
       "path": "~/Ranged"
@@ -4872,9 +4901,9 @@
       "registry_name": "rika",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/rika_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/entity/RikaEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/RikaRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/RikaRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/rika_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -5027,8 +5056,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/item/TojiOutfitItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/toji_outfit_leggings.json",
-          "src/main/resources/assets/craft_kaisen/models/item/toji_outfit_chestplate.json"
+          "src/main/resources/assets/craft_kaisen/models/item/toji_outfit_chestplate.json",
+          "src/main/resources/assets/craft_kaisen/models/item/toji_outfit_leggings.json"
         ]
       },
       "path": "~/Armor"
@@ -5132,10 +5161,10 @@
       "registry_name": "nue",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/NueRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/NueEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/nue_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/entity/model/NueModel.java",
-          "src/main/resources/assets/craft_kaisen/models/item/nue_spawn_egg.json"
+          "src/main/java/net/mcreator/craftkaisen/entity/NueEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/NueRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -5149,10 +5178,10 @@
       "registry_name": "toji_fushiguro",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java",
           "src/main/resources/assets/craft_kaisen/models/item/toji_fushiguro_spawn_egg.json",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -5206,9 +5235,9 @@
       "registry_name": "fire_arrow",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/fire_arrow.json",
           "src/main/java/net/mcreator/craftkaisen/entity/FireArrowEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/FireArrowItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/fire_arrow.json"
+          "src/main/java/net/mcreator/craftkaisen/item/FireArrowItem.java"
         ]
       },
       "path": "~/Abilities/SukunaVessel"
@@ -5286,9 +5315,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/KoGuyRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/ko_guy_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/entity/KoGuyEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/ko_guy_spawn_egg.json",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/ko_guy_biome_modifier.json"
+          "src/main/resources/assets/craft_kaisen/models/item/ko_guy_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -5302,10 +5331,10 @@
       "registry_name": "roppongi_cursed_spirit",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/RoppongiCursedSpiritRenderer.java",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/roppongi_cursed_spirit_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/entity/RoppongiCursedSpiritEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/roppongi_cursed_spirit_spawn_egg.json"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/RoppongiCursedSpiritRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/roppongi_cursed_spirit_spawn_egg.json",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/roppongi_cursed_spirit_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -5354,10 +5383,10 @@
       "registry_name": "yuji_itadori",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/YujiItadoriRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/YujiItadoriEntity.java",
           "src/main/resources/assets/craft_kaisen/models/item/yuji_itadori_spawn_egg.json",
-          "src/main/resources/data/craft_kaisen/forge/biome_modifier/yuji_itadori_biome_modifier.json"
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/yuji_itadori_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/YujiItadoriRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/YujiItadoriEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -5375,6 +5404,21 @@
         ]
       },
       "path": "~/Tags"
+    },
+    {
+      "name": "WorldEvents",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_events",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WorldEventsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -5671,6 +5715,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "worldEventTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -5734,67 +5784,113 @@
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
       "gui.craft_kaisen.move_gui.button_3": "3",
       "key.craft_kaisen.ability_1": "Ability 1",
-      "gui.craft_kaisen.move_gui.button_6": "6",
       "key.craft_kaisen.ability_2": "Ability 2",
+      "gui.craft_kaisen.move_gui.button_6": "6",
       "gui.craft_kaisen.move_gui.button_5": "5",
       "key.craft_kaisen.ability_3": "Ability 3",
+      "item.craft_kaisen.yuji_itadori_spawn_egg": "Yuji Itadori Spawn Egg",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
+      "advancements.semi_grade_3.title": "Semi Grade 3",
       "item.craft_kaisen.run_away_ranged": "Run Away Ranged",
+      "entity.craft_kaisen.ko_guy": "Ko-Guy",
+      "advancements.semi_grade_1.descr": "Reach The Required Fame.",
       "gui.craft_kaisen.main_menu.tooltip_increases_attack_damage": "increases attack damage",
       "gui.craft_kaisen.main_menu.label_race_human": "Human",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
+      "advancements.grade_3.title": "Grade 3",
+      "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
       "gui.craft_kaisen.main_menu.tooltip_cursed_technique": "Cursed Technique",
+      "item.craft_kaisen.great_serpent_spawn_egg": "Great Serpent Spawn Egg",
+      "advancements.grade_4.descr": "Reach The Required Fame.",
       "itemGroup.tabck_mobs": "Ck Mobs",
       "item.craft_kaisen.naginata": "Naginata",
+      "advancements.special_grade.title": "Special Grade",
+      "item.craft_kaisen.fire_arrow": "Fire Arrow",
+      "item.craft_kaisen.roppongi_cursed_spirit_spawn_egg": "Roppongi Cursed Spirit Spawn Egg",
+      "advancements.grade_1.descr": "Reach The Required Fame.",
+      "advancements.special_grade.descr": "Reach The Required Fame.",
       "gui.craft_kaisen.start_screen.label_cursed_spirit": "Curse",
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
       "item.craft_kaisen.miwa_katana": "Miwa Katana",
+      "item.craft_kaisen.yuta_okkotsu_spawn_egg": "Yuta Okkotsu Spawn Egg",
       "itemGroup.tabck_weapons": "Ck Weapons",
       "subtitles.hit": "strong hit",
       "gui.craft_kaisen.main_menu.label_empty6": "+",
       "item.craft_kaisen.split_soul_katana": "Split Soul Katana",
-      "item.craft_kaisen.twist_ranged": "Twist Ranged",
-      "item.craft_kaisen.explode_ranged": "Explode Ranged",
       "subtitles.electric": "electricity",
+      "item.craft_kaisen.explode_ranged": "Explode Ranged",
+      "item.craft_kaisen.twist_ranged": "Twist Ranged",
+      "entity.craft_kaisen.ryomen_sukuna": "Ryomen Sukuna",
       "gui.craft_kaisen.start_screen.button_test": "test",
+      "item.craft_kaisen.sukuna_outfit_chestplate": "Sukuna Haori",
+      "item.craft_kaisen.ryomen_sukuna_spawn_egg": "Ryomen Sukuna Spawn Egg",
       "gui.craft_kaisen.move_gui.button_unlock": "Unlock",
       "gui.craft_kaisen.main_menu.tooltip_increase_max_health": "increase max health",
       "gui.craft_kaisen.start_screen.label_finish": "SAVE",
+      "advancements.grade_2.descr": "Reach The Required Fame.",
       "item.craft_kaisen.jujutsu_sorcerer_uniform_leggings": "Jujutsu Sorcerer Uniform",
+      "item.craft_kaisen.nue_spawn_egg": "Nue Spawn Egg",
       "item.craft_kaisen.yuta_katana": "Yuta Katana",
+      "advancements.grade_1.title": "Grade 1",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
+      "effect.craft_kaisen.pre_fire_arrow": "PreFireArrow",
       "gui.craft_kaisen.main_menu.label_empty1": "\u003e\u003e",
       "gui.craft_kaisen.main_menu.label_empty5": "+",
-      "item.craft_kaisen.blast_away_ranged": "Blast Away Ranged",
       "gui.craft_kaisen.main_menu.label_empty4": "+",
+      "item.craft_kaisen.blast_away_ranged": "Blast Away Ranged",
       "gui.craft_kaisen.main_menu.label_empty3": "+",
-      "gui.craft_kaisen.start_screen.label_human": "Human",
       "gui.craft_kaisen.main_menu.label_empty2": "+",
+      "gui.craft_kaisen.start_screen.label_human": "Human",
       "gamerule.forceSukunaTechnique": "Force Sukuna Technique",
+      "item.craft_kaisen.toji_outfit_leggings": "Toji Pants",
+      "advancements.grade_2.title": "Grade 2",
       "item.craft_kaisen.bandage_blind_fold_helmet": "Bandage Blind Fold",
+      "advancements.grade_3.descr": "Reach The Required Fame.",
+      "entity.craft_kaisen.yuji_itadori": "Yuji Itadori",
       "gui.craft_kaisen.main_menu.tooltip_increase_max_cursed_energy": "increase max cursed energy",
+      "item.craft_kaisen.black_mucus": "Black Mucus",
+      "item.craft_kaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
+      "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
+      "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
       "gamerule.forceSukunaTechnique.description": "Forces sukuna technique on whoever is controlling the body of a vessel.",
+      "entity.craft_kaisen.roppongi_cursed_spirit": "Roppongi Cursed Spirit",
       "itemGroup.tabck_armor": "Ck Armor",
+      "item.craft_kaisen.inventory_curse": "Inventory Curse",
       "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
       "item.craft_kaisen.jujutsu_sorcerer_uniform_chestplate": "Jujutsu Sorcerer Uniform",
+      "entity.craft_kaisen.rika": "Rika",
+      "item.craft_kaisen.toji_outfit_chestplate": "Toji Shirt",
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
+      "advancements.semi_grade_2.descr": "Reach The Required Fame.",
+      "advancements.grade_4.title": "Grade 4",
+      "effect.craft_kaisen.nue_electricity_effect": "NueElectricity",
+      "entity.craft_kaisen.yuta_okkotsu": "Yuta Okkotsu",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
       "item.craft_kaisen.inverted_spear": "Inverted Spear",
+      "item.craft_kaisen.fire_arrow_mob": "Fire Arrow Mob",
       "effect.craft_kaisen.lapse_blue_control": "Lapse Blue",
       "item.craft_kaisen.crumble_away_ranged": "Crumble Away Ranged",
       "item.craft_kaisen.sleep_ranged": "Sleep Ranged",
+      "entity.craft_kaisen.rugby_field_cursed_spirit": "Rugby Field Cursed Spirit",
+      "advancements.semi_grade_1.title": "Semi Grade 1",
       "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
+      "advancements.semi_grade_3.descr": "Reach The Required Fame.",
       "key.craft_kaisen.charge_cursed_energy": "Charge Cursed Energy",
       "entity.craft_kaisen.reversal_red_entity": "Reversal Red Entity",
       "gui.craft_kaisen.main_menu.label_empty": "---------------",
+      "entity.craft_kaisen.nue": "Nue",
+      "item.craft_kaisen.toji_curse_armor_chestplate": "Toji Curse Armor ",
       "gui.craft_kaisen.main_menu.tooltip_increase_movement_speed": "increase movement speed",
       "effect.craft_kaisen.body_crushing": "Crushing",
       "effect.craft_kaisen.twisting": "Twisting",
+      "item.craft_kaisen.ko_guy_spawn_egg": "Ko-Guy Spawn Egg",
       "key.craft_kaisen.menu": "Menu",
       "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
+      "advancements.semi_grade_2.title": "Semi Grade 2",
+      "entity.craft_kaisen.great_serpent": "Great Serpent",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
       "item.craft_kaisen.dont_move_ranged": "Dont Move Ranged",
       "item.craft_kaisen.playful_cloud": "Playful Cloud"
@@ -6031,6 +6127,8 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
+      "geckolib",
       "playeranimator"
     ],
     "currentGenerator": "forge-1.19.2",
