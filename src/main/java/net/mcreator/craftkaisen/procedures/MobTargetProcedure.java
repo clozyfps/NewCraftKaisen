@@ -48,8 +48,10 @@ public class MobTargetProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 							.collect(Collectors.toList());
 					for (Entity entityiterator : _entfound) {
-						if (entityiterator.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("craft_kaisen:cursed_spirits")))
-								|| ((entityiterator.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).race).equals("Curse") || !(new Object() {
+						if (!(entity == entityiterator)) {
+							if (entityiterator.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("craft_kaisen:cursed_spirits")))
+									|| ((entityiterator.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).race).equals("Curse")) {
+								if (!(new Object() {
 									public boolean checkGamemode(Entity _ent) {
 										if (_ent instanceof ServerPlayer _serverPlayer) {
 											return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
@@ -60,8 +62,10 @@ public class MobTargetProcedure {
 										return false;
 									}
 								}.checkGamemode(entityiterator))) {
-							if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
-								_entity.setTarget(_ent);
+									if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
+										_entity.setTarget(_ent);
+								}
+							}
 						}
 					}
 				}
@@ -71,8 +75,10 @@ public class MobTargetProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 							.collect(Collectors.toList());
 					for (Entity entityiterator : _entfound) {
-						if (entityiterator.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("craft_kaisen:sorcerers")))
-								|| ((entityiterator.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).race).equals("Human") || !(new Object() {
+						if (!(entity == entityiterator)) {
+							if (entityiterator.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("craft_kaisen:sorcerers")))
+									|| ((entityiterator.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).race).equals("Human")) {
+								if (!(new Object() {
 									public boolean checkGamemode(Entity _ent) {
 										if (_ent instanceof ServerPlayer _serverPlayer) {
 											return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
@@ -83,8 +89,10 @@ public class MobTargetProcedure {
 										return false;
 									}
 								}.checkGamemode(entityiterator))) {
-							if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
-								_entity.setTarget(_ent);
+									if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
+										_entity.setTarget(_ent);
+								}
+							}
 						}
 					}
 				}
