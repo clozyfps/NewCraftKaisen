@@ -183,6 +183,7 @@ public class CraftKaisenModVariables {
 		public String vesselPlayerOne = "\"\"";
 		public String vesselTechnique = "\"\"";
 		public String vesselPlayerTwo = "\"\"";
+		public double worldEventTimer = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -194,6 +195,7 @@ public class CraftKaisenModVariables {
 			vesselPlayerOne = nbt.getString("vesselPlayerOne");
 			vesselTechnique = nbt.getString("vesselTechnique");
 			vesselPlayerTwo = nbt.getString("vesselPlayerTwo");
+			worldEventTimer = nbt.getDouble("worldEventTimer");
 		}
 
 		@Override
@@ -201,6 +203,7 @@ public class CraftKaisenModVariables {
 			nbt.putString("vesselPlayerOne", vesselPlayerOne);
 			nbt.putString("vesselTechnique", vesselTechnique);
 			nbt.putString("vesselPlayerTwo", vesselPlayerTwo);
+			nbt.putDouble("worldEventTimer", worldEventTimer);
 			return nbt;
 		}
 

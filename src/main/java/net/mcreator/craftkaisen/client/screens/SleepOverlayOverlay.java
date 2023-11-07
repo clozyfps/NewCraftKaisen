@@ -47,7 +47,7 @@ public class SleepOverlayOverlay {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (SleepOverlayDisplayOverlayIngameProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craft_kaisen:textures/screens/screenshot_2023-10-31_140759.png"));
-			Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -350, posY + -214, 0, 0, 1920, 1080, 1920, 1080);
+			Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -813, posY + -477, 0, 0, 1920, 1080, 1920, 1080);
 
 		}
 		RenderSystem.depthMask(true);

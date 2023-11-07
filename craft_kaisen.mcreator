@@ -5823,7 +5823,7 @@
           "src/main/resources/assets/craft_kaisen/models/item/dismantle.json"
         ]
       },
-      "path": "~/Ranged"
+      "path": "~/Procedures"
     },
     {
       "name": "FindBlueLocationProjectileHitsBlock",
@@ -5871,7 +5871,7 @@
           "src/main/java/net/mcreator/craftkaisen/entity/FindBlueLocationEntity.java"
         ]
       },
-      "path": "~/Ranged"
+      "path": "~/Procedures"
     },
     {
       "name": "FindBlueLocationWhileProjectileFlyingTick",
@@ -5968,6 +5968,21 @@
         ]
       },
       "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "WorldEvents",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_events",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WorldEventsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -6264,6 +6279,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "worldEventTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [
