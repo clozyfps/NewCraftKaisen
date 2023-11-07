@@ -34,8 +34,10 @@ import net.mcreator.craftkaisen.entity.KoGuyEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
+import net.mcreator.craftkaisen.entity.FindBlueLocationEntity;
 import net.mcreator.craftkaisen.entity.ExplodeRangedEntity;
 import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
+import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
 import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
@@ -118,6 +120,10 @@ public class CraftKaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BlackMucusEntity>> BLACK_MUCUS = register("projectile_black_mucus",
 			EntityType.Builder.<BlackMucusEntity>of(BlackMucusEntity::new, MobCategory.MISC).setCustomClientFactory(BlackMucusEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DismantleEntity>> DISMANTLE = register("projectile_dismantle",
+			EntityType.Builder.<DismantleEntity>of(DismantleEntity::new, MobCategory.MISC).setCustomClientFactory(DismantleEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FindBlueLocationEntity>> FIND_BLUE_LOCATION = register("projectile_find_blue_location", EntityType.Builder.<FindBlueLocationEntity>of(FindBlueLocationEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(FindBlueLocationEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

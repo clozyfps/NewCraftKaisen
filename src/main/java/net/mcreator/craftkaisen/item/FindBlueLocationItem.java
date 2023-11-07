@@ -4,8 +4,8 @@ package net.mcreator.craftkaisen.item;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 
-public class CrumbleAwayRangedItem extends Item {
-	public CrumbleAwayRangedItem() {
+public class FindBlueLocationItem extends Item {
+	public FindBlueLocationItem() {
 		super(new Item.Properties().tab(null).durability(100));
 	}
 
@@ -17,7 +17,7 @@ public class CrumbleAwayRangedItem extends Item {
 
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.NONE;
+		return UseAnim.BOW;
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class CrumbleAwayRangedItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				CrumbleAwayRangedEntity entityarrow = CrumbleAwayRangedEntity.shoot(world, entity, world.getRandom(), 2f, 5, 5);
+				FindBlueLocationEntity entityarrow = FindBlueLocationEntity.shoot(world, entity, world.getRandom(), 1f, 5, 5);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 			}

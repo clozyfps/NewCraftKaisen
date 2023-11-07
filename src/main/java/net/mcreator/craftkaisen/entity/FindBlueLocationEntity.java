@@ -2,20 +2,20 @@
 package net.mcreator.craftkaisen.entity;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class SleepRangedEntity extends AbstractArrow implements ItemSupplier {
-	public SleepRangedEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(CraftKaisenModEntities.SLEEP_RANGED.get(), world);
+public class FindBlueLocationEntity extends AbstractArrow implements ItemSupplier {
+	public FindBlueLocationEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(CraftKaisenModEntities.FIND_BLUE_LOCATION.get(), world);
 	}
 
-	public SleepRangedEntity(EntityType<? extends SleepRangedEntity> type, Level world) {
+	public FindBlueLocationEntity(EntityType<? extends FindBlueLocationEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public SleepRangedEntity(EntityType<? extends SleepRangedEntity> type, double x, double y, double z, Level world) {
+	public FindBlueLocationEntity(EntityType<? extends FindBlueLocationEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public SleepRangedEntity(EntityType<? extends SleepRangedEntity> type, LivingEntity entity, Level world) {
+	public FindBlueLocationEntity(EntityType<? extends FindBlueLocationEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -42,15 +42,27 @@ public class SleepRangedEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		FindBlueLocationProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
+	}
+
+	@Override
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		FindBlueLocationProjectileHitsBlockProcedure.execute(blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ(), this.getOwner());
+	}
+
+	@Override
 	public void tick() {
 		super.tick();
-		SleepRangedWhileProjectileFlyingTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		FindBlueLocationWhileProjectileFlyingTickProcedure.execute();
 		if (this.inGround)
 			this.discard();
 	}
 
-	public static SleepRangedEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		SleepRangedEntity entityarrow = new SleepRangedEntity(CraftKaisenModEntities.SLEEP_RANGED.get(), entity, world);
+	public static FindBlueLocationEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		FindBlueLocationEntity entityarrow = new FindBlueLocationEntity(CraftKaisenModEntities.FIND_BLUE_LOCATION.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -61,12 +73,12 @@ public class SleepRangedEntity extends AbstractArrow implements ItemSupplier {
 		return entityarrow;
 	}
 
-	public static SleepRangedEntity shoot(LivingEntity entity, LivingEntity target) {
-		SleepRangedEntity entityarrow = new SleepRangedEntity(CraftKaisenModEntities.SLEEP_RANGED.get(), entity, entity.level);
+	public static FindBlueLocationEntity shoot(LivingEntity entity, LivingEntity target) {
+		FindBlueLocationEntity entityarrow = new FindBlueLocationEntity(CraftKaisenModEntities.FIND_BLUE_LOCATION.get(), entity, entity.level);
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 2f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(5);
 		entityarrow.setKnockback(5);

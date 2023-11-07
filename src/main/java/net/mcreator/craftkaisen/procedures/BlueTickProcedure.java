@@ -35,8 +35,9 @@ public class BlueTickProcedure {
 								FallingBlockEntity.fall(_level, new BlockPos(x + xi, y + i, z + zi), (world.getBlockState(new BlockPos(x + xi, y + i, z + zi))));
 							{
 								final Vec3 _center = new Vec3(x + xi, y + i, z + zi);
-								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(6 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-										.collect(Collectors.toList());
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class,
+										new AABB(_center, _center).inflate(((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 2) / 2d), e -> true)
+										.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 								for (Entity entityiterator : _entfound) {
 									if (!(entity == entityiterator) && !(entityiterator instanceof FallingBlockEntity)) {
 										entityiterator.setDeltaMovement(new Vec3(((x + xi - entityiterator.getX()) / 7), ((y + i - entityiterator.getY()) / 7), ((z + zi - entityiterator.getZ()) / 7)));

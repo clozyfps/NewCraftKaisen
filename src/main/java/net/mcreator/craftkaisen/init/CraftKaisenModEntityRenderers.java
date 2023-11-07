@@ -52,5 +52,7 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.RUGBY_FIELD_CURSED_SPIRIT.get(), RugbyFieldCursedSpiritRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.KO_GUY.get(), KoGuyRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.BLACK_MUCUS.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.DISMANTLE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.FIND_BLUE_LOCATION.get(), ThrownItemRenderer::new);
 	}
 }
