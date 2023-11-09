@@ -8,16 +8,16 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.HumanoidModel;
 
-import net.mcreator.craftkaisen.entity.MahitoEntity;
+import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
 
-public class MahitoRenderer extends HumanoidMobRenderer<MahitoEntity, HumanoidModel<MahitoEntity>> {
-	public MahitoRenderer(EntityRendererProvider.Context context) {
+public class NanamiKentoRenderer extends HumanoidMobRenderer<NanamiKentoEntity, HumanoidModel<NanamiKentoEntity>> {
+	public NanamiKentoRenderer(EntityRendererProvider.Context context) {
 		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
 		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(MahitoEntity entity) {
-		return new ResourceLocation("craft_kaisen:textures/entities/mahitoh.png");
+	public ResourceLocation getTextureLocation(NanamiKentoEntity entity) {
+		return new ResourceLocation("craft_kaisen:textures/entities/nanami_kento_mc.png");
 	}
 }

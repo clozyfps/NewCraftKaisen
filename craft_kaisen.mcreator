@@ -3213,18 +3213,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -3323,18 +3311,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -4041,6 +4017,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
             "type": "entity"
           },
           {
@@ -5389,8 +5369,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -5743,8 +5727,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -6647,6 +6635,38 @@
         ]
       },
       "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "NanamiKento",
+      "type": "livingentity",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_kento",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/NanamiKentoEntity.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/nanami_kento_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/NanamiKentoRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/nanami_kento_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "NanamiKnife",
+      "type": "tool",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_knife",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/nanami_knife.json",
+          "src/main/java/net/mcreator/craftkaisen/item/NanamiKnifeItem.java"
+        ]
+      },
+      "path": "~/Weapons"
     }
   ],
   "variable_elements": [
@@ -7025,9 +7045,9 @@
       "gui.craft_kaisen.move_gui.button_3": "3",
       "key.craft_kaisen.ability_1": "Ability 1",
       "biome.craft_kaisen.shibuya": "Shibuya",
-      "key.craft_kaisen.ability_2": "Ability 2",
-      "gui.craft_kaisen.move_gui.button_6": "6",
       "effect.craft_kaisen.domain_expansion": "Domain Expansion",
+      "gui.craft_kaisen.move_gui.button_6": "6",
+      "key.craft_kaisen.ability_2": "Ability 2",
       "gui.craft_kaisen.move_gui.button_5": "5",
       "key.craft_kaisen.ability_3": "Ability 3",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
@@ -7053,6 +7073,7 @@
       "advancements.grade_4.descr": "Reach The Required Fame.",
       "itemGroup.tabck_mobs": "Craft Kaisen Humans",
       "item.craft_kaisen.naginata": "Naginata",
+      "entity.craft_kaisen.nanami_kento": "Nanami Kento",
       "item.craft_kaisen.roppongi_cursed_spirit_spawn_egg": "Roppongi Cursed Spirit Spawn Egg",
       "item.craft_kaisen.fire_arrow": "Fire Arrow",
       "advancements.special_grade.title": "Special Grade",
@@ -7113,8 +7134,10 @@
       "advancements.jujutsu_kaisen.descr": "Begin your journey in the world of JJK",
       "effect.craft_kaisen.punch_barrage_potion": "Punch Barrage Potion",
       "advancements.black_flash_advancement.descr": "Attack a mob while your cursed energy is active with a 0.01% Chance",
+      "item.craft_kaisen.nanami_kento_spawn_egg": "Nanami Kento Spawn Egg",
       "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
       "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
+      "item.craft_kaisen.nanami_knife": "Nanami Knife",
       "entity.craft_kaisen.choso": "Choso",
       "gamerule.forceSukunaTechnique.description": "Forces sukuna technique on whoever is controlling the body of a vessel.",
       "entity.craft_kaisen.roppongi_cursed_spirit": "Roppongi Cursed Spirit",
