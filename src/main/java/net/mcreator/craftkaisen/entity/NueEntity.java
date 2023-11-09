@@ -26,7 +26,6 @@ import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
@@ -72,7 +71,7 @@ public class NueEntity extends Monster implements IAnimatable {
 
 	public NueEntity(EntityType<NueEntity> type, Level world) {
 		super(type, world);
-		xpReward = 1;
+		xpReward = 0;
 		setNoAi(false);
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
@@ -106,17 +105,7 @@ public class NueEntity extends Monster implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 2.3, 20) {
-			@Override
-			protected Vec3 getPosition() {
-				RandomSource random = NueEntity.this.getRandom();
-				double dir_x = NueEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = NueEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = NueEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
-				return new Vec3(dir_x, dir_y, dir_z);
-			}
-		});
-		this.goalSelector.addGoal(2, new Goal() {
+		this.goalSelector.addGoal(1, new Goal() {
 			{
 				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
 			}
@@ -148,23 +137,26 @@ public class NueEntity extends Monster implements IAnimatable {
 					NueEntity.this.doHurtTarget(livingentity);
 				} else {
 					double d0 = NueEntity.this.distanceToSqr(livingentity);
-					if (d0 < 150) {
+					if (d0 < 80) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
 						NueEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.6, true) {
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1.7, 20) {
 			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			protected Vec3 getPosition() {
+				RandomSource random = NueEntity.this.getRandom();
+				double dir_x = NueEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = NueEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = NueEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(8, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(10, new FloatGoal(this));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
 	}
 
 	@Override
@@ -261,12 +253,12 @@ public class NueEntity extends Monster implements IAnimatable {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 240);
+		builder = builder.add(Attributes.MAX_HEALTH, 215);
 		builder = builder.add(Attributes.ARMOR, 0.1);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 150);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 3);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 5);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 4);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}

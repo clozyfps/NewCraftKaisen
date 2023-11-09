@@ -1,0 +1,27 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:GreatSerpent"
+      },
+      {
+        "value": "CUSTOM:Nue"
+      },
+      {
+        "value": "CUSTOM:Rika"
+      },
+      {
+        "value": "CUSTOM:Toad"
+      }
+    ],
+    "biomes": [],
+    "name": "ten_shadows",
+    "namespace": "mod"
+  }
+}

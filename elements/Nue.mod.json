@@ -18,15 +18,15 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -37301,
+      "value": -38604,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1315861,
+      "value": -8816263,
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:CkMobs"
+      "value": "CUSTOM:CkCurses"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -51,15 +51,15 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 12,
-    "attackKnockback": 3.0,
-    "knockbackResistance": 0.5,
+    "attackStrength": 16,
+    "attackKnockback": 4.0,
+    "knockbackResistance": 5.0,
     "movementSpeed": 0.3,
     "armorBaseValue": 0.1,
     "trackingRange": 64,
-    "followRange": 150,
-    "health": 240,
-    "xpAmount": 1,
+    "followRange": 50,
+    "health": 215,
+    "xpAmount": 0,
     "waterMob": false,
     "flyingMob": true,
     "guiBoundTo": "<NONE>",
@@ -104,7 +104,7 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"fly\"><field name=\"speed\">2.3</field><field name=\"condition\">null,null</field><next><block type=\"attack_fly\"><field name=\"radius\">150</field><field name=\"speed\">2</field><field name=\"condition\">null,null</field><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">2</field><field name=\"min_distance\">20</field><field name=\"max_distance\">100</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.6</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_fly\"><field name=\"radius\">80</field><field name=\"speed\">2</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">1.7</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "nue.geo.json",
     "groupName": "",
     "animation1": "Idle",

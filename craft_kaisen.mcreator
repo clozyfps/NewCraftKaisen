@@ -3228,6 +3228,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -3326,6 +3338,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -4967,10 +4991,6 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -5545,12 +5565,8 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
           },
           {
             "name": "world",
@@ -5907,12 +5923,8 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
           },
           {
             "name": "world",
@@ -5952,6 +5964,26 @@
       "path": "~/GUI"
     },
     {
+      "name": "DespawnProjectileWhenHitsEntity",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "despawn_projectile_when_hits_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DespawnProjectileWhenHitsEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
       "name": "SukunaCTonTickUpdate",
       "type": "procedure",
       "sortid": 239,
@@ -5976,24 +6008,598 @@
       "path": "~/Abilities/SukunaVessel"
     },
     {
-      "name": "DespawnProjectileWhenHitsEntity",
+      "name": "TojiMoves",
       "type": "procedure",
-      "sortid": 240,
+      "sortid": 241,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "despawn_projectile_when_hits_entity",
+      "registry_name": "toji_moves",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DespawnProjectileWhenHitsEntityProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiMovesProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "immediatesourceentity",
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "RyomenSukunaOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ryomen_sukuna_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
             "type": "entity"
           }
         ]
       },
-      "path": "~/Abilities/SukunaVessel"
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "ToadOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toad_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToadOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "SprinklerOn",
+      "type": "block",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_on",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/sprinkler_on.json",
+          "src/main/resources/assets/craft_kaisen/blockstates/sprinkler_on.json",
+          "src/main/java/net/mcreator/craftkaisen/block/SprinklerOnBlock.java",
+          "src/main/resources/assets/craft_kaisen/models/block/sprinkler_on.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "Choso",
+      "type": "livingentity",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choso",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/choso_biome_modifier.json",
+          "src/main/resources/assets/craft_kaisen/models/item/choso_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/ChosoEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ChosoRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "GojoRed",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gojo_red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GojoRedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "CurseUser",
+      "type": "tag",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_user",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/curse_user.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "SprinklerOnUpdateTick",
+      "type": "procedure",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_on_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SprinklerOnUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedure"
+    },
+    {
+      "name": "PunchBarragePotion",
+      "type": "potioneffect",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_barrage_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/PunchBarragePotionMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ClashParticle",
+      "type": "particle",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clash_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/clash_particle.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ClashParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Vector",
+      "type": "procedure",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vector",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VectorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TojiCooldown",
+      "type": "potioneffect",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/TojiCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "SwordClash",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_clash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SwordClashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ConstantSliceOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constant_slice_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ConstantSliceOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "ConstantSlice",
+      "type": "potioneffect",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constant_slice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ConstantSliceMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "MobKnockback",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_knockback",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MobKnockbackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PunchImpact",
+      "type": "particle",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_impact",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PunchImpactParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/punch_impact.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "TenShadows",
+      "type": "tag",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ten_shadows",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/ten_shadows.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CkCurses",
+      "type": "tab",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_curses",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "Sprinkler",
+      "type": "block",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/blockstates/sprinkler.json",
+          "src/main/resources/assets/craft_kaisen/models/item/sprinkler.json",
+          "src/main/resources/assets/craft_kaisen/models/block/sprinkler.json",
+          "src/main/java/net/mcreator/craftkaisen/block/SprinklerBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "ChosoArmor",
+      "type": "armor",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choso_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/choso_armor_leggings.json",
+          "src/main/resources/assets/craft_kaisen/models/item/choso_armor_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ChosoArmorItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "PunchBarragePotionOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_barrage_potion_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PunchBarragePotionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "MeleePowerful",
+      "type": "tag",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_powerful",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/melee_powerful.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "SprinklerPlayerStartsToDestroy",
+      "type": "procedure",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_player_starts_to_destroy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SprinklerPlayerStartsToDestroyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedure"
+    },
+    {
+      "name": "GojoMoves",
+      "type": "procedure",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gojo_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GojoMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "Shibuya",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shibuya",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/biome/ShibuyaBiome.java"
+        ]
+      },
+      "path": "~/Biome"
+    },
+    {
+      "name": "MeleePowerfulMoves",
+      "type": "procedure",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_powerful_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MeleePowerfulMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
     }
   ],
   "variable_elements": [
@@ -6346,6 +6952,14 @@
       ],
       "category": "neutral",
       "subtitle": "electricity"
+    },
+    {
+      "name": "clank",
+      "files": [
+        "sword-clash-1"
+      ],
+      "category": "neutral",
+      "subtitle": "clank"
     }
   ],
   "language_map": {
@@ -6418,6 +7032,7 @@
       "item.craft_kaisen.yuta_katana": "Yuta Katana",
       "advancements.grade_1.title": "Grade 1",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
+      "subtitles.clank": "clank",
       "effect.craft_kaisen.pre_fire_arrow": "PreFireArrow",
       "gui.craft_kaisen.main_menu.label_empty1": "\u003e\u003e",
       "gui.craft_kaisen.main_menu.label_empty5": "+",
@@ -6538,6 +7153,10 @@
             "children": []
           },
           {
+            "name": "BloodManipulation",
+            "children": []
+          },
+          {
             "name": "SukunaVessel",
             "children": []
           }
@@ -6584,7 +7203,12 @@
       },
       {
         "name": "Blocks",
-        "children": []
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Tags",

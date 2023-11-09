@@ -3,7 +3,9 @@ package net.mcreator.craftkaisen.procedures;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
 
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 import net.mcreator.craftkaisen.entity.DismantleEntity;
@@ -12,6 +14,8 @@ public class DismantleProcedureProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
+		if (entity instanceof LivingEntity _entity)
+			_entity.swing(InteractionHand.MAIN_HAND, true);
 		{
 			Entity _shootFrom = entity;
 			Level projectileLevel = _shootFrom.level;

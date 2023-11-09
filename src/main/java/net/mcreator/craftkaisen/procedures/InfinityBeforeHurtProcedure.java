@@ -10,6 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.init.CraftKaisenModItems;
+import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 
 import javax.annotation.Nullable;
 
@@ -19,19 +20,19 @@ public class InfinityBeforeHurtProcedure {
 	public static void onEntityAttacked(LivingHurtEvent event) {
 		Entity entity = event.getEntity();
 		if (event != null && entity != null) {
-			execute(event, entity, event.getSource().getDirectEntity());
+			execute(event, entity, event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(Entity entity, Entity immediatesourceentity) {
-		execute(null, entity, immediatesourceentity);
+	public static void execute(Entity entity, Entity sourceentity) {
+		execute(null, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity, Entity immediatesourceentity) {
-		if (entity == null || immediatesourceentity == null)
+	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("infinity")) {
-			if (!((immediatesourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftKaisenModItems.INVERTED_SPEAR.get())) {
+		if (entity.getPersistentData().getBoolean("infinity") || entity instanceof SatoruGojoEntity) {
+			if (!((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftKaisenModItems.INVERTED_SPEAR.get())) {
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);
 				}

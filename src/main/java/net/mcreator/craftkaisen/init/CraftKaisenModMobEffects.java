@@ -13,10 +13,13 @@ import net.minecraft.world.effect.MobEffect;
 import net.mcreator.craftkaisen.potion.VesselPotionEffectMobEffect;
 import net.mcreator.craftkaisen.potion.UnlimitedVoidEffectMobEffect;
 import net.mcreator.craftkaisen.potion.TwistingMobEffect;
+import net.mcreator.craftkaisen.potion.TojiCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.PunchBarragePotionMobEffect;
 import net.mcreator.craftkaisen.potion.PreFireArrowMobEffect;
 import net.mcreator.craftkaisen.potion.NueElectricityEffectMobEffect;
 import net.mcreator.craftkaisen.potion.LapseBlueControlMobEffect;
 import net.mcreator.craftkaisen.potion.DomainExpansionMobEffect;
+import net.mcreator.craftkaisen.potion.ConstantSliceMobEffect;
 import net.mcreator.craftkaisen.potion.BodyCrushingMobEffect;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
@@ -30,4 +33,7 @@ public class CraftKaisenModMobEffects {
 	public static final RegistryObject<MobEffect> NUE_ELECTRICITY_EFFECT = REGISTRY.register("nue_electricity_effect", () -> new NueElectricityEffectMobEffect());
 	public static final RegistryObject<MobEffect> UNLIMITED_VOID_EFFECT = REGISTRY.register("unlimited_void_effect", () -> new UnlimitedVoidEffectMobEffect());
 	public static final RegistryObject<MobEffect> DOMAIN_EXPANSION = REGISTRY.register("domain_expansion", () -> new DomainExpansionMobEffect());
+	public static final RegistryObject<MobEffect> CONSTANT_SLICE = REGISTRY.register("constant_slice", () -> new ConstantSliceMobEffect());
+	public static final RegistryObject<MobEffect> PUNCH_BARRAGE_POTION = REGISTRY.register("punch_barrage_potion", () -> new PunchBarragePotionMobEffect());
+	public static final RegistryObject<MobEffect> TOJI_COOLDOWN = REGISTRY.register("toji_cooldown", () -> new TojiCooldownMobEffect());
 }

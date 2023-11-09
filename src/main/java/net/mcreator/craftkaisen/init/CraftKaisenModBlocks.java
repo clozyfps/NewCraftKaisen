@@ -10,10 +10,14 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.craftkaisen.block.SprinklerOnBlock;
+import net.mcreator.craftkaisen.block.SprinklerBlock;
 import net.mcreator.craftkaisen.block.DomainBlockBlock;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 public class CraftKaisenModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, CraftKaisenMod.MODID);
 	public static final RegistryObject<Block> DOMAIN_BLOCK = REGISTRY.register("domain_block", () -> new DomainBlockBlock());
+	public static final RegistryObject<Block> SPRINKLER = REGISTRY.register("sprinkler", () -> new SprinklerBlock());
+	public static final RegistryObject<Block> SPRINKLER_ON = REGISTRY.register("sprinkler_on", () -> new SprinklerOnBlock());
 }
