@@ -45,7 +45,7 @@ public class InfinityTickProcedure {
 					});
 				}
 			} else if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy < 1) {
-				entity.getPersistentData().putBoolean("infinity", true);
+				entity.getPersistentData().putBoolean("infinity", false);
 			}
 			{
 				final Vec3 _center = new Vec3(x, y, z);

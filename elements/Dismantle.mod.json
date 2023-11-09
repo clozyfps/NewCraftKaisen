@@ -33,6 +33,9 @@
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",
+    "onBulletHitsEntity": {
+      "name": "DespawnProjectileWhenHitsEntity"
+    },
     "onBulletFlyingTick": {
       "name": "DismantleFlying"
     }

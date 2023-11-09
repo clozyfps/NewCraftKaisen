@@ -6539,23 +6539,6 @@
       "path": "~/Mobs"
     },
     {
-      "name": "GetoOutfit",
-      "type": "armor",
-      "sortid": 266,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "geto_outfit",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_chestplate.json",
-          "src/main/java/net/mcreator/craftkaisen/item/GetoOutfitItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_leggings.json",
-          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_boots.json"
-        ]
-      },
-      "path": "~/Armor"
-    },
-    {
       "name": "MouthCursedSpirit",
       "type": "livingentity",
       "sortid": 267,
@@ -6573,6 +6556,23 @@
       "path": "~/Mobs"
     },
     {
+      "name": "GetoOutfit",
+      "type": "armor",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "geto_outfit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/GetoOutfitItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_leggings.json",
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_boots.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
       "name": "Mahito",
       "type": "livingentity",
       "sortid": 268,
@@ -6588,6 +6588,65 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "InventoryCurseGui",
+      "type": "gui",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGuiMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGuiScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "DespawnProjectileWhenHitsEntity",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "despawn_projectile_when_hits_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DespawnProjectileWhenHitsEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "SukunaCTonTickUpdate",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_c_ton_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaCTonTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
     }
   ],
   "variable_elements": [
@@ -7159,11 +7218,11 @@
             "children": []
           },
           {
-            "name": "SukunaVessel",
+            "name": "BloodManipulation",
             "children": []
           },
           {
-            "name": "BloodManipulation",
+            "name": "SukunaVessel",
             "children": []
           }
         ]
