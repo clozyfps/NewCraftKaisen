@@ -16,6 +16,7 @@ import net.mcreator.craftkaisen.client.model.Modeltojipants;
 import net.mcreator.craftkaisen.client.model.Modeltoji_curse;
 import net.mcreator.craftkaisen.client.model.Modeltenshadowsgreatserpent;
 import net.mcreator.craftkaisen.client.model.Modelsukunafightingchestplate;
+import net.mcreator.craftkaisen.client.model.Modelsorcerernew;
 import net.mcreator.craftkaisen.client.model.Modelserpentground;
 import net.mcreator.craftkaisen.client.model.Modelroppongicursedspirit;
 import net.mcreator.craftkaisen.client.model.Modelreversalred;
@@ -43,6 +44,7 @@ public class CraftKaisenModModels {
 		event.registerLayerDefinition(Modelgetorobes.LAYER_LOCATION, Modelgetorobes::createBodyLayer);
 		event.registerLayerDefinition(Modelsukunafightingchestplate.LAYER_LOCATION, Modelsukunafightingchestplate::createBodyLayer);
 		event.registerLayerDefinition(Modelgetosandalsnew.LAYER_LOCATION, Modelgetosandalsnew::createBodyLayer);
+		event.registerLayerDefinition(Modelsorcerernew.LAYER_LOCATION, Modelsorcerernew::createBodyLayer);
 		event.registerLayerDefinition(Modelserpentground.LAYER_LOCATION, Modelserpentground::createBodyLayer);
 		event.registerLayerDefinition(Modelchoso.LAYER_LOCATION, Modelchoso::createBodyLayer);
 		event.registerLayerDefinition(Modelgetolegs.LAYER_LOCATION, Modelgetolegs::createBodyLayer);

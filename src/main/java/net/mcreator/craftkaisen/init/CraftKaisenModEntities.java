@@ -32,6 +32,7 @@ import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
+import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
 import net.mcreator.craftkaisen.entity.MouthCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
@@ -152,6 +153,10 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<NanamiKentoEntity>> NANAMI_KENTO = register("nanami_kento",
+			EntityType.Builder.<NanamiKentoEntity>of(NanamiKentoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiKentoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -178,6 +183,7 @@ public class CraftKaisenModEntities {
 			ChosoEntity.init();
 			MouthCursedSpiritEntity.init();
 			MahitoEntity.init();
+			NanamiKentoEntity.init();
 		});
 	}
 
@@ -201,5 +207,6 @@ public class CraftKaisenModEntities {
 		event.put(CHOSO.get(), ChosoEntity.createAttributes().build());
 		event.put(MOUTH_CURSED_SPIRIT.get(), MouthCursedSpiritEntity.createAttributes().build());
 		event.put(MAHITO.get(), MahitoEntity.createAttributes().build());
+		event.put(NANAMI_KENTO.get(), NanamiKentoEntity.createAttributes().build());
 	}
 }

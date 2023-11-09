@@ -3228,6 +3228,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -3326,6 +3338,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -4967,10 +4991,6 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -5545,12 +5565,8 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
           },
           {
             "name": "world",
@@ -5903,12 +5919,8 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
           },
           {
             "name": "world",
@@ -6647,6 +6659,38 @@
           "src/main/java/net/mcreator/craftkaisen/entity/MahitoEntity.java",
           "src/main/resources/assets/craft_kaisen/models/item/mahito_spawn_egg.json",
           "src/main/resources/data/craft_kaisen/forge/biome_modifier/mahito_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "NanamiKnife",
+      "type": "tool",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_knife",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/nanami_knife.json",
+          "src/main/java/net/mcreator/craftkaisen/item/NanamiKnifeItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "NanamiKento",
+      "type": "livingentity",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_kento",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/nanami_kento_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/NanamiKentoEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/NanamiKentoRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/nanami_kento_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"

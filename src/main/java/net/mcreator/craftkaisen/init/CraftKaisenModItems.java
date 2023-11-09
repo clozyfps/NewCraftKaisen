@@ -25,6 +25,7 @@ import net.mcreator.craftkaisen.item.SleepRangedItem;
 import net.mcreator.craftkaisen.item.RunAwayRangedItem;
 import net.mcreator.craftkaisen.item.ReversalRedProjectileItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
+import net.mcreator.craftkaisen.item.NanamiKnifeItem;
 import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MiwaKatanaItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererUniformItem;
@@ -112,6 +113,9 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> MOUTH_CURSED_SPIRIT_SPAWN_EGG = REGISTRY.register("mouth_cursed_spirit_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.MOUTH_CURSED_SPIRIT, -1, -3776159, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> MAHITO_SPAWN_EGG = REGISTRY.register("mahito_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.MAHITO, -15197403, -3342339, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> NANAMI_KENTO_SPAWN_EGG = REGISTRY.register("nanami_kento_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.NANAMI_KENTO, -1, -1316965, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> NANAMI_KNIFE = REGISTRY.register("nanami_knife", () -> new NanamiKnifeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
