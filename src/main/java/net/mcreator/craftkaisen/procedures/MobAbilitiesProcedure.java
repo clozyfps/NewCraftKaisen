@@ -42,7 +42,7 @@ public class MobAbilitiesProcedure {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.TOJI_COOLDOWN.get()) : false)) {
 					TojiMovesProcedure.execute(world, x, y, z, entity);
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-						_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.TOJI_COOLDOWN.get(), 15, 0, false, false));
+						_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.TOJI_COOLDOWN.get(), 10, 0, false, false));
 				}
 			} else if (entity instanceof SatoruGojoEntity) {
 				GojoMovesProcedure.execute(world, entity);

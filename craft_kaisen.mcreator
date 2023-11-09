@@ -6537,6 +6537,57 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "GetoOutfit",
+      "type": "armor",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "geto_outfit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/GetoOutfitItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_leggings.json",
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_boots.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "MouthCursedSpirit",
+      "type": "livingentity",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mouth_cursed_spirit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MouthCursedSpiritRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/mouth_cursed_spirit_biome_modifier.json",
+          "src/main/resources/assets/craft_kaisen/models/item/mouth_cursed_spirit_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/MouthCursedSpiritEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Mahito",
+      "type": "livingentity",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MahitoRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/mahito_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/MahitoEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/mahito_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -6902,25 +6953,26 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
-      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
-      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
       "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
+      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
       "key.craft_kaisen.ability_4": "Ability 4",
-      "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
+      "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
-      "biome.craft_kaisen.shibuya": "Shibuya",
-      "key.craft_kaisen.ability_1": "Ability 1",
-      "gui.craft_kaisen.move_gui.button_3": "3",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
-      "effect.craft_kaisen.domain_expansion": "Domain Expansion",
-      "gui.craft_kaisen.move_gui.button_6": "6",
+      "gui.craft_kaisen.move_gui.button_3": "3",
+      "key.craft_kaisen.ability_1": "Ability 1",
+      "biome.craft_kaisen.shibuya": "Shibuya",
       "key.craft_kaisen.ability_2": "Ability 2",
+      "gui.craft_kaisen.move_gui.button_6": "6",
+      "effect.craft_kaisen.domain_expansion": "Domain Expansion",
       "gui.craft_kaisen.move_gui.button_5": "5",
       "key.craft_kaisen.ability_3": "Ability 3",
-      "item.craft_kaisen.yuji_itadori_spawn_egg": "Yuji Itadori Spawn Egg",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
+      "item.craft_kaisen.yuji_itadori_spawn_egg": "Yuji Itadori Spawn Egg",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
       "advancements.semi_grade_3.title": "Semi Grade 3",
@@ -6933,6 +6985,7 @@
       "gui.craft_kaisen.main_menu.label_race_human": "Human",
       "item.craft_kaisen.toad_spawn_egg": "Toad Spawn Egg",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
+      "entity.craft_kaisen.mouth_cursed_spirit": "Mouth Cursed Spirit",
       "advancements.grade_3.title": "Grade 3",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
       "gui.craft_kaisen.main_menu.tooltip_cursed_technique": "Cursed Technique",
@@ -6945,10 +6998,12 @@
       "item.craft_kaisen.fire_arrow": "Fire Arrow",
       "advancements.special_grade.title": "Special Grade",
       "advancements.grade_1.descr": "Reach The Required Fame.",
+      "item.craft_kaisen.geto_outfit_boots": "Geto Sandals",
       "advancements.special_grade.descr": "Reach The Required Fame.",
       "gui.craft_kaisen.start_screen.label_cursed_spirit": "Curse",
       "gui.craft_kaisen.move_gui.button_empty": "\u003e",
       "item.craft_kaisen.miwa_katana": "Miwa Katana",
+      "entity.craft_kaisen.mahito": "Mahito",
       "item.craft_kaisen.yuta_okkotsu_spawn_egg": "Yuta Okkotsu Spawn Egg",
       "entity.craft_kaisen.heian_era_sukuna": "Heian Era Sukuna",
       "itemGroup.tabck_weapons": "Ck Weapons",
@@ -7011,14 +7066,17 @@
       "block.craft_kaisen.domain_block": "Domain Block",
       "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
       "item.craft_kaisen.jujutsu_sorcerer_uniform_chestplate": "Jujutsu Sorcerer Uniform",
+      "item.craft_kaisen.geto_outfit_leggings": "Geto Pants",
       "entity.craft_kaisen.rika": "Rika",
       "item.craft_kaisen.toji_outfit_chestplate": "Toji Shirt",
+      "item.craft_kaisen.mahito_spawn_egg": "Mahito Spawn Egg",
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
       "advancements.semi_grade_2.descr": "Reach The Required Fame.",
       "itemGroup.tabck_curses": "Craft Kaisen Curses",
       "item.craft_kaisen.dismantle": "Dismantle",
       "advancements.grade_4.title": "Grade 4",
       "effect.craft_kaisen.nue_electricity_effect": "NueElectricity",
+      "item.craft_kaisen.mouth_cursed_spirit_spawn_egg": "Mouth Cursed Spirit Spawn Egg",
       "entity.craft_kaisen.yuta_okkotsu": "Yuta Okkotsu",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
       "item.craft_kaisen.inverted_spear": "Inverted Spear",
