@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.client.particle.InfinityParticleParticle;
 import net.mcreator.craftkaisen.client.particle.FireArrowParticleParticle;
 import net.mcreator.craftkaisen.client.particle.ClashParticleParticle;
 import net.mcreator.craftkaisen.client.particle.BlueParticleParticle;
+import net.mcreator.craftkaisen.client.particle.BloodSplashParticle;
 import net.mcreator.craftkaisen.client.particle.BloodParticle;
 import net.mcreator.craftkaisen.client.particle.BlackFlashPulseParticle;
 
@@ -38,5 +39,6 @@ public class CraftKaisenModParticles {
 		event.register(CraftKaisenModParticleTypes.BLACK_FLASH_PULSE.get(), BlackFlashPulseParticle::provider);
 		event.register(CraftKaisenModParticleTypes.CLASH_PARTICLE.get(), ClashParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.PUNCH_IMPACT.get(), PunchImpactParticle::provider);
+		event.register(CraftKaisenModParticleTypes.BLOOD_SPLASH.get(), BloodSplashParticle::provider);
 	}
 }
