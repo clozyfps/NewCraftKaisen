@@ -68,7 +68,7 @@ public class DismantleFlyingProcedure {
 			}
 		}
 		int horizontalRadiusSphere = (int) (1 + 1 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 30)) - 1;
-		int verticalRadiusSphere = (int) (4 + 4 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 30)) - 1;
+		int verticalRadiusSphere = (int) (2 + 2 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 30)) - 1;
 		int yIterationsSphere = verticalRadiusSphere;
 		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {

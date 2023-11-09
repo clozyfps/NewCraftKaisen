@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -20,6 +21,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.craftkaisen.procedures.FireArrowWhileProjectileFlyingTickProcedure;
+import net.mcreator.craftkaisen.procedures.DespawnProjectileWhenHitsEntityProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
@@ -63,9 +65,15 @@ public class FireArrowEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		DespawnProjectileWhenHitsEntityProcedure.execute(this);
+	}
+
+	@Override
 	public void tick() {
 		super.tick();
-		FireArrowWhileProjectileFlyingTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner());
+		FireArrowWhileProjectileFlyingTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
 		if (this.inGround)
 			this.discard();
 	}

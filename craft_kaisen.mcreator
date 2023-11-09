@@ -3228,18 +3228,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -3338,18 +3326,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -4991,6 +4967,10 @@
             "type": "entity"
           },
           {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5565,8 +5545,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -5923,8 +5907,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -5947,6 +5935,65 @@
         ]
       },
       "path": "~/Advancement"
+    },
+    {
+      "name": "InventoryCurseGui",
+      "type": "gui",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGuiMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGuiScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "SukunaCTonTickUpdate",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_c_ton_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaCTonTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "DespawnProjectileWhenHitsEntity",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "despawn_projectile_when_hits_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DespawnProjectileWhenHitsEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
     }
   ],
   "variable_elements": [
@@ -6308,20 +6355,20 @@
       "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
       "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
       "key.craft_kaisen.ability_4": "Ability 4",
-      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_5": "Ability 5",
+      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
-      "key.craft_kaisen.ability_1": "Ability 1",
-      "gui.craft_kaisen.move_gui.button_3": "3",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
-      "gui.craft_kaisen.move_gui.button_6": "6",
-      "key.craft_kaisen.ability_2": "Ability 2",
+      "gui.craft_kaisen.move_gui.button_3": "3",
+      "key.craft_kaisen.ability_1": "Ability 1",
       "effect.craft_kaisen.domain_expansion": "Domain Expansion",
+      "key.craft_kaisen.ability_2": "Ability 2",
+      "gui.craft_kaisen.move_gui.button_6": "6",
       "gui.craft_kaisen.move_gui.button_5": "5",
       "key.craft_kaisen.ability_3": "Ability 3",
-      "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "item.craft_kaisen.yuji_itadori_spawn_egg": "Yuji Itadori Spawn Egg",
+      "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "gui.craft_kaisen.move_gui.button_2": "2",
       "gui.craft_kaisen.move_gui.button_1": "1",
       "advancements.semi_grade_3.title": "Semi Grade 3",
