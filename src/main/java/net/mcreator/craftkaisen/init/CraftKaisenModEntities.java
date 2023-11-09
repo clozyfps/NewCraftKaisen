@@ -32,6 +32,8 @@ import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
+import net.mcreator.craftkaisen.entity.MouthCursedSpiritEntity;
+import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
 import net.mcreator.craftkaisen.entity.HeianEraSukunaEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
@@ -142,6 +144,14 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<ChosoEntity>of(ChosoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ChosoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MouthCursedSpiritEntity>> MOUTH_CURSED_SPIRIT = register("mouth_cursed_spirit",
+			EntityType.Builder.<MouthCursedSpiritEntity>of(MouthCursedSpiritEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MouthCursedSpiritEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MahitoEntity>> MAHITO = register("mahito",
+			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -166,6 +176,8 @@ public class CraftKaisenModEntities {
 			ToadEntity.init();
 			UnlimitedVoidMobEntity.init();
 			ChosoEntity.init();
+			MouthCursedSpiritEntity.init();
+			MahitoEntity.init();
 		});
 	}
 
@@ -187,5 +199,7 @@ public class CraftKaisenModEntities {
 		event.put(TOAD.get(), ToadEntity.createAttributes().build());
 		event.put(UNLIMITED_VOID_MOB.get(), UnlimitedVoidMobEntity.createAttributes().build());
 		event.put(CHOSO.get(), ChosoEntity.createAttributes().build());
+		event.put(MOUTH_CURSED_SPIRIT.get(), MouthCursedSpiritEntity.createAttributes().build());
+		event.put(MAHITO.get(), MahitoEntity.createAttributes().build());
 	}
 }

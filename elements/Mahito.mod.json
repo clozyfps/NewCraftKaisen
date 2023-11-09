@@ -2,10 +2,10 @@
   "_fv": 47,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Toad",
+    "mobName": "Mahito",
     "mobLabel": "",
-    "mobModelName": "Modeltstoad",
-    "mobModelTexture": "toadtexture.png",
+    "mobModelName": "Biped",
+    "mobModelTexture": "mahitoh.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -16,11 +16,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -10841282,
+      "value": -15197403,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -3619735,
+      "value": -3342339,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -49,16 +49,16 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 12,
-    "attackKnockback": 1.0,
+    "attackStrength": 20,
+    "attackKnockback": 2.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
     "armorBaseValue": 0.1,
     "trackingRange": 64,
     "followRange": 50,
-    "health": 250,
-    "xpAmount": 0,
+    "health": 460,
+    "xpAmount": 3,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -96,12 +96,9 @@
     "stepSound": {
       "value": ""
     },
-    "onMobTickUpdate": {
-      "name": "ToadOnEntityTickUpdate"
-    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">0.9</field><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.7</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.4</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.6</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -112,7 +109,7 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 1,
     "mobSpawningType": "ambient",
