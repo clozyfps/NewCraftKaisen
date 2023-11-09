@@ -25,4 +25,6 @@ public class CraftKaisenModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> FIRE_ARROW_PARTICLE = REGISTRY.register("fire_arrow_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> NUE_ELECTRICITY = REGISTRY.register("nue_electricity", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> BLACK_FLASH_PULSE = REGISTRY.register("black_flash_pulse", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> CLASH_PARTICLE = REGISTRY.register("clash_particle", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> PUNCH_IMPACT = REGISTRY.register("punch_impact", () -> new SimpleParticleType(true));
 }

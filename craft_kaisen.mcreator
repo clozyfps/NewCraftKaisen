@@ -4883,23 +4883,6 @@
       "path": "~/Procedures/Rika"
     },
     {
-      "name": "Nue",
-      "type": "animatedentity",
-      "sortid": 185,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nue",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/NueRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/model/NueModel.java",
-          "src/main/resources/assets/craft_kaisen/models/item/nue_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/NueEntity.java"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
       "name": "PlayfulCloud",
       "type": "tool",
       "sortid": 188,
@@ -4931,7 +4914,7 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -5603,10 +5586,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -5983,6 +5962,581 @@
         "dependencies": []
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "ConstantSliceOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constant_slice_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ConstantSliceOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "ConstantSlice",
+      "type": "potioneffect",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constant_slice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ConstantSliceMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "TojiMoves",
+      "type": "procedure",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "Vector",
+      "type": "procedure",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vector",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VectorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ClashParticle",
+      "type": "particle",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clash_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/clash_particle.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ClashParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SwordClash",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_clash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SwordClashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "GojoRed",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gojo_red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GojoRedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "GojoMoves",
+      "type": "procedure",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gojo_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GojoMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "CurseUser",
+      "type": "tag",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_user",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/curse_user.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "MeleePowerful",
+      "type": "tag",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_powerful",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/melee_powerful.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "MeleePowerfulMoves",
+      "type": "procedure",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_powerful_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MeleePowerfulMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "PunchBarragePotionOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_barrage_potion_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PunchBarragePotionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "PunchBarragePotion",
+      "type": "potioneffect",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_barrage_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/PunchBarragePotionMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PunchImpact",
+      "type": "particle",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_impact",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PunchImpactParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/punch_impact.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "MobKnockback",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_knockback",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MobKnockbackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "RyomenSukunaOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ryomen_sukuna_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "TojiCooldown",
+      "type": "potioneffect",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/TojiCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Shibuya",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shibuya",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/biome/ShibuyaBiome.java"
+        ]
+      },
+      "path": "~/Biome"
+    },
+    {
+      "name": "CkCurses",
+      "type": "tab",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_curses",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "Nue",
+      "type": "animatedentity",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/NueRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/model/NueModel.java",
+          "src/main/resources/assets/craft_kaisen/models/item/nue_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/NueEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "TenShadows",
+      "type": "tag",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ten_shadows",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/ten_shadows.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "Sprinkler",
+      "type": "block",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/blockstates/sprinkler.json",
+          "src/main/java/net/mcreator/craftkaisen/block/SprinklerBlock.java",
+          "src/main/resources/assets/craft_kaisen/models/block/sprinkler.json",
+          "src/main/resources/assets/craft_kaisen/models/item/sprinkler.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "SprinklerOnUpdateTick",
+      "type": "procedure",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_on_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SprinklerOnUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedure"
+    },
+    {
+      "name": "SprinklerOn",
+      "type": "block",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_on",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/block/sprinkler_on.json",
+          "src/main/resources/assets/craft_kaisen/models/item/sprinkler_on.json",
+          "src/main/java/net/mcreator/craftkaisen/block/SprinklerOnBlock.java",
+          "src/main/resources/assets/craft_kaisen/blockstates/sprinkler_on.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "SprinklerPlayerStartsToDestroy",
+      "type": "procedure",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_player_starts_to_destroy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SprinklerPlayerStartsToDestroyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedure"
+    },
+    {
+      "name": "ChosoArmor",
+      "type": "armor",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choso_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/choso_armor_chestplate.json",
+          "src/main/resources/assets/craft_kaisen/models/item/choso_armor_leggings.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ChosoArmorItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "Choso",
+      "type": "livingentity",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choso",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/choso_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/ChosoEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/choso_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ChosoRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -6335,6 +6889,14 @@
       ],
       "category": "neutral",
       "subtitle": "strong hit"
+    },
+    {
+      "name": "clank",
+      "files": [
+        "sword-clash-1"
+      ],
+      "category": "neutral",
+      "subtitle": "clank"
     }
   ],
   "language_map": {
@@ -6348,6 +6910,7 @@
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
+      "biome.craft_kaisen.shibuya": "Shibuya",
       "key.craft_kaisen.ability_1": "Ability 1",
       "gui.craft_kaisen.move_gui.button_3": "3",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
@@ -6373,9 +6936,10 @@
       "advancements.grade_3.title": "Grade 3",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
       "gui.craft_kaisen.main_menu.tooltip_cursed_technique": "Cursed Technique",
+      "item.craft_kaisen.choso_armor_leggings": "Choso Pants",
       "item.craft_kaisen.great_serpent_spawn_egg": "Great Serpent Spawn Egg",
       "advancements.grade_4.descr": "Reach The Required Fame.",
-      "itemGroup.tabck_mobs": "Ck Mobs",
+      "itemGroup.tabck_mobs": "Craft Kaisen Humans",
       "item.craft_kaisen.naginata": "Naginata",
       "item.craft_kaisen.roppongi_cursed_spirit_spawn_egg": "Roppongi Cursed Spirit Spawn Egg",
       "item.craft_kaisen.fire_arrow": "Fire Arrow",
@@ -6407,8 +6971,11 @@
       "item.craft_kaisen.yuta_katana": "Yuta Katana",
       "advancements.grade_1.title": "Grade 1",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
+      "subtitles.clank": "clank",
       "effect.craft_kaisen.pre_fire_arrow": "PreFireArrow",
+      "item.craft_kaisen.choso_armor_chestplate": "Choso Outfit",
       "gui.craft_kaisen.main_menu.label_empty1": "\u003e\u003e",
+      "effect.craft_kaisen.toji_cooldown": "TojiCooldown",
       "gui.craft_kaisen.main_menu.label_empty5": "+",
       "item.craft_kaisen.blast_away_ranged": "Blast Away Ranged",
       "gui.craft_kaisen.main_menu.label_empty4": "+",
@@ -6417,8 +6984,10 @@
       "gui.craft_kaisen.start_screen.label_human": "Human",
       "gamerule.forceSukunaTechnique": "Force Sukuna Technique",
       "item.craft_kaisen.toji_outfit_leggings": "Toji Pants",
+      "item.craft_kaisen.choso_spawn_egg": "Choso Spawn Egg",
       "advancements.grade_2.title": "Grade 2",
       "item.craft_kaisen.bandage_blind_fold_helmet": "Bandage Blind Fold",
+      "block.craft_kaisen.sprinkler_on": "Sprinkler On",
       "advancements.grade_3.descr": "Reach The Required Fame.",
       "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "entity.craft_kaisen.yuji_itadori": "Yuji Itadori",
@@ -6428,13 +6997,16 @@
       "item.craft_kaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "advancements.jujutsu_kaisen.descr": "Begin your journey in the world of JJK",
+      "effect.craft_kaisen.punch_barrage_potion": "Punch Barrage Potion",
       "advancements.black_flash_advancement.descr": "Attack a mob while your cursed energy is active with a 0.01% Chance",
       "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
       "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
+      "entity.craft_kaisen.choso": "Choso",
       "gamerule.forceSukunaTechnique.description": "Forces sukuna technique on whoever is controlling the body of a vessel.",
       "entity.craft_kaisen.roppongi_cursed_spirit": "Roppongi Cursed Spirit",
       "itemGroup.tabck_armor": "Ck Armor",
       "entity.craft_kaisen.toad": "Toad",
+      "block.craft_kaisen.sprinkler": "Sprinkler",
       "item.craft_kaisen.inventory_curse": "Inventory Curse",
       "block.craft_kaisen.domain_block": "Domain Block",
       "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
@@ -6443,6 +7015,7 @@
       "item.craft_kaisen.toji_outfit_chestplate": "Toji Shirt",
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
       "advancements.semi_grade_2.descr": "Reach The Required Fame.",
+      "itemGroup.tabck_curses": "Craft Kaisen Curses",
       "item.craft_kaisen.dismantle": "Dismantle",
       "advancements.grade_4.title": "Grade 4",
       "effect.craft_kaisen.nue_electricity_effect": "NueElectricity",
@@ -6472,6 +7045,7 @@
       "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
       "advancements.semi_grade_2.title": "Semi Grade 2",
       "entity.craft_kaisen.great_serpent": "Great Serpent",
+      "effect.craft_kaisen.constant_slice": "ConstantSlice",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
       "item.craft_kaisen.dont_move_ranged": "Dont Move Ranged",
       "item.craft_kaisen.playful_cloud": "Playful Cloud"
@@ -6529,6 +7103,10 @@
           {
             "name": "SukunaVessel",
             "children": []
+          },
+          {
+            "name": "BloodManipulation",
+            "children": []
           }
         ]
       },
@@ -6573,7 +7151,12 @@
       },
       {
         "name": "Blocks",
-        "children": []
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Tags",

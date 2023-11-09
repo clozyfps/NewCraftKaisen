@@ -43,6 +43,7 @@ import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
 import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
 import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.ChosoEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlackMucusEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
@@ -108,10 +109,6 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<GreatSerpentEntity>of(GreatSerpentEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GreatSerpentEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<NueEntity>> NUE = register("nue",
-			EntityType.Builder.<NueEntity>of(NueEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NueEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<RugbyFieldCursedSpiritEntity>> RUGBY_FIELD_CURSED_SPIRIT = register("rugby_field_cursed_spirit",
 			EntityType.Builder.<RugbyFieldCursedSpiritEntity>of(RugbyFieldCursedSpiritEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(RugbyFieldCursedSpiritEntity::new)
@@ -137,6 +134,14 @@ public class CraftKaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<UnlimitedVoidMobEntity>> UNLIMITED_VOID_MOB = register("unlimited_void_mob", EntityType.Builder.<UnlimitedVoidMobEntity>of(UnlimitedVoidMobEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UnlimitedVoidMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<NueEntity>> NUE = register("nue",
+			EntityType.Builder.<NueEntity>of(NueEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NueEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ChosoEntity>> CHOSO = register("choso",
+			EntityType.Builder.<ChosoEntity>of(ChosoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ChosoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -154,12 +159,13 @@ public class CraftKaisenModEntities {
 			YutaOkkotsuEntity.init();
 			RikaEntity.init();
 			GreatSerpentEntity.init();
-			NueEntity.init();
 			RugbyFieldCursedSpiritEntity.init();
 			KoGuyEntity.init();
 			HeianEraSukunaEntity.init();
 			ToadEntity.init();
 			UnlimitedVoidMobEntity.init();
+			NueEntity.init();
+			ChosoEntity.init();
 		});
 	}
 
@@ -174,11 +180,12 @@ public class CraftKaisenModEntities {
 		event.put(YUTA_OKKOTSU.get(), YutaOkkotsuEntity.createAttributes().build());
 		event.put(RIKA.get(), RikaEntity.createAttributes().build());
 		event.put(GREAT_SERPENT.get(), GreatSerpentEntity.createAttributes().build());
-		event.put(NUE.get(), NueEntity.createAttributes().build());
 		event.put(RUGBY_FIELD_CURSED_SPIRIT.get(), RugbyFieldCursedSpiritEntity.createAttributes().build());
 		event.put(KO_GUY.get(), KoGuyEntity.createAttributes().build());
 		event.put(HEIAN_ERA_SUKUNA.get(), HeianEraSukunaEntity.createAttributes().build());
 		event.put(TOAD.get(), ToadEntity.createAttributes().build());
 		event.put(UNLIMITED_VOID_MOB.get(), UnlimitedVoidMobEntity.createAttributes().build());
+		event.put(NUE.get(), NueEntity.createAttributes().build());
+		event.put(CHOSO.get(), ChosoEntity.createAttributes().build());
 	}
 }

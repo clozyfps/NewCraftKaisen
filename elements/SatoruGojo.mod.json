@@ -36,7 +36,7 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": ""
+      "value": "CUSTOM:BandageBlindFold.helmet"
     },
     "equipmentBody": {
       "value": ""
@@ -49,12 +49,12 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 30,
-    "attackKnockback": 3.0,
+    "attackStrength": 40,
+    "attackKnockback": 4.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
-    "armorBaseValue": 0.1,
+    "armorBaseValue": 0.2,
     "trackingRange": 64,
     "followRange": 50,
     "health": 900,

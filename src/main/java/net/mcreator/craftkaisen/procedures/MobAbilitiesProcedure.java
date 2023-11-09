@@ -9,7 +9,14 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.tags.TagKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.Registry;
 
+import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
+import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
+import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
 
 import javax.annotation.Nullable;
@@ -31,6 +38,16 @@ public class MobAbilitiesProcedure {
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
 			if (entity instanceof RyomenSukunaEntity || entity.getPersistentData().getBoolean("sukuna")) {
 				SukunaMobMovesProcedure.execute(world, x, y, z, entity);
+			} else if (entity instanceof TojiFushiguroEntity) {
+				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.TOJI_COOLDOWN.get()) : false)) {
+					TojiMovesProcedure.execute(world, x, y, z, entity);
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.TOJI_COOLDOWN.get(), 15, 0, false, false));
+				}
+			} else if (entity instanceof SatoruGojoEntity) {
+				GojoMovesProcedure.execute(world, entity);
+			} else if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("melee_powerful")))) {
+				MeleePowerfulMovesProcedure.execute(world, entity);
 			}
 		}
 	}

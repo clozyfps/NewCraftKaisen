@@ -52,5 +52,14 @@
         "stream": false
       }
     ]
+  },
+  "clank": {
+    "subtitle": "subtitles.clank",
+    "sounds": [
+      {
+        "name": "craft_kaisen:sword-clash-1",
+        "stream": false
+      }
+    ]
   }
 }

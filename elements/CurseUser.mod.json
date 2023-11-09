@@ -1,0 +1,22 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [
+      {
+        "value": "CUSTOM:TojiFushiguro.spawn_egg"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:TojiFushiguro"
+      }
+    ],
+    "biomes": [],
+    "name": "curse_user",
+    "namespace": "mod"
+  }
+}
