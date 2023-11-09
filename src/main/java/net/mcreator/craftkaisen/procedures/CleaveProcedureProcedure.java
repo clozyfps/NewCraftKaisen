@@ -27,7 +27,7 @@ public class CleaveProcedureProcedure {
 					.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					entity.getPersistentData().putDouble("cleaveTime", (10 + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput));
+					entity.getPersistentData().putDouble("cleaveTime", (10 + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 3));
 					entityiterator.getPersistentData().putString("cleaveSource", (entity.getDisplayName().getString()));
 				}
 			}

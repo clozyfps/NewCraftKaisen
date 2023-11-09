@@ -13,32 +13,32 @@ import net.minecraft.client.particle.Particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 
 @OnlyIn(Dist.CLIENT)
-public class ClashParticleParticle extends TextureSheetParticle {
-	public static ClashParticleParticleProvider provider(SpriteSet spriteSet) {
-		return new ClashParticleParticleProvider(spriteSet);
+public class BloodSplashParticle extends TextureSheetParticle {
+	public static BloodSplashParticleProvider provider(SpriteSet spriteSet) {
+		return new BloodSplashParticleProvider(spriteSet);
 	}
 
-	public static class ClashParticleParticleProvider implements ParticleProvider<SimpleParticleType> {
+	public static class BloodSplashParticleProvider implements ParticleProvider<SimpleParticleType> {
 		private final SpriteSet spriteSet;
 
-		public ClashParticleParticleProvider(SpriteSet spriteSet) {
+		public BloodSplashParticleProvider(SpriteSet spriteSet) {
 			this.spriteSet = spriteSet;
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new ClashParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return new BloodSplashParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
 		}
 	}
 
 	private final SpriteSet spriteSet;
 
-	protected ClashParticleParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
+	protected BloodSplashParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 1.2f;
-		this.lifetime = 7;
-		this.gravity = 0f;
+		this.quadSize *= 3f;
+		this.lifetime = (int) Math.max(1, 20 + (this.random.nextInt(20) - 10));
+		this.gravity = 1f;
 		this.hasPhysics = true;
 		this.xd = vx * 1;
 		this.yd = vy * 1;
@@ -47,13 +47,8 @@ public class ClashParticleParticle extends TextureSheetParticle {
 	}
 
 	@Override
-	public int getLightColor(float partialTick) {
-		return 15728880;
-	}
-
-	@Override
 	public ParticleRenderType getRenderType() {
-		return ParticleRenderType.PARTICLE_SHEET_LIT;
+		return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
 	}
 
 	@Override

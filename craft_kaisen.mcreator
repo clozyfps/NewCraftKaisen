@@ -3228,18 +3228,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -3338,18 +3326,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -4183,7 +4159,7 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -4991,6 +4967,10 @@
             "type": "entity"
           },
           {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5565,8 +5545,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -5762,10 +5746,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -5923,8 +5903,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -6600,6 +6584,21 @@
         ]
       },
       "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "BloodSplash",
+      "type": "particle",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_splash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BloodSplashParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/blood_splash.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -6965,14 +6964,15 @@
   "language_map": {
     "en_us": {
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
-      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
-      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
       "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
+      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
       "key.craft_kaisen.ability_4": "Ability 4",
       "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
+      "biome.craft_kaisen.shibuya": "Shibuya",
       "key.craft_kaisen.ability_1": "Ability 1",
       "gui.craft_kaisen.move_gui.button_3": "3",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
@@ -6998,9 +6998,10 @@
       "advancements.grade_3.title": "Grade 3",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
       "gui.craft_kaisen.main_menu.tooltip_cursed_technique": "Cursed Technique",
+      "item.craft_kaisen.choso_armor_leggings": "Choso Pants",
       "item.craft_kaisen.great_serpent_spawn_egg": "Great Serpent Spawn Egg",
       "advancements.grade_4.descr": "Reach The Required Fame.",
-      "itemGroup.tabck_mobs": "Ck Mobs",
+      "itemGroup.tabck_mobs": "Craft Kaisen Humans",
       "item.craft_kaisen.naginata": "Naginata",
       "advancements.special_grade.title": "Special Grade",
       "item.craft_kaisen.fire_arrow": "Fire Arrow",
@@ -7034,7 +7035,9 @@
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
       "subtitles.clank": "clank",
       "effect.craft_kaisen.pre_fire_arrow": "PreFireArrow",
+      "item.craft_kaisen.choso_armor_chestplate": "Choso Outfit",
       "gui.craft_kaisen.main_menu.label_empty1": "\u003e\u003e",
+      "effect.craft_kaisen.toji_cooldown": "TojiCooldown",
       "gui.craft_kaisen.main_menu.label_empty5": "+",
       "gui.craft_kaisen.main_menu.label_empty4": "+",
       "item.craft_kaisen.blast_away_ranged": "Blast Away Ranged",
@@ -7043,8 +7046,10 @@
       "gui.craft_kaisen.start_screen.label_human": "Human",
       "gamerule.forceSukunaTechnique": "Force Sukuna Technique",
       "item.craft_kaisen.toji_outfit_leggings": "Toji Pants",
+      "item.craft_kaisen.choso_spawn_egg": "Choso Spawn Egg",
       "advancements.grade_2.title": "Grade 2",
       "item.craft_kaisen.bandage_blind_fold_helmet": "Bandage Blind Fold",
+      "block.craft_kaisen.sprinkler_on": "Sprinkler On",
       "advancements.grade_3.descr": "Reach The Required Fame.",
       "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "entity.craft_kaisen.yuji_itadori": "Yuji Itadori",
@@ -7054,13 +7059,16 @@
       "item.craft_kaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "advancements.jujutsu_kaisen.descr": "Begin your journey in the world of JJK",
+      "effect.craft_kaisen.punch_barrage_potion": "Punch Barrage Potion",
       "advancements.black_flash_advancement.descr": "Attack a mob while your cursed energy is active with a 0.01% Chance",
       "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
       "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
+      "entity.craft_kaisen.choso": "Choso",
       "gamerule.forceSukunaTechnique.description": "Forces sukuna technique on whoever is controlling the body of a vessel.",
       "entity.craft_kaisen.roppongi_cursed_spirit": "Roppongi Cursed Spirit",
       "itemGroup.tabck_armor": "Ck Armor",
       "entity.craft_kaisen.toad": "Toad",
+      "block.craft_kaisen.sprinkler": "Sprinkler",
       "item.craft_kaisen.inventory_curse": "Inventory Curse",
       "block.craft_kaisen.domain_block": "Domain Block",
       "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
@@ -7069,6 +7077,7 @@
       "item.craft_kaisen.toji_outfit_chestplate": "Toji Shirt",
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
       "advancements.semi_grade_2.descr": "Reach The Required Fame.",
+      "itemGroup.tabck_curses": "Craft Kaisen Curses",
       "item.craft_kaisen.dismantle": "Dismantle",
       "advancements.grade_4.title": "Grade 4",
       "effect.craft_kaisen.nue_electricity_effect": "NueElectricity",
@@ -7098,6 +7107,7 @@
       "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
       "advancements.semi_grade_2.title": "Semi Grade 2",
       "entity.craft_kaisen.great_serpent": "Great Serpent",
+      "effect.craft_kaisen.constant_slice": "ConstantSlice",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",
       "item.craft_kaisen.dont_move_ranged": "Dont Move Ranged",
       "item.craft_kaisen.playful_cloud": "Playful Cloud"
