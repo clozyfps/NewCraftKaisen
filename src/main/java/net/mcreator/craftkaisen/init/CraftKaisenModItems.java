@@ -21,6 +21,7 @@ import net.mcreator.craftkaisen.item.TojiCurseArmorItem;
 import net.mcreator.craftkaisen.item.TestItem;
 import net.mcreator.craftkaisen.item.SukunaOutfitItem;
 import net.mcreator.craftkaisen.item.SplitSoulKatanaItem;
+import net.mcreator.craftkaisen.item.SlicingExcorismItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
 import net.mcreator.craftkaisen.item.RunAwayRangedItem;
 import net.mcreator.craftkaisen.item.ReversalRedProjectileItem;
@@ -41,6 +42,10 @@ import net.mcreator.craftkaisen.item.DismantleItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
 import net.mcreator.craftkaisen.item.CrumbleAwayRangedItem;
 import net.mcreator.craftkaisen.item.ChosoArmorItem;
+import net.mcreator.craftkaisen.item.BloodSpearItem;
+import net.mcreator.craftkaisen.item.BloodMeteoriteItem;
+import net.mcreator.craftkaisen.item.BloodBladeItem;
+import net.mcreator.craftkaisen.item.BloodAxeItem;
 import net.mcreator.craftkaisen.item.BlastAwayRangedItem;
 import net.mcreator.craftkaisen.item.BlackMucusItem;
 import net.mcreator.craftkaisen.item.BlackBlindFoldItem;
@@ -116,6 +121,11 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> NANAMI_KENTO_SPAWN_EGG = REGISTRY.register("nanami_kento_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.NANAMI_KENTO, -1, -1316965, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> NANAMI_KNIFE = REGISTRY.register("nanami_knife", () -> new NanamiKnifeItem());
+	public static final RegistryObject<Item> SLICING_EXCORISM = REGISTRY.register("slicing_excorism", () -> new SlicingExcorismItem());
+	public static final RegistryObject<Item> BLOOD_METEORITE = REGISTRY.register("blood_meteorite", () -> new BloodMeteoriteItem());
+	public static final RegistryObject<Item> BLOOD_BLADE = REGISTRY.register("blood_blade", () -> new BloodBladeItem());
+	public static final RegistryObject<Item> BLOOD_SPEAR = REGISTRY.register("blood_spear", () -> new BloodSpearItem());
+	public static final RegistryObject<Item> BLOOD_AXE = REGISTRY.register("blood_axe", () -> new BloodAxeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

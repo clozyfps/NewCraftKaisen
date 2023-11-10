@@ -21,7 +21,7 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.init.CraftKaisenModTabs;
-import net.mcreator.craftkaisen.client.model.Modelchoso;
+import net.mcreator.craftkaisen.client.model.Modelchosodrip;
 
 import java.util.function.Consumer;
 import java.util.Map;
@@ -83,10 +83,10 @@ public abstract class ChosoArmorItem extends ArmorItem {
 				@Override
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).Body, "left_arm",
-							new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).LeftArm, "right_arm", new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).RightArm,
-							"head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
-							"left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
+					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).Body, "left_arm",
+							new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).LeftArm, "right_arm",
+							new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
 					armorModel.riding = defaultModel.riding;
 					armorModel.young = living.isBaby();
@@ -97,7 +97,7 @@ public abstract class ChosoArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_kaisen:textures/entities/choso.png";
+			return "craft_kaisen:textures/entities/chosooutfit.png";
 		}
 	}
 
@@ -113,8 +113,8 @@ public abstract class ChosoArmorItem extends ArmorItem {
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("left_leg", new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).LeftLeg, "right_leg",
-									new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							Map.of("left_leg", new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).LeftLeg, "right_leg",
+									new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
 									"left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
@@ -127,7 +127,7 @@ public abstract class ChosoArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_kaisen:textures/entities/choso.png";
+			return "craft_kaisen:textures/entities/chosooutfit.png";
 		}
 	}
 }

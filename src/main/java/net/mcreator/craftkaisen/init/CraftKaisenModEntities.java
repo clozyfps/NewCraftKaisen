@@ -22,6 +22,7 @@ import net.mcreator.craftkaisen.entity.UnlimitedVoidMobEntity;
 import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.ToadEntity;
+import net.mcreator.craftkaisen.entity.SlicingExcorismEntity;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
@@ -47,6 +48,7 @@ import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
 import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.ChosoEntity;
+import net.mcreator.craftkaisen.entity.BloodMeteoriteEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlackMucusEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
@@ -157,6 +159,10 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<NanamiKentoEntity>of(NanamiKentoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiKentoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SlicingExcorismEntity>> SLICING_EXCORISM = register("projectile_slicing_excorism", EntityType.Builder.<SlicingExcorismEntity>of(SlicingExcorismEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(SlicingExcorismEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BloodMeteoriteEntity>> BLOOD_METEORITE = register("projectile_blood_meteorite",
+			EntityType.Builder.<BloodMeteoriteEntity>of(BloodMeteoriteEntity::new, MobCategory.MISC).setCustomClientFactory(BloodMeteoriteEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

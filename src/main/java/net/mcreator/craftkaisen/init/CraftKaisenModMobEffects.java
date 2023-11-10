@@ -16,6 +16,7 @@ import net.mcreator.craftkaisen.potion.TwistingMobEffect;
 import net.mcreator.craftkaisen.potion.TojiCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.PunchBarragePotionMobEffect;
 import net.mcreator.craftkaisen.potion.PreFireArrowMobEffect;
+import net.mcreator.craftkaisen.potion.PiercingBloodMobEffect;
 import net.mcreator.craftkaisen.potion.NueElectricityEffectMobEffect;
 import net.mcreator.craftkaisen.potion.LapseBlueControlMobEffect;
 import net.mcreator.craftkaisen.potion.DomainExpansionMobEffect;
@@ -36,4 +37,5 @@ public class CraftKaisenModMobEffects {
 	public static final RegistryObject<MobEffect> CONSTANT_SLICE = REGISTRY.register("constant_slice", () -> new ConstantSliceMobEffect());
 	public static final RegistryObject<MobEffect> PUNCH_BARRAGE_POTION = REGISTRY.register("punch_barrage_potion", () -> new PunchBarragePotionMobEffect());
 	public static final RegistryObject<MobEffect> TOJI_COOLDOWN = REGISTRY.register("toji_cooldown", () -> new TojiCooldownMobEffect());
+	public static final RegistryObject<MobEffect> PIERCING_BLOOD = REGISTRY.register("piercing_blood", () -> new PiercingBloodMobEffect());
 }
