@@ -3213,6 +3213,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -3311,6 +3323,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -4017,10 +4041,6 @@
         "dependencies": [
           {
             "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
             "type": "entity"
           },
           {
@@ -5695,12 +5715,8 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
           },
           {
             "name": "world",
@@ -6652,42 +6668,6 @@
       "path": "~/Particles"
     },
     {
-      "name": "PiercingBloodOnEffectActiveTick",
-      "type": "procedure",
-      "sortid": 271,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "piercing_blood_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PiercingBloodOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potions/Procedures"
-    },
-    {
       "name": "PiercingBlood",
       "type": "potioneffect",
       "sortid": 272,
@@ -6700,114 +6680,6 @@
         ]
       },
       "path": "~/Potions"
-    },
-    {
-      "name": "BloodManipulationMoves",
-      "type": "procedure",
-      "sortid": 273,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blood_manipulation_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BloodManipulationMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/MoveUse"
-    },
-    {
-      "name": "SlicingExcorsismWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 274,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slicing_excorsism_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SlicingExcorsismWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/BloodManipulation"
-    },
-    {
-      "name": "SlicingExcorism",
-      "type": "rangeditem",
-      "sortid": 275,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slicing_excorism",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/SlicingExcorismItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/slicing_excorism.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/SlicingExcorismEntity.java"
-        ]
-      },
-      "path": "~/Abilities/BloodManipulation"
-    },
-    {
-      "name": "SlicingExcorismProjectileHitsLivingEntity",
-      "type": "procedure",
-      "sortid": 276,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slicing_excorism_projectile_hits_living_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SlicingExcorismProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/BloodManipulation"
     },
     {
       "name": "BloodMeteoriteWhileProjectileFlyingTick",
@@ -6882,17 +6754,100 @@
       "path": "~/Abilities/BloodManipulation"
     },
     {
-      "name": "BloodMeteoriteProjectileHitsBlock",
+      "name": "FlowingRedScaleProcedure",
       "type": "procedure",
-      "sortid": 279,
+      "sortid": 285,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "blood_meteorite_projectile_hits_block",
+      "registry_name": "flowing_red_scale_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BloodMeteoriteProjectileHitsBlockProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleProcedureProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "FlowingRedScaleMob",
+      "type": "procedure",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowing_red_scale_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleMobProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "BloodBlade",
+      "type": "tool",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_blade",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/blood_blade.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BloodBladeItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "BloodEdgeTick",
+      "type": "procedure",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_edge_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodEdgeTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "SlicingExcorsismWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slicing_excorsism_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SlicingExcorsismWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -6950,15 +6905,58 @@
       "path": "~/Abilities/BloodManipulation"
     },
     {
-      "name": "FlowingRedScale",
-      "type": "procedure",
-      "sortid": 282,
+      "name": "BloodSpear",
+      "type": "tool",
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flowing_red_scale",
+      "registry_name": "blood_spear",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/item/BloodSpearItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/blood_spear.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "SlicingExcorismProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slicing_excorism_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SlicingExcorismProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "BloodEdgeProcedure",
+      "type": "procedure",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_edge_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodEdgeProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -7006,76 +7004,6 @@
       "path": "~/Abilities/BloodManipulation"
     },
     {
-      "name": "FlowingRedScaleMob",
-      "type": "procedure",
-      "sortid": 284,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flowing_red_scale_mob",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleMobProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Abilities/BloodManipulation"
-    },
-    {
-      "name": "FlowingRedScaleProcedure",
-      "type": "procedure",
-      "sortid": 285,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flowing_red_scale_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Abilities/BloodManipulation"
-    },
-    {
-      "name": "BloodBlade",
-      "type": "tool",
-      "sortid": 286,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blood_blade",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/blood_blade.json",
-          "src/main/java/net/mcreator/craftkaisen/item/BloodBladeItem.java"
-        ]
-      },
-      "path": "~/Weapons"
-    },
-    {
-      "name": "BloodSpear",
-      "type": "tool",
-      "sortid": 287,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blood_spear",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/BloodSpearItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/blood_spear.json"
-        ]
-      },
-      "path": "~/Weapons"
-    },
-    {
       "name": "BloodAxe",
       "type": "tool",
       "sortid": 288,
@@ -7091,35 +7019,31 @@
       "path": "~/Weapons"
     },
     {
-      "name": "BloodEdgeProcedure",
-      "type": "procedure",
-      "sortid": 289,
+      "name": "SlicingExcorism",
+      "type": "rangeditem",
+      "sortid": 275,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "blood_edge_procedure",
+      "registry_name": "slicing_excorism",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BloodEdgeProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/net/mcreator/craftkaisen/item/SlicingExcorismItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/slicing_excorism.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/SlicingExcorismEntity.java"
         ]
       },
       "path": "~/Abilities/BloodManipulation"
     },
     {
-      "name": "BloodEdgeTick",
+      "name": "BloodManipulationMoves",
       "type": "procedure",
-      "sortid": 290,
+      "sortid": 273,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "blood_edge_tick",
+      "registry_name": "blood_manipulation_moves",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BloodEdgeTickProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodManipulationMovesProcedure.java"
         ],
         "dependencies": [
           {
@@ -7128,7 +7052,43 @@
           }
         ]
       },
-      "path": "~/Abilities/BloodManipulation"
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "PiercingBloodOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piercing_blood_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PiercingBloodOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
     },
     {
       "name": "SuperNovaProcedure",
@@ -7145,6 +7105,38 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "BloodMeteoriteProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meteorite_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodMeteoriteProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -7173,6 +7165,26 @@
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "FlowingRedScale",
+      "type": "procedure",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowing_red_scale",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
     }
   ],
   "variable_elements": [
