@@ -37,7 +37,9 @@ import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
 import net.mcreator.craftkaisen.entity.MouthCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
+import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.HeianEraSukunaEntity;
+import net.mcreator.craftkaisen.entity.HanamiEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
@@ -163,6 +165,14 @@ public class CraftKaisenModEntities {
 			.setCustomClientFactory(SlicingExcorismEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BloodMeteoriteEntity>> BLOOD_METEORITE = register("projectile_blood_meteorite",
 			EntityType.Builder.<BloodMeteoriteEntity>of(BloodMeteoriteEntity::new, MobCategory.MISC).setCustomClientFactory(BloodMeteoriteEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<HanamiEntity>> HANAMI = register("hanami",
+			EntityType.Builder.<HanamiEntity>of(HanamiEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HanamiEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<JogoEntity>> JOGO = register("jogo",
+			EntityType.Builder.<JogoEntity>of(JogoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JogoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -190,6 +200,8 @@ public class CraftKaisenModEntities {
 			MouthCursedSpiritEntity.init();
 			MahitoEntity.init();
 			NanamiKentoEntity.init();
+			HanamiEntity.init();
+			JogoEntity.init();
 		});
 	}
 
@@ -214,5 +226,7 @@ public class CraftKaisenModEntities {
 		event.put(MOUTH_CURSED_SPIRIT.get(), MouthCursedSpiritEntity.createAttributes().build());
 		event.put(MAHITO.get(), MahitoEntity.createAttributes().build());
 		event.put(NANAMI_KENTO.get(), NanamiKentoEntity.createAttributes().build());
+		event.put(HANAMI.get(), HanamiEntity.createAttributes().build());
+		event.put(JOGO.get(), JogoEntity.createAttributes().build());
 	}
 }

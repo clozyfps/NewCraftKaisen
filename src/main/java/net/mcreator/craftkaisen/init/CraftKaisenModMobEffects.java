@@ -21,6 +21,7 @@ import net.mcreator.craftkaisen.potion.NueElectricityEffectMobEffect;
 import net.mcreator.craftkaisen.potion.LapseBlueControlMobEffect;
 import net.mcreator.craftkaisen.potion.DomainExpansionMobEffect;
 import net.mcreator.craftkaisen.potion.ConstantSliceMobEffect;
+import net.mcreator.craftkaisen.potion.BurnCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.BodyCrushingMobEffect;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
@@ -38,4 +39,5 @@ public class CraftKaisenModMobEffects {
 	public static final RegistryObject<MobEffect> PUNCH_BARRAGE_POTION = REGISTRY.register("punch_barrage_potion", () -> new PunchBarragePotionMobEffect());
 	public static final RegistryObject<MobEffect> TOJI_COOLDOWN = REGISTRY.register("toji_cooldown", () -> new TojiCooldownMobEffect());
 	public static final RegistryObject<MobEffect> PIERCING_BLOOD = REGISTRY.register("piercing_blood", () -> new PiercingBloodMobEffect());
+	public static final RegistryObject<MobEffect> BURN_COOLDOWN = REGISTRY.register("burn_cooldown", () -> new BurnCooldownMobEffect());
 }

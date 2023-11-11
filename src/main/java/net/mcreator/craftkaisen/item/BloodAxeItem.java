@@ -1,7 +1,12 @@
 
 package net.mcreator.craftkaisen.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.AxeItem;
+
+import net.mcreator.craftkaisen.init.CraftKaisenModTabs;
 
 public class BloodAxeItem extends AxeItem {
 	public BloodAxeItem() {

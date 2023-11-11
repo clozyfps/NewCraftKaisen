@@ -3213,18 +3213,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -3323,18 +3311,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -4041,6 +4017,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
             "type": "entity"
           },
           {
@@ -5715,8 +5695,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -7049,6 +7033,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7185,6 +7173,94 @@
         ]
       },
       "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "Hanami",
+      "type": "livingentity",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hanami",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/hanami_biome_modifier.json",
+          "src/main/resources/assets/craft_kaisen/models/item/hanami_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HanamiRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HanamiEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Jogo",
+      "type": "livingentity",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jogo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/JogoEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/jogo_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/JogoRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/jogo_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BurnCooldown",
+      "type": "potioneffect",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/BurnCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "BurnDisasterFlames",
+      "type": "procedure",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_disaster_flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BurnDisasterFlamesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -7575,11 +7651,13 @@
       "advancements.semi_grade_3.title": "Semi Grade 3",
       "entity.craft_kaisen.unlimited_void_mob": "Unlimited Void Mob",
       "item.craft_kaisen.run_away_ranged": "Run Away Ranged",
+      "entity.craft_kaisen.hanami": "Hanami",
       "item.craft_kaisen.heian_era_sukuna_spawn_egg": "Heian Era Sukuna Spawn Egg",
       "entity.craft_kaisen.ko_guy": "Ko-Guy",
       "advancements.semi_grade_1.descr": "Reach The Required Fame.",
       "gui.craft_kaisen.main_menu.tooltip_increases_attack_damage": "increases attack damage",
       "gui.craft_kaisen.main_menu.label_race_human": "Human",
+      "item.craft_kaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "effect.craft_kaisen.piercing_blood": "PiercingBlood",
       "item.craft_kaisen.toad_spawn_egg": "Toad Spawn Egg",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
@@ -7630,6 +7708,7 @@
       "effect.craft_kaisen.pre_fire_arrow": "PreFireArrow",
       "item.craft_kaisen.choso_armor_chestplate": "Choso Outfit",
       "gui.craft_kaisen.main_menu.label_empty1": "\u003e\u003e",
+      "item.craft_kaisen.hanami_spawn_egg": "Hanami Spawn Egg",
       "effect.craft_kaisen.toji_cooldown": "TojiCooldown",
       "gui.craft_kaisen.main_menu.label_empty5": "+",
       "item.craft_kaisen.blast_away_ranged": "Blast Away Ranged",
@@ -7649,6 +7728,7 @@
       "item.craft_kaisen.find_blue_location": "Find Blue Location",
       "gui.craft_kaisen.main_menu.tooltip_increase_max_cursed_energy": "increase max cursed energy",
       "item.craft_kaisen.black_mucus": "Black Mucus",
+      "entity.craft_kaisen.jogo": "Jogo",
       "item.craft_kaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "advancements.jujutsu_kaisen.descr": "Begin your journey in the world of JJK",
@@ -7686,6 +7766,7 @@
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
       "item.craft_kaisen.inverted_spear": "Inverted Spear",
       "item.craft_kaisen.fire_arrow_mob": "Fire Arrow Mob",
+      "effect.craft_kaisen.burn_cooldown": "BurnCooldown",
       "effect.craft_kaisen.lapse_blue_control": "Lapse Blue",
       "item.craft_kaisen.crumble_away_ranged": "Crumble Away Ranged",
       "item.craft_kaisen.sleep_ranged": "Sleep Ranged",

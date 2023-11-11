@@ -27,7 +27,9 @@ import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MouthCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
 import net.mcreator.craftkaisen.client.renderer.KoGuyRenderer;
+import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
 import net.mcreator.craftkaisen.client.renderer.HeianEraSukunaRenderer;
+import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChosoRenderer;
 
@@ -70,5 +72,7 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.NANAMI_KENTO.get(), NanamiKentoRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.SLICING_EXCORISM.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.BLOOD_METEORITE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.HANAMI.get(), HanamiRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.JOGO.get(), JogoRenderer::new);
 	}
 }

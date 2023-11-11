@@ -126,6 +126,8 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> BLOOD_BLADE = REGISTRY.register("blood_blade", () -> new BloodBladeItem());
 	public static final RegistryObject<Item> BLOOD_SPEAR = REGISTRY.register("blood_spear", () -> new BloodSpearItem());
 	public static final RegistryObject<Item> BLOOD_AXE = REGISTRY.register("blood_axe", () -> new BloodAxeItem());
+	public static final RegistryObject<Item> HANAMI_SPAWN_EGG = REGISTRY.register("hanami_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.HANAMI, -1712445, -8700868, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> JOGO_SPAWN_EGG = REGISTRY.register("jogo_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.JOGO, -9138105, -3920640, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

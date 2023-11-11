@@ -1,8 +1,32 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.EntityDamageSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class PiercingBloodOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -10,7 +34,7 @@ public class PiercingBloodOnEffectActiveTickProcedure {
 			return;
 		double raytrace_distance = 0;
 		double distance = 0;
-		raytrace_distance = 10;
+		raytrace_distance = 8;
 		for (int index0 = 0; index0 < 14; index0++) {
 			if (!world.getBlockState(new BlockPos(
 					entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),

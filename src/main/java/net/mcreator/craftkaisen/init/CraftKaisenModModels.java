@@ -25,6 +25,7 @@ import net.mcreator.craftkaisen.client.model.Modelmouthcursedspirit;
 import net.mcreator.craftkaisen.client.model.Modeljogo;
 import net.mcreator.craftkaisen.client.model.Modeljjkoutfiot;
 import net.mcreator.craftkaisen.client.model.Modelinventorycurseground;
+import net.mcreator.craftkaisen.client.model.Modelhanami;
 import net.mcreator.craftkaisen.client.model.Modelgetosandalsnew;
 import net.mcreator.craftkaisen.client.model.Modelgetorobes;
 import net.mcreator.craftkaisen.client.model.Modelgetolegs;
@@ -54,6 +55,7 @@ public class CraftKaisenModModels {
 		event.registerLayerDefinition(ModelRika.LAYER_LOCATION, ModelRika::createBodyLayer);
 		event.registerLayerDefinition(Modeltenshadowsgreatserpent.LAYER_LOCATION, Modeltenshadowsgreatserpent::createBodyLayer);
 		event.registerLayerDefinition(Modeltojishirt.LAYER_LOCATION, Modeltojishirt::createBodyLayer);
+		event.registerLayerDefinition(Modelhanami.LAYER_LOCATION, Modelhanami::createBodyLayer);
 		event.registerLayerDefinition(Modelcursedspiritgrasshopper.LAYER_LOCATION, Modelcursedspiritgrasshopper::createBodyLayer);
 		event.registerLayerDefinition(Modeljogo.LAYER_LOCATION, Modeljogo::createBodyLayer);
 		event.registerLayerDefinition(Modelcustom_model.LAYER_LOCATION, Modelcustom_model::createBodyLayer);
