@@ -1,8 +1,16 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class DomainExpansionMobEffect extends MobEffect {
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class DomainExpansionMobEffect extends MobEffect {
 	public DomainExpansionMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}

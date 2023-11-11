@@ -99,6 +99,8 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> TOAD_SPAWN_EGG = REGISTRY.register("toad_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.TOAD, -10841282, -3619735, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
 	public static final RegistryObject<Item> DOMAIN_BLOCK = block(CraftKaisenModBlocks.DOMAIN_BLOCK, null);
+	public static final RegistryObject<Item> TALISMAN_BLOCK = block(CraftKaisenModBlocks.TALISMAN_BLOCK, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> SHIBUYA_GATES = block(CraftKaisenModBlocks.SHIBUYA_GATES, null);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
