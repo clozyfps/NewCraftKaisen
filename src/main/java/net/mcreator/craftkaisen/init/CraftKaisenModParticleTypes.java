@@ -19,10 +19,13 @@ public class CraftKaisenModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> SNOWFLAKE = REGISTRY.register("snowflake", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> SOUND_WAVE = REGISTRY.register("sound_wave", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> RED_PARTICLE = REGISTRY.register("red_particle", () -> new SimpleParticleType(true));
-	public static final RegistryObject<SimpleParticleType> BLOOD = REGISTRY.register("blood", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> BLOOD = REGISTRY.register("blood", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> BLUE_PARTICLE = REGISTRY.register("blue_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> INFINITY_PARTICLE = REGISTRY.register("infinity_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> FIRE_ARROW_PARTICLE = REGISTRY.register("fire_arrow_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> NUE_ELECTRICITY = REGISTRY.register("nue_electricity", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> BLACK_FLASH_PULSE = REGISTRY.register("black_flash_pulse", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> CLASH_PARTICLE = REGISTRY.register("clash_particle", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> PUNCH_IMPACT = REGISTRY.register("punch_impact", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> BLOOD_SPLASH = REGISTRY.register("blood_splash", () -> new SimpleParticleType(true));
 }

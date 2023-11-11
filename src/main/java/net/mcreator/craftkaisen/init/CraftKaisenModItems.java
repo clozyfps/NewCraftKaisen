@@ -21,15 +21,18 @@ import net.mcreator.craftkaisen.item.TojiCurseArmorItem;
 import net.mcreator.craftkaisen.item.TestItem;
 import net.mcreator.craftkaisen.item.SukunaOutfitItem;
 import net.mcreator.craftkaisen.item.SplitSoulKatanaItem;
+import net.mcreator.craftkaisen.item.SlicingExcorismItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
 import net.mcreator.craftkaisen.item.RunAwayRangedItem;
 import net.mcreator.craftkaisen.item.ReversalRedProjectileItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
+import net.mcreator.craftkaisen.item.NanamiKnifeItem;
 import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MiwaKatanaItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererUniformItem;
 import net.mcreator.craftkaisen.item.InvertedSpearItem;
 import net.mcreator.craftkaisen.item.InventoryCurseItem;
+import net.mcreator.craftkaisen.item.GetoOutfitItem;
 import net.mcreator.craftkaisen.item.FireArrowMobItem;
 import net.mcreator.craftkaisen.item.FireArrowItem;
 import net.mcreator.craftkaisen.item.FindBlueLocationItem;
@@ -38,6 +41,11 @@ import net.mcreator.craftkaisen.item.DontMoveRangedItem;
 import net.mcreator.craftkaisen.item.DismantleItem;
 import net.mcreator.craftkaisen.item.CrushedRangedItem;
 import net.mcreator.craftkaisen.item.CrumbleAwayRangedItem;
+import net.mcreator.craftkaisen.item.ChosoArmorItem;
+import net.mcreator.craftkaisen.item.BloodSpearItem;
+import net.mcreator.craftkaisen.item.BloodMeteoriteItem;
+import net.mcreator.craftkaisen.item.BloodBladeItem;
+import net.mcreator.craftkaisen.item.BloodAxeItem;
 import net.mcreator.craftkaisen.item.BlastAwayRangedItem;
 import net.mcreator.craftkaisen.item.BlackMucusItem;
 import net.mcreator.craftkaisen.item.BlackBlindFoldItem;
@@ -75,32 +83,53 @@ public class CraftKaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.YUJI_ITADORI, -15395555, -4712424, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> SUKUNA_OUTFIT_CHESTPLATE = REGISTRY.register("sukuna_outfit_chestplate", () -> new SukunaOutfitItem.Chestplate());
 	public static final RegistryObject<Item> RYOMEN_SUKUNA_SPAWN_EGG = REGISTRY.register("ryomen_sukuna_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RYOMEN_SUKUNA, -1, -3835270, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RYOMEN_SUKUNA, -1, -3835270, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> ROPPONGI_CURSED_SPIRIT_SPAWN_EGG = REGISTRY.register("roppongi_cursed_spirit_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.ROPPONGI_CURSED_SPIRIT, -2829154, -10795978, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.ROPPONGI_CURSED_SPIRIT, -2829154, -10795978, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> FIRE_ARROW = REGISTRY.register("fire_arrow", () -> new FireArrowItem());
 	public static final RegistryObject<Item> FIRE_ARROW_MOB = REGISTRY.register("fire_arrow_mob", () -> new FireArrowMobItem());
 	public static final RegistryObject<Item> YUTA_OKKOTSU_SPAWN_EGG = REGISTRY.register("yuta_okkotsu_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.YUTA_OKKOTSU, -1, -15066598, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> RIKA_SPAWN_EGG = REGISTRY.register("rika_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.RIKA, -1, -15527149, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> GREAT_SERPENT_SPAWN_EGG = REGISTRY.register("great_serpent_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.GREAT_SERPENT, -1, -16777216, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
-	public static final RegistryObject<Item> NUE_SPAWN_EGG = REGISTRY.register("nue_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.NUE, -37301, -1315861, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.GREAT_SERPENT, -1, -16777216, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> NUE_SPAWN_EGG = REGISTRY.register("nue_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.NUE, -38604, -8816263, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> RUGBY_FIELD_CURSED_SPIRIT_SPAWN_EGG = REGISTRY.register("rugby_field_cursed_spirit_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RUGBY_FIELD_CURSED_SPIRIT, -16764058, -6750208, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
-	public static final RegistryObject<Item> KO_GUY_SPAWN_EGG = REGISTRY.register("ko_guy_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.KO_GUY, -6831509, -2237795, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RUGBY_FIELD_CURSED_SPIRIT, -16764058, -6750208, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> KO_GUY_SPAWN_EGG = REGISTRY.register("ko_guy_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.KO_GUY, -6831509, -2237795, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> BLACK_MUCUS = REGISTRY.register("black_mucus", () -> new BlackMucusItem());
 	public static final RegistryObject<Item> INVENTORY_CURSE = REGISTRY.register("inventory_curse", () -> new InventoryCurseItem());
 	public static final RegistryObject<Item> TOJI_CURSE_ARMOR_CHESTPLATE = REGISTRY.register("toji_curse_armor_chestplate", () -> new TojiCurseArmorItem.Chestplate());
 	public static final RegistryObject<Item> DISMANTLE = REGISTRY.register("dismantle", () -> new DismantleItem());
 	public static final RegistryObject<Item> HEIAN_ERA_SUKUNA_SPAWN_EGG = REGISTRY.register("heian_era_sukuna_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.HEIAN_ERA_SUKUNA, -403824, -21804, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.HEIAN_ERA_SUKUNA, -403824, -21804, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> FIND_BLUE_LOCATION = REGISTRY.register("find_blue_location", () -> new FindBlueLocationItem());
-	public static final RegistryObject<Item> TOAD_SPAWN_EGG = REGISTRY.register("toad_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.TOAD, -10841282, -3619735, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> TOAD_SPAWN_EGG = REGISTRY.register("toad_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.TOAD, -10841282, -3619735, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
 	public static final RegistryObject<Item> DOMAIN_BLOCK = block(CraftKaisenModBlocks.DOMAIN_BLOCK, null);
 	public static final RegistryObject<Item> TALISMAN_BLOCK = block(CraftKaisenModBlocks.TALISMAN_BLOCK, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Item> SHIBUYA_GATES = block(CraftKaisenModBlocks.SHIBUYA_GATES, null);
+	public static final RegistryObject<Item> SPRINKLER = block(CraftKaisenModBlocks.SPRINKLER, CraftKaisenModTabs.TAB_CK_MOBS);
+	public static final RegistryObject<Item> SPRINKLER_ON = block(CraftKaisenModBlocks.SPRINKLER_ON, null);
+	public static final RegistryObject<Item> CHOSO_ARMOR_CHESTPLATE = REGISTRY.register("choso_armor_chestplate", () -> new ChosoArmorItem.Chestplate());
+	public static final RegistryObject<Item> CHOSO_ARMOR_LEGGINGS = REGISTRY.register("choso_armor_leggings", () -> new ChosoArmorItem.Leggings());
+	public static final RegistryObject<Item> CHOSO_SPAWN_EGG = REGISTRY.register("choso_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.CHOSO, -15002845, -4473925, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> GETO_OUTFIT_CHESTPLATE = REGISTRY.register("geto_outfit_chestplate", () -> new GetoOutfitItem.Chestplate());
+	public static final RegistryObject<Item> GETO_OUTFIT_LEGGINGS = REGISTRY.register("geto_outfit_leggings", () -> new GetoOutfitItem.Leggings());
+	public static final RegistryObject<Item> GETO_OUTFIT_BOOTS = REGISTRY.register("geto_outfit_boots", () -> new GetoOutfitItem.Boots());
+	public static final RegistryObject<Item> MOUTH_CURSED_SPIRIT_SPAWN_EGG = REGISTRY.register("mouth_cursed_spirit_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.MOUTH_CURSED_SPIRIT, -1, -3776159, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> MAHITO_SPAWN_EGG = REGISTRY.register("mahito_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.MAHITO, -15197403, -3342339, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> NANAMI_KENTO_SPAWN_EGG = REGISTRY.register("nanami_kento_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.NANAMI_KENTO, -1, -1316965, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> NANAMI_KNIFE = REGISTRY.register("nanami_knife", () -> new NanamiKnifeItem());
+	public static final RegistryObject<Item> SLICING_EXCORISM = REGISTRY.register("slicing_excorism", () -> new SlicingExcorismItem());
+	public static final RegistryObject<Item> BLOOD_METEORITE = REGISTRY.register("blood_meteorite", () -> new BloodMeteoriteItem());
+	public static final RegistryObject<Item> BLOOD_BLADE = REGISTRY.register("blood_blade", () -> new BloodBladeItem());
+	public static final RegistryObject<Item> BLOOD_SPEAR = REGISTRY.register("blood_spear", () -> new BloodSpearItem());
+	public static final RegistryObject<Item> BLOOD_AXE = REGISTRY.register("blood_axe", () -> new BloodAxeItem());
+	public static final RegistryObject<Item> HANAMI_SPAWN_EGG = REGISTRY.register("hanami_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.HANAMI, -1712445, -8700868, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> JOGO_SPAWN_EGG = REGISTRY.register("jogo_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.JOGO, -9138105, -3920640, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

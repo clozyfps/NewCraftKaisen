@@ -39,6 +39,7 @@ import net.mcreator.craftkaisen.init.CraftKaisenModMenus;
 import net.mcreator.craftkaisen.init.CraftKaisenModItems;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 import net.mcreator.craftkaisen.init.CraftKaisenModBlocks;
+import net.mcreator.craftkaisen.init.CraftKaisenModBiomes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -67,6 +68,7 @@ public class CraftKaisenMod {
 
 		CraftKaisenModParticleTypes.REGISTRY.register(bus);
 		CraftKaisenModMenus.REGISTRY.register(bus);
+		CraftKaisenModBiomes.REGISTRY.register(bus);
 
 		GeckoLib.initialize();
 	}

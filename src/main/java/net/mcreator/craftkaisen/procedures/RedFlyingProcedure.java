@@ -29,7 +29,7 @@ public class RedFlyingProcedure {
 		double sz = 0;
 		{
 			// Get the radius of the sphere
-			double radius = (1 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 100)); // 3 blocks
+			double radius = (0.1 + 1 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 120)); // 3 blocks
 			// Set the tolerance for how close to the surface a point must be to create a particle
 			double tolerance = 0.15; // 0.1 blocks
 			for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -60,6 +60,11 @@ public class RedFlyingProcedure {
 			_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35),
 					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35),
 					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35), 0);
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.RED_PARTICLE.get()), x, y, z, 15,
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35),
+					((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 35), 0.01);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world

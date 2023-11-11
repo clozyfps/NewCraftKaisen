@@ -23,9 +23,15 @@ import net.mcreator.craftkaisen.client.renderer.RoppongiCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.RikaRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.NueRenderer;
+import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
+import net.mcreator.craftkaisen.client.renderer.MouthCursedSpiritRenderer;
+import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
 import net.mcreator.craftkaisen.client.renderer.KoGuyRenderer;
+import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
 import net.mcreator.craftkaisen.client.renderer.HeianEraSukunaRenderer;
+import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
+import net.mcreator.craftkaisen.client.renderer.ChosoRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftKaisenModEntityRenderers {
@@ -60,5 +66,13 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.FIND_BLUE_LOCATION.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.TOAD.get(), ToadRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.UNLIMITED_VOID_MOB.get(), UnlimitedVoidMobRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.CHOSO.get(), ChosoRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.MOUTH_CURSED_SPIRIT.get(), MouthCursedSpiritRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.MAHITO.get(), MahitoRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.NANAMI_KENTO.get(), NanamiKentoRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.SLICING_EXCORISM.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.BLOOD_METEORITE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.HANAMI.get(), HanamiRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.JOGO.get(), JogoRenderer::new);
 	}
 }

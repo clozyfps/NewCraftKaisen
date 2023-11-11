@@ -11,6 +11,7 @@ public class CraftKaisenModTabs {
 	public static CreativeModeTab TAB_CK_WEAPONS;
 	public static CreativeModeTab TAB_CK_MOBS;
 	public static CreativeModeTab TAB_CK_ARMOR;
+	public static CreativeModeTab TAB_CK_CURSES;
 
 	public static void load() {
 		TAB_CK_WEAPONS = new CreativeModeTab("tabck_weapons") {
@@ -39,6 +40,17 @@ public class CraftKaisenModTabs {
 			@Override
 			public ItemStack makeIcon() {
 				return new ItemStack(CraftKaisenModItems.BLACK_BLIND_FOLD_HELMET.get());
+			}
+
+			@Override
+			public boolean hasSearchBar() {
+				return true;
+			}
+		}.setBackgroundSuffix("item_search.png");
+		TAB_CK_CURSES = new CreativeModeTab("tabck_curses") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(CraftKaisenModItems.HEIAN_ERA_SUKUNA_SPAWN_EGG.get());
 			}
 
 			@Override

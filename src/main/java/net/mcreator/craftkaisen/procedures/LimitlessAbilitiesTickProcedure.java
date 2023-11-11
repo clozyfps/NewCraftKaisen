@@ -66,7 +66,7 @@ public class LimitlessAbilitiesTickProcedure {
 			}
 		}
 		if (entity.getPersistentData().getBoolean("red") == true) {
-			entity.getPersistentData().putDouble("redDistance", (entity.getPersistentData().getDouble("redDistance") + 2));
+			entity.getPersistentData().putDouble("redDistance", (entity.getPersistentData().getDouble("redDistance") + 4));
 			RedFlyingProcedure.execute(world, (x + entity.getLookAngle().x * (entity.getPersistentData().getDouble("redDistance") + 3)), (y + entity.getLookAngle().y * entity.getPersistentData().getDouble("redDistance") + 0.6),
 					(z + entity.getLookAngle().z * (entity.getPersistentData().getDouble("redDistance") + 3)), entity);
 			if (entity.getPersistentData().getDouble("redDistance") >= 20 + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 4) {

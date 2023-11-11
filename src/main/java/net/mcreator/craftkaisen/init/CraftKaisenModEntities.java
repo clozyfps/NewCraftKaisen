@@ -22,6 +22,7 @@ import net.mcreator.craftkaisen.entity.UnlimitedVoidMobEntity;
 import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.ToadEntity;
+import net.mcreator.craftkaisen.entity.SlicingExcorismEntity;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
@@ -32,8 +33,13 @@ import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
+import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
+import net.mcreator.craftkaisen.entity.MouthCursedSpiritEntity;
+import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
+import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.HeianEraSukunaEntity;
+import net.mcreator.craftkaisen.entity.HanamiEntity;
 import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
 import net.mcreator.craftkaisen.entity.FireArrowMobEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
@@ -43,6 +49,8 @@ import net.mcreator.craftkaisen.entity.DontMoveRangedEntity;
 import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
 import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
+import net.mcreator.craftkaisen.entity.ChosoEntity;
+import net.mcreator.craftkaisen.entity.BloodMeteoriteEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlackMucusEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
@@ -137,6 +145,34 @@ public class CraftKaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<UnlimitedVoidMobEntity>> UNLIMITED_VOID_MOB = register("unlimited_void_mob", EntityType.Builder.<UnlimitedVoidMobEntity>of(UnlimitedVoidMobEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UnlimitedVoidMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ChosoEntity>> CHOSO = register("choso",
+			EntityType.Builder.<ChosoEntity>of(ChosoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ChosoEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MouthCursedSpiritEntity>> MOUTH_CURSED_SPIRIT = register("mouth_cursed_spirit",
+			EntityType.Builder.<MouthCursedSpiritEntity>of(MouthCursedSpiritEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MouthCursedSpiritEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MahitoEntity>> MAHITO = register("mahito",
+			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<NanamiKentoEntity>> NANAMI_KENTO = register("nanami_kento",
+			EntityType.Builder.<NanamiKentoEntity>of(NanamiKentoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiKentoEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SlicingExcorismEntity>> SLICING_EXCORISM = register("projectile_slicing_excorism", EntityType.Builder.<SlicingExcorismEntity>of(SlicingExcorismEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(SlicingExcorismEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BloodMeteoriteEntity>> BLOOD_METEORITE = register("projectile_blood_meteorite",
+			EntityType.Builder.<BloodMeteoriteEntity>of(BloodMeteoriteEntity::new, MobCategory.MISC).setCustomClientFactory(BloodMeteoriteEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<HanamiEntity>> HANAMI = register("hanami",
+			EntityType.Builder.<HanamiEntity>of(HanamiEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HanamiEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<JogoEntity>> JOGO = register("jogo",
+			EntityType.Builder.<JogoEntity>of(JogoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JogoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -160,6 +196,12 @@ public class CraftKaisenModEntities {
 			HeianEraSukunaEntity.init();
 			ToadEntity.init();
 			UnlimitedVoidMobEntity.init();
+			ChosoEntity.init();
+			MouthCursedSpiritEntity.init();
+			MahitoEntity.init();
+			NanamiKentoEntity.init();
+			HanamiEntity.init();
+			JogoEntity.init();
 		});
 	}
 
@@ -180,5 +222,11 @@ public class CraftKaisenModEntities {
 		event.put(HEIAN_ERA_SUKUNA.get(), HeianEraSukunaEntity.createAttributes().build());
 		event.put(TOAD.get(), ToadEntity.createAttributes().build());
 		event.put(UNLIMITED_VOID_MOB.get(), UnlimitedVoidMobEntity.createAttributes().build());
+		event.put(CHOSO.get(), ChosoEntity.createAttributes().build());
+		event.put(MOUTH_CURSED_SPIRIT.get(), MouthCursedSpiritEntity.createAttributes().build());
+		event.put(MAHITO.get(), MahitoEntity.createAttributes().build());
+		event.put(NANAMI_KENTO.get(), NanamiKentoEntity.createAttributes().build());
+		event.put(HANAMI.get(), HanamiEntity.createAttributes().build());
+		event.put(JOGO.get(), JogoEntity.createAttributes().build());
 	}
 }

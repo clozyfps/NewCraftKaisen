@@ -13,7 +13,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
@@ -43,32 +42,9 @@ public class PreFireArrowEffectExpiresProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.FIRE_ARROW_PARTICLE.get()), x, y, z, 1, 0.1, 0.1, 0.1, 1);
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, x, y, z, 5, 0.1, 2, 0.1, 0.1);
 		if (entity instanceof LivingEntity _entity)
 			_entity.swing(InteractionHand.MAIN_HAND, true);
 		if (!(entity instanceof RyomenSukunaEntity || entity.getPersistentData().getBoolean("sukuna"))) {
-			{
-				Entity _shootFrom = entity;
-				Level projectileLevel = _shootFrom.level;
-				if (!projectileLevel.isClientSide()) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new FireArrowEntity(CraftKaisenModEntities.FIRE_ARROW.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							entityToSpawn.setSecondsOnFire(100);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 5), 2);
-					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-			}
-		} else {
 			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level;
@@ -83,9 +59,30 @@ public class PreFireArrowEffectExpiresProcedure {
 							entityToSpawn.setSecondsOnFire(100);
 							return entityToSpawn;
 						}
+					}.getArrow(projectileLevel, entity, (float) (5 + (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 5), 2);
+					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+			}
+		} else {
+			{
+				Entity _shootFrom = entity;
+				Level projectileLevel = _shootFrom.level;
+				if (!projectileLevel.isClientSide()) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new FireArrowEntity(CraftKaisenModEntities.FIRE_ARROW.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							entityToSpawn.setSecondsOnFire(100);
+							return entityToSpawn;
+						}
 					}.getArrow(projectileLevel, entity, 15, 2);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 0);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}

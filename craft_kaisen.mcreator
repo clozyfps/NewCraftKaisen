@@ -1014,9 +1014,9 @@
       "registry_name": "reversal_red_projectile",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
-          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
+          "src/main/resources/assets/craft_kaisen/models/item/reversal_red_projectile.json"
         ]
       },
       "path": "~/Ranged"
@@ -1259,8 +1259,8 @@
       "registry_name": "snowflake",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/particles/snowflake.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SnowflakeParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/snowflake.json"
         ]
       },
       "path": "~/Particles"
@@ -1762,8 +1762,8 @@
       "registry_name": "sound_wave",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json"
+          "src/main/resources/assets/craft_kaisen/particles/sound_wave.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/SoundWaveParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1797,9 +1797,9 @@
       "registry_name": "explode_ranged",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json",
           "src/main/java/net/mcreator/craftkaisen/item/ExplodeRangedItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/explode_ranged.json"
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeRangedEntity.java"
         ]
       },
       "path": "~/Abilities/CursedSpeech"
@@ -2895,8 +2895,8 @@
       "registry_name": "blue_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/BlueParticleParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/blue_particle.json"
+          "src/main/resources/assets/craft_kaisen/particles/blue_particle.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BlueParticleParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -3448,8 +3448,8 @@
       "registry_name": "black_blind_fold",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/BlackBlindFoldItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/black_blind_fold_helmet.json"
+          "src/main/resources/assets/craft_kaisen/models/item/black_blind_fold_helmet.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BlackBlindFoldItem.java"
         ]
       },
       "path": "~/Armor"
@@ -5040,8 +5040,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/item/TojiOutfitItem.java",
-          "src/main/resources/assets/craft_kaisen/models/item/toji_outfit_chestplate.json",
-          "src/main/resources/assets/craft_kaisen/models/item/toji_outfit_leggings.json"
+          "src/main/resources/assets/craft_kaisen/models/item/toji_outfit_leggings.json",
+          "src/main/resources/assets/craft_kaisen/models/item/toji_outfit_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -5966,6 +5966,23 @@
       "path": "~/Blocks"
     },
     {
+      "name": "ShibuyaGates",
+      "type": "block",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shibuya_gates",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/shibuya_gates.json",
+          "src/main/resources/assets/craft_kaisen/blockstates/shibuya_gates.json",
+          "src/main/java/net/mcreator/craftkaisen/block/ShibuyaGatesBlock.java",
+          "src/main/resources/assets/craft_kaisen/models/block/shibuya_gates.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
       "name": "TalismanBlockOnBlockRightClicked",
       "type": "procedure",
       "sortid": 239,
@@ -6002,21 +6019,1366 @@
       "path": "~/Blocks/Procedures"
     },
     {
-      "name": "ShibuyaGates",
+      "name": "SprinklerOn",
       "type": "block",
-      "sortid": 240,
+      "sortid": 262,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shibuya_gates",
+      "registry_name": "sprinkler_on",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craft_kaisen/models/item/shibuya_gates.json",
-          "src/main/resources/assets/craft_kaisen/blockstates/shibuya_gates.json",
-          "src/main/java/net/mcreator/craftkaisen/block/ShibuyaGatesBlock.java",
-          "src/main/resources/assets/craft_kaisen/models/block/shibuya_gates.json"
+          "src/main/resources/assets/craft_kaisen/models/item/sprinkler_on.json",
+          "src/main/resources/assets/craft_kaisen/blockstates/sprinkler_on.json",
+          "src/main/resources/assets/craft_kaisen/models/block/sprinkler_on.json",
+          "src/main/java/net/mcreator/craftkaisen/block/SprinklerOnBlock.java"
         ]
       },
       "path": "~/Blocks"
+    },
+    {
+      "name": "Choso",
+      "type": "livingentity",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choso",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ChosoEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ChosoRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/choso_biome_modifier.json",
+          "src/main/resources/assets/craft_kaisen/models/item/choso_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BloodMeteorite",
+      "type": "rangeditem",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meteorite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/BloodMeteoriteItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/blood_meteorite.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/BloodMeteoriteEntity.java"
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "CurseUser",
+      "type": "tag",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_user",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/curse_user.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "SprinklerOnUpdateTick",
+      "type": "procedure",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_on_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SprinklerOnUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedure"
+    },
+    {
+      "name": "PunchBarragePotion",
+      "type": "potioneffect",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_barrage_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/PunchBarragePotionMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ClashParticle",
+      "type": "particle",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clash_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ClashParticleParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/clash_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "FlowingRedScaleHit",
+      "type": "procedure",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowing_red_scale_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "SlicingExcorism",
+      "type": "rangeditem",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slicing_excorism",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/slicing_excorism.json",
+          "src/main/java/net/mcreator/craftkaisen/item/SlicingExcorismItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/SlicingExcorismEntity.java"
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "Mahito",
+      "type": "livingentity",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/MahitoEntity.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/mahito_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MahitoRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/mahito_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SuperNovaProcedure",
+      "type": "procedure",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "super_nova_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SuperNovaProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "Vector",
+      "type": "procedure",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vector",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VectorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BloodMeteoriteProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meteorite_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodMeteoriteProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "TojiCooldown",
+      "type": "potioneffect",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/TojiCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FlowingRedScale",
+      "type": "procedure",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowing_red_scale",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "ConstantSlice",
+      "type": "potioneffect",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constant_slice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ConstantSliceMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FlowingRedScaleMob",
+      "type": "procedure",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowing_red_scale_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleMobProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "PunchImpact",
+      "type": "particle",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_impact",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/punch_impact.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PunchImpactParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SlicingExcorsismWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slicing_excorsism_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SlicingExcorsismWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "NanamiKnife",
+      "type": "tool",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_knife",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/nanami_knife.json",
+          "src/main/java/net/mcreator/craftkaisen/item/NanamiKnifeItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "SukunaCTonTickUpdate",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_c_ton_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaCTonTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "Jogo",
+      "type": "livingentity",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jogo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/jogo_spawn_egg.json",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/jogo_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/JogoEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/JogoRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "ChosoArmor",
+      "type": "armor",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choso_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/choso_armor_leggings.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ChosoArmorItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/choso_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "BloodSpear",
+      "type": "tool",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_spear",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/BloodSpearItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/blood_spear.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "SlicingExcorismProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slicing_excorism_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SlicingExcorismProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "MeleePowerful",
+      "type": "tag",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_powerful",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/melee_powerful.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "BloodAxe",
+      "type": "tool",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_axe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/BloodAxeItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/blood_axe.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "BurnDisasterFlames",
+      "type": "procedure",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_disaster_flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BurnDisasterFlamesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "GojoMoves",
+      "type": "procedure",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gojo_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GojoMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "BloodManipulationMoves",
+      "type": "procedure",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_manipulation_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodManipulationMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "Shibuya",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shibuya",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/biome/ShibuyaBiome.java"
+        ]
+      },
+      "path": "~/Biome"
+    },
+    {
+      "name": "MeleePowerfulMoves",
+      "type": "procedure",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_powerful_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MeleePowerfulMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "PiercingBlood",
+      "type": "potioneffect",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piercing_blood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/PiercingBloodMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "TojiMoves",
+      "type": "procedure",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "RyomenSukunaOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ryomen_sukuna_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "BloodMeteoriteWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meteorite_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodMeteoriteWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "FlowingRedScaleProcedure",
+      "type": "procedure",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowing_red_scale_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowingRedScaleProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "BurnCooldown",
+      "type": "potioneffect",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/BurnCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ToadOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toad_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToadOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "GojoRed",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gojo_red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GojoRedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MobMoves"
+    },
+    {
+      "name": "NanamiKento",
+      "type": "livingentity",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_kento",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/NanamiKentoEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/nanami_kento_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/NanamiKentoRenderer.java",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/nanami_kento_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BloodSplash",
+      "type": "particle",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_splash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BloodSplashParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/blood_splash.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Hanami",
+      "type": "livingentity",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hanami",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/hanami_biome_modifier.json",
+          "src/main/resources/assets/craft_kaisen/models/item/hanami_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HanamiRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HanamiEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "InventoryCurseGui",
+      "type": "gui",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGuiMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGuiScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "SwordClash",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_clash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SwordClashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BloodMeteoriteProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meteorite_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodMeteoriteProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "ConstantSliceOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constant_slice_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ConstantSliceOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "MobKnockback",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_knockback",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MobKnockbackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BloodBlade",
+      "type": "tool",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_blade",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/blood_blade.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BloodBladeItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "BloodEdgeTick",
+      "type": "procedure",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_edge_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodEdgeTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "TenShadows",
+      "type": "tag",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ten_shadows",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/ten_shadows.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "BloodMeteorriteProcedure",
+      "type": "procedure",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meteorrite_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodMeteorriteProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "GetoOutfit",
+      "type": "armor",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "geto_outfit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_boots.json",
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_leggings.json",
+          "src/main/java/net/mcreator/craftkaisen/item/GetoOutfitItem.java",
+          "src/main/resources/assets/craft_kaisen/models/item/geto_outfit_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "CkCurses",
+      "type": "tab",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_curses",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "Sprinkler",
+      "type": "block",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/sprinkler.json",
+          "src/main/resources/assets/craft_kaisen/models/block/sprinkler.json",
+          "src/main/java/net/mcreator/craftkaisen/block/SprinklerBlock.java",
+          "src/main/resources/assets/craft_kaisen/blockstates/sprinkler.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "DespawnProjectileWhenHitsEntity",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "despawn_projectile_when_hits_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DespawnProjectileWhenHitsEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "BloodEdgeProcedure",
+      "type": "procedure",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_edge_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BloodEdgeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/BloodManipulation"
+    },
+    {
+      "name": "PunchBarragePotionOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_barrage_potion_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PunchBarragePotionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "SprinklerPlayerStartsToDestroy",
+      "type": "procedure",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinkler_player_starts_to_destroy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SprinklerPlayerStartsToDestroyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedure"
+    },
+    {
+      "name": "MouthCursedSpirit",
+      "type": "livingentity",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mouth_cursed_spirit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/MouthCursedSpiritEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MouthCursedSpiritRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/mouth_cursed_spirit_spawn_egg.json",
+          "src/main/resources/data/craft_kaisen/forge/biome_modifier/mouth_cursed_spirit_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "PiercingBloodOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piercing_blood_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PiercingBloodOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "SetBloodManipulation",
+      "type": "procedure",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_blood_manipulation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetBloodManipulationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
     }
   ],
   "variable_elements": [
@@ -6369,6 +7731,14 @@
       ],
       "category": "neutral",
       "subtitle": "electricity"
+    },
+    {
+      "name": "clank",
+      "files": [
+        "sword-clash-1"
+      ],
+      "category": "neutral",
+      "subtitle": "clank"
     }
   ],
   "language_map": {
