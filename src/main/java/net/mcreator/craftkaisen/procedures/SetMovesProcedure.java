@@ -121,5 +121,27 @@ public class SetMovesProcedure {
 				entity.getPersistentData().putDouble("moveCost", 25);
 			}
 		}
+		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Blood Manipulation")) {
+			entity.getPersistentData().putDouble("maxMoves", 6);
+			if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+				entity.getPersistentData().putString("moveDisplay", "Piercing Blood");
+				entity.getPersistentData().putDouble("moveCost", 7);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
+				entity.getPersistentData().putString("moveDisplay", "Slicing Excorsism");
+				entity.getPersistentData().putDouble("moveCost", 10);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
+				entity.getPersistentData().putString("moveDisplay", "Blood Edge");
+				entity.getPersistentData().putDouble("moveCost", 15);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
+				entity.getPersistentData().putString("moveDisplay", "Blood Meteorite");
+				entity.getPersistentData().putDouble("moveCost", 18);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
+				entity.getPersistentData().putString("moveDisplay", "Flowing Red Scale");
+				entity.getPersistentData().putDouble("moveCost", 20);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 6) {
+				entity.getPersistentData().putString("moveDisplay", "Super Nova");
+				entity.getPersistentData().putDouble("moveCost", 23);
+			}
+		}
 	}
 }

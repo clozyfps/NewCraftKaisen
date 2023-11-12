@@ -1,33 +1,12 @@
 
 package net.mcreator.craftkaisen.item;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.craftkaisen.init.CraftKaisenModTabs;
-import net.mcreator.craftkaisen.client.model.Modelchoso;
-
 import java.util.function.Consumer;
-import java.util.Map;
-import java.util.Collections;
+import net.minecraft.client.model.Model;
 
 public abstract class ChosoArmorItem extends ArmorItem {
+
 	public ChosoArmorItem(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
@@ -73,6 +52,7 @@ public abstract class ChosoArmorItem extends ArmorItem {
 	}
 
 	public static class Chestplate extends ChosoArmorItem {
+
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_ARMOR));
 		}
@@ -83,10 +63,10 @@ public abstract class ChosoArmorItem extends ArmorItem {
 				@Override
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).Body, "left_arm",
-							new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).LeftArm, "right_arm", new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).RightArm,
-							"head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
-							"left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
+					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).Body, "left_arm",
+							new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).LeftArm, "right_arm",
+							new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
 					armorModel.riding = defaultModel.riding;
 					armorModel.young = living.isBaby();
@@ -97,11 +77,13 @@ public abstract class ChosoArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_kaisen:textures/entities/choso.png";
+			return "craft_kaisen:textures/entities/chosooutfit.png";
 		}
+
 	}
 
 	public static class Leggings extends ChosoArmorItem {
+
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_ARMOR));
 		}
@@ -113,8 +95,8 @@ public abstract class ChosoArmorItem extends ArmorItem {
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("left_leg", new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).LeftLeg, "right_leg",
-									new Modelchoso(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchoso.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							Map.of("left_leg", new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).LeftLeg, "right_leg",
+									new Modelchosodrip(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchosodrip.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
 									"left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
@@ -127,7 +109,9 @@ public abstract class ChosoArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_kaisen:textures/entities/choso.png";
+			return "craft_kaisen:textures/entities/chosooutfit.png";
 		}
+
 	}
+
 }
