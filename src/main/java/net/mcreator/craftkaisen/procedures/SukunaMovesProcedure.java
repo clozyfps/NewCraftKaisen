@@ -134,7 +134,7 @@ public class SukunaMovesProcedure {
 						_player.displayClientMessage(Component.literal("Domain Expansion: Malevolent Shrine"), true);
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = new MalevolentShrineEntity(CraftKaisenModEntities.MALEVOLENT_SHRINE.get(), _level);
-						entityToSpawn.moveTo((entity.getX() + entity.getLookAngle().x * (-2)), (entity.getY()), (entity.getZ() + entity.getLookAngle().z * (-2)), entity.getYRot(), entity.getXRot());
+						entityToSpawn.moveTo((entity.getX() + entity.getLookAngle().x * (-2)), (entity.getY() - 2), (entity.getZ() + entity.getLookAngle().z * (-2)), entity.getYRot(), entity.getXRot());
 						entityToSpawn.setYBodyRot(entity.getYRot());
 						entityToSpawn.setYHeadRot(entity.getYRot());
 						entityToSpawn.setDeltaMovement(0, 0, 0);

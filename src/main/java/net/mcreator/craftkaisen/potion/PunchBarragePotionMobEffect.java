@@ -1,8 +1,19 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class PunchBarragePotionMobEffect extends MobEffect {
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+
+import net.mcreator.craftkaisen.procedures.PunchBarragePotionOnEffectActiveTickProcedure;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class PunchBarragePotionMobEffect extends MobEffect {
 	public PunchBarragePotionMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -14,9 +25,7 @@ public class PunchBarragePotionMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		PunchBarragePotionOnEffectActiveTickProcedure.execute(
-
-		);
+		PunchBarragePotionOnEffectActiveTickProcedure.execute(entity.level, entity);
 	}
 
 	@Override

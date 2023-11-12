@@ -1,8 +1,13 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class ConstantSliceMobEffect extends MobEffect {
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.procedures.ConstantSliceOnEffectActiveTickProcedure;
+
+public class ConstantSliceMobEffect extends MobEffect {
 	public ConstantSliceMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -14,14 +19,11 @@ public class ConstantSliceMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		ConstantSliceOnEffectActiveTickProcedure.execute(
-
-		);
+		ConstantSliceOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

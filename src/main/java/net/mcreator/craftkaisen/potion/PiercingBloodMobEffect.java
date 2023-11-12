@@ -1,8 +1,19 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class PiercingBloodMobEffect extends MobEffect {
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+
+import net.mcreator.craftkaisen.procedures.PiercingBloodOnEffectActiveTickProcedure;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class PiercingBloodMobEffect extends MobEffect {
 	public PiercingBloodMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -65536);
 	}
@@ -14,9 +25,7 @@ public class PiercingBloodMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		PiercingBloodOnEffectActiveTickProcedure.execute(
-
-		);
+		PiercingBloodOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
