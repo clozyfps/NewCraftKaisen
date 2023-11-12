@@ -3228,18 +3228,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -3338,18 +3326,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -4991,6 +4967,10 @@
             "type": "entity"
           },
           {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5353,7 +5333,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craft_kaisen/models/item/inventory_curse.json",
-          "src/main/java/net/mcreator/craftkaisen/item/InventoryCurseItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/InventoryCurseItem.java",
+          "src/main/java/net/mcreator/craftkaisen/item/inventory/InventoryCurseInventoryCapability.java"
         ]
       },
       "path": "~/Items"
@@ -5565,8 +5546,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -5919,8 +5904,12 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           },
           {
             "name": "world",
@@ -6694,6 +6683,57 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "MalevolentShrine",
+      "type": "livingentity",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "malevolent_shrine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/MalevolentShrineEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MalevolentShrineRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MalevolentShrineOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "malevolent_shrine_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -7060,21 +7100,21 @@
     "en_us": {
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
       "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
-      "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
-      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
       "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
+      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
       "key.craft_kaisen.ability_4": "Ability 4",
-      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_5": "Ability 5",
+      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
-      "biome.craft_kaisen.shibuya": "Shibuya",
-      "key.craft_kaisen.ability_1": "Ability 1",
-      "gui.craft_kaisen.move_gui.button_3": "3",
       "effect.craft_kaisen.vessel_potion_effect": "Vessel",
-      "gui.craft_kaisen.move_gui.button_6": "6",
-      "key.craft_kaisen.ability_2": "Ability 2",
+      "gui.craft_kaisen.move_gui.button_3": "3",
+      "key.craft_kaisen.ability_1": "Ability 1",
+      "biome.craft_kaisen.shibuya": "Shibuya",
       "effect.craft_kaisen.domain_expansion": "Domain Expansion",
+      "key.craft_kaisen.ability_2": "Ability 2",
+      "gui.craft_kaisen.move_gui.button_6": "6",
       "gui.craft_kaisen.move_gui.button_5": "5",
       "key.craft_kaisen.ability_3": "Ability 3",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
@@ -7100,6 +7140,7 @@
       "advancements.grade_4.descr": "Reach The Required Fame.",
       "itemGroup.tabck_mobs": "Craft Kaisen Humans",
       "item.craft_kaisen.naginata": "Naginata",
+      "entity.craft_kaisen.nanami_kento": "Nanami Kento",
       "advancements.special_grade.title": "Special Grade",
       "item.craft_kaisen.fire_arrow": "Fire Arrow",
       "item.craft_kaisen.roppongi_cursed_spirit_spawn_egg": "Roppongi Cursed Spirit Spawn Egg",
@@ -7143,6 +7184,7 @@
       "gui.craft_kaisen.main_menu.label_empty3": "+",
       "gui.craft_kaisen.main_menu.label_empty2": "+",
       "gui.craft_kaisen.start_screen.label_human": "Human",
+      "entity.craft_kaisen.malevolent_shrine": "Malevolent Shrine",
       "gamerule.forceSukunaTechnique": "Force Sukuna Technique",
       "item.craft_kaisen.toji_outfit_leggings": "Toji Pants",
       "item.craft_kaisen.choso_spawn_egg": "Choso Spawn Egg",
@@ -7160,8 +7202,10 @@
       "advancements.jujutsu_kaisen.descr": "Begin your journey in the world of JJK",
       "effect.craft_kaisen.punch_barrage_potion": "Punch Barrage Potion",
       "advancements.black_flash_advancement.descr": "Attack a mob while your cursed energy is active with a 0.01% Chance",
+      "item.craft_kaisen.nanami_kento_spawn_egg": "Nanami Kento Spawn Egg",
       "item.craft_kaisen.rugby_field_cursed_spirit_spawn_egg": "Rugby Field Cursed Spirit Spawn Egg",
       "item.craft_kaisen.rika_spawn_egg": "Rika Spawn Egg",
+      "item.craft_kaisen.nanami_knife": "Nanami Knife",
       "entity.craft_kaisen.choso": "Choso",
       "gamerule.forceSukunaTechnique.description": "Forces sukuna technique on whoever is controlling the body of a vessel.",
       "entity.craft_kaisen.roppongi_cursed_spirit": "Roppongi Cursed Spirit",

@@ -30,8 +30,8 @@
       "The Inventory Curse will be on you while this item is in your inventory"
     ],
     "hasGlow": false,
-    "guiBoundTo": "<NONE>",
-    "inventorySize": 9,
+    "guiBoundTo": "InventoryCurseGui",
+    "inventorySize": 12,
     "inventoryStackSize": 64,
     "isFood": false,
     "nutritionalValue": 4,
