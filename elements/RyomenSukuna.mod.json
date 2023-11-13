@@ -39,17 +39,17 @@
       "value": ""
     },
     "equipmentBody": {
-      "value": "CUSTOM:SukunaOutfit.body"
+      "value": ""
     },
     "equipmentLeggings": {
-      "value": "CUSTOM:TojiOutfit.legs"
+      "value": ""
     },
     "equipmentBoots": {
       "value": ""
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 25,
+    "attackStrength": 30,
     "attackKnockback": 2.0,
     "knockbackResistance": 0.5,
     "movementSpeed": 0.4,

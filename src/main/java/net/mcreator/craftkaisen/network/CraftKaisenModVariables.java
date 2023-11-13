@@ -107,6 +107,8 @@ public class CraftKaisenModVariables {
 			clone.Squad = original.Squad;
 			clone.ReputationStatus = original.ReputationStatus;
 			clone.PartyLabel = original.PartyLabel;
+			clone.Miracles = original.Miracles;
+			clone.CtSpecial = original.CtSpecial;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -338,6 +340,8 @@ public class CraftKaisenModVariables {
 		public String ReputationStatus = "\"\"";
 		public boolean InCombat = false;
 		public String PartyLabel = "";
+		public double Miracles = 0;
+		public boolean CtSpecial = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -392,6 +396,8 @@ public class CraftKaisenModVariables {
 			nbt.putString("ReputationStatus", ReputationStatus);
 			nbt.putBoolean("InCombat", InCombat);
 			nbt.putString("PartyLabel", PartyLabel);
+			nbt.putDouble("Miracles", Miracles);
+			nbt.putBoolean("CtSpecial", CtSpecial);
 			return nbt;
 		}
 
@@ -443,6 +449,8 @@ public class CraftKaisenModVariables {
 			ReputationStatus = nbt.getString("ReputationStatus");
 			InCombat = nbt.getBoolean("InCombat");
 			PartyLabel = nbt.getString("PartyLabel");
+			Miracles = nbt.getDouble("Miracles");
+			CtSpecial = nbt.getBoolean("CtSpecial");
 		}
 	}
 
@@ -513,6 +521,8 @@ public class CraftKaisenModVariables {
 					variables.ReputationStatus = message.data.ReputationStatus;
 					variables.InCombat = message.data.InCombat;
 					variables.PartyLabel = message.data.PartyLabel;
+					variables.Miracles = message.data.Miracles;
+					variables.CtSpecial = message.data.CtSpecial;
 				}
 			});
 			context.setPacketHandled(true);

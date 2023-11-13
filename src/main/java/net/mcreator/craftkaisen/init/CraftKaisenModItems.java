@@ -130,6 +130,10 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> BLOOD_AXE = REGISTRY.register("blood_axe", () -> new BloodAxeItem());
 	public static final RegistryObject<Item> HANAMI_SPAWN_EGG = REGISTRY.register("hanami_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.HANAMI, -1712445, -8700868, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> JOGO_SPAWN_EGG = REGISTRY.register("jogo_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.JOGO, -9138105, -3920640, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> ROUND_DEER_SPAWN_EGG = REGISTRY.register("round_deer_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.ROUND_DEER, -12966123, -6121343, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> RESURRECTED_TOJI_SPAWN_EGG = REGISTRY.register("resurrected_toji_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RESURRECTED_TOJI, -1, -10092544, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -4790,7 +4790,28 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobAbilitiesProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -5965,7 +5986,12 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnInitialEntitySpawnProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Mobs/Procedure"
     },
@@ -6050,7 +6076,16 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoRedProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -6446,7 +6481,16 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoMovesProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -7336,6 +7380,342 @@
           }
         ]
       }
+    },
+    {
+      "name": "MiracleOverlay",
+      "type": "overlay",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miracle_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/MiracleOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlay"
+    },
+    {
+      "name": "RoundDeer",
+      "type": "animatedentity",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "round_deer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/RoundDeerRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/model/RoundDeerModel.java",
+          "src/main/resources/assets/craft_kaisen/models/item/round_deer_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/RoundDeerEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MiracleFallDamage",
+      "type": "procedure",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miracle_fall_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MiracleFallDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Miracles"
+    },
+    {
+      "name": "InverseHit",
+      "type": "procedure",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inverse_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InverseHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Abilities/Inverse"
+    },
+    {
+      "name": "MiracleItems",
+      "type": "tag",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miracle_items",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/items/miracle_items.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "PlayfulCloudLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playful_cloud_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlayfulCloudLivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Weapons/Procedures"
+    },
+    {
+      "name": "MiracleOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miracle_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MiracleOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Procedures"
+    },
+    {
+      "name": "SetInverse",
+      "type": "procedure",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_inverse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetInverseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "MobDodge",
+      "type": "procedure",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_dodge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MobDodgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MiracleItemPickup",
+      "type": "procedure",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miracle_item_pickup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MiracleItemPickupProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Abilities/Miracles"
+    },
+    {
+      "name": "MiracleCount",
+      "type": "procedure",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miracle_count",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MiracleCountProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlay/Procedures/Value"
+    },
+    {
+      "name": "ResurrectedToji",
+      "type": "livingentity",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resurrected_toji",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/models/item/resurrected_toji_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ResurrectedTojiRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ResurrectedTojiEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SetMiracle",
+      "type": "procedure",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_miracle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetMiracleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "MiracleDeath",
+      "type": "procedure",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miracle_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MiracleDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Miracles"
+    },
+    {
+      "name": "Dashable",
+      "type": "tag",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dashable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/tags/entity_types/dashable.json"
+        ]
+      },
+      "path": "~/Tags"
     }
   ],
   "variable_elements": [
@@ -7638,6 +8018,18 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "Miracles",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CtSpecial",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -7736,7 +8128,6 @@
       "effect.craft_kaisen.piercing_blood": "PiercingBlood",
       "item.craft_kaisen.toad_spawn_egg": "Toad Spawn Egg",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
-      "block.craft_kaisen.talisman_block": "Talisman Block",
       "entity.craft_kaisen.mouth_cursed_spirit": "Mouth Cursed Spirit",
       "advancements.grade_3.title": "Grade 3",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
@@ -7791,7 +8182,6 @@
       "gui.craft_kaisen.main_menu.label_empty3": "+",
       "gui.craft_kaisen.main_menu.label_empty2": "+",
       "gui.craft_kaisen.start_screen.label_human": "Human",
-      "entity.craft_kaisen.malevolent_shrine": "Malevolent Shrine",
       "gamerule.forceSukunaTechnique": "Force Sukuna Technique",
       "item.craft_kaisen.toji_outfit_leggings": "Toji Pants",
       "item.craft_kaisen.choso_spawn_egg": "Choso Spawn Egg",
@@ -7839,7 +8229,6 @@
       "effect.craft_kaisen.nue_electricity_effect": "NueElectricity",
       "item.craft_kaisen.mouth_cursed_spirit_spawn_egg": "Mouth Cursed Spirit Spawn Egg",
       "entity.craft_kaisen.yuta_okkotsu": "Yuta Okkotsu",
-      "block.craft_kaisen.shibuya_gates": "Shibuya Gates",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
       "item.craft_kaisen.inverted_spear": "Inverted Spear",
       "item.craft_kaisen.fire_arrow_mob": "Fire Arrow Mob",
@@ -7889,6 +8278,10 @@
         "name": "Abilities",
         "children": [
           {
+            "name": "Miracles",
+            "children": []
+          },
+          {
             "name": "MoveUse",
             "children": []
           },
@@ -7920,6 +8313,14 @@
           },
           {
             "name": "Copy",
+            "children": []
+          },
+          {
+            "name": "Inverse",
+            "children": []
+          },
+          {
+            "name": "BloodManipulation",
             "children": []
           },
           {
@@ -7971,7 +8372,7 @@
         "name": "Blocks",
         "children": [
           {
-            "name": "Procedures",
+            "name": "Procedure",
             "children": []
           }
         ]

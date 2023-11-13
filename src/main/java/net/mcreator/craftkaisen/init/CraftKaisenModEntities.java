@@ -28,10 +28,12 @@ import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
 import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.RugbyFieldCursedSpiritEntity;
+import net.mcreator.craftkaisen.entity.RoundDeerEntity;
 import net.mcreator.craftkaisen.entity.RoppongiCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
+import net.mcreator.craftkaisen.entity.ResurrectedTojiEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
 import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
 import net.mcreator.craftkaisen.entity.MouthCursedSpiritEntity;
@@ -176,6 +178,14 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<JogoEntity>of(JogoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JogoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RoundDeerEntity>> ROUND_DEER = register("round_deer",
+			EntityType.Builder.<RoundDeerEntity>of(RoundDeerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RoundDeerEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ResurrectedTojiEntity>> RESURRECTED_TOJI = register("resurrected_toji",
+			EntityType.Builder.<ResurrectedTojiEntity>of(ResurrectedTojiEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ResurrectedTojiEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -206,6 +216,8 @@ public class CraftKaisenModEntities {
 			MalevolentShrineEntity.init();
 			HanamiEntity.init();
 			JogoEntity.init();
+			RoundDeerEntity.init();
+			ResurrectedTojiEntity.init();
 		});
 	}
 
@@ -233,5 +245,7 @@ public class CraftKaisenModEntities {
 		event.put(MALEVOLENT_SHRINE.get(), MalevolentShrineEntity.createAttributes().build());
 		event.put(HANAMI.get(), HanamiEntity.createAttributes().build());
 		event.put(JOGO.get(), JogoEntity.createAttributes().build());
+		event.put(ROUND_DEER.get(), RoundDeerEntity.createAttributes().build());
+		event.put(RESURRECTED_TOJI.get(), ResurrectedTojiEntity.createAttributes().build());
 	}
 }
