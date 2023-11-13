@@ -33,7 +33,7 @@ public class SukunaMobMovesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (Math.random() < 0.009) {
+		if (Math.random() < 0.005) {
 			{
 				final Vec3 _center = new Vec3(
 						(entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(10)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),

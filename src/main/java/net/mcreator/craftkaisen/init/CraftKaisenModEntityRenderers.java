@@ -19,9 +19,11 @@ import net.mcreator.craftkaisen.client.renderer.ToadRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.RyomenSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.RugbyFieldCursedSpiritRenderer;
+import net.mcreator.craftkaisen.client.renderer.RoundDeerRenderer;
 import net.mcreator.craftkaisen.client.renderer.RoppongiCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.RikaRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
+import net.mcreator.craftkaisen.client.renderer.ResurrectedTojiRenderer;
 import net.mcreator.craftkaisen.client.renderer.NueRenderer;
 import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MouthCursedSpiritRenderer;
@@ -74,5 +76,7 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.BLOOD_METEORITE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.HANAMI.get(), HanamiRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.JOGO.get(), JogoRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.ROUND_DEER.get(), RoundDeerRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.RESURRECTED_TOJI.get(), ResurrectedTojiRenderer::new);
 	}
 }

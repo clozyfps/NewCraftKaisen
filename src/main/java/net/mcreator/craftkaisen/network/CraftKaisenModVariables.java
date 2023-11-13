@@ -107,6 +107,8 @@ public class CraftKaisenModVariables {
 			clone.CurrentMission = original.CurrentMission;
 			clone.Yen = original.Yen;
 			clone.ReputationStatus = original.ReputationStatus;
+			clone.Miracles = original.Miracles;
+			clone.CtSpecial = original.CtSpecial;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -338,6 +340,8 @@ public class CraftKaisenModVariables {
 		public String CurrentMission = "\"\"";
 		public double Yen = 0;
 		public String ReputationStatus = "\"\"";
+		public double Miracles = 0;
+		public boolean CtSpecial = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -392,6 +396,8 @@ public class CraftKaisenModVariables {
 			nbt.putString("CurrentMission", CurrentMission);
 			nbt.putDouble("Yen", Yen);
 			nbt.putString("ReputationStatus", ReputationStatus);
+			nbt.putDouble("Miracles", Miracles);
+			nbt.putBoolean("CtSpecial", CtSpecial);
 			return nbt;
 		}
 
@@ -443,6 +449,8 @@ public class CraftKaisenModVariables {
 			CurrentMission = nbt.getString("CurrentMission");
 			Yen = nbt.getDouble("Yen");
 			ReputationStatus = nbt.getString("ReputationStatus");
+			Miracles = nbt.getDouble("Miracles");
+			CtSpecial = nbt.getBoolean("CtSpecial");
 		}
 	}
 
@@ -513,6 +521,8 @@ public class CraftKaisenModVariables {
 					variables.CurrentMission = message.data.CurrentMission;
 					variables.Yen = message.data.Yen;
 					variables.ReputationStatus = message.data.ReputationStatus;
+					variables.Miracles = message.data.Miracles;
+					variables.CtSpecial = message.data.CtSpecial;
 				}
 			});
 			context.setPacketHandled(true);

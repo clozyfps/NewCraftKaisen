@@ -21,8 +21,10 @@ import net.mcreator.craftkaisen.procedures.SetSkillPointsProcedure;
 import net.mcreator.craftkaisen.procedures.SetSixEyesProcedure;
 import net.mcreator.craftkaisen.procedures.SetPhysicallyGiftedProcedure;
 import net.mcreator.craftkaisen.procedures.SetNoEnergyProcedure;
+import net.mcreator.craftkaisen.procedures.SetMiracleProcedure;
 import net.mcreator.craftkaisen.procedures.SetLimitlessProcedure;
 import net.mcreator.craftkaisen.procedures.SetLevelProcedure;
+import net.mcreator.craftkaisen.procedures.SetInverseProcedure;
 import net.mcreator.craftkaisen.procedures.SetHumanProcedure;
 import net.mcreator.craftkaisen.procedures.SetHealthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetFragileBodyProcedure;
@@ -101,6 +103,30 @@ public class SetCommandCommand {
 					Direction direction = entity.getDirection();
 
 					SetBloodManipulationProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("Miracle").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetMiracleProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("Inverse").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetInverseProcedure.execute(entity);
 					return 0;
 				})))).then(Commands.literal("race").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("human").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
