@@ -51,12 +51,12 @@
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 30,
     "attackKnockback": 2.0,
-    "knockbackResistance": 0.1,
+    "knockbackResistance": 0.5,
     "movementSpeed": 0.4,
     "stepHeight": 0.6,
-    "armorBaseValue": 0.1,
+    "armorBaseValue": 10.0,
     "trackingRange": 64,
-    "followRange": 50,
+    "followRange": 500,
     "health": 890,
     "xpAmount": 3,
     "waterMob": false,
@@ -95,6 +95,9 @@
     },
     "stepSound": {
       "value": ""
+    },
+    "onMobTickUpdate": {
+      "name": "RyomenSukunaOnEntityTickUpdate"
     },
     "onInitialSpawn": {
       "name": "RyomenSukunaOnInitialEntitySpawn"
