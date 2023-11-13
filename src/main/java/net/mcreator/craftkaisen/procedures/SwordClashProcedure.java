@@ -21,6 +21,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
+import net.mcreator.craftkaisen.entity.ResurrectedTojiEntity;
 
 import javax.annotation.Nullable;
 
@@ -63,7 +64,7 @@ public class SwordClashProcedure {
 			}
 		}
 		if (Math.random() < 0.7) {
-			if (entity instanceof TojiFushiguroEntity) {
+			if (entity instanceof TojiFushiguroEntity || entity instanceof ResurrectedTojiEntity) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.swing(InteractionHand.MAIN_HAND, true);
 				if (world instanceof Level _level) {

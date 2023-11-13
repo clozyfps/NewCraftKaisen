@@ -20,19 +20,19 @@ public class InfinityBeforeHurtProcedure {
 	public static void onEntityAttacked(LivingHurtEvent event) {
 		Entity entity = event.getEntity();
 		if (event != null && entity != null) {
-			execute(event, entity, event.getSource().getEntity());
+			execute(event, entity, event.getSource().getDirectEntity());
 		}
 	}
 
-	public static void execute(Entity entity, Entity sourceentity) {
-		execute(null, entity, sourceentity);
+	public static void execute(Entity entity, Entity immediatesourceentity) {
+		execute(null, entity, immediatesourceentity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	private static void execute(@Nullable Event event, Entity entity, Entity immediatesourceentity) {
+		if (entity == null || immediatesourceentity == null)
 			return;
 		if (entity.getPersistentData().getBoolean("infinity") || entity instanceof SatoruGojoEntity) {
-			if (!((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftKaisenModItems.INVERTED_SPEAR.get())) {
+			if (!((immediatesourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftKaisenModItems.INVERTED_SPEAR.get())) {
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);
 				}

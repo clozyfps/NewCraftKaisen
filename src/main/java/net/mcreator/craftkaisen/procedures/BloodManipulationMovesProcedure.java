@@ -51,7 +51,7 @@ public class BloodManipulationMovesProcedure {
 						});
 					}
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-						_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.PIERCING_BLOOD.get(), 20, 1, false, false));
+						_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.PIERCING_BLOOD.get(), 70, 1, false, false));
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(Component.literal("Piercing Blood"), true);
 					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))), 0);
@@ -156,7 +156,7 @@ public class BloodManipulationMovesProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					FlowingRedScaleProcedure.execute(entity);
+					FlowingRedScaleProcedureProcedure.execute(entity);
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(Component.literal("Flowing Red Scale."), true);
 					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))), 0);
