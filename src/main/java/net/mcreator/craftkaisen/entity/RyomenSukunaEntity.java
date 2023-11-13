@@ -33,6 +33,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftkaisen.procedures.RyomenSukunaOnInitialEntitySpawnProcedure;
+import net.mcreator.craftkaisen.procedures.RyomenSukunaOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModItems;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
@@ -95,8 +96,16 @@ public class RyomenSukunaEntity extends Monster {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		RyomenSukunaOnInitialEntitySpawnProcedure.execute(this);
+		RyomenSukunaOnInitialEntitySpawnProcedure.execute(
+
+		);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		RyomenSukunaOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {
@@ -107,10 +116,10 @@ public class RyomenSukunaEntity extends Monster {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
 		builder = builder.add(Attributes.MAX_HEALTH, 890);
-		builder = builder.add(Attributes.ARMOR, 0.1);
+		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 25);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 500);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;
 	}

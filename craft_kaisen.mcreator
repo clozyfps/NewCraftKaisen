@@ -4378,28 +4378,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/SukunaMobMovesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -4811,28 +4790,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobAbilitiesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -6007,12 +5965,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnInitialEntitySpawnProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Mobs/Procedure"
     },
@@ -6097,16 +6050,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoRedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -6502,16 +6446,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoMovesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -7366,6 +7301,41 @@
         ]
       },
       "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "RyomenSukunaOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ryomen_sukuna_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -7730,20 +7700,20 @@
   ],
   "language_map": {
     "en_us": {
-      "gui.craft_kaisen.main_menu.label_curse": "Curse",
       "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
-      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
-      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "gui.craft_kaisen.main_menu.label_curse": "Curse",
       "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
+      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
       "key.craft_kaisen.ability_4": "Ability 4",
-      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_5": "Ability 5",
+      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
-      "key.craft_kaisen.ability_1": "Ability 1",
-      "gui.craft_kaisen.move_gui.button_3": "3",
-      "effect.craft_kaisen.vessel_potion_effect": "Vessel",
       "biome.craft_kaisen.shibuya": "Shibuya",
+      "effect.craft_kaisen.vessel_potion_effect": "Vessel",
+      "gui.craft_kaisen.move_gui.button_3": "3",
+      "key.craft_kaisen.ability_1": "Ability 1",
       "gui.craft_kaisen.move_gui.button_6": "6",
       "key.craft_kaisen.ability_2": "Ability 2",
       "effect.craft_kaisen.domain_expansion": "Domain Expansion",
