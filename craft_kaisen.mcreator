@@ -4790,28 +4790,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobAbilitiesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -5986,12 +5965,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnInitialEntitySpawnProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Mobs/Procedure"
     },
@@ -6076,16 +6050,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoRedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -6481,16 +6446,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoMovesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -7343,8 +7299,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Blocks/Procedures"
+      }
     },
     {
       "name": "RyomenSukunaOnEntityTickUpdate",
@@ -7639,7 +7594,12 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MiracleCountProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlay/Procedures/Value"
     },
@@ -8094,18 +8054,18 @@
     "en_us": {
       "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
-      "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
-      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
       "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
+      "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
+      "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
       "key.craft_kaisen.ability_4": "Ability 4",
-      "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.output": "Output",
+      "key.craft_kaisen.ability_5": "Ability 5",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
-      "biome.craft_kaisen.shibuya": "Shibuya",
-      "effect.craft_kaisen.vessel_potion_effect": "Vessel",
-      "gui.craft_kaisen.move_gui.button_3": "3",
       "key.craft_kaisen.ability_1": "Ability 1",
+      "gui.craft_kaisen.move_gui.button_3": "3",
+      "effect.craft_kaisen.vessel_potion_effect": "Vessel",
+      "biome.craft_kaisen.shibuya": "Shibuya",
       "gui.craft_kaisen.move_gui.button_6": "6",
       "key.craft_kaisen.ability_2": "Ability 2",
       "effect.craft_kaisen.domain_expansion": "Domain Expansion",
@@ -8128,10 +8088,12 @@
       "effect.craft_kaisen.piercing_blood": "PiercingBlood",
       "item.craft_kaisen.toad_spawn_egg": "Toad Spawn Egg",
       "gui.craft_kaisen.main_menu.tooltip_increase_energy_regen_rate_and_m": "increase energy regen rate and max output",
+      "block.craft_kaisen.talisman_block": "Talisman Block",
       "entity.craft_kaisen.mouth_cursed_spirit": "Mouth Cursed Spirit",
       "advancements.grade_3.title": "Grade 3",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
       "item.craft_kaisen.blood_meteorite": "Blood Meteorite",
+      "entity.craft_kaisen.round_deer": "Round Deer",
       "gui.craft_kaisen.main_menu.tooltip_cursed_technique": "Cursed Technique",
       "item.craft_kaisen.choso_armor_leggings": "Choso Pants",
       "item.craft_kaisen.great_serpent_spawn_egg": "Great Serpent Spawn Egg",
@@ -8171,6 +8133,7 @@
       "item.craft_kaisen.yuta_katana": "Yuta Katana",
       "advancements.grade_1.title": "Grade 1",
       "gui.craft_kaisen.start_screen.label_empty": "\u003e",
+      "item.craft_kaisen.round_deer_spawn_egg": "Round Deer Spawn Egg",
       "effect.craft_kaisen.pre_fire_arrow": "PreFireArrow",
       "item.craft_kaisen.choso_armor_chestplate": "Choso Outfit",
       "gui.craft_kaisen.main_menu.label_empty1": "\u003e\u003e",
@@ -8182,6 +8145,7 @@
       "gui.craft_kaisen.main_menu.label_empty3": "+",
       "gui.craft_kaisen.main_menu.label_empty2": "+",
       "gui.craft_kaisen.start_screen.label_human": "Human",
+      "entity.craft_kaisen.malevolent_shrine": "Malevolent Shrine",
       "gamerule.forceSukunaTechnique": "Force Sukuna Technique",
       "item.craft_kaisen.toji_outfit_leggings": "Toji Pants",
       "item.craft_kaisen.choso_spawn_egg": "Choso Spawn Egg",
@@ -8227,12 +8191,15 @@
       "advancements.grade_4.title": "Grade 4",
       "item.craft_kaisen.slicing_excorism": "Slicing Excorism",
       "effect.craft_kaisen.nue_electricity_effect": "NueElectricity",
+      "item.craft_kaisen.resurrected_toji_spawn_egg": "Resurrected Toji Spawn Egg",
       "item.craft_kaisen.mouth_cursed_spirit_spawn_egg": "Mouth Cursed Spirit Spawn Egg",
       "entity.craft_kaisen.yuta_okkotsu": "Yuta Okkotsu",
+      "block.craft_kaisen.shibuya_gates": "Shibuya Gates",
       "item.craft_kaisen.reversal_red_projectile": "Reversal Red Projectile",
       "item.craft_kaisen.inverted_spear": "Inverted Spear",
       "item.craft_kaisen.fire_arrow_mob": "Fire Arrow Mob",
       "effect.craft_kaisen.burn_cooldown": "BurnCooldown",
+      "entity.craft_kaisen.resurrected_toji": "Resurrected Toji",
       "effect.craft_kaisen.lapse_blue_control": "Lapse Blue",
       "item.craft_kaisen.crumble_away_ranged": "Crumble Away Ranged",
       "item.craft_kaisen.sleep_ranged": "Sleep Ranged",

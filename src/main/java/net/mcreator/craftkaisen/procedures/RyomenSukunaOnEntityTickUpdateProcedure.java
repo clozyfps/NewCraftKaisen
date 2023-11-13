@@ -1,8 +1,35 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.EntityDamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
+import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
+import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
+import net.mcreator.craftkaisen.entity.DismantleEntity;
+import net.mcreator.craftkaisen.CraftKaisenMod;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class RyomenSukunaOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -66,7 +93,7 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 				// Get the radius of the sphere
 				double radius = (entity.getPersistentData().getDouble("sphereSize") / 10); // 3 blocks
 				// Set the tolerance for how close to the surface a point must be to create a particle
-				double tolerance = 0.15; // 0.1 blocks
+				double tolerance = 0.05; // 0.1 blocks
 				for (double xx = -radius; xx <= radius; xx += 0.1) {
 					for (double yy = -radius; yy <= radius; yy += 0.1) {
 						for (double zz = -radius; zz <= radius; zz += 0.1) {
@@ -87,7 +114,7 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 				}
 			}
 			int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("sphereSize") / 10) - 1;
-			int verticalRadiusSphere = (int) (entity.getPersistentData().getDouble("sphereSize") / 10) - 1;
+			int verticalRadiusSphere = (int) (entity.getPersistentData().getDouble("sphereSize") / 30) - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -98,6 +125,7 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.SWEEP_ATTACK, x + xi, y + i, z + zi, 3, 0.1, 0.1, 0.1, 1);
 							world.destroyBlock(new BlockPos(x + xi, y + i, z + zi), false);
+							world.setBlock(new BlockPos(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
 						}
 					}
 				}
