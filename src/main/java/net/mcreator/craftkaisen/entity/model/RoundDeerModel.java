@@ -1,11 +1,5 @@
 package net.mcreator.craftkaisen.entity.model;
 
-import software.bernie.geckolib3.model.AnimatedGeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-
-import net.mcreator.craftkaisen.entity.RoundDeerEntity;
-
 public class RoundDeerModel extends AnimatedGeoModel<RoundDeerEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(RoundDeerEntity entity) {

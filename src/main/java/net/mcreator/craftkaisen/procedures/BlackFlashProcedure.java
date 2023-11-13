@@ -1,6 +1,10 @@
 package net.mcreator.craftkaisen.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -24,14 +28,29 @@ import net.minecraft.advancements.Advancement;
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 
+import javax.annotation.Nullable;
+
 import java.util.Iterator;
 
+@Mod.EventBusSubscriber
 public class BlackFlashProcedure {
+	@SubscribeEvent
+	public static void onEntityAttacked(LivingAttackEvent event) {
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity, event.getSource().getEntity(), event.getAmount());
+		}
+	}
+
 	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, double amount) {
+		execute(null, world, entity, sourceentity, amount);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity, double amount) {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy > 0) {
-			if (Math.random() < 0.001 * ((sourceentity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).energyControl / 3)) {
+			if (Math.random() < 0.001) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(
 							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

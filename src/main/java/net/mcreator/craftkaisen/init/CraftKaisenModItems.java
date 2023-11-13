@@ -106,6 +106,8 @@ public class CraftKaisenModItems {
 	public static final RegistryObject<Item> TOAD_SPAWN_EGG = REGISTRY.register("toad_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.TOAD, -10841282, -3619735, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
 	public static final RegistryObject<Item> DOMAIN_BLOCK = block(CraftKaisenModBlocks.DOMAIN_BLOCK, null);
+	public static final RegistryObject<Item> TALISMAN_BLOCK = block(CraftKaisenModBlocks.TALISMAN_BLOCK, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> SHIBUYA_GATES = block(CraftKaisenModBlocks.SHIBUYA_GATES, null);
 	public static final RegistryObject<Item> NUE_SPAWN_EGG = REGISTRY.register("nue_spawn_egg", () -> new ForgeSpawnEggItem(CraftKaisenModEntities.NUE, -38604, -8816263, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> SPRINKLER = block(CraftKaisenModBlocks.SPRINKLER, CraftKaisenModTabs.TAB_CK_MOBS);
 	public static final RegistryObject<Item> SPRINKLER_ON = block(CraftKaisenModBlocks.SPRINKLER_ON, null);
