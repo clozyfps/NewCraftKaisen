@@ -18,6 +18,7 @@ import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
+import net.mcreator.craftkaisen.entity.ResurrectedTojiEntity;
 
 import javax.annotation.Nullable;
 
@@ -38,7 +39,7 @@ public class MobAbilitiesProcedure {
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
 			if (entity instanceof RyomenSukunaEntity || entity.getPersistentData().getBoolean("sukuna")) {
 				SukunaMobMovesProcedure.execute(world, x, y, z, entity);
-			} else if (entity instanceof TojiFushiguroEntity) {
+			} else if (entity instanceof TojiFushiguroEntity || entity instanceof ResurrectedTojiEntity) {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftKaisenModMobEffects.TOJI_COOLDOWN.get()) : false)) {
 					TojiMovesProcedure.execute(world, x, y, z, entity);
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())

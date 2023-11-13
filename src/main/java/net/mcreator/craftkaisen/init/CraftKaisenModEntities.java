@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
 import net.mcreator.craftkaisen.entity.YujiItadoriEntity;
+import net.mcreator.craftkaisen.entity.WaterMaximumElephantEntity;
 import net.mcreator.craftkaisen.entity.UnlimitedVoidMobEntity;
 import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
@@ -33,10 +34,12 @@ import net.mcreator.craftkaisen.entity.RoppongiCursedSpiritEntity;
 import net.mcreator.craftkaisen.entity.RikaEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
+import net.mcreator.craftkaisen.entity.ReversalRedEntity;
 import net.mcreator.craftkaisen.entity.ResurrectedTojiEntity;
 import net.mcreator.craftkaisen.entity.NueEntity;
 import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
 import net.mcreator.craftkaisen.entity.MouthCursedSpiritEntity;
+import net.mcreator.craftkaisen.entity.MaximumElephantEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.KoGuyEntity;
@@ -186,6 +189,14 @@ public class CraftKaisenModEntities {
 			EntityType.Builder.<ResurrectedTojiEntity>of(ResurrectedTojiEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ResurrectedTojiEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ReversalRedEntity>> REVERSAL_RED = register("projectile_reversal_red",
+			EntityType.Builder.<ReversalRedEntity>of(ReversalRedEntity::new, MobCategory.MISC).setCustomClientFactory(ReversalRedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MaximumElephantEntity>> MAXIMUM_ELEPHANT = register("maximum_elephant",
+			EntityType.Builder.<MaximumElephantEntity>of(MaximumElephantEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MaximumElephantEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<WaterMaximumElephantEntity>> WATER_MAXIMUM_ELEPHANT = register("projectile_water_maximum_elephant", EntityType.Builder.<WaterMaximumElephantEntity>of(WaterMaximumElephantEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(WaterMaximumElephantEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -218,6 +229,7 @@ public class CraftKaisenModEntities {
 			JogoEntity.init();
 			RoundDeerEntity.init();
 			ResurrectedTojiEntity.init();
+			MaximumElephantEntity.init();
 		});
 	}
 
@@ -247,5 +259,6 @@ public class CraftKaisenModEntities {
 		event.put(JOGO.get(), JogoEntity.createAttributes().build());
 		event.put(ROUND_DEER.get(), RoundDeerEntity.createAttributes().build());
 		event.put(RESURRECTED_TOJI.get(), ResurrectedTojiEntity.createAttributes().build());
+		event.put(MAXIMUM_ELEPHANT.get(), MaximumElephantEntity.createAttributes().build());
 	}
 }

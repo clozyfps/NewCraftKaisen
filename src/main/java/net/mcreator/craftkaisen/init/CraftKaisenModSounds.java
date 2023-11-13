@@ -22,4 +22,5 @@ public class CraftKaisenModSounds {
 	public static final RegistryObject<SoundEvent> ELECTRIC = REGISTRY.register("electric", () -> new SoundEvent(new ResourceLocation("craft_kaisen", "electric")));
 	public static final RegistryObject<SoundEvent> HIT = REGISTRY.register("hit", () -> new SoundEvent(new ResourceLocation("craft_kaisen", "hit")));
 	public static final RegistryObject<SoundEvent> CLANK = REGISTRY.register("clank", () -> new SoundEvent(new ResourceLocation("craft_kaisen", "clank")));
+	public static final RegistryObject<SoundEvent> SPLASH = REGISTRY.register("splash", () -> new SoundEvent(new ResourceLocation("craft_kaisen", "splash")));
 }

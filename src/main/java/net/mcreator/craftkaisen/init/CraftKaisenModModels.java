@@ -22,6 +22,7 @@ import net.mcreator.craftkaisen.client.model.Modelroppongicursedspirit;
 import net.mcreator.craftkaisen.client.model.Modelreversalred;
 import net.mcreator.craftkaisen.client.model.Modelnewmuzi;
 import net.mcreator.craftkaisen.client.model.Modelmouthcursedspirit;
+import net.mcreator.craftkaisen.client.model.Modelmaximumelephant;
 import net.mcreator.craftkaisen.client.model.Modeljogo;
 import net.mcreator.craftkaisen.client.model.Modeljjkoutfiot;
 import net.mcreator.craftkaisen.client.model.Modelinventorycurseground;
@@ -65,6 +66,7 @@ public class CraftKaisenModModels {
 		event.registerLayerDefinition(Modelcursedspiritrugbyfield.LAYER_LOCATION, Modelcursedspiritrugbyfield::createBodyLayer);
 		event.registerLayerDefinition(Modelreversalred.LAYER_LOCATION, Modelreversalred::createBodyLayer);
 		event.registerLayerDefinition(Modeljjkoutfiot.LAYER_LOCATION, Modeljjkoutfiot::createBodyLayer);
+		event.registerLayerDefinition(Modelmaximumelephant.LAYER_LOCATION, Modelmaximumelephant::createBodyLayer);
 		event.registerLayerDefinition(Modelnewmuzi.LAYER_LOCATION, Modelnewmuzi::createBodyLayer);
 		event.registerLayerDefinition(Modeltstoad.LAYER_LOCATION, Modeltstoad::createBodyLayer);
 		event.registerLayerDefinition(Modelroppongicursedspirit.LAYER_LOCATION, Modelroppongicursedspirit::createBodyLayer);

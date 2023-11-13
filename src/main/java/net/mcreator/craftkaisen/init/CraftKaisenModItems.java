@@ -15,6 +15,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.craftkaisen.item.YutaKatanaItem;
+import net.mcreator.craftkaisen.item.WaterMaximumElephantItem;
 import net.mcreator.craftkaisen.item.TwistRangedItem;
 import net.mcreator.craftkaisen.item.TojiOutfitItem;
 import net.mcreator.craftkaisen.item.TojiCurseArmorItem;
@@ -25,6 +26,7 @@ import net.mcreator.craftkaisen.item.SlicingExcorismItem;
 import net.mcreator.craftkaisen.item.SleepRangedItem;
 import net.mcreator.craftkaisen.item.RunAwayRangedItem;
 import net.mcreator.craftkaisen.item.ReversalRedProjectileItem;
+import net.mcreator.craftkaisen.item.ReversalRedItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.NanamiKnifeItem;
 import net.mcreator.craftkaisen.item.NaginataItem;
@@ -134,6 +136,10 @@ public class CraftKaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.ROUND_DEER, -12966123, -6121343, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> RESURRECTED_TOJI_SPAWN_EGG = REGISTRY.register("resurrected_toji_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RESURRECTED_TOJI, -1, -10092544, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> REVERSAL_RED = REGISTRY.register("reversal_red", () -> new ReversalRedItem());
+	public static final RegistryObject<Item> MAXIMUM_ELEPHANT_SPAWN_EGG = REGISTRY.register("maximum_elephant_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.MAXIMUM_ELEPHANT, -2509095, -2507960, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+	public static final RegistryObject<Item> WATER_MAXIMUM_ELEPHANT = REGISTRY.register("water_maximum_elephant", () -> new WaterMaximumElephantItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
