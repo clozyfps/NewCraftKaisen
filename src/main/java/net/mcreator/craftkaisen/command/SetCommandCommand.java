@@ -14,6 +14,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
+import net.mcreator.craftkaisen.procedures.SetTenShadowsProcedure;
 import net.mcreator.craftkaisen.procedures.SetSukunaProcedure;
 import net.mcreator.craftkaisen.procedures.SetStrengthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetSpeedStatProcedure;
@@ -127,6 +128,18 @@ public class SetCommandCommand {
 					Direction direction = entity.getDirection();
 
 					SetInverseProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("TenShadows").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetTenShadowsProcedure.execute(entity);
 					return 0;
 				})))).then(Commands.literal("race").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("human").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();

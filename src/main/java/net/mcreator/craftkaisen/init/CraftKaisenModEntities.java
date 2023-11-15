@@ -18,13 +18,16 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
 import net.mcreator.craftkaisen.entity.YujiItadoriEntity;
+import net.mcreator.craftkaisen.entity.WhiteDivineDogEntity;
 import net.mcreator.craftkaisen.entity.WaterMaximumElephantEntity;
 import net.mcreator.craftkaisen.entity.UnlimitedVoidMobEntity;
 import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.ToadEntity;
+import net.mcreator.craftkaisen.entity.TenShadowRabbitEntity;
 import net.mcreator.craftkaisen.entity.SlicingExcorismEntity;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
+import net.mcreator.craftkaisen.entity.ShadowFrogEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
 import net.mcreator.craftkaisen.entity.RunAwayRangedEntity;
@@ -59,6 +62,7 @@ import net.mcreator.craftkaisen.entity.ChosoEntity;
 import net.mcreator.craftkaisen.entity.BloodMeteoriteEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlackMucusEntity;
+import net.mcreator.craftkaisen.entity.BlackDivineDogEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -197,6 +201,20 @@ public class CraftKaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<WaterMaximumElephantEntity>> WATER_MAXIMUM_ELEPHANT = register("projectile_water_maximum_elephant", EntityType.Builder.<WaterMaximumElephantEntity>of(WaterMaximumElephantEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(WaterMaximumElephantEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BlackDivineDogEntity>> BLACK_DIVINE_DOG = register("black_divine_dog",
+			EntityType.Builder.<BlackDivineDogEntity>of(BlackDivineDogEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlackDivineDogEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<WhiteDivineDogEntity>> WHITE_DIVINE_DOG = register("white_divine_dog",
+			EntityType.Builder.<WhiteDivineDogEntity>of(WhiteDivineDogEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WhiteDivineDogEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TenShadowRabbitEntity>> TEN_SHADOW_RABBIT = register("ten_shadow_rabbit",
+			EntityType.Builder.<TenShadowRabbitEntity>of(TenShadowRabbitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TenShadowRabbitEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ShadowFrogEntity>> SHADOW_FROG = register("shadow_frog", EntityType.Builder.<ShadowFrogEntity>of(ShadowFrogEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(ShadowFrogEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -230,6 +248,10 @@ public class CraftKaisenModEntities {
 			RoundDeerEntity.init();
 			ResurrectedTojiEntity.init();
 			MaximumElephantEntity.init();
+			BlackDivineDogEntity.init();
+			WhiteDivineDogEntity.init();
+			TenShadowRabbitEntity.init();
+			ShadowFrogEntity.init();
 		});
 	}
 
@@ -260,5 +282,9 @@ public class CraftKaisenModEntities {
 		event.put(ROUND_DEER.get(), RoundDeerEntity.createAttributes().build());
 		event.put(RESURRECTED_TOJI.get(), ResurrectedTojiEntity.createAttributes().build());
 		event.put(MAXIMUM_ELEPHANT.get(), MaximumElephantEntity.createAttributes().build());
+		event.put(BLACK_DIVINE_DOG.get(), BlackDivineDogEntity.createAttributes().build());
+		event.put(WHITE_DIVINE_DOG.get(), WhiteDivineDogEntity.createAttributes().build());
+		event.put(TEN_SHADOW_RABBIT.get(), TenShadowRabbitEntity.createAttributes().build());
+		event.put(SHADOW_FROG.get(), ShadowFrogEntity.createAttributes().build());
 	}
 }

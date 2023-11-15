@@ -14,13 +14,22 @@
         "value": "CUSTOM:Nue"
       },
       {
-        "value": "CUSTOM:Rika"
-      },
-      {
         "value": "CUSTOM:Toad"
       },
       {
         "value": "CUSTOM:RoundDeer"
+      },
+      {
+        "value": "CUSTOM:TenShadowRabbit"
+      },
+      {
+        "value": "CUSTOM:WhiteDivineDog"
+      },
+      {
+        "value": "CUSTOM:BlackDivineDog"
+      },
+      {
+        "value": "CUSTOM:MaximumElephant"
       }
     ],
     "biomes": [],
