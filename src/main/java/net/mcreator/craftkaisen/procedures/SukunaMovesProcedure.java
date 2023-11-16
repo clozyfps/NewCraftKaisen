@@ -7,19 +7,13 @@ import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
-import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
-import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 
 import javax.annotation.Nullable;
 
@@ -28,15 +22,15 @@ public class SukunaMovesProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level, event.player);
+			execute(event, event.player.level, event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
 		}
 	}
 
-	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput > 0) {
@@ -132,20 +126,7 @@ public class SukunaMovesProcedure {
 						* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)) {
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(Component.literal("Domain Expansion: Malevolent Shrine"), true);
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new MalevolentShrineEntity(CraftKaisenModEntities.MALEVOLENT_SHRINE.get(), _level);
-						entityToSpawn.moveTo((entity.getX() + entity.getLookAngle().x * (-2)), (entity.getY() - 2), (entity.getZ() + entity.getLookAngle().z * (-2)), entity.getYRot(), entity.getXRot());
-						entityToSpawn.setYBodyRot(entity.getYRot());
-						entityToSpawn.setYHeadRot(entity.getYRot());
-						entityToSpawn.setDeltaMovement(0, 0, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn) {
-							_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-							if (entityToSpawn instanceof TamableAnimal _toTame && entity instanceof Player _owner) {
-								_toTame.tame(_owner);
-							}
-						}
-						_level.addFreshEntity(entityToSpawn);
-					}
+					MalevolentShrineProcedureProcedure.execute(world, x, y, z, entity);
 					{
 						double _setval = (entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy
 								- 100 * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10);

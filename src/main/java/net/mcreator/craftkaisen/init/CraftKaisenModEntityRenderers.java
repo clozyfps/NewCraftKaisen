@@ -39,6 +39,7 @@ import net.mcreator.craftkaisen.client.renderer.HeianEraSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChosoRenderer;
+import net.mcreator.craftkaisen.client.renderer.ChimeraShadowGardenMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.BlackDivineDogRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -92,5 +93,6 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.WHITE_DIVINE_DOG.get(), WhiteDivineDogRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.TEN_SHADOW_RABBIT.get(), TenShadowRabbitRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.SHADOW_FROG.get(), ShadowFrogRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.CHIMERA_SHADOW_GARDEN_MOB.get(), ChimeraShadowGardenMobRenderer::new);
 	}
 }

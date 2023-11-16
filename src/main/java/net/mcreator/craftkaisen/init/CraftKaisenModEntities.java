@@ -59,6 +59,7 @@ import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.entity.CrushedRangedEntity;
 import net.mcreator.craftkaisen.entity.CrumbleAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.ChosoEntity;
+import net.mcreator.craftkaisen.entity.ChimeraShadowGardenMobEntity;
 import net.mcreator.craftkaisen.entity.BloodMeteoriteEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayRangedEntity;
 import net.mcreator.craftkaisen.entity.BlackMucusEntity;
@@ -215,6 +216,9 @@ public class CraftKaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ShadowFrogEntity>> SHADOW_FROG = register("shadow_frog", EntityType.Builder.<ShadowFrogEntity>of(ShadowFrogEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(ShadowFrogEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ChimeraShadowGardenMobEntity>> CHIMERA_SHADOW_GARDEN_MOB = register("chimera_shadow_garden_mob",
+			EntityType.Builder.<ChimeraShadowGardenMobEntity>of(ChimeraShadowGardenMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(ChimeraShadowGardenMobEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -252,6 +256,7 @@ public class CraftKaisenModEntities {
 			WhiteDivineDogEntity.init();
 			TenShadowRabbitEntity.init();
 			ShadowFrogEntity.init();
+			ChimeraShadowGardenMobEntity.init();
 		});
 	}
 
@@ -286,5 +291,6 @@ public class CraftKaisenModEntities {
 		event.put(WHITE_DIVINE_DOG.get(), WhiteDivineDogEntity.createAttributes().build());
 		event.put(TEN_SHADOW_RABBIT.get(), TenShadowRabbitEntity.createAttributes().build());
 		event.put(SHADOW_FROG.get(), ShadowFrogEntity.createAttributes().build());
+		event.put(CHIMERA_SHADOW_GARDEN_MOB.get(), ChimeraShadowGardenMobEntity.createAttributes().build());
 	}
 }

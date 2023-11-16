@@ -31,8 +31,8 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 			if (!entity.level.isClientSide())
 				entity.discard();
 		}
-		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("shrineTick") / 20) - 1;
-		int verticalRadiusHemiTop = (int) 12;
+		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("shrineTick") / 7) - 1;
+		int verticalRadiusHemiTop = (int) 15;
 		int yIterationsHemiTop = verticalRadiusHemiTop;
 		for (int i = 0; i < yIterationsHemiTop; i++) {
 			if (i == verticalRadiusHemiTop) {
@@ -61,7 +61,7 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((entity.getPersistentData().getDouble("shrineTick") / 10) / 2d), e -> true).stream()
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((entity.getPersistentData().getDouble("shrineTick") / 7) / 2d), e -> true).stream()
 					.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator) && !((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == entityiterator)) {

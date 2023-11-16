@@ -110,7 +110,7 @@
           }
         ]
       },
-      "path": "~/Keybinds"
+      "path": "~/Keybinds/Procedures"
     },
     {
       "name": "ChargeCursedEnergyOnKeyPressed",
@@ -130,7 +130,7 @@
           }
         ]
       },
-      "path": "~/Keybinds"
+      "path": "~/Keybinds/Procedures"
     },
     {
       "name": "ChargeCursedEnergy",
@@ -337,7 +337,7 @@
           }
         ]
       },
-      "path": "~/Keybinds"
+      "path": "~/Keybinds/Procedures"
     },
     {
       "name": "SetCurse",
@@ -473,7 +473,7 @@
           }
         ]
       },
-      "path": "~/Keybinds"
+      "path": "~/Keybinds/Procedures"
     },
     {
       "name": "Ability1OnKeyPressed",
@@ -762,7 +762,7 @@
           }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/GUI/Procedures"
     },
     {
       "name": "BackButton",
@@ -782,7 +782,7 @@
           }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/GUI/Procedures"
     },
     {
       "name": "Ab3pressed",
@@ -822,7 +822,7 @@
           }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/GUI/Procedures"
     },
     {
       "name": "Ab5pressed",
@@ -1517,7 +1517,7 @@
           }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/GUI/Procedures"
     },
     {
       "name": "SetAbility6",
@@ -2482,7 +2482,7 @@
           }
         ]
       },
-      "path": "~/Keybinds"
+      "path": "~/Keybinds/Procedures"
     },
     {
       "name": "ReturnEnergyControl",
@@ -2704,7 +2704,7 @@
           }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/GUI/Procedures"
     },
     {
       "name": "ReturnPlayer",
@@ -2808,7 +2808,7 @@
           }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/GUI/Procedures"
     },
     {
       "name": "ReturnSpeed",
@@ -3311,6 +3311,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -3906,28 +3918,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobAbilitiesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -4873,7 +4864,7 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
           }
         ]
@@ -4892,7 +4883,7 @@
           "src/main/resources/data/craft_kaisen/advancements/grade_4.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "SemiGrade3",
@@ -4906,7 +4897,7 @@
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_3.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "Grade3",
@@ -4920,7 +4911,7 @@
           "src/main/resources/data/craft_kaisen/advancements/grade_3.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "SemiGrade2",
@@ -4934,7 +4925,7 @@
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_2.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "Grade2",
@@ -4948,7 +4939,7 @@
           "src/main/resources/data/craft_kaisen/advancements/grade_2.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "SemiGrade1",
@@ -4962,7 +4953,7 @@
           "src/main/resources/data/craft_kaisen/advancements/semi_grade_1.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "Grade1",
@@ -4976,7 +4967,7 @@
           "src/main/resources/data/craft_kaisen/advancements/grade_1.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "SpecialGrade",
@@ -4990,7 +4981,7 @@
           "src/main/resources/data/craft_kaisen/advancements/special_grade.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "GojoQuests",
@@ -5375,7 +5366,7 @@
           "src/main/resources/data/craft_kaisen/advancements/jujutsu_sorcerer.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/Ranks"
     },
     {
       "name": "UnlimitedVoidMobOnInitialEntitySpawn",
@@ -5683,6 +5674,18 @@
             "type": "number"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -5702,7 +5705,7 @@
           "src/main/resources/data/craft_kaisen/advancements/black_flash_advancement.json"
         ]
       },
-      "path": "~/Advancement"
+      "path": "~/Advancement/PassiveSkills"
     },
     {
       "name": "FindBlueLocationProjectileHitsLivingEntity",
@@ -6071,16 +6074,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoRedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -6095,16 +6089,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoMovesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -6264,12 +6249,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnInitialEntitySpawnProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Mobs/Procedure"
     },
@@ -7500,7 +7480,12 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MiracleCountProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlay/Procedures/Value"
     },
@@ -8552,6 +8537,281 @@
         ]
       },
       "path": "~/Abilities/MoveUse"
+    },
+    {
+      "name": "MalevolentShrineProcedure",
+      "type": "procedure",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "malevolent_shrine_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "ChimeraShadowGardenMob",
+      "type": "livingentity",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chimera_shadow_garden_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ChimeraShadowGardenMobRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ChimeraShadowGardenMobEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "ChimeraShadowGardenMobOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chimera_shadow_garden_mob_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChimeraShadowGardenMobOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "ChimeraShadowGardenMobOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chimera_shadow_garden_mob_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChimeraShadowGardenMobOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "ShadowFrogOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_frog_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ShadowFrogOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "ShadowFrogOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_frog_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ShadowFrogOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "ChimeraShadowGardenProcedure",
+      "type": "procedure",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chimera_shadow_garden_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChimeraShadowGardenProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "StandProudYouAreStrong",
+      "type": "achievement",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stand_proud_you_are_strong",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/stand_proud_you_are_strong.json"
+        ]
+      },
+      "path": "~/Advancement/Other"
+    },
+    {
+      "name": "ToggleCTSpecialOnKeyPressed",
+      "type": "procedure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toggle_ct_special_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToggleCTSpecialOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "ToggleCTSpecial",
+      "type": "keybind",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toggle_ct_special",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/ToggleCTSpecialMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
     }
   ],
   "variable_elements": [
@@ -8942,8 +9202,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
+      "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
+      "advancements.stand_proud_you_are_strong.descr": "Get Sukuna To Atleast Half Health And Lose To Him",
       "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
       "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
       "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
@@ -8982,6 +9243,7 @@
       "block.craft_kaisen.talisman_block": "Talisman Block",
       "entity.craft_kaisen.mouth_cursed_spirit": "Mouth Cursed Spirit",
       "advancements.grade_3.title": "Grade 3",
+      "entity.craft_kaisen.black_divine_dog": "Black Divine Dog",
       "entity.craft_kaisen.toji_fushiguro": "Toji Fushiguro",
       "item.craft_kaisen.blood_meteorite": "Blood Meteorite",
       "entity.craft_kaisen.round_deer": "Round Deer",
@@ -9034,6 +9296,7 @@
       "gui.craft_kaisen.main_menu.label_empty5": "+",
       "item.craft_kaisen.blast_away_ranged": "Blast Away Ranged",
       "gui.craft_kaisen.main_menu.label_empty4": "+",
+      "item.craft_kaisen.white_divine_dog_spawn_egg": "White Divine Dog Spawn Egg",
       "gui.craft_kaisen.main_menu.label_empty3": "+",
       "gui.craft_kaisen.main_menu.label_empty2": "+",
       "gui.craft_kaisen.start_screen.label_human": "Human",
@@ -9047,10 +9310,12 @@
       "advancements.grade_3.descr": "Reach The Required Fame.",
       "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "entity.craft_kaisen.yuji_itadori": "Yuji Itadori",
+      "item.craft_kaisen.black_divine_dog_spawn_egg": "Black Divine Dog Spawn Egg",
       "item.craft_kaisen.find_blue_location": "Find Blue Location",
       "gui.craft_kaisen.main_menu.tooltip_increase_max_cursed_energy": "increase max cursed energy",
       "item.craft_kaisen.black_mucus": "Black Mucus",
       "entity.craft_kaisen.jogo": "Jogo",
+      "key.craft_kaisen.toggle_ct_special": "Toggle CT Special",
       "item.craft_kaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "entity.craft_kaisen.satoru_gojo": "Satoru Gojo",
       "advancements.jujutsu_kaisen.descr": "Begin your journey in the world of JJK",
@@ -9070,19 +9335,24 @@
       "item.craft_kaisen.blood_blade": "Blood Dagger",
       "item.craft_kaisen.inventory_curse": "Inventory Curse",
       "block.craft_kaisen.domain_block": "Domain Block",
+      "advancements.stand_proud_you_are_strong.title": "Stand Proud, You\u0027re Strong",
       "item.craft_kaisen.black_blind_fold_helmet": "Black Blind Fold ",
       "item.craft_kaisen.jujutsu_sorcerer_uniform_chestplate": "Jujutsu Sorcerer Uniform",
+      "entity.craft_kaisen.white_divine_dog": "White Divine Dog",
       "item.craft_kaisen.geto_outfit_leggings": "Geto Pants",
       "entity.craft_kaisen.rika": "Rika",
       "item.craft_kaisen.toji_outfit_chestplate": "Toji Shirt",
       "item.craft_kaisen.mahito_spawn_egg": "Mahito Spawn Egg",
       "gui.craft_kaisen.start_screen.label_empty1": "\u003c",
       "advancements.semi_grade_2.descr": "Reach The Required Fame.",
+      "entity.craft_kaisen.chimera_shadow_garden_mob": "Chimera Shadow Garden Mob",
       "itemGroup.tabck_curses": "Craft Kaisen Curses",
       "item.craft_kaisen.dismantle": "Dismantle",
+      "entity.craft_kaisen.ten_shadow_rabbit": "Ten Shadow Rabbit",
       "advancements.grade_4.title": "Grade 4",
       "item.craft_kaisen.slicing_excorism": "Slicing Excorism",
       "effect.craft_kaisen.nue_electricity_effect": "NueElectricity",
+      "item.craft_kaisen.ten_shadow_rabbit_spawn_egg": "Ten Shadow Rabbit Spawn Egg",
       "item.craft_kaisen.resurrected_toji_spawn_egg": "Resurrected Toji Spawn Egg",
       "item.craft_kaisen.mouth_cursed_spirit_spawn_egg": "Mouth Cursed Spirit Spawn Egg",
       "entity.craft_kaisen.yuta_okkotsu": "Yuta Okkotsu",
@@ -9115,6 +9385,7 @@
       "key.craft_kaisen.menu": "Menu",
       "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
       "advancements.semi_grade_2.title": "Semi Grade 2",
+      "entity.craft_kaisen.shadow_frog": "Shadow Frog",
       "item.craft_kaisen.water_maximum_elephant": "Water Maximum Elephant",
       "entity.craft_kaisen.great_serpent": "Great Serpent",
       "effect.craft_kaisen.constant_slice": "ConstantSlice",
@@ -9313,6 +9584,18 @@
         "children": [
           {
             "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "Ranks",
+            "children": []
+          },
+          {
+            "name": "PassiveSkills",
+            "children": []
+          },
+          {
+            "name": "Other",
             "children": []
           }
         ]
