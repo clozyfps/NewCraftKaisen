@@ -109,6 +109,7 @@ public class CraftKaisenModVariables {
 			clone.PartyLabel = original.PartyLabel;
 			clone.Miracles = original.Miracles;
 			clone.CtSpecial = original.CtSpecial;
+			clone.Durability = original.Durability;
 			if (!event.isWasDeath()) {
 				clone.currentMove = original.currentMove;
 				clone.currentOutput = original.currentOutput;
@@ -342,6 +343,7 @@ public class CraftKaisenModVariables {
 		public String PartyLabel = "";
 		public double Miracles = 0;
 		public boolean CtSpecial = false;
+		public double Durability = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -398,6 +400,7 @@ public class CraftKaisenModVariables {
 			nbt.putString("PartyLabel", PartyLabel);
 			nbt.putDouble("Miracles", Miracles);
 			nbt.putBoolean("CtSpecial", CtSpecial);
+			nbt.putDouble("Durability", Durability);
 			return nbt;
 		}
 
@@ -451,6 +454,7 @@ public class CraftKaisenModVariables {
 			PartyLabel = nbt.getString("PartyLabel");
 			Miracles = nbt.getDouble("Miracles");
 			CtSpecial = nbt.getBoolean("CtSpecial");
+			Durability = nbt.getDouble("Durability");
 		}
 	}
 
@@ -523,6 +527,7 @@ public class CraftKaisenModVariables {
 					variables.PartyLabel = message.data.PartyLabel;
 					variables.Miracles = message.data.Miracles;
 					variables.CtSpecial = message.data.CtSpecial;
+					variables.Durability = message.data.Durability;
 				}
 			});
 			context.setPacketHandled(true);

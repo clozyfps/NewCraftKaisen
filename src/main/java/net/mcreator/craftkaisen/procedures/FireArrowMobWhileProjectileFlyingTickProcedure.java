@@ -57,7 +57,8 @@ public class FireArrowMobWhileProjectileFlyingTickProcedure {
 							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 					if (distanceSq <= 1.0) {
 						if (world.getBlockState(new BlockPos(x + xi, y + i, z + zi)).canOcclude()) {
-							if (!world.getBlockState(new BlockPos(x + xi, y + i + 1, z + zi)).canOcclude()) {
+							if (!world.getBlockState(new BlockPos(x + xi, y + i + 1, z + zi)).canOcclude()
+									&& !((world.getBlockState(new BlockPos(x + xi, y + i + 1, z + zi))).getBlock() == (world.getBlockState(new BlockPos(entity.getX(), entity.getY(), entity.getZ()))).getBlock())) {
 								world.setBlock(new BlockPos(x + xi, y + i + 1, z + zi), Blocks.FIRE.defaultBlockState(), 3);
 							}
 							{

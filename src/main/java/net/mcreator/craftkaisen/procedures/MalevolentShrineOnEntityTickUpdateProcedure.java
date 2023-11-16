@@ -26,12 +26,15 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putDouble("shrineTick", (entity.getPersistentData().getDouble("shrineTick") + 1));
-		if (entity.getPersistentData().getDouble("shrineTick") >= 1200) {
+		entity.getPersistentData().putDouble("domainTick", (entity.getPersistentData().getDouble("domainTick") + 1));
+		if (entity.getPersistentData().getDouble("shrineTick") < 1200) {
+			entity.getPersistentData().putDouble("shrineTick", (entity.getPersistentData().getDouble("shrineTick") + 10));
+		}
+		if (entity.getPersistentData().getDouble("domainTick") >= 3600) {
 			if (!entity.level.isClientSide())
 				entity.discard();
 		}
-		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("shrineTick") / 20) - 1;
+		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("shrineTick") / 10) - 1;
 		int verticalRadiusHemiTop = (int) 12;
 		int yIterationsHemiTop = verticalRadiusHemiTop;
 		for (int i = 0; i < yIterationsHemiTop; i++) {
@@ -44,14 +47,16 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 							+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 					if (distanceSq <= 1.0) {
 						if (world.getBlockState(new BlockPos(x + xi, y + i, z + zi)).canOcclude()) {
-							world.destroyBlock(new BlockPos(x + xi, y + i, z + zi), false);
-							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.SWEEP_ATTACK, x + xi, y + i, z + zi, 1, 0.1, 0.1, 0.1, 1);
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, new BlockPos(x + xi, y + i, z + zi), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:slice")), SoundSource.PLAYERS, 1, 1);
-								} else {
-									_level.playLocalSound(x + xi, y + i, z + zi, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:slice")), SoundSource.PLAYERS, 1, 1, false);
+							if (Math.random() < 0.2) {
+								world.destroyBlock(new BlockPos(x + xi, y + i, z + zi), false);
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles(ParticleTypes.SWEEP_ATTACK, x + xi, y + i, z + zi, 10, 0.1, 0.1, 0.1, 1);
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, new BlockPos(x + xi, y + i, z + zi), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:slice")), SoundSource.PLAYERS, 1, 1);
+									} else {
+										_level.playLocalSound(x + xi, y + i, z + zi, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_kaisen:slice")), SoundSource.PLAYERS, 1, 1, false);
+									}
 								}
 							}
 						}
@@ -61,8 +66,7 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((entity.getPersistentData().getDouble("shrineTick") / 10) / 2d), e -> true).stream()
-					.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(100 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator) && !((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == entityiterator)) {
 					if (Math.random() < 0.3) {

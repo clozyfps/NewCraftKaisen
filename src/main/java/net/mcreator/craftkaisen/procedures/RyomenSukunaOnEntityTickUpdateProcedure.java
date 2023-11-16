@@ -7,6 +7,9 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -24,6 +27,7 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftKaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
+import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.DismantleEntity;
 import net.mcreator.craftkaisen.CraftKaisenMod;
 
@@ -40,20 +44,11 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		{
-			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(50 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
-			for (Entity entityiterator : _entfound) {
-				if (!(entityiterator == entity) && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
-					if (entityiterator.getPersistentData().getDouble("rep") >= 1) {
-						if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
-							_entity.setTarget(_ent);
-					}
-				}
-			}
-		}
 		if (entity.getPersistentData().getDouble("cooldown") >= 1) {
 			entity.getPersistentData().putDouble("cooldown", (entity.getPersistentData().getDouble("cooldown") - 1));
+		}
+		if (entity.getPersistentData().getDouble("domainCooldown") >= 1) {
+			entity.getPersistentData().putDouble("domainCooldown", (entity.getPersistentData().getDouble("domainCooldown") - 3));
 		}
 		if (entity.getPersistentData().getDouble("dashAttack") >= 1) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
@@ -93,7 +88,7 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 				// Get the radius of the sphere
 				double radius = (entity.getPersistentData().getDouble("sphereSize") / 10); // 3 blocks
 				// Set the tolerance for how close to the surface a point must be to create a particle
-				double tolerance = 0.05; // 0.1 blocks
+				double tolerance = 0.005; // 0.1 blocks
 				for (double xx = -radius; xx <= radius; xx += 0.1) {
 					for (double yy = -radius; yy <= radius; yy += 0.1) {
 						for (double zz = -radius; zz <= radius; zz += 0.1) {
@@ -147,7 +142,7 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 		}
 		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 			if (entity.getPersistentData().getDouble("cooldown") == 0) {
-				move = Mth.nextInt(RandomSource.create(), 1, 5);
+				move = Mth.nextInt(RandomSource.create(), 1, 6);
 				if (move == 1) {
 					{
 						Entity _shootFrom = entity;
@@ -247,6 +242,27 @@ public class RyomenSukunaOnEntityTickUpdateProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(CraftKaisenModMobEffects.PRE_FIRE_ARROW.get(), 60, 1, false, false));
 					entity.getPersistentData().putDouble("cooldown", 80);
+				} else if (move == 6) {
+					if (Math.random() < 0.05) {
+						if (entity.getPersistentData().getDouble("domainCooldown") <= 0) {
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = new MalevolentShrineEntity(CraftKaisenModEntities.MALEVOLENT_SHRINE.get(), _level);
+								entityToSpawn.moveTo((entity.getX() + entity.getLookAngle().x * (-1)), (entity.getY() - 2), (entity.getZ() + entity.getLookAngle().z * (-1)), entity.getYRot(), entity.getXRot());
+								entityToSpawn.setYBodyRot(entity.getYRot());
+								entityToSpawn.setYHeadRot(entity.getYRot());
+								entityToSpawn.setDeltaMovement(0, 0, 0);
+								if (entityToSpawn instanceof Mob _mobToSpawn) {
+									_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+									if (entityToSpawn instanceof TamableAnimal _toTame && entity instanceof Player _owner) {
+										_toTame.tame(_owner);
+									}
+								}
+								_level.addFreshEntity(entityToSpawn);
+							}
+							entity.getPersistentData().putDouble("domainCooldown", 1200);
+							entity.getPersistentData().putDouble("cooldown", 80);
+						}
+					}
 				}
 			}
 		}

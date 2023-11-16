@@ -10,10 +10,8 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.EntityDamageSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -48,8 +46,6 @@ public class SukunaCTonTickUpdateProcedure {
 			return;
 		if (entity.getPersistentData().getDouble("cleaveTime") >= 1) {
 			entity.getPersistentData().putDouble("cleaveTime", (entity.getPersistentData().getDouble("cleaveTime") - 1));
-			if (entity instanceof LivingEntity _entity)
-				_entity.swing(InteractionHand.MAIN_HAND, true);
 			{
 				final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1000 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))

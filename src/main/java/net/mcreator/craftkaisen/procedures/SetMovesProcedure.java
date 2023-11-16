@@ -89,7 +89,7 @@ public class SetMovesProcedure {
 				entity.getPersistentData().putString("moveDisplay", "Cleave");
 				entity.getPersistentData().putDouble("moveCost", 10);
 			} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
-				entity.getPersistentData().putString("moveDisplay", "Constant Distmantle");
+				entity.getPersistentData().putString("moveDisplay", "Constant Dismantle");
 				entity.getPersistentData().putDouble("moveCost", 15);
 			} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
 				entity.getPersistentData().putString("moveDisplay", "Fire Arrow");

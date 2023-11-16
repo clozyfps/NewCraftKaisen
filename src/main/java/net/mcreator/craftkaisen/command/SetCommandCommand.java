@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.procedures.SetStrengthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetSpeedStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetSkillPointsProcedure;
 import net.mcreator.craftkaisen.procedures.SetSixEyesProcedure;
+import net.mcreator.craftkaisen.procedures.SetRepProcedure;
 import net.mcreator.craftkaisen.procedures.SetPhysicallyGiftedProcedure;
 import net.mcreator.craftkaisen.procedures.SetNoEnergyProcedure;
 import net.mcreator.craftkaisen.procedures.SetMiracleProcedure;
@@ -30,6 +31,7 @@ import net.mcreator.craftkaisen.procedures.SetHealthStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetFragileBodyProcedure;
 import net.mcreator.craftkaisen.procedures.SetExpProcedure;
 import net.mcreator.craftkaisen.procedures.SetEnergyControlProcedure;
+import net.mcreator.craftkaisen.procedures.SetDurabilityProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedSpeechProcedure;
 import net.mcreator.craftkaisen.procedures.SetCursedEnergyStatProcedure;
 import net.mcreator.craftkaisen.procedures.SetCurseProcedure;
@@ -247,6 +249,30 @@ public class SetCommandCommand {
 					Direction direction = entity.getDirection();
 
 					SetExpProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("reputation").then(Commands.argument("reputation", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetRepProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("durability").then(Commands.argument("Durability", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					SetDurabilityProcedure.execute(arguments);
 					return 0;
 				}))))).then(Commands.literal("special").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("SixEyes").executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();

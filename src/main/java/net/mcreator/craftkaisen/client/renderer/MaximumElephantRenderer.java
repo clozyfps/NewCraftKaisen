@@ -1,16 +1,20 @@
 
 package net.mcreator.craftkaisen.client.renderer;
 
-public class MaximumElephantRenderer extends MobRenderer<MaximumElephantEntity, Modelmaximumelephant<MaximumElephantEntity>> {
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
+import net.mcreator.craftkaisen.entity.MaximumElephantEntity;
+import net.mcreator.craftkaisen.client.model.Modelmaximumelephant;
+
+public class MaximumElephantRenderer extends MobRenderer<MaximumElephantEntity, Modelmaximumelephant<MaximumElephantEntity>> {
 	public MaximumElephantRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelmaximumelephant(context.bakeLayer(Modelmaximumelephant.LAYER_LOCATION)), 0.5f);
-
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(MaximumElephantEntity entity) {
 		return new ResourceLocation("craft_kaisen:textures/entities/maximumelephant.png");
 	}
-
 }

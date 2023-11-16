@@ -1569,6 +1569,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3328,6 +3332,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -4159,7 +4175,7 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
           }
         ]
@@ -4467,28 +4483,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobTargetProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -4790,28 +4785,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobAbilitiesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -5859,6 +5833,18 @@
             "type": "number"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -5986,12 +5972,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/RyomenSukunaOnInitialEntitySpawnProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Mobs/Procedure"
     },
@@ -6076,16 +6057,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoRedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -6481,16 +6453,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/GojoMovesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/MobMoves"
     },
@@ -7638,7 +7601,12 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MiracleCountProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlay/Procedures/Value"
     },
@@ -7717,41 +7685,6 @@
       "path": "~/Tags"
     },
     {
-      "name": "Red7",
-      "type": "procedure",
-      "sortid": 319,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_7",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red7Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "ReversalRedWhileProjectileFlyingTick",
       "type": "procedure",
       "sortid": 323,
@@ -7792,181 +7725,6 @@
       "path": "~/Abilities/Limitless"
     },
     {
-      "name": "Red8",
-      "type": "procedure",
-      "sortid": 320,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_8",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red8Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Red5",
-      "type": "procedure",
-      "sortid": 317,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_5",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Red10",
-      "type": "procedure",
-      "sortid": 322,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_10",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red10Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Red6",
-      "type": "procedure",
-      "sortid": 318,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_6",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Red3",
-      "type": "procedure",
-      "sortid": 315,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "WhiteDisplay",
       "type": "procedure",
       "sortid": 327,
@@ -7988,41 +7746,6 @@
       "path": "~/Overlay/Procedures"
     },
     {
-      "name": "Red4",
-      "type": "procedure",
-      "sortid": 316,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "ImpactFrameDisplayOverlayIngame",
       "type": "procedure",
       "sortid": 329,
@@ -8042,41 +7765,6 @@
         ]
       },
       "path": "~/Overlay/Procedures"
-    },
-    {
-      "name": "Red1",
-      "type": "procedure",
-      "sortid": 313,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     },
     {
       "name": "ReversalRedTick",
@@ -8101,41 +7789,6 @@
         ]
       },
       "path": "~/Abilities/Limitless"
-    },
-    {
-      "name": "Red2",
-      "type": "procedure",
-      "sortid": 314,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     },
     {
       "name": "ReversalRed",
@@ -8213,41 +7866,6 @@
         ]
       },
       "path": "~/Overlay/Procedures"
-    },
-    {
-      "name": "Red9",
-      "type": "procedure",
-      "sortid": 321,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_9",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Red9Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     },
     {
       "name": "ImpactFrame",
@@ -8378,6 +7996,327 @@
         ]
       },
       "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "DomainClash",
+      "type": "procedure",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_clash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DomainClashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "DomainSpawnNbt",
+      "type": "procedure",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_spawn_nbt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DomainSpawnNbtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MalevolentShrineEntityIsHurt",
+      "type": "procedure",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "malevolent_shrine_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SetRep",
+      "type": "procedure",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rep",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetRepProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "EntityReps",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_reps",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntityRepsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetEntityReputations",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_entity_reputations",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetEntityReputationsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Entitydeaths",
+      "type": "procedure",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entitydeaths",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntitydeathsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetDurability",
+      "type": "procedure",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_durability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetDurabilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "MistPurple",
+      "type": "particle",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_purple",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/mist_purple.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/MistPurpleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PurplePulse",
+      "type": "particle",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_pulse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurplePulseParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/purple_pulse.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PurpleProcedure",
+      "type": "procedure",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PurpleProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LimitlessTick2",
+      "type": "procedure",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limitless_tick_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessTick2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Limitless"
+    },
+    {
+      "name": "HollowPurpeWhilstFlying",
+      "type": "procedure",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purpe_whilst_flying",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpeWhilstFlyingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -8692,6 +8631,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "Durability",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -8762,14 +8707,14 @@
   ],
   "language_map": {
     "en_us": {
-      "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
       "gui.craft_kaisen.main_menu.label_curse": "Curse",
+      "item.craft_kaisen.geto_outfit_chestplate": "Geto Robe",
       "advancements.jujutsu_sorcerer.descr": "Kill a Cursed Spirit",
       "advancements.jujutsu_kaisen.title": "Jujutsu Kaisen",
       "effect.craft_kaisen.unlimited_void_effect": "UnlimitedVoid",
       "key.craft_kaisen.ability_4": "Ability 4",
-      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_5": "Ability 5",
+      "key.craft_kaisen.output": "Output",
       "key.craft_kaisen.ability_6": "Ability 6",
       "gui.craft_kaisen.move_gui.button_4": "4",
       "key.craft_kaisen.ability_1": "Ability 1",
@@ -8781,6 +8726,7 @@
       "effect.craft_kaisen.domain_expansion": "Domain Expansion",
       "gui.craft_kaisen.move_gui.button_5": "5",
       "key.craft_kaisen.ability_3": "Ability 3",
+      "item.craft_kaisen.reversal_red": "Reversal Red",
       "item.craft_kaisen.yuji_itadori_spawn_egg": "Yuji Itadori Spawn Egg",
       "gui.craft_kaisen.move_gui.button_empty1": "\u003c",
       "gui.craft_kaisen.move_gui.button_2": "2",
@@ -8824,6 +8770,7 @@
       "item.craft_kaisen.yuta_okkotsu_spawn_egg": "Yuta Okkotsu Spawn Egg",
       "entity.craft_kaisen.heian_era_sukuna": "Heian Era Sukuna",
       "itemGroup.tabck_weapons": "Ck Weapons",
+      "entity.craft_kaisen.maximum_elephant": "Maximum Elephant",
       "subtitles.hit": "strong hit",
       "gui.craft_kaisen.main_menu.label_empty6": "+",
       "item.craft_kaisen.split_soul_katana": "Split Soul Katana",
@@ -8916,6 +8863,7 @@
       "entity.craft_kaisen.rugby_field_cursed_spirit": "Rugby Field Cursed Spirit",
       "item.craft_kaisen.test": "Test",
       "advancements.semi_grade_1.title": "Semi Grade 1",
+      "item.craft_kaisen.maximum_elephant_spawn_egg": "Maximum Elephant Spawn Egg",
       "item.craft_kaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "item.craft_kaisen.blood_spear": "Blood Spear",
       "advancements.semi_grade_3.descr": "Reach The Required Fame.",
@@ -8932,6 +8880,7 @@
       "key.craft_kaisen.menu": "Menu",
       "item.craft_kaisen.crushed_ranged": "Crushed Ranged",
       "advancements.semi_grade_2.title": "Semi Grade 2",
+      "item.craft_kaisen.water_maximum_elephant": "Water Maximum Elephant",
       "entity.craft_kaisen.great_serpent": "Great Serpent",
       "effect.craft_kaisen.constant_slice": "ConstantSlice",
       "gui.craft_kaisen.start_screen.label_race": "RACE:",

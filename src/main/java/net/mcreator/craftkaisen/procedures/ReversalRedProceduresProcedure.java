@@ -6,6 +6,9 @@ public class ReversalRedProceduresProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putBoolean("reversal", true);
+		if (entity.getPersistentData().getBoolean("redCharge") == false && entity.getPersistentData().getDouble("redDistance") == 0) {
+			entity.getPersistentData().putBoolean("redCharge", true);
+			entity.getPersistentData().putDouble("redTick", 0);
+		}
 	}
 }
