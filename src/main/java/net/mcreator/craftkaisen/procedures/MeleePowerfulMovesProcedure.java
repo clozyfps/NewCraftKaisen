@@ -12,7 +12,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
@@ -71,44 +70,6 @@ public class MeleePowerfulMovesProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entity == entityiterator)) {
 								entityiterator.hurt(DamageSource.GENERIC, 11);
-								entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x() + 1.2), (entityiterator.getDeltaMovement().y() + 1.2), (entityiterator.getDeltaMovement().y())));
-							}
-						}
-					}
-				});
-			});
-		}
-		if (Math.random() < 0.05) {
-			(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).setDeltaMovement(new Vec3((1.9 * entity.getLookAngle().x), (2 * entity.getLookAngle().y), (1.9 * entity.getLookAngle().z)));
-			CraftKaisenMod.queueServerWork(20, () -> {
-				CraftKaisenMod.queueServerWork(5, () -> {
-					{
-						Entity _ent = entity;
-						_ent.teleportTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
-								((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()));
-						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
-									((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()), _ent.getYRot(), _ent.getXRot());
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX(), (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY(),
-									(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
-									((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
-								((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()), 15, 3, 0.5, 3, 0);
-					{
-						final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-								.collect(Collectors.toList());
-						for (Entity entityiterator : _entfound) {
-							if (!(entity == entityiterator)) {
-								entityiterator.hurt(DamageSource.GENERIC, 15);
 								entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x() + 1.2), (entityiterator.getDeltaMovement().y() + 1.2), (entityiterator.getDeltaMovement().y())));
 							}
 						}

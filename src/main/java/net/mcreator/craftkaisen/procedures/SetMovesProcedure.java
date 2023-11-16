@@ -1,13 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.craftkaisen.network.CraftKaisenModVariables;
 
 import javax.annotation.Nullable;
 
@@ -89,7 +82,7 @@ public class SetMovesProcedure {
 				entity.getPersistentData().putString("moveDisplay", "Cleave");
 				entity.getPersistentData().putDouble("moveCost", 10);
 			} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
-				entity.getPersistentData().putString("moveDisplay", "Constant Dismantle");
+				entity.getPersistentData().putString("moveDisplay", "Constant Distmantle");
 				entity.getPersistentData().putDouble("moveCost", 15);
 			} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
 				entity.getPersistentData().putString("moveDisplay", "Fire Arrow");
@@ -141,6 +134,46 @@ public class SetMovesProcedure {
 			} else if (entity.getPersistentData().getDouble("moveNumber") == 6) {
 				entity.getPersistentData().putString("moveDisplay", "Super Nova");
 				entity.getPersistentData().putDouble("moveCost", 23);
+			}
+		}
+		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Ten Shadows")) {
+			entity.getPersistentData().putDouble("maxMoves", 12);
+			if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+				entity.getPersistentData().putString("moveDisplay", "Black Divine Dog");
+				entity.getPersistentData().putDouble("moveCost", 7);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
+				entity.getPersistentData().putString("moveDisplay", "White Divine Dog");
+				entity.getPersistentData().putDouble("moveCost", 7);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
+				entity.getPersistentData().putString("moveDisplay", "Divine Dogs: Totality");
+				entity.getPersistentData().putDouble("moveCost", 10);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
+				entity.getPersistentData().putString("moveDisplay", "Nue");
+				entity.getPersistentData().putDouble("moveCost", 12);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
+				entity.getPersistentData().putString("moveDisplay", "Toad");
+				entity.getPersistentData().putDouble("moveCost", 15);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 6) {
+				entity.getPersistentData().putString("moveDisplay", "Great Serpent");
+				entity.getPersistentData().putDouble("moveCost", 18);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 7) {
+				entity.getPersistentData().putString("moveDisplay", "Maximum Elephant");
+				entity.getPersistentData().putDouble("moveCost", 20);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 8) {
+				entity.getPersistentData().putString("moveDisplay", "Rabbit Escape");
+				entity.getPersistentData().putDouble("moveCost", 23);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 9) {
+				entity.getPersistentData().putString("moveDisplay", "Round Deer");
+				entity.getPersistentData().putDouble("moveCost", 23);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 10) {
+				entity.getPersistentData().putString("moveDisplay", "Piercing Ox");
+				entity.getPersistentData().putDouble("moveCost", 25);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 11) {
+				entity.getPersistentData().putString("moveDisplay", "Chimera Shadow Garden");
+				entity.getPersistentData().putDouble("moveCost", 30);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 12) {
+				entity.getPersistentData().putString("moveDisplay", "Divine Treasure Mahoraga");
+				entity.getPersistentData().putDouble("moveCost", 35);
 			}
 		}
 	}

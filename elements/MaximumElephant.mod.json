@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Maximum Elephant",
     "mobLabel": "",
-    "mobModelName": "Modelmaximumelephant",
-    "mobModelTexture": "maximumelephant.png",
+    "mobModelName": "Modelmaximumelephantnew",
+    "mobModelTexture": "maximumelephantexture.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -24,7 +24,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:CkMobs"
+      "value": "CUSTOM:CkCurses"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -101,9 +101,9 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "breedable": false,
-    "tameable": false,
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"73\" y=\"56\"><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">1</field><field name=\"min_distance\">20</field><field name=\"max_distance\">5</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": true,
+    "tameable": true,
     "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {

@@ -1,29 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
-import net.mcreator.craftkaisen.entity.YujiItadoriEntity;
-import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
-import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
-import net.mcreator.craftkaisen.entity.RyomenSukunaEntity;
-import net.mcreator.craftkaisen.entity.RugbyFieldCursedSpiritEntity;
-import net.mcreator.craftkaisen.entity.RoppongiCursedSpiritEntity;
-import net.mcreator.craftkaisen.entity.RikaEntity;
-import net.mcreator.craftkaisen.entity.ResurrectedTojiEntity;
-import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
-import net.mcreator.craftkaisen.entity.MouthCursedSpiritEntity;
-import net.mcreator.craftkaisen.entity.MahitoEntity;
-import net.mcreator.craftkaisen.entity.KoGuyEntity;
-import net.mcreator.craftkaisen.entity.JogoEntity;
-import net.mcreator.craftkaisen.entity.HeianEraSukunaEntity;
-import net.mcreator.craftkaisen.entity.HanamiEntity;
-import net.mcreator.craftkaisen.entity.ChosoEntity;
 
 import javax.annotation.Nullable;
 

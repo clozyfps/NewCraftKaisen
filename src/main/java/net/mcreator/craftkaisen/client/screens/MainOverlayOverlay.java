@@ -14,7 +14,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.procedures.ReturnOutputProcedure;
-import net.mcreator.craftkaisen.procedures.ReturnMoveListProcedure;
 import net.mcreator.craftkaisen.procedures.ReturnCEOverlayProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
@@ -43,9 +42,6 @@ public class MainOverlayOverlay {
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					ReturnOutputProcedure.execute(entity), posX + 96, posY + 89, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(),
-
-					ReturnMoveListProcedure.execute(entity), posX + 95, posY + 76, -1);
 		}
 	}
 }

@@ -15,6 +15,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.craftkaisen.network.ToggleCTSpecialMessage;
 import net.mcreator.craftkaisen.network.OutputMessage;
 import net.mcreator.craftkaisen.network.MenuMessage;
 import net.mcreator.craftkaisen.network.ChargeCursedEnergyMessage;
@@ -150,6 +151,19 @@ public class CraftKaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping TOGGLE_CT_SPECIAL = new KeyMapping("key.craft_kaisen.toggle_ct_special", GLFW.GLFW_KEY_J, "key.categories.craft_kaisen") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftKaisenMod.PACKET_HANDLER.sendToServer(new ToggleCTSpecialMessage(0, 0));
+				ToggleCTSpecialMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -163,6 +177,7 @@ public class CraftKaisenModKeyMappings {
 		event.register(ABILITY_6);
 		event.register(OUTPUT);
 		event.register(MENU);
+		event.register(TOGGLE_CT_SPECIAL);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -179,6 +194,7 @@ public class CraftKaisenModKeyMappings {
 				ABILITY_6.consumeClick();
 				OUTPUT.consumeClick();
 				MENU.consumeClick();
+				TOGGLE_CT_SPECIAL.consumeClick();
 			}
 		}
 	}

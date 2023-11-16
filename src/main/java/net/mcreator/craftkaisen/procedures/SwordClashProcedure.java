@@ -10,8 +10,11 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
@@ -22,6 +25,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftkaisen.init.CraftKaisenModParticleTypes;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.ResurrectedTojiEntity;
+import net.mcreator.craftkaisen.entity.GreatSerpentEntity;
 
 import javax.annotation.Nullable;
 
@@ -76,10 +80,16 @@ public class SwordClashProcedure {
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (CraftKaisenModParticleTypes.CLASH_PARTICLE.get()), x, y, z, 2, 1, 2, 1, 2);
+				if (entity instanceof Mob _entity && sourceentity instanceof LivingEntity _ent)
+					_entity.setTarget(_ent);
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);
 				}
 			}
+		}
+		if (sourceentity instanceof GreatSerpentEntity) {
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1, false, false));
 		}
 	}
 }

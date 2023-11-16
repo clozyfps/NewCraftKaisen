@@ -45,7 +45,7 @@ public class CopyMovesProcedure {
 					SummonRikaProcedureProcedure.execute(world, x, y, z, entity);
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(Component.literal("Rika!!"), true);
-					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))), 0);
+					entity.getPersistentData().putDouble(("cooldown" + new java.text.DecimalFormat("##.##").format(entity.getPersistentData().getDouble("coolset"))), 20);
 				} else if ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentCursedEnergy < 50
 						* ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 10)) {
 					if (entity instanceof Player _player && !_player.level.isClientSide())

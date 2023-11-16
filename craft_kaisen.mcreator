@@ -1569,10 +1569,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -4483,7 +4479,28 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MobTargetProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -7998,6 +8015,226 @@
       "path": "~/Mobs/Procedure"
     },
     {
+      "name": "PurplePulse",
+      "type": "particle",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_pulse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurplePulseParticle.java",
+          "src/main/resources/assets/craft_kaisen/particles/purple_pulse.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "DomainSpawnNbt",
+      "type": "procedure",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_spawn_nbt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DomainSpawnNbtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SetEntityReputations",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_entity_reputations",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetEntityReputationsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PurpleProcedure",
+      "type": "procedure",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PurpleProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HollowPurpeWhilstFlying",
+      "type": "procedure",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purpe_whilst_flying",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpeWhilstFlyingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EntityReps",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_reps",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntityRepsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MalevolentShrineEntityIsHurt",
+      "type": "procedure",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "malevolent_shrine_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MistPurple",
+      "type": "particle",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_purple",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_kaisen/particles/mist_purple.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/MistPurpleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Entitydeaths",
+      "type": "procedure",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entitydeaths",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntitydeathsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetDurability",
+      "type": "procedure",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_durability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetDurabilityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
       "name": "DomainClash",
       "type": "procedure",
       "sortid": 335,
@@ -8038,46 +8275,6 @@
       "path": "~/Mobs"
     },
     {
-      "name": "DomainSpawnNbt",
-      "type": "procedure",
-      "sortid": 336,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "domain_spawn_nbt",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DomainSpawnNbtProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "MalevolentShrineEntityIsHurt",
-      "type": "procedure",
-      "sortid": 337,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "malevolent_shrine_entity_is_hurt",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineEntityIsHurtProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          }
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
       "name": "SetRep",
       "type": "procedure",
       "sortid": 338,
@@ -8096,156 +8293,6 @@
         ]
       },
       "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "EntityReps",
-      "type": "procedure",
-      "sortid": 339,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "entity_reps",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/EntityRepsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SetEntityReputations",
-      "type": "procedure",
-      "sortid": 340,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_entity_reputations",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetEntityReputationsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Entitydeaths",
-      "type": "procedure",
-      "sortid": 341,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "entitydeaths",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/EntitydeathsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SetDurability",
-      "type": "procedure",
-      "sortid": 342,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_durability",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetDurabilityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "MistPurple",
-      "type": "particle",
-      "sortid": 343,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mist_purple",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_kaisen/particles/mist_purple.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/MistPurpleParticle.java"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
-      "name": "PurplePulse",
-      "type": "particle",
-      "sortid": 344,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "purple_pulse",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/PurplePulseParticle.java",
-          "src/main/resources/assets/craft_kaisen/particles/purple_pulse.json"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
-      "name": "PurpleProcedure",
-      "type": "procedure",
-      "sortid": 345,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "purple_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PurpleProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     },
     {
       "name": "LimitlessTick2",
@@ -8284,15 +8331,15 @@
       "path": "~/Abilities/Limitless"
     },
     {
-      "name": "HollowPurpeWhilstFlying",
+      "name": "WhiteDivineDogProcedure",
       "type": "procedure",
-      "sortid": 347,
+      "sortid": 338,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "hollow_purpe_whilst_flying",
+      "registry_name": "white_divine_dog_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpeWhilstFlyingProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/WhiteDivineDogProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -8316,7 +8363,754 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "TenShadowRabbit",
+      "type": "livingentity",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ten_shadow_rabbit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/TenShadowRabbitRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/ten_shadow_rabbit_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/TenShadowRabbitEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "RoundDeerProcedure",
+      "type": "procedure",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "round_deer_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RoundDeerProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "SukunaQuote",
+      "type": "procedure",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_quote",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaQuoteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TenShadowDeath",
+      "type": "procedure",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ten_shadow_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TenShadowDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "ToggleCTSpecial",
+      "type": "keybind",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toggle_ct_special",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/ToggleCTSpecialMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "QuoteTick",
+      "type": "procedure",
+      "sortid": 351,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quote_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/QuoteTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BlackDivineDog",
+      "type": "livingentity",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_divine_dog",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/BlackDivineDogRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/BlackDivineDogEntity.java",
+          "src/main/resources/assets/craft_kaisen/models/item/black_divine_dog_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "ChimeraShadowGardenMob",
+      "type": "livingentity",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chimera_shadow_garden_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ChimeraShadowGardenMobEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ChimeraShadowGardenMobRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "NueProcedure",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nue_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/NueProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "MaximumElephantProcedure",
+      "type": "procedure",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maximum_elephant_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MaximumElephantProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "RabbitEscapeProcedure",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rabbit_escape_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RabbitEscapeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "WhiteDivineDog",
+      "type": "livingentity",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_divine_dog",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/WhiteDivineDogEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/WhiteDivineDogRenderer.java",
+          "src/main/resources/assets/craft_kaisen/models/item/white_divine_dog_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "TenShadowSpawn",
+      "type": "procedure",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ten_shadow_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TenShadowSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "StandProudYouAreStrong",
+      "type": "achievement",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stand_proud_you_are_strong",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_kaisen/advancements/stand_proud_you_are_strong.json"
+        ]
+      },
+      "path": "~/Advancement/Other"
+    },
+    {
+      "name": "ChimeraShadowGardenMobOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chimera_shadow_garden_mob_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChimeraShadowGardenMobOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "ChimeraShadowGardenMobOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chimera_shadow_garden_mob_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChimeraShadowGardenMobOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Domain"
+    },
+    {
+      "name": "BlackDivineDogProcedure",
+      "type": "procedure",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_divine_dog_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlackDivineDogProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "ShadowFrogOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_frog_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ShadowFrogOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "ChimeraShadowGardenProcedure",
+      "type": "procedure",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chimera_shadow_garden_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChimeraShadowGardenProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "GreatSerpentProcedure",
+      "type": "procedure",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "great_serpent_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GreatSerpentProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "ToadProcedure",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toad_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToadProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/TenShadows"
+    },
+    {
+      "name": "ShadowFrog",
+      "type": "livingentity",
+      "sortid": 352,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_frog",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ShadowFrogRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ShadowFrogEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SetTenShadows",
+      "type": "procedure",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ten_shadows",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetTenShadowsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "MalevolentShrineProcedure",
+      "type": "procedure",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "malevolent_shrine_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/SukunaVessel"
+    },
+    {
+      "name": "ShadowFrogOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_frog_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ShadowFrogOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedure"
+    },
+    {
+      "name": "ToggleCTSpecialOnKeyPressed",
+      "type": "procedure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toggle_ct_special_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToggleCTSpecialOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "TenShadowsMoves",
+      "type": "procedure",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ten_shadows_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TenShadowsMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/MoveUse"
     }
   ],
   "variable_elements": [
@@ -8637,6 +9431,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "TenShadowDeaths",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -9077,7 +9877,19 @@
         "name": "Advancement",
         "children": [
           {
+            "name": "Ranks",
+            "children": []
+          },
+          {
+            "name": "Other",
+            "children": []
+          },
+          {
             "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "PassiveSkills",
             "children": []
           }
         ]

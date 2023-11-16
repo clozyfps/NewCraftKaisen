@@ -138,8 +138,14 @@ public class CraftKaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.RESURRECTED_TOJI, -1, -10092544, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
 	public static final RegistryObject<Item> REVERSAL_RED = REGISTRY.register("reversal_red", () -> new ReversalRedItem());
 	public static final RegistryObject<Item> MAXIMUM_ELEPHANT_SPAWN_EGG = REGISTRY.register("maximum_elephant_spawn_egg",
-			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.MAXIMUM_ELEPHANT, -2509095, -2507960, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_MOBS)));
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.MAXIMUM_ELEPHANT, -2509095, -2507960, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 	public static final RegistryObject<Item> WATER_MAXIMUM_ELEPHANT = REGISTRY.register("water_maximum_elephant", () -> new WaterMaximumElephantItem());
+	public static final RegistryObject<Item> BLACK_DIVINE_DOG_SPAWN_EGG = REGISTRY.register("black_divine_dog_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.BLACK_DIVINE_DOG, -16777216, -6750208, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> WHITE_DIVINE_DOG_SPAWN_EGG = REGISTRY.register("white_divine_dog_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.WHITE_DIVINE_DOG, -1, -6750208, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
+	public static final RegistryObject<Item> TEN_SHADOW_RABBIT_SPAWN_EGG = REGISTRY.register("ten_shadow_rabbit_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftKaisenModEntities.TEN_SHADOW_RABBIT, -986896, -1825242, new Item.Properties().tab(CraftKaisenModTabs.TAB_CK_CURSES)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
