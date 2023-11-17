@@ -1,9 +1,33 @@
 
 package net.mcreator.craftkaisen.network;
 
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.craftkaisen.world.inventory.MoveGuiMenu;
+import net.mcreator.craftkaisen.procedures.UnlockButtonProcedure;
+import net.mcreator.craftkaisen.procedures.SetAbility6Procedure;
+import net.mcreator.craftkaisen.procedures.SetAbility5Procedure;
+import net.mcreator.craftkaisen.procedures.SetAbility4Procedure;
+import net.mcreator.craftkaisen.procedures.SetAbility3Procedure;
+import net.mcreator.craftkaisen.procedures.SetAbility2Procedure;
+import net.mcreator.craftkaisen.procedures.SetAbility1Procedure;
+import net.mcreator.craftkaisen.procedures.ForwardbuttonProcedure;
+import net.mcreator.craftkaisen.procedures.BackButtonProcedure;
+import net.mcreator.craftkaisen.CraftKaisenMod;
+
+import java.util.function.Supplier;
+import java.util.HashMap;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MoveGuiButtonMessage {
-
 	private final int buttonID, x, y, z;
 
 	public MoveGuiButtonMessage(FriendlyByteBuf buffer) {
@@ -35,7 +59,6 @@ public class MoveGuiButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
-
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -44,11 +67,9 @@ public class MoveGuiButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = MoveGuiMenu.guistate;
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-
 		if (buttonID == 0) {
 
 			SetAbility1Procedure.execute(entity);
@@ -91,5 +112,4 @@ public class MoveGuiButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		CraftKaisenMod.addNetworkMessage(MoveGuiButtonMessage.class, MoveGuiButtonMessage::buffer, MoveGuiButtonMessage::new, MoveGuiButtonMessage::handler);
 	}
-
 }

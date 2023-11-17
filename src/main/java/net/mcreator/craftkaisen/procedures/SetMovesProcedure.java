@@ -143,5 +143,27 @@ public class SetMovesProcedure {
 				entity.getPersistentData().putDouble("moveCost", 23);
 			}
 		}
+		if (((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).technique).equals("Antigravity System")) {
+			entity.getPersistentData().putDouble("maxMoves", 6);
+			if (entity.getPersistentData().getDouble("moveNumber") == 1) {
+				entity.getPersistentData().putString("moveDisplay", "Float");
+				entity.getPersistentData().putDouble("moveCost", 3);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 2) {
+				entity.getPersistentData().putString("moveDisplay", "Anti Gravity Imbue");
+				entity.getPersistentData().putDouble("moveCost", 8);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 3) {
+				entity.getPersistentData().putString("moveDisplay", "Anti Gravity Field");
+				entity.getPersistentData().putDouble("moveCost", 15);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 4) {
+				entity.getPersistentData().putString("moveDisplay", "Pressure");
+				entity.getPersistentData().putDouble("moveCost", 17);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 5) {
+				entity.getPersistentData().putString("moveDisplay", "Pressure Imbue");
+				entity.getPersistentData().putDouble("moveCost", 20);
+			} else if (entity.getPersistentData().getDouble("moveNumber") == 6) {
+				entity.getPersistentData().putString("moveDisplay", "Pressure Field");
+				entity.getPersistentData().putDouble("moveCost", 25);
+			}
+		}
 	}
 }
