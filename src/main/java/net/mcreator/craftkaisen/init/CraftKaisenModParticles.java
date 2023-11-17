@@ -12,9 +12,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.craftkaisen.client.particle.SoundWaveParticle;
 import net.mcreator.craftkaisen.client.particle.SnowflakeParticle;
 import net.mcreator.craftkaisen.client.particle.RedParticleParticle;
+import net.mcreator.craftkaisen.client.particle.PurplePulseParticle;
 import net.mcreator.craftkaisen.client.particle.PurpleElectricityParticle;
 import net.mcreator.craftkaisen.client.particle.PunchImpactParticle;
 import net.mcreator.craftkaisen.client.particle.NueElectricityParticle;
+import net.mcreator.craftkaisen.client.particle.MistPurpleParticle;
 import net.mcreator.craftkaisen.client.particle.InfinityParticleParticle;
 import net.mcreator.craftkaisen.client.particle.FireArrowParticleParticle;
 import net.mcreator.craftkaisen.client.particle.ClashParticleParticle;
@@ -40,5 +42,7 @@ public class CraftKaisenModParticles {
 		event.register(CraftKaisenModParticleTypes.CLASH_PARTICLE.get(), ClashParticleParticle::provider);
 		event.register(CraftKaisenModParticleTypes.PUNCH_IMPACT.get(), PunchImpactParticle::provider);
 		event.register(CraftKaisenModParticleTypes.BLOOD_SPLASH.get(), BloodSplashParticle::provider);
+		event.register(CraftKaisenModParticleTypes.MIST_PURPLE.get(), MistPurpleParticle::provider);
+		event.register(CraftKaisenModParticleTypes.PURPLE_PULSE.get(), PurplePulseParticle::provider);
 	}
 }

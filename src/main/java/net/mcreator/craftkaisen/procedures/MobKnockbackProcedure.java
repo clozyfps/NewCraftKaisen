@@ -79,14 +79,6 @@ public class MobKnockbackProcedure {
 					_level.sendParticles(ParticleTypes.POOF, x, y, z, 8, 1, 2, 1, 0);
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 3, 1, 2, 1, 0);
-				CraftKaisenMod.queueServerWork(20, () -> {
-					{
-						Entity _ent = sourceentity;
-						_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
-						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
-					}
-				});
 				entity.getPersistentData().putBoolean("slam", true);
 			}
 		}

@@ -35,22 +35,6 @@
           "x": 309,
           "y": 209
         }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_return_move_list",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnMoveList"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 308,
-          "y": 196
-        }
       }
     ],
     "baseTexture": "",

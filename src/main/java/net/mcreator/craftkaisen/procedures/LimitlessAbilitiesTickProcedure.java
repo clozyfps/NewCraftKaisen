@@ -35,7 +35,7 @@ public class LimitlessAbilitiesTickProcedure {
 		if (entity.getPersistentData().getBoolean("redCharge") == true) {
 			{
 				// Get the radius of the sphere
-				double radius = ((entity.getPersistentData().getDouble("redTick") / 10) * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 100)); // 3 blocks
+				double radius = ((entity.getPersistentData().getDouble("redTick") / 20) * ((entity.getCapability(CraftKaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftKaisenModVariables.PlayerVariables())).currentOutput / 100)); // 3 blocks
 				// Set the tolerance for how close to the surface a point must be to create a particle
 				double tolerance = 0.15; // 0.1 blocks
 				for (double xx = -radius; xx <= radius; xx += 0.1) {

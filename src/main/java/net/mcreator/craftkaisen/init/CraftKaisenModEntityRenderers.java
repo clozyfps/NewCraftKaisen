@@ -13,18 +13,25 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftkaisen.client.renderer.YutaOkkotsuRenderer;
 import net.mcreator.craftkaisen.client.renderer.YujiItadoriRenderer;
+import net.mcreator.craftkaisen.client.renderer.WhiteDivineDogRenderer;
 import net.mcreator.craftkaisen.client.renderer.UnlimitedVoidMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.ToadRenderer;
+import net.mcreator.craftkaisen.client.renderer.TenShadowRabbitRenderer;
+import net.mcreator.craftkaisen.client.renderer.ShadowFrogRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.RyomenSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.RugbyFieldCursedSpiritRenderer;
+import net.mcreator.craftkaisen.client.renderer.RoundDeerRenderer;
 import net.mcreator.craftkaisen.client.renderer.RoppongiCursedSpiritRenderer;
 import net.mcreator.craftkaisen.client.renderer.RikaRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
+import net.mcreator.craftkaisen.client.renderer.ResurrectedTojiRenderer;
 import net.mcreator.craftkaisen.client.renderer.NueRenderer;
 import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MouthCursedSpiritRenderer;
+import net.mcreator.craftkaisen.client.renderer.MaximumElephantRenderer;
+import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
 import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
 import net.mcreator.craftkaisen.client.renderer.KoGuyRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
@@ -32,6 +39,8 @@ import net.mcreator.craftkaisen.client.renderer.HeianEraSukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
 import net.mcreator.craftkaisen.client.renderer.GreatSerpentRenderer;
 import net.mcreator.craftkaisen.client.renderer.ChosoRenderer;
+import net.mcreator.craftkaisen.client.renderer.ChimeraShadowGardenMobRenderer;
+import net.mcreator.craftkaisen.client.renderer.BlackDivineDogRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftKaisenModEntityRenderers {
@@ -70,9 +79,20 @@ public class CraftKaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftKaisenModEntities.MOUTH_CURSED_SPIRIT.get(), MouthCursedSpiritRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.MAHITO.get(), MahitoRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.NANAMI_KENTO.get(), NanamiKentoRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.MALEVOLENT_SHRINE.get(), MalevolentShrineRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.SLICING_EXCORISM.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.BLOOD_METEORITE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.HANAMI.get(), HanamiRenderer::new);
 		event.registerEntityRenderer(CraftKaisenModEntities.JOGO.get(), JogoRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.ROUND_DEER.get(), RoundDeerRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.RESURRECTED_TOJI.get(), ResurrectedTojiRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.REVERSAL_RED.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.MAXIMUM_ELEPHANT.get(), MaximumElephantRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.WATER_MAXIMUM_ELEPHANT.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.BLACK_DIVINE_DOG.get(), BlackDivineDogRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.WHITE_DIVINE_DOG.get(), WhiteDivineDogRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.TEN_SHADOW_RABBIT.get(), TenShadowRabbitRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.SHADOW_FROG.get(), ShadowFrogRenderer::new);
+		event.registerEntityRenderer(CraftKaisenModEntities.CHIMERA_SHADOW_GARDEN_MOB.get(), ChimeraShadowGardenMobRenderer::new);
 	}
 }

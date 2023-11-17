@@ -11,6 +11,7 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -25,6 +26,7 @@ import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.craftkaisen.procedures.RyomenSukunaOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
 
 public class HeianEraSukunaEntity extends Monster {
@@ -36,7 +38,7 @@ public class HeianEraSukunaEntity extends Monster {
 
 	public HeianEraSukunaEntity(EntityType<HeianEraSukunaEntity> type, Level world) {
 		super(type, world);
-		maxUpStep = 0.6f;
+		maxUpStep = 5f;
 		xpReward = 5;
 		setNoAi(false);
 	}
@@ -55,10 +57,11 @@ public class HeianEraSukunaEntity extends Monster {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(2, new LeapAtTargetGoal(this, (float) 1));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
 	}
 
 	@Override
@@ -74,6 +77,12 @@ public class HeianEraSukunaEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		RyomenSukunaOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

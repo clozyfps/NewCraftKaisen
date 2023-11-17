@@ -39,24 +39,24 @@
       "value": ""
     },
     "equipmentBody": {
-      "value": "CUSTOM:SukunaOutfit.body"
+      "value": ""
     },
     "equipmentLeggings": {
-      "value": "CUSTOM:TojiOutfit.legs"
+      "value": ""
     },
     "equipmentBoots": {
       "value": ""
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 25,
+    "attackStrength": 30,
     "attackKnockback": 2.0,
-    "knockbackResistance": 0.1,
+    "knockbackResistance": 0.5,
     "movementSpeed": 0.4,
-    "stepHeight": 0.6,
-    "armorBaseValue": 0.1,
+    "stepHeight": 5.0,
+    "armorBaseValue": 10.0,
     "trackingRange": 64,
-    "followRange": 50,
+    "followRange": 500,
     "health": 890,
     "xpAmount": 3,
     "waterMob": false,
@@ -96,12 +96,12 @@
     "stepSound": {
       "value": ""
     },
-    "onInitialSpawn": {
-      "name": "RyomenSukunaOnInitialEntitySpawn"
+    "onMobTickUpdate": {
+      "name": "RyomenSukunaOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.6</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.6</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

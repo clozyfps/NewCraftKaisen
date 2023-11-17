@@ -61,5 +61,13 @@
         "stream": false
       }
     ]
+  },
+  "splash": {
+    "sounds": [
+      {
+        "name": "craft_kaisen:9508__petenice__splash",
+        "stream": false
+      }
+    ]
   }
 }
