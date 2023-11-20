@@ -1,16 +1,46 @@
 
 package net.mcreator.craftkaisen.entity;
 
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.nbt.Tag;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
+
+import net.mcreator.craftkaisen.procedures.MaximumElephantOnEntityTickUpdateProcedure;
+import net.mcreator.craftkaisen.init.CraftKaisenModEntities;
+
+import java.util.List;
 
 public class MaximumElephantEntity extends TamableAnimal {
-
 	public MaximumElephantEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(CraftKaisenModEntities.MAXIMUM_ELEPHANT.get(), world);
 	}
@@ -20,7 +50,6 @@ public class MaximumElephantEntity extends TamableAnimal {
 		maxUpStep = 0.6f;
 		xpReward = 5;
 		setNoAi(false);
-
 	}
 
 	@Override
@@ -31,23 +60,19 @@ public class MaximumElephantEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 		this.targetSelector.addGoal(1, new OwnerHurtTargetGoal(this));
 		this.goalSelector.addGoal(2, new OwnerHurtByTargetGoal(this));
 		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
-
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
-
 		});
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(6, new FollowOwnerGoal(this, 1, (float) 20, (float) 5, false));
 		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(8, new FloatGoal(this));
-
 	}
 
 	@Override
@@ -69,7 +94,6 @@ public class MaximumElephantEntity extends TamableAnimal {
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
-
 		Item item = itemstack.getItem();
 		if (itemstack.getItem() instanceof SpawnEggItem) {
 			retval = super.mobInteract(sourceentity, hand);
@@ -98,7 +122,6 @@ public class MaximumElephantEntity extends TamableAnimal {
 				} else {
 					this.level.broadcastEntityEvent(this, (byte) 6);
 				}
-
 				this.setPersistenceRequired();
 				retval = InteractionResult.sidedSuccess(this.level.isClientSide());
 			} else {
@@ -107,16 +130,13 @@ public class MaximumElephantEntity extends TamableAnimal {
 					this.setPersistenceRequired();
 			}
 		}
-
 		return retval;
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		MaximumElephantOnEntityTickUpdateProcedure.execute(
-
-		);
+		MaximumElephantOnEntityTickUpdateProcedure.execute(this);
 	}
 
 	@Override
@@ -132,7 +152,6 @@ public class MaximumElephantEntity extends TamableAnimal {
 	}
 
 	public static void init() {
-
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -142,12 +161,8 @@ public class MaximumElephantEntity extends TamableAnimal {
 		builder = builder.add(Attributes.ARMOR, 0.1);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 15);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
-
 		return builder;
 	}
-
 }

@@ -25,6 +25,7 @@ import net.mcreator.craftkaisen.entity.TwistRangedEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.ToadEntity;
 import net.mcreator.craftkaisen.entity.TenShadowRabbitEntity;
+import net.mcreator.craftkaisen.entity.TeleportCircleEntity;
 import net.mcreator.craftkaisen.entity.SlicingExcorismEntity;
 import net.mcreator.craftkaisen.entity.SleepRangedEntity;
 import net.mcreator.craftkaisen.entity.ShadowFrogEntity;
@@ -219,6 +220,8 @@ public class CraftKaisenModEntities {
 	public static final RegistryObject<EntityType<ChimeraShadowGardenMobEntity>> CHIMERA_SHADOW_GARDEN_MOB = register("chimera_shadow_garden_mob",
 			EntityType.Builder.<ChimeraShadowGardenMobEntity>of(ChimeraShadowGardenMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(ChimeraShadowGardenMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TeleportCircleEntity>> TELEPORT_CIRCLE = register("teleport_circle", EntityType.Builder.<TeleportCircleEntity>of(TeleportCircleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TeleportCircleEntity::new).fireImmune().sized(0f, 0f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -257,6 +260,7 @@ public class CraftKaisenModEntities {
 			TenShadowRabbitEntity.init();
 			ShadowFrogEntity.init();
 			ChimeraShadowGardenMobEntity.init();
+			TeleportCircleEntity.init();
 		});
 	}
 
@@ -292,5 +296,6 @@ public class CraftKaisenModEntities {
 		event.put(TEN_SHADOW_RABBIT.get(), TenShadowRabbitEntity.createAttributes().build());
 		event.put(SHADOW_FROG.get(), ShadowFrogEntity.createAttributes().build());
 		event.put(CHIMERA_SHADOW_GARDEN_MOB.get(), ChimeraShadowGardenMobEntity.createAttributes().build());
+		event.put(TELEPORT_CIRCLE.get(), TeleportCircleEntity.createAttributes().build());
 	}
 }

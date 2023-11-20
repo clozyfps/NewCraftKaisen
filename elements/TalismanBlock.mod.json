@@ -20,25 +20,16 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 1.0,
-        "my": 0.01,
-        "mz": 4.0,
-        "Mx": 15.0,
-        "My": 0.01,
-        "Mz": 12.0,
-        "subtract": false
-      },
-      {
-        "mx": 1.0,
+        "mx": 0.0,
         "my": 0.0,
-        "mz": 4.0,
-        "Mx": 15.0,
-        "My": 0.0,
-        "Mz": 12.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
         "subtract": false
       }
     ],
@@ -109,7 +100,7 @@
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "isBonemealable": false,
-    "hasInventory": false,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
@@ -128,6 +119,9 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "TalismanBlockOnBlockRightClicked"
+    },
+    "onStartToDestroy": {
+      "name": "TalismanBlockPlayerStartsToDestroy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

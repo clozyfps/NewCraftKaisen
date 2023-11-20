@@ -164,6 +164,7 @@ public class CraftKaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping ACTIVATE_RCT = new KeyMapping("key.craft_kaisen.activate_rct", GLFW.GLFW_KEY_T, "key.categories.craft_kaisen");
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -178,6 +179,7 @@ public class CraftKaisenModKeyMappings {
 		event.register(OUTPUT);
 		event.register(MENU);
 		event.register(TOGGLE_CT_SPECIAL);
+		event.register(ACTIVATE_RCT);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})

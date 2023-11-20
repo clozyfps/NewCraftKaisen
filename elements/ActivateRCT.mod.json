@@ -1,0 +1,9 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "T",
+    "keyBindingName": "Activate RCT",
+    "keyBindingCategoryKey": "craft_kaisen"
+  }
+}
